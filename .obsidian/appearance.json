@@ -1,0 +1,13 @@
+{
+  "baseFontSize": 16,
+  "theme": "moonstone",
+  "translucency": false,
+  "cssTheme": "March",
+  "enabledCssSnippets": [],
+  "accentColor": "#45b0a9",
+  "nativeMenus": false,
+  "showViewHeader": true,
+  "interfaceFontFamily": "jf open 粉圓 2.1",
+  "monospaceFontFamily": "Iosevka,jf open 粉圓 2.1",
+  "textFontFamily": "jf open 粉圓 2.1"
+}

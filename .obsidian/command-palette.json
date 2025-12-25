@@ -1,0 +1,7 @@
+{
+  "pinned": [
+    "templater-obsidian:insert-templater",
+    "obsidian-linter:lint-file-unless-ignored",
+    "obsidian-style-settings:show-style-settings-leaf"
+  ]
+}

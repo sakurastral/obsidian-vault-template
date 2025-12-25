@@ -1,0 +1,18 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "created": "datetime",
+    "modified": "datetime",
+    "categories": "multitext",
+    "references": "multitext",
+    "parent": "multitext",
+    "Task：Priority": "number",
+    "Task：Due": "datetime",
+    "Task：Done": "datetime",
+    "Task：Cancelled": "datetime",
+    "Task：Archived": "datetime",
+    "Task：Content": "text"
+  }
+}

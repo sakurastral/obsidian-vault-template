@@ -1,0 +1,58 @@
+{
+  "command_timeout": 5,
+  "templates_folder": "Assets/Template",
+  "templates_pairs": [
+    [
+      "",
+      ""
+    ]
+  ],
+  "trigger_on_file_creation": true,
+  "auto_jump_to_cursor": true,
+  "enable_system_commands": false,
+  "shell_path": "",
+  "user_scripts_folder": "Assets/Scripts",
+  "enable_folder_templates": true,
+  "folder_templates": [
+    {
+      "folder": "Inbox",
+      "template": "Assets/Template/Inbox/Add New Note.md"
+    },
+    {
+      "folder": "Project",
+      "template": "Assets/Template/Project/Add New Note.md"
+    },
+    {
+      "folder": "Task/Inbox",
+      "template": "Assets/Template/Task/Add New Task.md"
+    },
+    {
+      "folder": "Nexus/Categories",
+      "template": "Assets/Template/Nexus/Add New Category.md"
+    }
+  ],
+  "enable_file_templates": false,
+  "file_templates": [],
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
+  "enabled_templates_hotkeys": [
+    "Assets/Template/Task/Add New Task.md",
+    "Assets/Template/Task/Mark as Completed.md",
+    "Assets/Template/Task/Mark as Cancelled.md",
+    "Assets/Template/Task/Mark as In Progess.md",
+    "Assets/Template/Task/Archive Task.md",
+    "Assets/Template/Properties/Add New Reference.md",
+    "Assets/Template/Properties/Change Note Name.md",
+    "Assets/Template/Properties/Add New Categories.md",
+    "Assets/Template/Nexus/Add Base View to Existed Category.md",
+    "Assets/Template/Custom/Delete Selected Attachment's Link and File.md",
+    "Assets/Template/Custom/Convert Color Codes to HTML Block.md",
+    "Assets/Template/Custom/Update “Created” and “Modified” Properties Across All Vault Notes.md",
+    "Assets/Template/Custom/Delete Example Notes.md"
+  ],
+  "startup_templates": [
+    ""
+  ],
+  "intellisense_render": 1,
+  "enable_ribbon_icon": true
+}

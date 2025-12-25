@@ -1,0 +1,377 @@
+{
+  "choices": [
+    {
+      "id": "ccff25c8-14fd-47a0-ade7-712df019c8e4",
+      "name": "Track Daily",
+      "type": "Capture",
+      "command": true,
+      "appendLink": false,
+      "captureTo": "Project/Journal/{{DATE:YYYY}}/{{date}}",
+      "captureToActiveFile": false,
+      "createFileIfItDoesntExist": {
+        "enabled": true,
+        "createWithTemplate": true,
+        "template": "Assets/Template/Project/Journal/Add Daily Note.md"
+      },
+      "format": {
+        "enabled": true,
+        "format": "## {{DATE:HH:mm}}\n\n"
+      },
+      "insertAfter": {
+        "enabled": false,
+        "after": "",
+        "insertAtEnd": false,
+        "considerSubsections": false,
+        "createIfNotFound": false,
+        "createIfNotFoundLocation": "top"
+      },
+      "prepend": true,
+      "task": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "focus": true,
+        "mode": "default"
+      }
+    },
+    {
+      "id": "8a3a4f0c-4f28-47ee-9e8b-de9509eb457f",
+      "name": "Properties Management",
+      "type": "Multi",
+      "command": true,
+      "choices": [
+        {
+          "id": "ed4ace33-5f39-4979-bbf0-81f1d1280d90",
+          "name": "Add Reference Link",
+          "type": "Macro",
+          "command": false,
+          "runOnStartup": false,
+          "macro": {
+            "name": "Add Reference Link",
+            "id": "7b833a7d-571d-4efd-8bdd-ba0400b7e0b7",
+            "commands": [
+              {
+                "name": "Templater: Insert Properties/Add New Reference",
+                "type": "Obsidian",
+                "id": "b03ed772-aa90-40d8-9998-b89f9cc2984d",
+                "commandId": "templater-obsidian:Assets/Template/Properties/Add New Reference.md"
+              }
+            ]
+          }
+        },
+        {
+          "id": "8b862312-5be5-4d74-84ed-54cbbb8e8c3c",
+          "name": "Add Categories",
+          "type": "Macro",
+          "command": false,
+          "runOnStartup": false,
+          "macro": {
+            "name": "Add Categories",
+            "id": "67f8c993-7024-4b91-9e08-4c30c4119cd5",
+            "commands": [
+              {
+                "name": "Templater: Insert Properties/Add New Categories",
+                "type": "Obsidian",
+                "id": "4f337293-2af6-4988-8faa-3d3db820f154",
+                "commandId": "templater-obsidian:Assets/Template/Properties/Add New Categories.md"
+              }
+            ]
+          }
+        },
+        {
+          "id": "180cee5e-61bc-4ec5-9c5d-2e6b1f874032",
+          "name": "Change Note Name",
+          "type": "Macro",
+          "command": false,
+          "runOnStartup": false,
+          "macro": {
+            "name": "Change Note Name",
+            "id": "deae5aa9-f540-4afe-81f0-6a801292fd29",
+            "commands": [
+              {
+                "name": "Templater: Insert Properties/Change Note Name",
+                "type": "Obsidian",
+                "id": "23b35160-6314-4d79-9acc-7f8d01771f16",
+                "commandId": "templater-obsidian:Assets/Template/Properties/Change Note Name.md"
+              }
+            ]
+          }
+        }
+      ],
+      "collapsed": false
+    },
+    {
+      "id": "ed1eedf0-97b6-487d-b075-f4d3645b5f02",
+      "name": "Task Management",
+      "type": "Multi",
+      "command": true,
+      "choices": [
+        {
+          "id": "b9dce716-0b76-4ba2-bc4d-615fa33abd64",
+          "name": "Add New Task",
+          "type": "Macro",
+          "command": false,
+          "runOnStartup": false,
+          "macro": {
+            "name": "Add New Task",
+            "id": "27e02b73-2c47-40ce-929e-e4a692dac09e",
+            "commands": [
+              {
+                "name": "Templater: Create Task/Add New Task",
+                "type": "Obsidian",
+                "id": "edb8165c-587d-4e86-8d65-864a810f77b7",
+                "commandId": "templater-obsidian:create-Assets/Template/Task/Add New Task.md"
+              }
+            ]
+          }
+        },
+        {
+          "id": "0cad9361-37b0-407e-a487-681b1ea2fe1a",
+          "name": "Start the Task",
+          "type": "Macro",
+          "command": false,
+          "runOnStartup": false,
+          "macro": {
+            "name": "Start the Task",
+            "id": "67cad7a9-4c69-4beb-a41d-23ae64d81ff4",
+            "commands": [
+              {
+                "name": "Templater: Insert Task/Mark as In Progess",
+                "type": "Obsidian",
+                "id": "a24a4820-71b8-46b8-979b-e98de84a208e",
+                "commandId": "templater-obsidian:Assets/Template/Task/Mark as In Progess.md"
+              }
+            ]
+          }
+        },
+        {
+          "id": "f193fa44-db51-4390-bce6-642693927e46",
+          "name": "Complete Task",
+          "type": "Macro",
+          "command": false,
+          "runOnStartup": false,
+          "macro": {
+            "name": "Complete Task",
+            "id": "aa1fe9e2-e23b-4879-a1cf-4903f69f39d0",
+            "commands": [
+              {
+                "name": "Templater: Insert Task/Mark as Completed",
+                "type": "Obsidian",
+                "id": "64438205-48dc-4376-bc6b-8dd95eaa50fc",
+                "commandId": "templater-obsidian:Assets/Template/Task/Mark as Completed.md"
+              },
+              {
+                "name": "Wait",
+                "type": "Wait",
+                "id": "4820982c-6282-49f6-9d97-a35c1d017241",
+                "time": 200
+              },
+              {
+                "name": "Templater: Insert Task/Archive Task",
+                "type": "Obsidian",
+                "id": "fdf52cb1-2a5f-4629-b66c-c715bc521499",
+                "commandId": "templater-obsidian:Assets/Template/Task/Archive Task.md"
+              }
+            ]
+          }
+        },
+        {
+          "id": "6dffead6-0529-4ecb-bdda-e1a1634ef469",
+          "name": "Cancel Task",
+          "type": "Macro",
+          "command": false,
+          "runOnStartup": false,
+          "macro": {
+            "name": "Cancel Task",
+            "id": "f4ce1d0e-bbea-4622-86c3-12ac61da9094",
+            "commands": [
+              {
+                "name": "Templater: Insert Task/Mark as Cancelled",
+                "type": "Obsidian",
+                "id": "c00eda01-a486-4e9e-963a-8d039133efe7",
+                "commandId": "templater-obsidian:Assets/Template/Task/Mark as Cancelled.md"
+              },
+              {
+                "name": "Wait",
+                "type": "Wait",
+                "id": "9c6b2f73-913b-42a9-b3fd-691e8a7dffa9",
+                "time": 200
+              },
+              {
+                "name": "Templater: Insert Task/Archive Task",
+                "type": "Obsidian",
+                "id": "dba91ed5-8b7d-41aa-9021-46215d3dd57e",
+                "commandId": "templater-obsidian:Assets/Template/Task/Archive Task.md"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "08f40264-10ab-4be3-a635-67271f0b9e99",
+      "name": "Block Composer",
+      "type": "Multi",
+      "command": true,
+      "choices": [
+        {
+          "id": "9c58ffc9-9d3a-49fa-aeb8-b84c164dacaf",
+          "name": "Convert Color Codes to HTML Block",
+          "type": "Macro",
+          "command": false,
+          "runOnStartup": false,
+          "macro": {
+            "name": "Convert Color Codes to HTML Block",
+            "id": "6d1199aa-4ef6-459c-862f-d5be1021e478",
+            "commands": [
+              {
+                "name": "Templater: Insert Custom/Convert Color Codes to HTML Block",
+                "type": "Obsidian",
+                "id": "c78637f1-43f8-4f69-ac20-61bc2ed7551d",
+                "commandId": "templater-obsidian:Assets/Template/Custom/Convert Color Codes to HTML Block.md"
+              }
+            ]
+          }
+        },
+        {
+          "id": "2e205c8e-672c-4c9b-855e-2776c316eba5",
+          "name": "Remove Attachment Link and Delete the File",
+          "type": "Macro",
+          "command": true,
+          "runOnStartup": false,
+          "macro": {
+            "name": "Remove Attachment Link and Delete the File",
+            "id": "fd8cab98-8f77-451c-9de0-7bc60a04ce7d",
+            "commands": [
+              {
+                "name": "Templater: Insert Custom/Delete Selected Attachment's Link and File",
+                "type": "Obsidian",
+                "id": "f86e8863-1c7d-489b-a245-7270655a36c9",
+                "commandId": "templater-obsidian:Assets/Template/Custom/Delete Selected Attachment's Link and File.md"
+              }
+            ]
+          }
+        }
+      ],
+      "collapsed": false
+    },
+    {
+      "id": "14c482f9-5a57-4a16-b139-c9a1174b1876",
+      "name": "Vault Init",
+      "type": "Macro",
+      "command": true,
+      "runOnStartup": false,
+      "macro": {
+        "name": "Vault Init",
+        "id": "33a3f1a7-2225-44ec-b759-26190798ede9",
+        "commands": [
+          {
+            "name": "Templater: Create Custom/Update “Created” and “Modified” Properties Across All Vault Notes",
+            "type": "Obsidian",
+            "id": "f1edecdd-1b33-492c-872e-ac461d434f09",
+            "commandId": "templater-obsidian:create-Assets/Template/Custom/Update “Created” and “Modified” Properties Across All Vault Notes.md"
+          },
+          {
+            "name": "Wait",
+            "type": "Wait",
+            "id": "41570ca8-b562-46f8-9ace-3b3cd28f3efe",
+            "time": 100
+          },
+          {
+            "name": "Templater: Create Custom/Delete Example Notes",
+            "type": "Obsidian",
+            "id": "5e6eff91-f69c-4c45-8d53-70613eb77ffb",
+            "commandId": "templater-obsidian:create-Assets/Template/Custom/Delete Example Notes.md"
+          }
+        ]
+      }
+    }
+  ],
+  "inputPrompt": "multi-line",
+  "devMode": false,
+  "templateFolderPath": "",
+  "announceUpdates": "major",
+  "version": "2.9.4",
+  "globalVariables": {},
+  "onePageInputEnabled": false,
+  "disableOnlineFeatures": true,
+  "enableRibbonIcon": false,
+  "showCaptureNotification": true,
+  "showInputCancellationNotification": false,
+  "enableTemplatePropertyTypes": false,
+  "ai": {
+    "defaultModel": "Ask me",
+    "defaultSystemPrompt": "As an AI assistant within Obsidian, your primary goal is to help users manage their ideas and knowledge more effectively. Format your responses using Markdown syntax. Please use the [[Obsidian]] link format. You can write aliases for the links by writing [[Obsidian|the alias after the pipe symbol]]. To use mathematical notation, use LaTeX syntax. LaTeX syntax for larger equations should be on separate lines, surrounded with double dollar signs ($$). You can also inline math expressions by wrapping it in $ symbols. For example, use $$w_{ij}^{\text{new}}:=w_{ij}^{\text{current}}+etacdotdelta_jcdot x_{ij}$$ on a separate line, but you can write \"($eta$ = learning rate, $delta_j$ = error term, $x_{ij}$ = input)\" inline.",
+    "promptTemplatesFolderPath": "",
+    "showAssistant": true,
+    "providers": [
+      {
+        "name": "OpenAI",
+        "endpoint": "https://api.openai.com/v1",
+        "apiKey": "",
+        "models": [
+          {
+            "name": "text-davinci-003",
+            "maxTokens": 4096
+          },
+          {
+            "name": "gpt-3.5-turbo",
+            "maxTokens": 4096
+          },
+          {
+            "name": "gpt-3.5-turbo-16k",
+            "maxTokens": 16384
+          },
+          {
+            "name": "gpt-3.5-turbo-1106",
+            "maxTokens": 16385
+          },
+          {
+            "name": "gpt-4",
+            "maxTokens": 8192
+          },
+          {
+            "name": "gpt-4-32k",
+            "maxTokens": 32768
+          },
+          {
+            "name": "gpt-4-1106-preview",
+            "maxTokens": 128000
+          },
+          {
+            "name": "gpt-4-turbo",
+            "maxTokens": 128000
+          },
+          {
+            "name": "gpt-4o",
+            "maxTokens": 128000
+          },
+          {
+            "name": "gpt-4o-mini",
+            "maxTokens": 128000
+          }
+        ],
+        "modelSource": "auto"
+      }
+    ]
+  },
+  "migrations": {
+    "migrateToMacroIDFromEmbeddedMacro": true,
+    "useQuickAddTemplateFolder": true,
+    "incrementFileNameSettingMoveToDefaultBehavior": true,
+    "mutualExclusionInsertAfterAndWriteToBottomOfFile": true,
+    "setVersionAfterUpdateModalRelease": true,
+    "addDefaultAIProviders": true,
+    "removeMacroIndirection": true,
+    "migrateFileOpeningSettings": true,
+    "setProviderModelDiscoveryMode": true
+  },
+  "macros": []
+}
