@@ -1,5 +1,5 @@
-<%* let title = tp.file.title -%>  
-<%* if (title.startsWith("Untitled")) { -%>  
+<%* let title = tp.file.title -%>
+<%* if (title.startsWith("Untitled")) { -%>
 <%*  
 	try{  
 		const modalForm = app.plugins.plugins.modalforms.api;  
@@ -25,8 +25,8 @@
 		new Notice(`Error: ${e.message || e}`)
 		console.error(e)
 	}
--%>  
-<%* } -%>  
+-%>
+<%* } -%>
 <%*  
 	tp.hooks.on_all_templates_executed(async() => {  
 		let file = tp.file.find_tfile(tp.file.path(true));  
