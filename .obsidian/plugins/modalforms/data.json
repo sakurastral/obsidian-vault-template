@@ -143,6 +143,81 @@
         }
       ],
       "version": "1"
+    },
+    {
+      "title": "Edit Journal Properties",
+      "name": "edit-journal-properties",
+      "fields": [
+        {
+          "name": "day-type",
+          "label": "Today's Day Type",
+          "description": "Is today a workday or a day off?",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "notes",
+            "folder": "Assets/Settings/Journal/Day Type",
+            "options": []
+          }
+        },
+        {
+          "name": "national-holidays",
+          "label": "National Hoilidays",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "Assets/Settings/Journal/National Holidays",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
+          }
+        },
+        {
+          "name": "makeup-type",
+          "label": "Makeup Type",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "Assets/Settings/Journal/Makeup Type",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
+          }
+        },
+        {
+          "name": "events",
+          "label": "Special Events",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "Assets/Settings/Journal/Events",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
+          }
+        },
+        {
+          "name": "work-status",
+          "label": "Work Status",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "Assets/Settings/Journal/Work Status",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
+          }
+        }
+      ],
+      "version": "1"
     }
   ]
 }

@@ -258,6 +258,25 @@
               }
             ]
           }
+        },
+        {
+          "id": "a1ca67a4-b857-47f2-865e-9623b38d62c0",
+          "name": "Edit Journal's Properties",
+          "type": "Macro",
+          "command": false,
+          "runOnStartup": false,
+          "macro": {
+            "name": "Edit Journal's Properties",
+            "id": "05535692-4ce3-4597-9a7b-69d8f8f2ca05",
+            "commands": [
+              {
+                "name": "Templater: Insert Project/Journal/Edit Journal's Properties",
+                "type": "Obsidian",
+                "id": "068a2482-d982-4844-8dac-8cc552d7539c",
+                "commandId": "templater-obsidian:Assets/Template/Project/Journal/Edit Journal's Properties.md"
+              }
+            ]
+          }
         }
       ],
       "collapsed": false
