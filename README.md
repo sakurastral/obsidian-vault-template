@@ -5,7 +5,7 @@ aliases:
 categories:
 tags:
 created: 2025-12-19T16:35:48+08:00
-modified: 2025-12-25T17:50:38+08:00
+modified: 2026-01-18T00:16:12+08:00
 parent:
 references:
 ---
@@ -18,7 +18,7 @@ This is an Obsidian vault.
 2. Unzip the .zip file to a folder
 3. Open this folder in Obsidian
 4. Open Command Palette and Execute `QuickAdd: Vault Init`
-5. You can choose to delete `QuickAdd: Vault Init` in QuickAdd plugin's settings.
+5. After that, you can start writing your notes!
 
 ## Vault Organization Method: CAPTAIN
 
@@ -52,7 +52,7 @@ This is an Obsidian vault.
 - Inbox: All new internal or external notes are first placed here before being processed, categorized, and moved to their final location.
 - Nexus: Defines the **core category system** of the vault.
 
-## Properties in Notes
+## Basic Properties in Notes
 
 ```yaml
 ---
