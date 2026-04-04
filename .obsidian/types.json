@@ -13,6 +13,11 @@
     "Task：Done": "datetime",
     "Task：Cancelled": "datetime",
     "Task：Archived": "datetime",
-    "Task：Content": "text"
+    "Task：Content": "text",
+    "Day：N-Holiday": "multitext",
+    "Day：Events": "multitext",
+    "Day：Work": "multitext",
+    "Task：Scheduled(Start)": "datetime",
+    "Task：Scheduled(End)": "datetime"
   }
 }

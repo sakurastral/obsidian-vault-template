@@ -102,8 +102,38 @@
       "name": "add-new-task",
       "fields": [
         {
+          "name": "content",
+          "label": "Task Content",
+          "description": "",
+          "isRequired": true,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
           "name": "due",
           "label": "Due",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "datetime",
+            "hidden": false
+          }
+        },
+        {
+          "name": "start",
+          "label": "Scheduled (Start)",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "datetime",
+            "hidden": false
+          }
+        },
+        {
+          "name": "end",
+          "label": "Scheduled (End)",
           "description": "",
           "isRequired": false,
           "input": {
@@ -119,16 +149,6 @@
           "input": {
             "type": "note",
             "folder": "Nexus/Categories/Projects"
-          }
-        },
-        {
-          "name": "content",
-          "label": "Task Content",
-          "description": "",
-          "isRequired": true,
-          "input": {
-            "type": "text",
-            "hidden": false
           }
         },
         {
@@ -156,8 +176,7 @@
           "input": {
             "type": "select",
             "source": "notes",
-            "folder": "Assets/Settings/Journal/Day Type",
-            "options": []
+            "folder": "Assets/Settings/Journal/Day Type"
           }
         },
         {
@@ -168,10 +187,7 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "Assets/Settings/Journal/National Holidays",
-            "allowUnknownValues": false,
-            "query": "",
-            "multi_select_options": []
+            "folder": "Assets/Settings/Journal/National Holidays"
           }
         },
         {
@@ -182,10 +198,7 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "Assets/Settings/Journal/Makeup Type",
-            "allowUnknownValues": false,
-            "query": "",
-            "multi_select_options": []
+            "folder": "Assets/Settings/Journal/Makeup Type"
           }
         },
         {
@@ -196,10 +209,7 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "Assets/Settings/Journal/Events",
-            "allowUnknownValues": false,
-            "query": "",
-            "multi_select_options": []
+            "folder": "Assets/Settings/Journal/Events"
           }
         },
         {
@@ -210,10 +220,7 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "Assets/Settings/Journal/Work Status",
-            "allowUnknownValues": false,
-            "query": "",
-            "multi_select_options": []
+            "folder": "Assets/Settings/Journal/Work Status"
           }
         }
       ],

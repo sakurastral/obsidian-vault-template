@@ -35,7 +35,7 @@
     },
     "yaml-key-sort": {
       "enabled": true,
-      "yaml-key-priority-sort-order": "cover:\ntitle:\naliases:\ncategories:\ntags:\ncreated:\nmodified:\nparent:\nreferences:\nTask：Content:\nTask：Status:\nTask：Priority:\nTask：Due:\nTask：Done:\nTask：Cancelled:\nTask：Archive:\nDay：Type:\nDay：N-Holiday:\nDay：Makeup:\nDay：Events:\nDay：Work:",
+      "yaml-key-priority-sort-order": "cover:\ntitle:\naliases:\ncategories:\ntags:\ncreated:\nmodified:\nparent:\nreferences:\nTask：Content:\nTask：Status:\nTask：Priority:\nTask：Scheduled(Start):\nTask：Scheduled(End):\nTask：Due:\nTask：Done:\nTask：Cancelled:\nTask：Archive:\nDay：Type:\nDay：N-Holiday:\nDay：Makeup:\nDay：Events:\nDay：Work:",
       "priority-keys-at-start-of-yaml": true,
       "yaml-sort-order-for-other-keys": "Ascending Alphabetical"
     },
@@ -47,7 +47,7 @@
       "date-modified-key": "modified",
       "format": "YYYY-MM-DDTHH:mm:ssZ",
       "date-created-source-of-truth": "frontmatter",
-      "date-modified-source-of-truth": "file system",
+      "date-modified-source-of-truth": "user or Linter edits",
       "convert-to-utc": false,
       "update-on-file-contents-updated": "never"
     },
@@ -88,7 +88,8 @@
       "enabled": false
     },
     "move-footnotes-to-the-bottom": {
-      "enabled": true
+      "enabled": true,
+      "include-blank-line-between-footnotes": false
     },
     "re-index-footnotes": {
       "enabled": false
@@ -273,9 +274,11 @@
   "lintOnSave": true,
   "recordLintOnSaveLogs": true,
   "displayChanged": false,
+  "suppressMessageWhenNoChange": false,
   "lintOnFileChange": true,
   "displayLintOnFileChangeNotice": false,
   "settingsConvertedToConfigKeyValues": true,
+  "additionalFileExtensions": [],
   "foldersToIgnore": [
     "Assets/Attachments",
     "Assets/Images",

@@ -50,6 +50,8 @@ _%>
 	content = data.content;  
 	due = data.due;  
 	status = "[[" + data.status + "]]";  
+	start = data.start ?? "";
+	end = data.end ?? "";
 _%>
 ---
 title: <% (title) %>  
@@ -59,6 +61,8 @@ categories:
 Task：Content: <% (content) %>  
 Task：Status: "<%(status)%>"  
 Task：Priority:  
+Task：Scheduled(Start): <% (start) %> 
+Task：Scheduled(End): <% (end) %> 
 Task：Due: <% (due) %>  
 Task：Done:  
 Task：Cancelled:  
