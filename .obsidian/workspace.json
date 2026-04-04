@@ -86,7 +86,7 @@
             }
           },
           {
-            "id": "4de27bda24d13785",
+            "id": "e59c101f717cd836",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -152,7 +152,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "[\"Task：Priority\"]",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -306,53 +306,6 @@
       "modalforms:Edit forms": false
     }
   },
-  "active": "4de27bda24d13785",
-  "lastOpenFiles": [
-    "Atlas/Journal Management.md",
-    "README.md",
-    "Atlas/Home.md",
-    "Atlas/Task Board.md",
-    "Atlas/Notes Management.md",
-    "Assets/Settings/Journal/Work Status/Overtime.md",
-    "Project/Journal/2026/2026-01-18.md",
-    "Project/Journal/2026",
-    "Assets/Settings/Journal/Work Status/Hourly Leave.md",
-    "Assets/Settings/Journal/Work Status/Leave.md",
-    "Assets/Settings/Journal/National Holidays/New Year.md",
-    "Assets/Settings/Journal/Makeup Type/Regular Day Off.md",
-    "Assets/Settings/Journal/Day Type/Workday💼.md",
-    "Assets/Settings/Journal/National Holidays/光復節.md",
-    "Assets/Settings/Journal/National Holidays/228紀念日.md",
-    "Assets/Settings/Journal/Day Type/Day Off🎉.md",
-    "Assets/Settings/Journal/Makeup Type/Adjusted Workday💼.md",
-    "Assets/Settings/Journal/Makeup Type/Compensatory Day Off.md",
-    "Assets/Settings/Journal/Events/Trip.md",
-    "Assets/Settings/Journal/Events/Birthday.md",
-    "Assets/Settings/Journal/Events/公司尾牙.md",
-    "Assets/Template/Project/Journal/Edit Journal's Properties.md",
-    "Assets/Settings/Journal/Events/媽咪的生日.md",
-    "Assets/Settings/Journal/Events",
-    "Assets/Settings/Journal/National Holidays/農曆新年.md",
-    "Assets/Settings/Journal/National Holidays/颱風假.md",
-    "Assets/Settings/Journal/National Holidays/行憲紀念日.md",
-    "Assets/Settings/Journal/National Holidays/端午節.md",
-    "Assets/Settings/Journal/National Holidays",
-    "Assets/Settings/Journal/Makeup Type",
-    "Assets/Settings/Journal/Day Type",
-    "Assets/Settings/Journal/Work Status",
-    "Assets/Settings/Journal",
-    "Task/Archived",
-    "LICENSE.txt",
-    "Atlas",
-    "Assets/Attachments/【剪藏】IIS Crypto/2025-12-24_120131189.png",
-    "Assets/Attachments/【.Net】如何將整個方案重新命名/Pasted image 20230615093342.png",
-    "Assets/Attachments/【筆記】IIS Log 分析⭐Log Parser and Log Parser Studio/Pasted image 20231205102840.png",
-    "Assets/Attachments/IIS - SSL憑證請求檔/Snipaste_2024-01-22_10-41-28.jpg",
-    "Assets/Attachments/【MSSQL】Function and Example/Pasted image 20230614152717.png",
-    "Assets/Attachments/【Web】Contact Form and Captcha/Pasted image 20240418101813.png",
-    "Assets/Attachments/【IIS】http to https _ redirect to certain site/Pasted image 20230614164024.png",
-    "Assets/Attachments/【IIS】Nextjs app or Nodejs IIS部署/Pasted image 20230215084924.png",
-    "Assets/Attachments/Accordion Example/Accordion Example-1755160593737.png",
-    "Assets/Attachments/CSS Pattern Fancy backgrounds with CSS gradients/CSS Pattern Fancy backgrounds with CSS gradients-1750387608420.png"
-  ]
+  "active": "e59c101f717cd836",
+  "lastOpenFiles": []
 }
