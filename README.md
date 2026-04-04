@@ -111,6 +111,22 @@ It is very useful for managing images in notes, but it conflicts with custom-att
 
 [Github - @steven-kraft - obsidian-markdown-furigana](https://github.com/steven-kraft/obsidian-markdown-furigana)
 
+#### Interactive Ratings Plugin
+
+https://github.com/peritus/obsidian-interactive-ratings
+
+#### StoryLine
+
+https://github.com/PixeroJan/obsidian-storyline
+
+#### TaskNotes
+
+https://github.com/callumalpass/tasknotes
+
+#### Notebook Navigator
+
+https://github.com/johansan/notebook-navigator
+
 ## License
 
 This project is under the MIT license. See the LICENSE file for more details.
