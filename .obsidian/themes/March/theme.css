@@ -22,11 +22,35 @@ settings:
         default: var(--color-red)
         format: hex
     -
-        id: h1-indicator-color
+        id: march-h1-indicator-color
         title: Headings 1 indicator's Icon Color
         type: variable-color
         default: var(--text-faint)
         format: hex
+    -
+        id: march-h1-indicator-opacity
+        title: Auto Hide Headings 1's Indicator
+        type: variable-select
+        default: '1'
+        options:
+            - 
+                label: Auto Hide
+                value: 0
+            - 
+                label: Fixed
+                value: 1
+    -
+        id: march-h1-align
+        title: Headings 1's Alignment
+        type: variable-select
+        default: left
+        options:
+            - 
+                label: Center
+                value: center
+            - 
+                label: Left
+                value: left
     -
         id: h2-size
         title: Headings 2 Font Size
@@ -40,11 +64,35 @@ settings:
         default: var(--color-orange)
         format: hex
     -
-        id: h2-indicator-color
+        id: march-h2-indicator-color
         title: Headings 2 indicator's Icon Color
         type: variable-color
         default: var(--text-faint)
         format: hex
+    -
+        id: march-h2-indicator-opacity
+        title: Auto Hide Headings 2's Indicator
+        type: variable-select
+        default: '1'
+        options:
+            - 
+                label: Auto Hide
+                value: 0
+            - 
+                label: Fixed
+                value: 1
+    -
+        id: march-h2-align
+        title: Headings 2's Alignment
+        type: variable-select
+        default: left
+        options:
+            - 
+                label: Center
+                value: center
+            - 
+                label: Left
+                value: left
     -
         id: h3-size
         title: Headings 3 Font Size
@@ -58,11 +106,35 @@ settings:
         default: var(--color-green)
         format: hex
     -
-        id: h3-indicator-color
+        id: march-h3-indicator-color
         title: Headings 3 indicator's Icon Color
         type: variable-color
         default: var(--text-faint)
         format: hex
+    -
+        id: march-h3-indicator-opacity
+        title: Auto Hide Headings 3's Indicator
+        type: variable-select
+        default: '1'
+        options:
+            - 
+                label: Auto Hide
+                value: 0
+            - 
+                label: Fixed
+                value: 1
+    -
+        id: march-h3-align
+        title: Headings 3's Alignment
+        type: variable-select
+        default: left
+        options:
+            - 
+                label: Center
+                value: center
+            - 
+                label: Left
+                value: left
     -
         id: h4-size
         title: Headings 4 Font Size
@@ -76,11 +148,35 @@ settings:
         default: var(--color-cyan)
         format: hex
     -
-        id: h4-indicator-color
+        id: march-h4-indicator-color
         title: Headings 4 indicator's Icon Color
         type: variable-color
         default: var(--text-faint)
         format: hex
+    -
+        id: march-h4-indicator-opacity
+        title: Auto Hide Headings 4's Indicator
+        type: variable-select
+        default: '1'
+        options:
+            - 
+                label: Auto Hide
+                value: 0
+            - 
+                label: Fixed
+                value: 1
+    -
+        id: march-h4-align
+        title: Headings 4's Alignment
+        type: variable-select
+        default: left
+        options:
+            - 
+                label: Center
+                value: center
+            - 
+                label: Left
+                value: left
     -
         id: h5-size
         title: Headings 5 Font Size
@@ -94,11 +190,35 @@ settings:
         default: var(--color-blue)
         format: hex
     -
-        id: h5-indicator-color
+        id: march-h5-indicator-color
         title: Headings 5 indicator's Icon Color
         type: variable-color
         default: var(--text-faint)
         format: hex
+    -
+        id: march-h5-indicator-opacity
+        title: Auto Hide Headings 5's Indicator
+        type: variable-select
+        default: '1'
+        options:
+            - 
+                label: Auto Hide
+                value: 0
+            - 
+                label: Fixed
+                value: 1
+    -
+        id: march-h5-align
+        title: Headings 5's Alignment
+        type: variable-select
+        default: left
+        options:
+            - 
+                label: Center
+                value: center
+            - 
+                label: Left
+                value: left
     -
         id: h6-size
         title: Headings 6 Font Size
@@ -112,22 +232,41 @@ settings:
         default: var(--color-purple)
         format: hex
     -
-        id: h6-indicator-color
+        id: march-h6-indicator-color
         title: Headings 6 indicator's Icon Color
         type: variable-color
         default: var(--text-faint)
         format: hex
+    -
+        id: march-h6-indicator-opacity
+        title: Auto Hide Headings 6's Indicator
+        type: variable-select
+        default: '1'
+        options:
+            - 
+                label: Auto Hide
+                value: 0
+            - 
+                label: Fixed
+                value: 1
+    -
+        id: march-h6-align
+        title: Headings 6's Alignment
+        type: variable-select
+        default: left
+        options:
+            - 
+                label: Center
+                value: center
+            - 
+                label: Left
+                value: left
     -
         id: heading-links
         title: Links
         type: heading
         level: 2
         collapsed: true
-    -
-        id: disable-styled-links-in-headings
-        title: Disable Link Style in Headings
-        type: class-toggle
-        default: false
     -
         id: link-color
         title: Internal Link's Font Color
@@ -136,24 +275,10 @@ settings:
         format: rgb
         opacity: true
     -
-        id: march-internal-link-background-color
-        title: Internal Link's Background Color
-        type: variable-color
-        default: var(--march-bg-accent)
-        format: rgb
-        opacity: true
-    -
         id: link-external-color
         title: External Link's Font Color
         type: variable-color
         default: var(--march-accent)
-        format: rgb
-        opacity: true
-    -
-        id: march-external-link-background-color
-        title: External Link's Background Color
-        type: variable-color
-        default: var(--march-bg-accent)
         format: rgb
         opacity: true
     - 
@@ -817,6 +942,21 @@ settings:
         min: 0
         max: 20
         step: 1
+    - 
+        id: heading-spacing
+        title: Spacing
+        type: heading
+        level: 1
+        collapsed: false
+    - 
+        id: march-letter-spacing
+        title: Letter Spacing
+        type: variable-number-slider
+        format: em
+        default: 0.1
+        min: 0
+        max: 0.15
+        step: 0.01
 */
 :is(body) {
   --font-ui-smaller: 0.75rem;
@@ -1364,8 +1504,7 @@ body {
   --tab-text-color-focused-highlighted: var(--text-accent);
   --tab-text-color-focused-active-current: var(--text-accent);
   --march-status-bar-height: calc(var(--status-bar-font-size) + var(--size-4-1) + var(--size-4-1) + 0.5rem);
-  --ribbon-background: var(--background-primary);
-  --tab-container-background: var(--background-primary);
+  --march-letter-spacing: 0.1em;
 }
 body .mod-root {
   --metadata-background: var(--background-primary-alt);
@@ -1374,6 +1513,10 @@ body .mod-root {
   --metadata-border-radius: 0.5rem;
   --metadata-padding: 0.5rem;
   --metadata-divider-width: 0px;
+}
+body {
+  --ribbon-background: var(--background-primary);
+  --tab-container-background: var(--background-primary);
 }
 body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
   background-color: var(--background-secondary);
@@ -1455,6 +1598,10 @@ body .sidebar-toggle-button {
   --icon-color-focused: var(--text-on-accent);
   --icon-color-hover: var(--text-on-accent);
 }
+body .side-dock-actions .side-dock-ribbon-action:hover {
+  background-color: var(--march-accent);
+  color: var(--text-on-accent);
+}
 body .status-bar {
   --status-bar-background: var(--titlebar-background);
   --status-bar-text-color: var(--titlebar-text-color);
@@ -1483,6 +1630,10 @@ body .search-input-container input {
 }
 body .workspace:has(.workspace-split.mod-horizontal.mod-sidedock.mod-right-split.is-sidedock-collapsed) .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-container {
   padding-right: 10px;
+}
+body .markdown-preview-view,
+body .markdown-source-view {
+  letter-spacing: var(--march-letter-spacing);
 }
 
 body {
@@ -1516,8 +1667,11 @@ body :hover::-webkit-scrollbar-thumb {
   max-width: 3rem;
 }
 
-body .cm-line.cm-active {
-  background-color: var(--march-bg-accent) !important;
+/* ========================================================================== */
+/*                            Layout - Active Line                            */
+/* ========================================================================== */
+body .cm-gutterElement.cm-active {
+  color: var(--march-accent) !important;
 }
 
 .inline-title {
@@ -1650,11 +1804,11 @@ body .HyperMD-codeblock .cm-foldPlaceholder::before {
 body .HyperMD-codeblock.cm-line:is(.HyperMD-codeblock-begin) .cm-indent::before {
   --indentation-guide-color: transparent;
 }
-body .HyperMD-codeblock.cm-line:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end) {
-  position: relative;
-}
 body .HyperMD-codeblock.cm-line:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end).HyperMD-codeblock:not(.HyperMD-list-line) {
   padding-left: 3rem;
+}
+body .HyperMD-codeblock.cm-line:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end) {
+  position: relative;
 }
 body .HyperMD-codeblock.cm-line:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end)::before {
   align-items: flex-end;
@@ -1692,6 +1846,8 @@ body code {
   --code-background: var(--march-code-background);
   --code-normal: var(--text-muted);
   border: var(--code-border-width) solid var(--code-border-color);
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 body .HyperMD-codeblock.cm-line {
   --code-background: var(--march-code-background);
@@ -1717,8 +1873,6 @@ body {
 
 body {
   /* [x] Done */
-  /* [-] Canceled */
-  /* [/] In Progress */
 }
 body input[data-task=x]:checked,
 body li[data-task=x] > input:checked,
@@ -1768,6 +1922,9 @@ body .markdown-preview-view ul li[data-task=X].task-list-item.is-checked .cm-lin
 body li[data-task=X].task-list-item.is-checked .cm-link {
   color: var(--checklist-done-color);
 }
+body {
+  /* [-] Canceled */
+}
 body input[data-task="-"]:checked,
 body li[data-task="-"] > input:checked,
 body li[data-task="-"] > p > input:checked {
@@ -1810,6 +1967,9 @@ body .markdown-preview-view ul li[data-task="-"].task-list-item.is-checked .cm-l
 body li[data-task="-"].task-list-item.is-checked .cm-link {
   color: var(--march-checklist-cancel-color);
 }
+body {
+  /* [/] In Progress */
+}
 body input[data-task="/"]:checked,
 body li[data-task="/"] > input:checked,
 body li[data-task="/"] > p > input:checked {
@@ -1844,7 +2004,6 @@ body li[data-task="/"] > p > input:checked:after {
 
 .march-enable-custom-icons {
   /* [p] Planned */
-  /* [r] Review */
 }
 .march-enable-custom-icons input[data-task=p]:checked,
 .march-enable-custom-icons li[data-task=p] > input:checked,
@@ -1876,6 +2035,9 @@ body li[data-task="/"] > p > input:checked:after {
   -webkit-mask-position-y: 52%;
   background-color: var(--color-cyan);
   color: var(--color-cyan);
+}
+.march-enable-custom-icons {
+  /* [r] Review */
 }
 .march-enable-custom-icons input[data-task=r]:checked,
 .march-enable-custom-icons li[data-task=r] > input:checked,
@@ -1916,16 +2078,13 @@ body li[data-task="/"] > p > input:checked:after {
  * Styled links is inspired from @subframe7536/obsidian-theme-maple (https://github.com/subframe7536/obsidian-theme-maple) and @kepano/obsidian-minimal(https://github.com/kepano/obsidian-minimal)
  */
 body {
-  --march-link-icon-size: calc(var(--font-text-size) - 2px);
-  --march-link-border-radius: 0.625rem;
+  --march-link-icon-size: calc(var(--font-text-size));
   --march-internal-link-decoration-style: dashed;
   --march-external-link-decoration-style: dashed;
-  --march-internal-link-icon-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text-icon lucide-file-text"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>');
-  --march-external-link-icon-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>');
+  --march-internal-link-icon-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJpY29uIGljb24tdGFibGVyIGljb25zLXRhYmxlci1vdXRsaW5lIGljb24tdGFibGVyLW1hcmtkb3duIj48cGF0aCBzdHJva2U9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz48cGF0aCBkPSJNMyA3YTIgMiAwIDAgMSAyIC0yaDE0YTIgMiAwIDAgMSAyIDJ2MTBhMiAyIDAgMCAxIC0yIDJoLTE0YTIgMiAwIDAgMSAtMiAtMnYtMTAiIC8+PHBhdGggZD0iTTcgMTV2LTZsMiAybDIgLTJ2NiIgLz48cGF0aCBkPSJNMTQgMTNsMiAybDIgLTJtLTIgMnYtNiIgLz48L3N2Zz4=');
+  --march-external-link-icon-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXNxdWFyZS1hcnJvdy11cC1yaWdodC1pY29uIGx1Y2lkZS1zcXVhcmUtYXJyb3ctdXAtcmlnaHQiPjxyZWN0IHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgeD0iMyIgeT0iMyIgcng9IjIiLz48cGF0aCBkPSJNOCA4aDh2OCIvPjxwYXRoIGQ9Im04IDE2IDgtOCIvPjwvc3ZnPg==');
   --link-color: var(--march-accent);
-  --march-internal-link-background-color: var(--march-bg-accent);
   --link-external-color: var(--march-accent);
-  --march-external-link-background-color: var(--march-bg-accent);
 }
 
 body span.cm-link:hover,
@@ -1940,65 +2099,45 @@ body span.external-link {
   display: none;
 }
 
-body {
+:not(.multi-select-container) body {
   --link-decoration: none;
   --link-decoration-hover: none;
 }
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .internal-link,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .metadata-link,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .multi-select-container .internal-link,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) a.internal-link:not(.is-unresolved),
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .cm-hmd-internal-link,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .cm-hmd-internal-link > .cm-underline {
-  background-color: var(--march-internal-link-background-color);
-  border-radius: var(--march-link-border-radius);
-  padding: 0 4.8px 0 3.2px;
-}
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .internal-link:hover,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .metadata-link:hover,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .multi-select-container .internal-link:hover,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) a.internal-link:not(.is-unresolved):hover,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .cm-hmd-internal-link:hover,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .cm-hmd-internal-link > .cm-underline:hover {
+:not(.multi-select-container) body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .internal-link:not(.multi-select-pill),
+:not(.multi-select-container) body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .multi-select-pill-content.internal-link,
+:not(.multi-select-container) body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) a.internal-link:not(.is-unresolved),
+:not(.multi-select-container) body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .is-unresolved:not(.multi-select-pill),
+:not(.multi-select-container) body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .cm-hmd-internal-link > .cm-underline {
   color: var(--link-color);
-  text-decoration-line: underline !important;
-  text-decoration-thickness: var(--link-decoration-thickness);
-  text-decoration-style: var(--march-internal-link-decoration-style);
-  text-decoration-color: var(--link-color);
+  padding: 0 5px 0;
+  display: inline-block;
+  padding-bottom: 2px;
+  background-image: linear-gradient(currentColor 0 0);
+  background-position: 0 100%;
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s, background-position 0s 0.3s;
 }
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .internal-link .multi-select-pill-content::before, body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .internal-link .internal-link:not(.internal-link)::before, body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .internal-link .metadata-link-inner.internal-link::before, body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .internal-link .cm-underline::before, body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .internal-link div[data-frontmatter-markdown-links-link-data]::before,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .metadata-link .multi-select-pill-content::before,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .metadata-link .internal-link:not(.internal-link)::before,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .metadata-link .metadata-link-inner.internal-link::before,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .metadata-link .cm-underline::before,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .metadata-link div[data-frontmatter-markdown-links-link-data]::before,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .multi-select-container .internal-link .multi-select-pill-content::before,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .multi-select-container .internal-link .internal-link:not(.internal-link)::before,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .multi-select-container .internal-link .metadata-link-inner.internal-link::before,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .multi-select-container .internal-link .cm-underline::before,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .multi-select-container .internal-link div[data-frontmatter-markdown-links-link-data]::before,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) a.internal-link:not(.is-unresolved) .multi-select-pill-content::before,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) a.internal-link:not(.is-unresolved) .internal-link:not(.internal-link)::before,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) a.internal-link:not(.is-unresolved) .metadata-link-inner.internal-link::before,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) a.internal-link:not(.is-unresolved) .cm-underline::before,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) a.internal-link:not(.is-unresolved) div[data-frontmatter-markdown-links-link-data]::before,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .cm-hmd-internal-link .multi-select-pill-content::before,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .cm-hmd-internal-link .internal-link:not(.internal-link)::before,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .cm-hmd-internal-link .metadata-link-inner.internal-link::before,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .cm-hmd-internal-link .cm-underline::before,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .cm-hmd-internal-link div[data-frontmatter-markdown-links-link-data]::before,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .cm-hmd-internal-link > .cm-underline .multi-select-pill-content::before,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .cm-hmd-internal-link > .cm-underline .internal-link:not(.internal-link)::before,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .cm-hmd-internal-link > .cm-underline .metadata-link-inner.internal-link::before,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .cm-hmd-internal-link > .cm-underline .cm-underline::before,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .cm-hmd-internal-link > .cm-underline div[data-frontmatter-markdown-links-link-data]::before {
+:not(.multi-select-container) body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .internal-link:not(.multi-select-pill):hover,
+:not(.multi-select-container) body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .multi-select-pill-content.internal-link:hover,
+:not(.multi-select-container) body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) a.internal-link:not(.is-unresolved):hover,
+:not(.multi-select-container) body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .is-unresolved:not(.multi-select-pill):hover,
+:not(.multi-select-container) body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .cm-hmd-internal-link > .cm-underline:hover {
+  background-position: 100% 100%; /*OR bottom right*/
+  background-size: 100% 2px;
+  text-decoration: none;
+}
+:not(.multi-select-container) body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .internal-link:not(.multi-select-pill)::after,
+:not(.multi-select-container) body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .multi-select-pill-content.internal-link::after,
+:not(.multi-select-container) body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) a.internal-link:not(.is-unresolved)::after,
+:not(.multi-select-container) body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .is-unresolved:not(.multi-select-pill)::after,
+:not(.multi-select-container) body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .cm-hmd-internal-link > .cm-underline::after {
   content: "";
   display: inline-block;
   width: var(--march-link-icon-size);
   height: var(--march-link-icon-size);
   margin-left: var(--size-2-1);
-  margin-right: var(--size-2-1);
-  background-color: var(--link-color);
+  background-color: currentColor;
   background-image: none;
   -webkit-mask-image: var(--march-internal-link-icon-image);
   mask-image: var(--march-internal-link-icon-image);
@@ -2007,41 +2146,44 @@ body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .mark
   -webkit-mask-repeat-x: no-repeat;
   -webkit-mask-repeat-y: no-repeat;
   mask-repeat: no-repeat;
+  transform: translateY(var(--size-2-1));
 }
 
-body {
+:not(.multi-select-container) body {
   --link-external-decoration: none;
   --link-external-decoration-hover: none;
 }
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) a.external-link:not(.cm-escape + .cm-link .cm-underline),
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .external-link:not(.multi-select-pill):not(.cm-escape + .cm-link .cm-underline),
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .external-link .multi-select-pill-content:not(.cm-escape + .cm-link .cm-underline),
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) :is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline) {
-  background-color: var(--march-external-link-background-color);
-  border-radius: var(--march-link-border-radius);
+:not(.multi-select-container) body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) a.external-link:not(.cm-escape + .cm-link .cm-underline),
+:not(.multi-select-container) body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .external-link:not(.multi-select-pill, .cm-formatting):not(.cm-escape + .cm-link .cm-underline),
+:not(.multi-select-container) body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .external-link .multi-select-pill-content:not(.cm-escape + .cm-link .cm-underline),
+:not(.multi-select-container) body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) :is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline) {
   padding: 0 4.8px 0 3.2px;
+  display: inline-block;
+  padding-bottom: 2px;
+  background-image: linear-gradient(currentColor 0 0);
+  background-position: 0 100%;
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s, background-position 0s 0.3s;
 }
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) a.external-link:not(.cm-escape + .cm-link .cm-underline):hover,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .external-link:not(.multi-select-pill):not(.cm-escape + .cm-link .cm-underline):hover,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .external-link .multi-select-pill-content:not(.cm-escape + .cm-link .cm-underline):hover,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) :is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline):hover {
-  color: var(--link-external-color);
-  text-decoration-line: underline;
-  text-decoration-thickness: var(--link-decoration-thickness);
-  text-decoration-style: var(--march-external-link-decoration-style);
-  text-decoration-color: var(--link-external-color);
+:not(.multi-select-container) body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) a.external-link:not(.cm-escape + .cm-link .cm-underline):hover,
+:not(.multi-select-container) body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .external-link:not(.multi-select-pill, .cm-formatting):not(.cm-escape + .cm-link .cm-underline):hover,
+:not(.multi-select-container) body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .external-link .multi-select-pill-content:not(.cm-escape + .cm-link .cm-underline):hover,
+:not(.multi-select-container) body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) :is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline):hover {
+  background-position: 100% 100%; /*OR bottom right*/
+  background-size: 100% 2px;
+  text-decoration: none;
 }
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) a.external-link:not(.cm-escape + .cm-link .cm-underline)::before,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .external-link:not(.multi-select-pill):not(.cm-escape + .cm-link .cm-underline)::before,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .external-link .multi-select-pill-content:not(.cm-escape + .cm-link .cm-underline)::before,
-body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) :is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline)::before {
+:not(.multi-select-container) body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) a.external-link:not(.cm-escape + .cm-link .cm-underline)::after,
+:not(.multi-select-container) body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .external-link:not(.multi-select-pill, .cm-formatting):not(.cm-escape + .cm-link .cm-underline)::after,
+:not(.multi-select-container) body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) .external-link .multi-select-pill-content:not(.cm-escape + .cm-link .cm-underline)::after,
+:not(.multi-select-container) body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .markdown-rendered) :is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline)::after {
   content: "";
   display: inline-block;
   width: var(--march-link-icon-size);
   height: var(--march-link-icon-size);
   margin-left: var(--size-2-1);
-  margin-right: var(--size-2-1);
-  background-color: var(--link-external-color);
+  background-color: currentColor;
   background-image: none;
   -webkit-mask-image: var(--march-external-link-icon-image);
   mask-image: var(--march-external-link-icon-image);
@@ -2050,187 +2192,230 @@ body :is(.markdown-source-view, .markdown-preview-view, .metadata-content, .mark
   -webkit-mask-repeat-x: no-repeat;
   -webkit-mask-repeat-y: no-repeat;
   mask-repeat: no-repeat;
+  transform: translateY(var(--size-2-1));
 }
 
-.disable-styled-links-in-headings .markdown-source-view span.cm-header-1,
-.disable-styled-links-in-headings .markdown-source-view h1,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-1,
-.disable-styled-links-in-headings .markdown-preview-view h1 {
+body .markdown-source-view span.cm-header-1:not(.cm-highlight, :hover),
+body .markdown-source-view h1:not(.cm-highlight, :hover),
+body .markdown-preview-view span.cm-header-1:not(.cm-highlight, :hover),
+body .markdown-preview-view h1:not(.cm-highlight, :hover) {
   --link-color: var(--h1-color);
   --link-external-color: var(--h1-color);
-  --march-internal-link-background-color: transparent;
-  --march-external-link-background-color: transparent;
 }
-.disable-styled-links-in-headings .markdown-source-view span.cm-header-1.cm-hmd-internal-link > .cm-underline::before, .disable-styled-links-in-headings .markdown-source-view span.cm-header-1:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-source-view span.cm-header-1 a.internal-link:not(.is-unresolved)::before,
-.disable-styled-links-in-headings .markdown-source-view span.cm-header-1 a.internal-link.is-unresolved::before,
-.disable-styled-links-in-headings .markdown-source-view span.cm-header-1 a.external-link:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-source-view h1.cm-hmd-internal-link > .cm-underline::before,
-.disable-styled-links-in-headings .markdown-source-view h1:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-source-view h1 a.internal-link:not(.is-unresolved)::before,
-.disable-styled-links-in-headings .markdown-source-view h1 a.internal-link.is-unresolved::before,
-.disable-styled-links-in-headings .markdown-source-view h1 a.external-link:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-1.cm-hmd-internal-link > .cm-underline::before,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-1:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-1 a.internal-link:not(.is-unresolved)::before,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-1 a.internal-link.is-unresolved::before,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-1 a.external-link:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-preview-view h1.cm-hmd-internal-link > .cm-underline::before,
-.disable-styled-links-in-headings .markdown-preview-view h1:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-preview-view h1 a.internal-link:not(.is-unresolved)::before,
-.disable-styled-links-in-headings .markdown-preview-view h1 a.internal-link.is-unresolved::before,
-.disable-styled-links-in-headings .markdown-preview-view h1 a.external-link:not(.cm-escape + .cm-link .cm-underline)::before {
-  display: none;
+body .markdown-source-view span.cm-header-1.cm-highlight:not(:hover),
+body .markdown-source-view h1.cm-highlight:not(:hover),
+body .markdown-preview-view span.cm-header-1.cm-highlight:not(:hover),
+body .markdown-preview-view h1.cm-highlight:not(:hover) {
+  --link-color: currentColor;
+  --link-external-color: currentColor;
 }
-.disable-styled-links-in-headings .markdown-source-view span.cm-header-2,
-.disable-styled-links-in-headings .markdown-source-view h2,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-2,
-.disable-styled-links-in-headings .markdown-preview-view h2 {
+body .markdown-source-view span.cm-header-1.cm-hmd-internal-link > .cm-underline, body .markdown-source-view span.cm-header-1:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-source-view span.cm-header-1 a.internal-link:not(.is-unresolved),
+body .markdown-source-view span.cm-header-1 a.internal-link.is-unresolved,
+body .markdown-source-view span.cm-header-1 a.external-link:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-source-view h1.cm-hmd-internal-link > .cm-underline,
+body .markdown-source-view h1:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-source-view h1 a.internal-link:not(.is-unresolved),
+body .markdown-source-view h1 a.internal-link.is-unresolved,
+body .markdown-source-view h1 a.external-link:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-preview-view span.cm-header-1.cm-hmd-internal-link > .cm-underline,
+body .markdown-preview-view span.cm-header-1:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-preview-view span.cm-header-1 a.internal-link:not(.is-unresolved),
+body .markdown-preview-view span.cm-header-1 a.internal-link.is-unresolved,
+body .markdown-preview-view span.cm-header-1 a.external-link:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-preview-view h1.cm-hmd-internal-link > .cm-underline,
+body .markdown-preview-view h1:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-preview-view h1 a.internal-link:not(.is-unresolved),
+body .markdown-preview-view h1 a.internal-link.is-unresolved,
+body .markdown-preview-view h1 a.external-link:not(.cm-escape + .cm-link .cm-underline) {
+  border-radius: 0;
+  padding: 0;
+  text-decoration-line: underline;
+}
+body .markdown-source-view span.cm-header-2:not(.cm-highlight, :hover),
+body .markdown-source-view h2:not(.cm-highlight, :hover),
+body .markdown-preview-view span.cm-header-2:not(.cm-highlight, :hover),
+body .markdown-preview-view h2:not(.cm-highlight, :hover) {
   --link-color: var(--h2-color);
   --link-external-color: var(--h2-color);
-  --march-internal-link-background-color: transparent;
-  --march-external-link-background-color: transparent;
 }
-.disable-styled-links-in-headings .markdown-source-view span.cm-header-2.cm-hmd-internal-link > .cm-underline::before, .disable-styled-links-in-headings .markdown-source-view span.cm-header-2:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-source-view span.cm-header-2 a.internal-link:not(.is-unresolved)::before,
-.disable-styled-links-in-headings .markdown-source-view span.cm-header-2 a.internal-link.is-unresolved::before,
-.disable-styled-links-in-headings .markdown-source-view span.cm-header-2 a.external-link:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-source-view h2.cm-hmd-internal-link > .cm-underline::before,
-.disable-styled-links-in-headings .markdown-source-view h2:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-source-view h2 a.internal-link:not(.is-unresolved)::before,
-.disable-styled-links-in-headings .markdown-source-view h2 a.internal-link.is-unresolved::before,
-.disable-styled-links-in-headings .markdown-source-view h2 a.external-link:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-2.cm-hmd-internal-link > .cm-underline::before,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-2:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-2 a.internal-link:not(.is-unresolved)::before,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-2 a.internal-link.is-unresolved::before,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-2 a.external-link:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-preview-view h2.cm-hmd-internal-link > .cm-underline::before,
-.disable-styled-links-in-headings .markdown-preview-view h2:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-preview-view h2 a.internal-link:not(.is-unresolved)::before,
-.disable-styled-links-in-headings .markdown-preview-view h2 a.internal-link.is-unresolved::before,
-.disable-styled-links-in-headings .markdown-preview-view h2 a.external-link:not(.cm-escape + .cm-link .cm-underline)::before {
-  display: none;
+body .markdown-source-view span.cm-header-2.cm-highlight:not(:hover),
+body .markdown-source-view h2.cm-highlight:not(:hover),
+body .markdown-preview-view span.cm-header-2.cm-highlight:not(:hover),
+body .markdown-preview-view h2.cm-highlight:not(:hover) {
+  --link-color: currentColor;
+  --link-external-color: currentColor;
 }
-.disable-styled-links-in-headings .markdown-source-view span.cm-header-3,
-.disable-styled-links-in-headings .markdown-source-view h3,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-3,
-.disable-styled-links-in-headings .markdown-preview-view h3 {
+body .markdown-source-view span.cm-header-2.cm-hmd-internal-link > .cm-underline, body .markdown-source-view span.cm-header-2:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-source-view span.cm-header-2 a.internal-link:not(.is-unresolved),
+body .markdown-source-view span.cm-header-2 a.internal-link.is-unresolved,
+body .markdown-source-view span.cm-header-2 a.external-link:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-source-view h2.cm-hmd-internal-link > .cm-underline,
+body .markdown-source-view h2:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-source-view h2 a.internal-link:not(.is-unresolved),
+body .markdown-source-view h2 a.internal-link.is-unresolved,
+body .markdown-source-view h2 a.external-link:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-preview-view span.cm-header-2.cm-hmd-internal-link > .cm-underline,
+body .markdown-preview-view span.cm-header-2:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-preview-view span.cm-header-2 a.internal-link:not(.is-unresolved),
+body .markdown-preview-view span.cm-header-2 a.internal-link.is-unresolved,
+body .markdown-preview-view span.cm-header-2 a.external-link:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-preview-view h2.cm-hmd-internal-link > .cm-underline,
+body .markdown-preview-view h2:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-preview-view h2 a.internal-link:not(.is-unresolved),
+body .markdown-preview-view h2 a.internal-link.is-unresolved,
+body .markdown-preview-view h2 a.external-link:not(.cm-escape + .cm-link .cm-underline) {
+  border-radius: 0;
+  padding: 0;
+  text-decoration-line: underline;
+}
+body .markdown-source-view span.cm-header-3:not(.cm-highlight, :hover),
+body .markdown-source-view h3:not(.cm-highlight, :hover),
+body .markdown-preview-view span.cm-header-3:not(.cm-highlight, :hover),
+body .markdown-preview-view h3:not(.cm-highlight, :hover) {
   --link-color: var(--h3-color);
   --link-external-color: var(--h3-color);
-  --march-internal-link-background-color: transparent;
-  --march-external-link-background-color: transparent;
 }
-.disable-styled-links-in-headings .markdown-source-view span.cm-header-3.cm-hmd-internal-link > .cm-underline::before, .disable-styled-links-in-headings .markdown-source-view span.cm-header-3:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-source-view span.cm-header-3 a.internal-link:not(.is-unresolved)::before,
-.disable-styled-links-in-headings .markdown-source-view span.cm-header-3 a.internal-link.is-unresolved::before,
-.disable-styled-links-in-headings .markdown-source-view span.cm-header-3 a.external-link:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-source-view h3.cm-hmd-internal-link > .cm-underline::before,
-.disable-styled-links-in-headings .markdown-source-view h3:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-source-view h3 a.internal-link:not(.is-unresolved)::before,
-.disable-styled-links-in-headings .markdown-source-view h3 a.internal-link.is-unresolved::before,
-.disable-styled-links-in-headings .markdown-source-view h3 a.external-link:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-3.cm-hmd-internal-link > .cm-underline::before,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-3:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-3 a.internal-link:not(.is-unresolved)::before,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-3 a.internal-link.is-unresolved::before,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-3 a.external-link:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-preview-view h3.cm-hmd-internal-link > .cm-underline::before,
-.disable-styled-links-in-headings .markdown-preview-view h3:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-preview-view h3 a.internal-link:not(.is-unresolved)::before,
-.disable-styled-links-in-headings .markdown-preview-view h3 a.internal-link.is-unresolved::before,
-.disable-styled-links-in-headings .markdown-preview-view h3 a.external-link:not(.cm-escape + .cm-link .cm-underline)::before {
-  display: none;
+body .markdown-source-view span.cm-header-3.cm-highlight:not(:hover),
+body .markdown-source-view h3.cm-highlight:not(:hover),
+body .markdown-preview-view span.cm-header-3.cm-highlight:not(:hover),
+body .markdown-preview-view h3.cm-highlight:not(:hover) {
+  --link-color: currentColor;
+  --link-external-color: currentColor;
 }
-.disable-styled-links-in-headings .markdown-source-view span.cm-header-4,
-.disable-styled-links-in-headings .markdown-source-view h4,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-4,
-.disable-styled-links-in-headings .markdown-preview-view h4 {
+body .markdown-source-view span.cm-header-3.cm-hmd-internal-link > .cm-underline, body .markdown-source-view span.cm-header-3:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-source-view span.cm-header-3 a.internal-link:not(.is-unresolved),
+body .markdown-source-view span.cm-header-3 a.internal-link.is-unresolved,
+body .markdown-source-view span.cm-header-3 a.external-link:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-source-view h3.cm-hmd-internal-link > .cm-underline,
+body .markdown-source-view h3:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-source-view h3 a.internal-link:not(.is-unresolved),
+body .markdown-source-view h3 a.internal-link.is-unresolved,
+body .markdown-source-view h3 a.external-link:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-preview-view span.cm-header-3.cm-hmd-internal-link > .cm-underline,
+body .markdown-preview-view span.cm-header-3:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-preview-view span.cm-header-3 a.internal-link:not(.is-unresolved),
+body .markdown-preview-view span.cm-header-3 a.internal-link.is-unresolved,
+body .markdown-preview-view span.cm-header-3 a.external-link:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-preview-view h3.cm-hmd-internal-link > .cm-underline,
+body .markdown-preview-view h3:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-preview-view h3 a.internal-link:not(.is-unresolved),
+body .markdown-preview-view h3 a.internal-link.is-unresolved,
+body .markdown-preview-view h3 a.external-link:not(.cm-escape + .cm-link .cm-underline) {
+  border-radius: 0;
+  padding: 0;
+  text-decoration-line: underline;
+}
+body .markdown-source-view span.cm-header-4:not(.cm-highlight, :hover),
+body .markdown-source-view h4:not(.cm-highlight, :hover),
+body .markdown-preview-view span.cm-header-4:not(.cm-highlight, :hover),
+body .markdown-preview-view h4:not(.cm-highlight, :hover) {
   --link-color: var(--h4-color);
   --link-external-color: var(--h4-color);
-  --march-internal-link-background-color: transparent;
-  --march-external-link-background-color: transparent;
 }
-.disable-styled-links-in-headings .markdown-source-view span.cm-header-4.cm-hmd-internal-link > .cm-underline::before, .disable-styled-links-in-headings .markdown-source-view span.cm-header-4:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-source-view span.cm-header-4 a.internal-link:not(.is-unresolved)::before,
-.disable-styled-links-in-headings .markdown-source-view span.cm-header-4 a.internal-link.is-unresolved::before,
-.disable-styled-links-in-headings .markdown-source-view span.cm-header-4 a.external-link:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-source-view h4.cm-hmd-internal-link > .cm-underline::before,
-.disable-styled-links-in-headings .markdown-source-view h4:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-source-view h4 a.internal-link:not(.is-unresolved)::before,
-.disable-styled-links-in-headings .markdown-source-view h4 a.internal-link.is-unresolved::before,
-.disable-styled-links-in-headings .markdown-source-view h4 a.external-link:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-4.cm-hmd-internal-link > .cm-underline::before,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-4:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-4 a.internal-link:not(.is-unresolved)::before,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-4 a.internal-link.is-unresolved::before,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-4 a.external-link:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-preview-view h4.cm-hmd-internal-link > .cm-underline::before,
-.disable-styled-links-in-headings .markdown-preview-view h4:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-preview-view h4 a.internal-link:not(.is-unresolved)::before,
-.disable-styled-links-in-headings .markdown-preview-view h4 a.internal-link.is-unresolved::before,
-.disable-styled-links-in-headings .markdown-preview-view h4 a.external-link:not(.cm-escape + .cm-link .cm-underline)::before {
-  display: none;
+body .markdown-source-view span.cm-header-4.cm-highlight:not(:hover),
+body .markdown-source-view h4.cm-highlight:not(:hover),
+body .markdown-preview-view span.cm-header-4.cm-highlight:not(:hover),
+body .markdown-preview-view h4.cm-highlight:not(:hover) {
+  --link-color: currentColor;
+  --link-external-color: currentColor;
 }
-.disable-styled-links-in-headings .markdown-source-view span.cm-header-5,
-.disable-styled-links-in-headings .markdown-source-view h5,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-5,
-.disable-styled-links-in-headings .markdown-preview-view h5 {
+body .markdown-source-view span.cm-header-4.cm-hmd-internal-link > .cm-underline, body .markdown-source-view span.cm-header-4:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-source-view span.cm-header-4 a.internal-link:not(.is-unresolved),
+body .markdown-source-view span.cm-header-4 a.internal-link.is-unresolved,
+body .markdown-source-view span.cm-header-4 a.external-link:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-source-view h4.cm-hmd-internal-link > .cm-underline,
+body .markdown-source-view h4:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-source-view h4 a.internal-link:not(.is-unresolved),
+body .markdown-source-view h4 a.internal-link.is-unresolved,
+body .markdown-source-view h4 a.external-link:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-preview-view span.cm-header-4.cm-hmd-internal-link > .cm-underline,
+body .markdown-preview-view span.cm-header-4:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-preview-view span.cm-header-4 a.internal-link:not(.is-unresolved),
+body .markdown-preview-view span.cm-header-4 a.internal-link.is-unresolved,
+body .markdown-preview-view span.cm-header-4 a.external-link:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-preview-view h4.cm-hmd-internal-link > .cm-underline,
+body .markdown-preview-view h4:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-preview-view h4 a.internal-link:not(.is-unresolved),
+body .markdown-preview-view h4 a.internal-link.is-unresolved,
+body .markdown-preview-view h4 a.external-link:not(.cm-escape + .cm-link .cm-underline) {
+  border-radius: 0;
+  padding: 0;
+  text-decoration-line: underline;
+}
+body .markdown-source-view span.cm-header-5:not(.cm-highlight, :hover),
+body .markdown-source-view h5:not(.cm-highlight, :hover),
+body .markdown-preview-view span.cm-header-5:not(.cm-highlight, :hover),
+body .markdown-preview-view h5:not(.cm-highlight, :hover) {
   --link-color: var(--h5-color);
   --link-external-color: var(--h5-color);
-  --march-internal-link-background-color: transparent;
-  --march-external-link-background-color: transparent;
 }
-.disable-styled-links-in-headings .markdown-source-view span.cm-header-5.cm-hmd-internal-link > .cm-underline::before, .disable-styled-links-in-headings .markdown-source-view span.cm-header-5:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-source-view span.cm-header-5 a.internal-link:not(.is-unresolved)::before,
-.disable-styled-links-in-headings .markdown-source-view span.cm-header-5 a.internal-link.is-unresolved::before,
-.disable-styled-links-in-headings .markdown-source-view span.cm-header-5 a.external-link:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-source-view h5.cm-hmd-internal-link > .cm-underline::before,
-.disable-styled-links-in-headings .markdown-source-view h5:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-source-view h5 a.internal-link:not(.is-unresolved)::before,
-.disable-styled-links-in-headings .markdown-source-view h5 a.internal-link.is-unresolved::before,
-.disable-styled-links-in-headings .markdown-source-view h5 a.external-link:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-5.cm-hmd-internal-link > .cm-underline::before,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-5:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-5 a.internal-link:not(.is-unresolved)::before,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-5 a.internal-link.is-unresolved::before,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-5 a.external-link:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-preview-view h5.cm-hmd-internal-link > .cm-underline::before,
-.disable-styled-links-in-headings .markdown-preview-view h5:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-preview-view h5 a.internal-link:not(.is-unresolved)::before,
-.disable-styled-links-in-headings .markdown-preview-view h5 a.internal-link.is-unresolved::before,
-.disable-styled-links-in-headings .markdown-preview-view h5 a.external-link:not(.cm-escape + .cm-link .cm-underline)::before {
-  display: none;
+body .markdown-source-view span.cm-header-5.cm-highlight:not(:hover),
+body .markdown-source-view h5.cm-highlight:not(:hover),
+body .markdown-preview-view span.cm-header-5.cm-highlight:not(:hover),
+body .markdown-preview-view h5.cm-highlight:not(:hover) {
+  --link-color: currentColor;
+  --link-external-color: currentColor;
 }
-.disable-styled-links-in-headings .markdown-source-view span.cm-header-6,
-.disable-styled-links-in-headings .markdown-source-view h6,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-6,
-.disable-styled-links-in-headings .markdown-preview-view h6 {
+body .markdown-source-view span.cm-header-5.cm-hmd-internal-link > .cm-underline, body .markdown-source-view span.cm-header-5:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-source-view span.cm-header-5 a.internal-link:not(.is-unresolved),
+body .markdown-source-view span.cm-header-5 a.internal-link.is-unresolved,
+body .markdown-source-view span.cm-header-5 a.external-link:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-source-view h5.cm-hmd-internal-link > .cm-underline,
+body .markdown-source-view h5:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-source-view h5 a.internal-link:not(.is-unresolved),
+body .markdown-source-view h5 a.internal-link.is-unresolved,
+body .markdown-source-view h5 a.external-link:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-preview-view span.cm-header-5.cm-hmd-internal-link > .cm-underline,
+body .markdown-preview-view span.cm-header-5:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-preview-view span.cm-header-5 a.internal-link:not(.is-unresolved),
+body .markdown-preview-view span.cm-header-5 a.internal-link.is-unresolved,
+body .markdown-preview-view span.cm-header-5 a.external-link:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-preview-view h5.cm-hmd-internal-link > .cm-underline,
+body .markdown-preview-view h5:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-preview-view h5 a.internal-link:not(.is-unresolved),
+body .markdown-preview-view h5 a.internal-link.is-unresolved,
+body .markdown-preview-view h5 a.external-link:not(.cm-escape + .cm-link .cm-underline) {
+  border-radius: 0;
+  padding: 0;
+  text-decoration-line: underline;
+}
+body .markdown-source-view span.cm-header-6:not(.cm-highlight, :hover),
+body .markdown-source-view h6:not(.cm-highlight, :hover),
+body .markdown-preview-view span.cm-header-6:not(.cm-highlight, :hover),
+body .markdown-preview-view h6:not(.cm-highlight, :hover) {
   --link-color: var(--h6-color);
   --link-external-color: var(--h6-color);
-  --march-internal-link-background-color: transparent;
-  --march-external-link-background-color: transparent;
 }
-.disable-styled-links-in-headings .markdown-source-view span.cm-header-6.cm-hmd-internal-link > .cm-underline::before, .disable-styled-links-in-headings .markdown-source-view span.cm-header-6:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-source-view span.cm-header-6 a.internal-link:not(.is-unresolved)::before,
-.disable-styled-links-in-headings .markdown-source-view span.cm-header-6 a.internal-link.is-unresolved::before,
-.disable-styled-links-in-headings .markdown-source-view span.cm-header-6 a.external-link:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-source-view h6.cm-hmd-internal-link > .cm-underline::before,
-.disable-styled-links-in-headings .markdown-source-view h6:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-source-view h6 a.internal-link:not(.is-unresolved)::before,
-.disable-styled-links-in-headings .markdown-source-view h6 a.internal-link.is-unresolved::before,
-.disable-styled-links-in-headings .markdown-source-view h6 a.external-link:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-6.cm-hmd-internal-link > .cm-underline::before,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-6:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-6 a.internal-link:not(.is-unresolved)::before,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-6 a.internal-link.is-unresolved::before,
-.disable-styled-links-in-headings .markdown-preview-view span.cm-header-6 a.external-link:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-preview-view h6.cm-hmd-internal-link > .cm-underline::before,
-.disable-styled-links-in-headings .markdown-preview-view h6:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline)::before,
-.disable-styled-links-in-headings .markdown-preview-view h6 a.internal-link:not(.is-unresolved)::before,
-.disable-styled-links-in-headings .markdown-preview-view h6 a.internal-link.is-unresolved::before,
-.disable-styled-links-in-headings .markdown-preview-view h6 a.external-link:not(.cm-escape + .cm-link .cm-underline)::before {
-  display: none;
+body .markdown-source-view span.cm-header-6.cm-highlight:not(:hover),
+body .markdown-source-view h6.cm-highlight:not(:hover),
+body .markdown-preview-view span.cm-header-6.cm-highlight:not(:hover),
+body .markdown-preview-view h6.cm-highlight:not(:hover) {
+  --link-color: currentColor;
+  --link-external-color: currentColor;
+}
+body .markdown-source-view span.cm-header-6.cm-hmd-internal-link > .cm-underline, body .markdown-source-view span.cm-header-6:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-source-view span.cm-header-6 a.internal-link:not(.is-unresolved),
+body .markdown-source-view span.cm-header-6 a.internal-link.is-unresolved,
+body .markdown-source-view span.cm-header-6 a.external-link:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-source-view h6.cm-hmd-internal-link > .cm-underline,
+body .markdown-source-view h6:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-source-view h6 a.internal-link:not(.is-unresolved),
+body .markdown-source-view h6 a.internal-link.is-unresolved,
+body .markdown-source-view h6 a.external-link:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-preview-view span.cm-header-6.cm-hmd-internal-link > .cm-underline,
+body .markdown-preview-view span.cm-header-6:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-preview-view span.cm-header-6 a.internal-link:not(.is-unresolved),
+body .markdown-preview-view span.cm-header-6 a.internal-link.is-unresolved,
+body .markdown-preview-view span.cm-header-6 a.external-link:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-preview-view h6.cm-hmd-internal-link > .cm-underline,
+body .markdown-preview-view h6:is(.cm-link:not(.cm-hmd-footnote, .cm-escape), .cm-url) > .cm-underline:not(.cm-escape + .cm-link .cm-underline),
+body .markdown-preview-view h6 a.internal-link:not(.is-unresolved),
+body .markdown-preview-view h6 a.internal-link.is-unresolved,
+body .markdown-preview-view h6 a.external-link:not(.cm-escape + .cm-link .cm-underline) {
+  border-radius: 0;
+  padding: 0;
+  text-decoration-line: underline;
 }
 
 /* ========================================================================== */
@@ -2243,12 +2428,12 @@ body {
   --h4-size: calc(var(--font-text-size) * 1.4);
   --h5-size: calc(var(--font-text-size) * 1.2);
   --h6-size: calc(var(--font-text-size) * 1);
-  --h1-color: var(--color-red);
-  --h2-color: var(--color-orange);
-  --h3-color: var(--color-green);
-  --h4-color: var(--color-cyan);
-  --h5-color: var(--color-blue);
-  --h6-color: var(--color-purple);
+  --h1-color: var(--text-normal);
+  --h2-color: var(--text-normal);
+  --h3-color: var(--text-normal);
+  --h4-color: var(--text-normal);
+  --h5-color: var(--text-normal);
+  --h6-color: var(--text-normal);
   --march-h1-indicator-color: var(--text-faint);
   --march-h2-indicator-color: var(--text-faint);
   --march-h3-indicator-color: var(--text-faint);
@@ -2261,14 +2446,88 @@ body {
   --march-h4-indicator-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heading4-icon lucide-heading-4"><path d="M12 18V6"/><path d="M17 10v3a1 1 0 0 0 1 1h3"/><path d="M21 10v8"/><path d="M4 12h8"/><path d="M4 18V6"/></svg>');
   --march-h5-indicator-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heading5-icon lucide-heading-5"><path d="M4 12h8"/><path d="M4 18V6"/><path d="M12 18V6"/><path d="M17 13v-3h4"/><path d="M17 17.7c.4.2.8.3 1.3.3 1.5 0 2.7-1.1 2.7-2.5S19.8 13 18.3 13H17"/></svg>');
   --march-h6-indicator-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heading6-icon lucide-heading-6"><path d="M4 12h8"/><path d="M4 18V6"/><path d="M12 18V6"/><circle cx="19" cy="16" r="2"/><path d="M20 10c-2 2-3 3.5-3 6"/></svg>');
+  --march-h1-align: left;
+  --march-h2-align: left;
+  --march-h3-align: left;
+  --march-h4-align: left;
+  --march-h5-align: left;
+  --march-h6-align: left;
+  --march-h1-indicator-opacity: 1;
+  --march-h2-indicator-opacity: 1;
+  --march-h3-indicator-opacity: 1;
+  --march-h4-indicator-opacity: 1;
+  --march-h5-indicator-opacity: 1;
+  --march-h6-indicator-opacity: 1;
 }
 
-body .cm-s-obsidian .cm-line.HyperMD-header + .cm-line:not(.HyperMD-header):has(> br:only-child) + .cm-line.HyperMD-header {
-  padding-top: var(--p-spacing);
+body .cm-s-obsidian .cm-gutters .cm-gutterElement {
+  padding-top: 0 !important;
+  display: flex;
+  align-items: start;
 }
-body .HyperMD-header-1::before,
-body h-1::before {
-  content: "H0";
+body .cm-s-obsidian .cm-line.HyperMD-header {
+  padding-top: 0 !important;
+}
+body .HyperMD-header-1,
+body h-1 {
+  text-align: var(--march-h1-align);
+}
+body .HyperMD-header-2,
+body h-2 {
+  text-align: var(--march-h2-align);
+}
+body .HyperMD-header-3,
+body h-3 {
+  text-align: var(--march-h3-align);
+}
+body .HyperMD-header-4,
+body h-4 {
+  text-align: var(--march-h4-align);
+}
+body .HyperMD-header-5,
+body h-5 {
+  text-align: var(--march-h5-align);
+}
+body .HyperMD-header-6,
+body h-6 {
+  text-align: var(--march-h6-align);
+}
+body .cm-line:hover .collapse-indicator,
+body .HyperMD-header-1:hover .collapse-indicator,
+body h-1:hover .collapse-indicator {
+  opacity: 1 !important;
+}
+body .cm-line:hover .collapse-indicator,
+body .HyperMD-header-2:hover .collapse-indicator,
+body h-2:hover .collapse-indicator {
+  opacity: 1 !important;
+}
+body .cm-line:hover .collapse-indicator,
+body .HyperMD-header-3:hover .collapse-indicator,
+body h-3:hover .collapse-indicator {
+  opacity: 1 !important;
+}
+body .cm-line:hover .collapse-indicator,
+body .HyperMD-header-4:hover .collapse-indicator,
+body h-4:hover .collapse-indicator {
+  opacity: 1 !important;
+}
+body .cm-line:hover .collapse-indicator,
+body .HyperMD-header-5:hover .collapse-indicator,
+body h-5:hover .collapse-indicator {
+  opacity: 1 !important;
+}
+body .cm-line:hover .collapse-indicator,
+body .HyperMD-header-6:hover .collapse-indicator,
+body h-6:hover .collapse-indicator {
+  opacity: 1 !important;
+}
+body .HyperMD-header-1 .collapse-indicator,
+body h-1 .collapse-indicator {
+  opacity: var(--march-h1-indicator-opacity) !important;
+}
+body .HyperMD-header-1 .collapse-indicator.collapse-icon svg,
+body h-1 .collapse-indicator.collapse-icon svg {
   -webkit-mask-image: var(--march-h1-indicator-icon);
   mask-image: var(--march-h1-indicator-icon);
   -webkit-mask-size: 95%;
@@ -2281,32 +2540,18 @@ body h-1::before {
   mask-position: 52%;
   background-color: var(--march-h1-indicator-color);
   color: var(--march-h1-indicator-color);
-  position: absolute;
-  top: 50% !important;
-  left: -20px;
-  font-size: var(--font-ui-smaller);
-  margin-right: 0.5rem;
+  width: 20px;
 }
-body .HyperMD-header-1:has(.is-collapsed),
-body h-1:has(.is-collapsed) {
-  --march-h1-indicator-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>');
-}
-body .HyperMD-header-1:hover,
-body h-1:hover {
+body .HyperMD-header-1 .collapse-indicator.collapse-icon svg:hover,
+body h-1 .collapse-indicator.collapse-icon svg:hover {
   --march-h1-indicator-color: var(--h1-color);
-  --march-h1-indicator-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down-icon lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>');
 }
-body .HyperMD-header-1:hover:has(.is-collapsed),
-body h-1:hover:has(.is-collapsed) {
-  --march-h1-indicator-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>');
+body .HyperMD-header-2 .collapse-indicator,
+body h-2 .collapse-indicator {
+  opacity: var(--march-h2-indicator-opacity) !important;
 }
-body .HyperMD-header-1 .collapse-icon,
-body h-1 .collapse-icon {
-  opacity: 0 !important;
-}
-body .HyperMD-header-2::before,
-body h-2::before {
-  content: "H0";
+body .HyperMD-header-2 .collapse-indicator.collapse-icon svg,
+body h-2 .collapse-indicator.collapse-icon svg {
   -webkit-mask-image: var(--march-h2-indicator-icon);
   mask-image: var(--march-h2-indicator-icon);
   -webkit-mask-size: 95%;
@@ -2319,32 +2564,18 @@ body h-2::before {
   mask-position: 52%;
   background-color: var(--march-h2-indicator-color);
   color: var(--march-h2-indicator-color);
-  position: absolute;
-  top: 50% !important;
-  left: -20px;
-  font-size: var(--font-ui-smaller);
-  margin-right: 0.5rem;
+  width: 20px;
 }
-body .HyperMD-header-2:has(.is-collapsed),
-body h-2:has(.is-collapsed) {
-  --march-h2-indicator-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>');
-}
-body .HyperMD-header-2:hover,
-body h-2:hover {
+body .HyperMD-header-2 .collapse-indicator.collapse-icon svg:hover,
+body h-2 .collapse-indicator.collapse-icon svg:hover {
   --march-h2-indicator-color: var(--h2-color);
-  --march-h2-indicator-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down-icon lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>');
 }
-body .HyperMD-header-2:hover:has(.is-collapsed),
-body h-2:hover:has(.is-collapsed) {
-  --march-h2-indicator-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>');
+body .HyperMD-header-3 .collapse-indicator,
+body h-3 .collapse-indicator {
+  opacity: var(--march-h3-indicator-opacity) !important;
 }
-body .HyperMD-header-2 .collapse-icon,
-body h-2 .collapse-icon {
-  opacity: 0 !important;
-}
-body .HyperMD-header-3::before,
-body h-3::before {
-  content: "H0";
+body .HyperMD-header-3 .collapse-indicator.collapse-icon svg,
+body h-3 .collapse-indicator.collapse-icon svg {
   -webkit-mask-image: var(--march-h3-indicator-icon);
   mask-image: var(--march-h3-indicator-icon);
   -webkit-mask-size: 95%;
@@ -2357,32 +2588,18 @@ body h-3::before {
   mask-position: 52%;
   background-color: var(--march-h3-indicator-color);
   color: var(--march-h3-indicator-color);
-  position: absolute;
-  top: 50% !important;
-  left: -20px;
-  font-size: var(--font-ui-smaller);
-  margin-right: 0.5rem;
+  width: 20px;
 }
-body .HyperMD-header-3:has(.is-collapsed),
-body h-3:has(.is-collapsed) {
-  --march-h3-indicator-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>');
-}
-body .HyperMD-header-3:hover,
-body h-3:hover {
+body .HyperMD-header-3 .collapse-indicator.collapse-icon svg:hover,
+body h-3 .collapse-indicator.collapse-icon svg:hover {
   --march-h3-indicator-color: var(--h3-color);
-  --march-h3-indicator-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down-icon lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>');
 }
-body .HyperMD-header-3:hover:has(.is-collapsed),
-body h-3:hover:has(.is-collapsed) {
-  --march-h3-indicator-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>');
+body .HyperMD-header-4 .collapse-indicator,
+body h-4 .collapse-indicator {
+  opacity: var(--march-h4-indicator-opacity) !important;
 }
-body .HyperMD-header-3 .collapse-icon,
-body h-3 .collapse-icon {
-  opacity: 0 !important;
-}
-body .HyperMD-header-4::before,
-body h-4::before {
-  content: "H0";
+body .HyperMD-header-4 .collapse-indicator.collapse-icon svg,
+body h-4 .collapse-indicator.collapse-icon svg {
   -webkit-mask-image: var(--march-h4-indicator-icon);
   mask-image: var(--march-h4-indicator-icon);
   -webkit-mask-size: 95%;
@@ -2395,32 +2612,18 @@ body h-4::before {
   mask-position: 52%;
   background-color: var(--march-h4-indicator-color);
   color: var(--march-h4-indicator-color);
-  position: absolute;
-  top: 50% !important;
-  left: -20px;
-  font-size: var(--font-ui-smaller);
-  margin-right: 0.5rem;
+  width: 20px;
 }
-body .HyperMD-header-4:has(.is-collapsed),
-body h-4:has(.is-collapsed) {
-  --march-h4-indicator-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>');
-}
-body .HyperMD-header-4:hover,
-body h-4:hover {
+body .HyperMD-header-4 .collapse-indicator.collapse-icon svg:hover,
+body h-4 .collapse-indicator.collapse-icon svg:hover {
   --march-h4-indicator-color: var(--h4-color);
-  --march-h4-indicator-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down-icon lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>');
 }
-body .HyperMD-header-4:hover:has(.is-collapsed),
-body h-4:hover:has(.is-collapsed) {
-  --march-h4-indicator-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>');
+body .HyperMD-header-5 .collapse-indicator,
+body h-5 .collapse-indicator {
+  opacity: var(--march-h5-indicator-opacity) !important;
 }
-body .HyperMD-header-4 .collapse-icon,
-body h-4 .collapse-icon {
-  opacity: 0 !important;
-}
-body .HyperMD-header-5::before,
-body h-5::before {
-  content: "H0";
+body .HyperMD-header-5 .collapse-indicator.collapse-icon svg,
+body h-5 .collapse-indicator.collapse-icon svg {
   -webkit-mask-image: var(--march-h5-indicator-icon);
   mask-image: var(--march-h5-indicator-icon);
   -webkit-mask-size: 95%;
@@ -2433,32 +2636,18 @@ body h-5::before {
   mask-position: 52%;
   background-color: var(--march-h5-indicator-color);
   color: var(--march-h5-indicator-color);
-  position: absolute;
-  top: 50% !important;
-  left: -20px;
-  font-size: var(--font-ui-smaller);
-  margin-right: 0.5rem;
+  width: 20px;
 }
-body .HyperMD-header-5:has(.is-collapsed),
-body h-5:has(.is-collapsed) {
-  --march-h5-indicator-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>');
-}
-body .HyperMD-header-5:hover,
-body h-5:hover {
+body .HyperMD-header-5 .collapse-indicator.collapse-icon svg:hover,
+body h-5 .collapse-indicator.collapse-icon svg:hover {
   --march-h5-indicator-color: var(--h5-color);
-  --march-h5-indicator-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down-icon lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>');
 }
-body .HyperMD-header-5:hover:has(.is-collapsed),
-body h-5:hover:has(.is-collapsed) {
-  --march-h5-indicator-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>');
+body .HyperMD-header-6 .collapse-indicator,
+body h-6 .collapse-indicator {
+  opacity: var(--march-h6-indicator-opacity) !important;
 }
-body .HyperMD-header-5 .collapse-icon,
-body h-5 .collapse-icon {
-  opacity: 0 !important;
-}
-body .HyperMD-header-6::before,
-body h-6::before {
-  content: "H0";
+body .HyperMD-header-6 .collapse-indicator.collapse-icon svg,
+body h-6 .collapse-indicator.collapse-icon svg {
   -webkit-mask-image: var(--march-h6-indicator-icon);
   mask-image: var(--march-h6-indicator-icon);
   -webkit-mask-size: 95%;
@@ -2471,28 +2660,11 @@ body h-6::before {
   mask-position: 52%;
   background-color: var(--march-h6-indicator-color);
   color: var(--march-h6-indicator-color);
-  position: absolute;
-  top: 50% !important;
-  left: -20px;
-  font-size: var(--font-ui-smaller);
-  margin-right: 0.5rem;
+  width: 20px;
 }
-body .HyperMD-header-6:has(.is-collapsed),
-body h-6:has(.is-collapsed) {
-  --march-h6-indicator-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>');
-}
-body .HyperMD-header-6:hover,
-body h-6:hover {
+body .HyperMD-header-6 .collapse-indicator.collapse-icon svg:hover,
+body h-6 .collapse-indicator.collapse-icon svg:hover {
   --march-h6-indicator-color: var(--h6-color);
-  --march-h6-indicator-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down-icon lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>');
-}
-body .HyperMD-header-6:hover:has(.is-collapsed),
-body h-6:hover:has(.is-collapsed) {
-  --march-h6-indicator-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>');
-}
-body .HyperMD-header-6 .collapse-icon,
-body h-6 .collapse-icon {
-  opacity: 0 !important;
 }
 
 /* ========================================================================== */
@@ -2505,6 +2677,9 @@ body {
   --table-border-color: var(--march-50-accent);
 }
 
+/* ========================================================================== */
+/*                           Editor - Formatted Text                          */
+/* ========================================================================== */
 :is(body) {
   --march-formatted-text-highlight-bg: hsl(56, 100%, 50%);
   --march-formatted-text-highlight-fg: hsl(0, 0%, 0%);
@@ -2513,23 +2688,42 @@ body {
 }
 
 .theme-light {
-  --march-formatted-text-bg-height: 0.6rem;
+  --march-formatted-text-bg-height: calc(var(--font-text-size) / 2);
 }
 
 .theme-dark {
-  --march-formatted-text-bg-height: 0rem;
+  --march-formatted-text-bg-height: calc(var(--font-text-size) / 8);
   --bold-color: var(--march-formatted-text-bold-bg);
   --italic-color: var(--march-formatted-text-italic-bg);
 }
 
+/* ========================================================================== */
+/*                                  Highlight                                 */
+/* ========================================================================== */
 .cm-highlight,
 mark {
   background-color: var(--march-formatted-text-highlight-bg) !important;
   color: var(--march-formatted-text-highlight-fg) !important;
-  --link-color: var(--text-on-accent);
-  --march-internal-link-background-color: var(--march-accent);
-  --link-external-color: var(--text-on-accent);
-  --march-external-link-background-color: var(--march-accent);
+}
+.cm-highlight :not(:hover),
+mark :not(:hover) {
+  color: var(--march-formatted-text-highlight-fg) !important;
+}
+
+.cm-line .cm-highlight:nth-child(1 of .cm-highlight) {
+  border-top-left-radius: var(--radius-m);
+  border-bottom-left-radius: var(--radius-m);
+  padding-left: 5px;
+}
+.cm-line .cm-highlight:nth-last-child(1 of .cm-highlight) {
+  border-top-right-radius: var(--radius-m);
+  border-bottom-right-radius: var(--radius-m);
+  padding-right: 5px;
+}
+
+mark {
+  border-radius: var(--radius-m);
+  padding: 0 5px;
 }
 
 .theme-dark .suggestion-highlight,
@@ -2547,19 +2741,16 @@ mark {
   border-bottom: 2px solid var(--march-formatted-text-highlight-bg);
 }
 
+/* ========================================================================== */
+/*                                    Bold                                    */
+/* ========================================================================== */
 b,
 strong,
 .cm-strong {
   color: var(--bold-color);
   box-shadow: inset 0 calc(var(--march-formatted-text-bg-height) * -1) 0 0 var(--march-formatted-text-bold-bg);
-}
-b .cm-link,
-strong .cm-link,
-.cm-strong .cm-link {
-  --link-color: var(--text-on-accent);
-  --march-internal-link-background-color: var(--march-accent);
-  --link-external-color: var(--text-on-accent);
-  --march-external-link-background-color: var(--march-accent);
+  --link-color: var(--bold-color) !important;
+  --link-external-color: var(--bold-color) !important;
 }
 b i, b em, b.cm-em,
 strong i,
@@ -2573,23 +2764,20 @@ strong.cm-em,
 b.cm-inline-code,
 strong.cm-inline-code,
 .cm-strong.cm-inline-code {
-  box-shadow: inset 0 0 0 0 var(--march-formatted-text-bold-bg);
+  border-radius: 0 !important;
 }
 
+/* ========================================================================== */
+/*                                   Italic                                   */
+/* ========================================================================== */
 i,
 em,
 .cm-em {
   color: var(--italic-color);
   box-shadow: inset 0 calc(var(--march-formatted-text-bg-height) * -1) 0 0 var(--march-formatted-text-italic-bg);
   padding-right: 0.2rem;
-}
-i .cm-link,
-em .cm-link,
-.cm-em .cm-link {
-  --link-color: var(--text-on-accent);
-  --march-internal-link-background-color: var(--march-accent);
-  --link-external-color: var(--text-on-accent);
-  --march-external-link-background-color: var(--march-accent);
+  --link-color: var(--italic-color);
+  --link-external-color: var(--italic-color);
 }
 i b, i strong, i.cm-strong,
 em b,
@@ -2603,7 +2791,15 @@ em.cm-strong,
 i.cm-inline-code,
 em.cm-inline-code,
 .cm-em.cm-inline-code {
-  box-shadow: inset 0 0 0 0 var(--march-formatted-text-bold-bg);
+  border-radius: 0 !important;
+}
+
+/* ========================================================================== */
+/*                               Strike through                               */
+/* ========================================================================== */
+.cm-strikethrough,
+del {
+  color: var(--text-faint);
 }
 
 /* ========================================================================== */
@@ -2721,7 +2917,6 @@ em.cm-inline-code,
 }
 .nav-files-container .is-active {
   --nav-collapse-icon-color: var(--march-accent);
-  --background-modifier-border-focus: var(--march-50-accent);
 }
 .nav-files-container .is-active .tree-item-inner {
   background-color: var(--march-accent);
@@ -2730,6 +2925,9 @@ em.cm-inline-code,
   border-radius: 0.6rem;
   transition: var(--transition-file-explorer-property);
   transition-duration: var(--transition-file-explorer-duration);
+}
+.nav-files-container .is-active {
+  --background-modifier-border-focus: var(--march-50-accent);
 }
 .nav-files-container .is-active:hover {
   --nav-item-background-active: var(--march-bg-accent);
@@ -2952,6 +3150,10 @@ li[data-task="-"].task-list-item.is-checked span.dataview.inline-field-key,
 li[data-task="-"].task-list-item.is-checked span.dataview.inline-field-value {
   background: transparent;
   color: var(--text-faint);
+}
+
+body {
+  --bases-embed-radius: 10px;
 }
 
 .cmdr-name-input-wrapper {
