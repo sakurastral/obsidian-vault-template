@@ -18,6 +18,7 @@
     "Day：Events": "multitext",
     "Day：Work": "multitext",
     "Task：Scheduled(Start)": "datetime",
-    "Task：Scheduled(End)": "datetime"
+    "Task：Scheduled(End)": "datetime",
+    "process": "number"
   }
 }
