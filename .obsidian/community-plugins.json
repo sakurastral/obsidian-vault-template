@@ -2,7 +2,6 @@
   "templater-obsidian",
   "custom-sort",
   "obsidian-memos",
-  "tag-wrangler",
   "keyshots",
   "obsidian-icon-folder",
   "calendar",
@@ -13,5 +12,6 @@
   "obsidian42-brat",
   "modalforms",
   "obsidian-custom-attachment-location",
-  "obsidian-linter"
+  "obsidian-linter",
+  "calendar-bases"
 ]

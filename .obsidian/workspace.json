@@ -86,12 +86,12 @@
             }
           },
           {
-            "id": "e59c101f717cd836",
+            "id": "990c5da5df1ca4c0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Nexus/Categories/Common.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -106,7 +106,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Common"
             }
           }
         ],
@@ -213,13 +213,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "Nexus/Categories/Common.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of README"
+              "title": "Outline of Common"
             }
           }
         ]
@@ -235,7 +235,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Nexus/Categories/Common.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -245,7 +245,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for README"
+              "title": "Backlinks for Common"
             }
           },
           {
@@ -306,6 +306,16 @@
       "modalforms:Edit forms": false
     }
   },
-  "active": "e59c101f717cd836",
-  "lastOpenFiles": []
+  "active": "990c5da5df1ca4c0",
+  "lastOpenFiles": [
+    "Nexus/Categories/Journal.md",
+    "Nexus/Categories/Task.md",
+    "Nexus/Categories/Vault Management.md",
+    "Nexus/Categories/Vault Properties.md",
+    "Nexus/Categories/MOC.md",
+    "Nexus/Categories/Project.md",
+    "Nexus/Categories/Outdated.md",
+    "Atlas/Task Board.md",
+    "README.md"
+  ]
 }
