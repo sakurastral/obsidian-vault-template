@@ -19,6 +19,6 @@
     "Day：Work": "multitext",
     "Task：Scheduled(Start)": "datetime",
     "Task：Scheduled(End)": "datetime",
-    "process": "number"
+    "status": "text"
   }
 }

@@ -6,11 +6,11 @@
     "emojiStyle": "twemoji",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "RiProgress3Line",
-      "LiCalendar",
-      "LiSquareSplitHorizontal",
-      "LiBraces",
-      "RiAsterisk"
+      "LiMapPin",
+      "RaFlowers",
+      "LiTreePine",
+      "TiPlant",
+      "LiSprout"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -29,7 +29,7 @@
     "iconIdentifier": ":",
     "debugMode": false,
     "iconInFrontmatterFieldName": "icon",
-    "iconColorInFrontmatterFieldName": "iconColor",
+    "iconColorInFrontmatterFieldName": "icon-color",
     "iconInTitlePosition": "above",
     "lucideIconPackType": "native",
     "useInternalPlugins": true
@@ -72,5 +72,26 @@
   "Assets/Settings/Task Status": "RiCheckDoubleLine",
   "Atlas/Vault Property Management.md": "BoBxCategory",
   "Assets/Settings/Journal": "LiCalendar",
-  "Nexus/Categories/Outdated.md": "RiAsterisk"
+  "Nexus/Categories/Outdated.md": "RiAsterisk",
+  "Nexus/Status": "TiSeeding",
+  "Nexus/Status/Seedling.md": {
+    "iconName": "LiSprout",
+    "iconColor": "var(--color-cyan)"
+  },
+  "Nexus/Status/Sapling.md": {
+    "iconName": "TiPlant",
+    "iconColor": "var(--color-blue)"
+  },
+  "Nexus/Status/Tree.md": {
+    "iconName": "LiTreePine",
+    "iconColor": "var(--color-green)"
+  },
+  "Nexus/Status/Wildflower.md": {
+    "iconName": "RaFlowers",
+    "iconColor": "var(--color-red)"
+  },
+  "Nexus/Status/Path.md": {
+    "iconName": "LiMapPin",
+    "iconColor": "var(--color-yellow)"
+  }
 }
