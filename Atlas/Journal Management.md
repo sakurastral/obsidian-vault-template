@@ -30,16 +30,6 @@ properties:
     displayName: Date
   formula.weekday:
     displayName: Week day
-  note.Day：Type:
-    displayName: Type
-  note.Day：N-Holiday:
-    displayName: National Holiday
-  note.Day：Makeup:
-    displayName: Makeup Type
-  note.Day：Events:
-    displayName: Events
-  note.Day：Work:
-    displayName: Work Status
 views:
   - type: table
     name: Current
@@ -49,11 +39,6 @@ views:
     order:
       - formula.date
       - formula.weekday
-      - Day：Type
-      - Day：N-Holiday
-      - Day：Makeup
-      - Day：Events
-      - Day：Work
       - tags
     sort:
       - property: file.basename
@@ -61,10 +46,6 @@ views:
     columnSize:
       formula.date: 123
       formula.weekday: 29
-      note.Day：N-Holiday: 158
-      note.Day：Makeup: 141
-      note.Day：Events: 134
-      note.Day：Work: 121
       note.tags: 155
   - type: table
     name: Past
@@ -74,11 +55,6 @@ views:
     order:
       - formula.date
       - formula.weekday
-      - Day：Type
-      - Day：N-Holiday
-      - Day：Makeup
-      - Day：Events
-      - Day：Work
       - tags
     sort:
       - property: file.basename
@@ -86,10 +62,6 @@ views:
     columnSize:
       formula.date: 123
       formula.weekday: 29
-      note.Day：N-Holiday: 158
-      note.Day：Makeup: 141
-      note.Day：Events: 134
-      note.Day：Work: 121
       note.tags: 155
   - type: table
     name: View

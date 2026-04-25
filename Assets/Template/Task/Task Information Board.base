@@ -1,0 +1,38 @@
+filters:
+  and:
+    - file.path == this.file.path
+    - file.folder == this.file.folder
+formulas:
+  schedule: if(note["Task：Scheduled(Start)"] && note["Task：Scheduled(Start)"]!="",note["Task：Scheduled(Start)"].format("YYYY-MM-DD HH:mm"),"")+if(note["Task：Scheduled(End)"] && (note["Task：Scheduled(Start)"].toString() != note["Task：Scheduled(End)"].toString()), " ~ "+note["Task：Scheduled(End)"].format("YYYY-MM-DD HH:mm"), "")
+properties:
+  note.Task：Content:
+    displayName: 任務內容
+  note.Task：Status:
+    displayName: 執行進度
+  note.Task：Priority:
+    displayName: 重要性
+  formula.schedule:
+    displayName: 預計執行日期
+  note.Task：Due:
+    displayName: 截止日期（死線）
+  note.Task：Done:
+    displayName: 完成日期
+  note.Task：Cancelled:
+    displayName: 取消日期
+  note.Task：Archived:
+    displayName: 歸檔日期
+views:
+  - type: cards
+    name: View
+    order:
+      - Task：Content
+      - Task：Status
+      - Task：Priority
+      - formula.schedule
+      - Task：Due
+      - Task：Done
+      - Task：Cancelled
+      - Task：Archived
+    imageAspectRatio: 0.35
+    cardSize: 400
+    image: note.cover

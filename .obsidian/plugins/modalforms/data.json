@@ -61,7 +61,7 @@
           "isRequired": false,
           "input": {
             "type": "note",
-            "folder": "Assets/Settings/Title Prefix"
+            "folder": "Nexus/Title Prefix"
           }
         },
         {
@@ -81,7 +81,7 @@
           "isRequired": false,
           "input": {
             "type": "note",
-            "folder": "Assets/Settings/Title Separator"
+            "folder": "Nexus/Title Separator"
           }
         },
         {
@@ -142,23 +142,24 @@
           }
         },
         {
-          "name": "project",
-          "label": "Project",
-          "description": "",
-          "isRequired": false,
-          "input": {
-            "type": "note",
-            "folder": "Nexus/Categories/Projects"
-          }
-        },
-        {
           "name": "status",
           "label": "Current Status",
           "description": "",
           "isRequired": true,
           "input": {
             "type": "note",
-            "folder": "Assets/Settings/Task Status"
+            "folder": "Nexus/Task Status"
+          }
+        },
+        {
+          "name": "priority",
+          "label": "Task Priority",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "slider",
+            "min": 0,
+            "max": 5
           }
         }
       ],
@@ -221,6 +222,57 @@
             "type": "multiselect",
             "source": "notes",
             "folder": "Assets/Settings/Journal/Work Status"
+          }
+        }
+      ],
+      "version": "1"
+    },
+    {
+      "title": "Edit Calendar Event",
+      "name": "edit-calendar-event",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "description": "",
+          "isRequired": true,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "start",
+          "label": "Start Date",
+          "description": "",
+          "isRequired": true,
+          "input": {
+            "type": "date",
+            "hidden": false
+          }
+        },
+        {
+          "name": "end",
+          "label": "End Date",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "start",
+            "type": "isSet"
+          },
+          "input": {
+            "type": "date",
+            "hidden": false
+          }
+        },
+        {
+          "name": "type",
+          "label": "Type",
+          "description": "",
+          "isRequired": true,
+          "input": {
+            "type": "note",
+            "folder": "Nexus/Calendar Scope"
           }
         }
       ],

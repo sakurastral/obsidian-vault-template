@@ -128,6 +128,37 @@
                 "type": "Obsidian",
                 "id": "edb8165c-587d-4e86-8d65-864a810f77b7",
                 "commandId": "templater-obsidian:create-Assets/Template/Task/Add New Task.md"
+              },
+              {
+                "name": "Wait",
+                "type": "Wait",
+                "id": "fd3e9763-6d54-4976-a41f-54c0eecb7f88",
+                "time": 100
+              },
+              {
+                "name": "Templater: Insert Task/Edit Task",
+                "type": "Obsidian",
+                "id": "de1020d9-c488-4cad-8c4b-baebfc5f33d7",
+                "commandId": "templater-obsidian:Assets/Template/Task/Edit Task.md"
+              }
+            ]
+          }
+        },
+        {
+          "id": "6ef5affd-c449-4d6e-8c0d-abdafca714c1",
+          "name": "Edit Task",
+          "type": "Macro",
+          "command": false,
+          "runOnStartup": false,
+          "macro": {
+            "name": "Edit Task",
+            "id": "37586ee2-c088-40c9-8c41-d846b9f504a8",
+            "commands": [
+              {
+                "name": "Templater: Insert Task/Edit Task",
+                "type": "Obsidian",
+                "id": "e6055957-4ce4-4ca7-9e26-6823059eed5d",
+                "commandId": "templater-obsidian:Assets/Template/Task/Edit Task.md"
               }
             ]
           }
@@ -260,20 +291,20 @@
           }
         },
         {
-          "id": "a1ca67a4-b857-47f2-865e-9623b38d62c0",
-          "name": "Edit Journal's Properties",
+          "id": "d78f3b4a-2fe5-4277-8a48-ba5a64ecdc47",
+          "name": "Edit Calendar Event",
           "type": "Macro",
           "command": false,
           "runOnStartup": false,
           "macro": {
-            "name": "Edit Journal's Properties",
-            "id": "05535692-4ce3-4597-9a7b-69d8f8f2ca05",
+            "name": "Edit Calendar Event",
+            "id": "b86c0b7b-f411-45ee-8d55-36ad51d665df",
             "commands": [
               {
-                "name": "Templater: Insert Project/Journal/Edit Journal's Properties",
+                "name": "Templater: Insert Project/Calendar/Add New Event",
                 "type": "Obsidian",
-                "id": "068a2482-d982-4844-8dac-8cc552d7539c",
-                "commandId": "templater-obsidian:Assets/Template/Project/Journal/Edit Journal's Properties.md"
+                "id": "a62fef7f-5090-44fb-bee7-79e67781ffec",
+                "commandId": "templater-obsidian:Assets/Template/Project/Calendar/Add New Event.md"
               }
             ]
           }

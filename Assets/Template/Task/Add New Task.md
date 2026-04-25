@@ -1,76 +1,50 @@
-<%* let title = tp.file.title _%> 
-<%*  // Pre-define Form Values
-	let path = "";  
-	let files = "";
-	
-	let project = "";
-	
-	let content = "";
-	
-	let due = tp.date.now("YYYY-MM-DDT17:00");
+---
+cover:
+title: Add New Task
+aliases:
+categories: 
+   - "[[Task]]"  
+tags:
+created: 2025-06-24T09:30:38+08:00
+modified: 2026-04-25T14:41:17+08:00
+status:
+parent:
+references:
+Task：Content:   
+Task：Status: 
+Task：Priority:  
+Task：Scheduled(Start):
+Task：Scheduled(End):
+Task：Due: 
+Task：Done:  
+Task：Cancelled:  
+Task：Archived:  
+---
+<%* let title = tp.file.title _%>
+<%* if (tp.file.title.includes("Untitled")) { -%>
+![[Task Information Board.base#View|no-toolbar]]  
+<%* } -%>
+<%*
 
-	path = "Assets/Settings/Task Status";  
-	files = app.vault.getMarkdownFiles()
-		.filter(file => file.path.includes(path))
-		.map(tFile=>tFile.basename)
-		.sort((a, b) => { return a.localeCompare(b); }); 
-	let status = files[0];
-
-	let values = {
-		project,
-		content, 
-		due, 
-		status,
-	}
-_%> 
-<%* 
-if (title.startsWith("Untitled")) { 
-_%> 
-<%*  
+if ( title.startsWith("Untitled") ) { 
 	if( !title ) { title = "" }  
 	let counter = 1;  
 	let checkedTitle = tp.date.now("YYYYMMDDHHmmss");  
 	while (await tp.file.exists(tp.file.folder(true) + "/" + checkedTitle + ".md") ) {    
-		checkedTitle = title + "_" + counter;  
+		checkedTitle = checkedTitle + "_" + counter;  
 		counter++;  
 	}  
 	title = checkedTitle;  
 	title = tp.obsidian.stripHeading(title);  
 	title = tp.obsidian.stripHeadingForLink(title);  
-	await tp.file.rename(title);  
-_%> 
-<%* } _%> 
-<%*  
-	const modalForm = app.plugins.plugins.modalforms.api;  
-	const formResult = await modalForm.openForm('add-new-task', { values });  
-	const data = formResult.getData();  
-	if (data.project) {
-		project = '- "[[' + data.project + ']]"';
-	}
-	content = data.content;  
-	due = data.due;  
-	status = "[[" + data.status + "]]";  
-	start = data.start ?? "";
-	end = data.end ?? "";
-_%>
----
-title: <% (title) %>  
-categories: 
-   - "[[Task]]"  
-   <%(project)%>
-Task：Content: <% (content) %>  
-Task：Status: "<%(status)%>"  
-Task：Priority:  
-Task：Scheduled(Start): <% (start) %> 
-Task：Scheduled(End): <% (end) %> 
-Task：Due: <% (due) %>  
-Task：Done:  
-Task：Cancelled:  
-Task：Archived:  
-<%* -%>
----
+	// await tp.file.rename(title);  
+	await tp.file.move("/Task/Inbox/" + title)
+}  
+-%>
 <%*
 	tp.hooks.on_all_templates_executed(async() => {
-		await tp.file.move("/Task/Inbox/" + title)
+	  const file = tp.file.find_tfile(tp.file.path(true));
+	  await app.workspace.activeLeaf.openFile(file);
+	  await app.commands.executeCommandById("obsidian-linter:lint-file"); 
 	});
-_%>
+-%>

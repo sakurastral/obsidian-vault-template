@@ -4,7 +4,6 @@
   "obsidian-memos",
   "keyshots",
   "obsidian-icon-folder",
-  "calendar",
   "obsidian-outliner",
   "cmdr",
   "obsidian-style-settings",
@@ -13,5 +12,7 @@
   "modalforms",
   "obsidian-custom-attachment-location",
   "obsidian-linter",
-  "calendar-bases"
+  "calendar-bases",
+  "better-properties",
+  "supercharged-links-obsidian"
 ]

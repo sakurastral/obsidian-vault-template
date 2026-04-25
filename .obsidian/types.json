@@ -8,17 +8,19 @@
     "categories": "multitext",
     "references": "multitext",
     "parent": "multitext",
-    "Task：Priority": "number",
+    "Task：Priority": "better-properties:rating",
     "Task：Due": "datetime",
     "Task：Done": "datetime",
     "Task：Cancelled": "datetime",
     "Task：Archived": "datetime",
     "Task：Content": "text",
-    "Day：N-Holiday": "multitext",
-    "Day：Events": "multitext",
-    "Day：Work": "multitext",
     "Task：Scheduled(Start)": "datetime",
     "Task：Scheduled(End)": "datetime",
-    "status": "text"
+    "status": "better-properties:select",
+    "Task：Status": "better-properties:select",
+    "calendar-event-end": "date",
+    "calendar-event-start": "date",
+    "calendar-event-title": "text",
+    "calendar-event-type": "better-properties:select"
   }
 }

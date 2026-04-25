@@ -1,6 +1,13 @@
 {
-  "pluginList": [],
-  "pluginSubListFrozenVersion": [],
+  "pluginList": [
+    "unxok/obsidian-better-properties"
+  ],
+  "pluginSubListFrozenVersion": [
+    {
+      "repo": "unxok/obsidian-better-properties",
+      "version": "latest"
+    }
+  ],
   "themesList": [
     {
       "repo": "sakurastral/Obsidian-March-Theme",
@@ -15,6 +22,7 @@
   "loggingVerboseEnabled": false,
   "debuggingMode": false,
   "notificationsEnabled": true,
+  "globalTokenName": "",
   "personalAccessToken": "",
   "selectLatestPluginVersionByDefault": false,
   "allowIncompatiblePlugins": false

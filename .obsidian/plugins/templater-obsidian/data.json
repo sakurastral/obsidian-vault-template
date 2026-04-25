@@ -29,6 +29,10 @@
     {
       "folder": "Nexus/Categories",
       "template": "Assets/Template/Nexus/Add New Category.md"
+    },
+    {
+      "folder": "Project/Calendar",
+      "template": "Assets/Template/Project/Calendar/Add New Event.md"
     }
   ],
   "enable_file_templates": false,
@@ -49,7 +53,8 @@
     "Assets/Template/Custom/Convert Color Codes to HTML Block.md",
     "Assets/Template/Custom/Update “Created” and “Modified” Properties Across All Vault Notes.md",
     "Assets/Template/Custom/Delete Example Notes.md",
-    "Assets/Template/Project/Journal/Edit Journal's Properties.md"
+    "Assets/Template/Project/Calendar/Add New Event.md",
+    "Assets/Template/Task/Edit Task.md"
   ],
   "startup_templates": [
     ""
