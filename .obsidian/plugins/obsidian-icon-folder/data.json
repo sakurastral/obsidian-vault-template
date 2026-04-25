@@ -6,11 +6,11 @@
     "emojiStyle": "twemoji",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "TiCalendarCog",
       "LiMapPin",
       "RaFlowers",
       "LiTreePine",
-      "TiPlant",
-      "LiSprout"
+      "TiPlant"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -31,7 +31,7 @@
     "iconInFrontmatterFieldName": "icon",
     "iconColorInFrontmatterFieldName": "icon-color",
     "iconInTitlePosition": "above",
-    "lucideIconPackType": "native",
+    "lucideIconPackType": "custom",
     "useInternalPlugins": true
   },
   "Collection": "BoBxCollection",
@@ -67,31 +67,13 @@
   "Nexus/Categories/Vault Properties.md": "RiAsterisk",
   "Nexus/Categories/Project.md": "RiAsterisk",
   "Nexus/Categories/Projects": "TiSquareLetterP",
-  "Assets/Settings/Title Prefix": "LiBraces",
-  "Assets/Settings/Title Separator": "LiSquareSplitHorizontal",
-  "Assets/Settings/Task Status": "RiCheckDoubleLine",
   "Atlas/Vault Property Management.md": "BoBxCategory",
   "Assets/Settings/Journal": "LiCalendar",
   "Nexus/Categories/Outdated.md": "RiAsterisk",
   "Nexus/Status": "TiSeeding",
-  "Nexus/Status/Seedling.md": {
-    "iconName": "LiSprout",
-    "iconColor": "var(--color-cyan)"
-  },
-  "Nexus/Status/Sapling.md": {
-    "iconName": "TiPlant",
-    "iconColor": "var(--color-blue)"
-  },
-  "Nexus/Status/Tree.md": {
-    "iconName": "LiTreePine",
-    "iconColor": "var(--color-green)"
-  },
-  "Nexus/Status/Wildflower.md": {
-    "iconName": "RaFlowers",
-    "iconColor": "var(--color-red)"
-  },
-  "Nexus/Status/Path.md": {
-    "iconName": "LiMapPin",
-    "iconColor": "var(--color-yellow)"
-  }
+  "Nexus/Task Status": "RiCheckDoubleLine",
+  "Nexus/Title Prefix": "LiBraces",
+  "Nexus/Title Separator": "LiSquareSplitHorizontal",
+  "Nexus/Calendar Scope": "TiCalendarCog",
+  "Project/Calendar": "LiCalendar"
 }

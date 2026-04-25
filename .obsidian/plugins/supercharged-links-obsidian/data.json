@@ -1,0 +1,14 @@
+{
+  "targetAttributes": [],
+  "targetTags": true,
+  "getFromInlineField": false,
+  "enableTabHeader": true,
+  "activateSnippet": false,
+  "enableEditor": true,
+  "enableFileList": true,
+  "enableBacklinks": true,
+  "enableQuickSwitcher": true,
+  "enableSuggestor": true,
+  "enableBases": true,
+  "selectors": []
+}

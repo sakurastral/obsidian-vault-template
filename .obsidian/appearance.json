@@ -3,7 +3,9 @@
   "theme": "moonstone",
   "translucency": false,
   "cssTheme": "March",
-  "enabledCssSnippets": [],
+  "enabledCssSnippets": [
+    "custom-supercharged-links"
+  ],
   "accentColor": "#45b0a9",
   "nativeMenus": false,
   "showViewHeader": true,
