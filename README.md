@@ -90,23 +90,11 @@ You can install more icons packs if you needed.
 
 ### Optional
 
-#### Obsidian Shiki Plugin 
-
-Github - @mProjectsCode - [obsidian-shiki-plugin](https://github.com/mProjectsCode/obsidian-shiki-plugin)
-
-This plugin is not installed in the vault, but is a good choice if you want to enhance codeblock style in editor mode.
-
 #### Pretty properties 
 
 Github - @anareaty - [pretty-properties](https://github.com/anareaty/pretty-properties)
 
 This is another useful plugin if you would like to beautify your properties table in notes or table view in bases. This plugin is not installed in the vault.
-
-#### Image Converter for ObsidianMD
-
-Github - @xRyul - [obsidian-image-converter](https://github.com/xRyul/obsidian-image-converter)
-
-It is very useful for managing images in notes, but it conflicts with custom-attachment-location.
 
 #### Markdown Furigana Plugin (Obsidian)
 

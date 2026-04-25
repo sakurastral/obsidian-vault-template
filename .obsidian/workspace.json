@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "9b1dc716f10c9ce8",
+            "id": "872373c1055f0c9f",
             "type": "leaf",
             "pinned": true,
             "state": {
@@ -86,7 +86,7 @@
             }
           },
           {
-            "id": "872373c1055f0c9f",
+            "id": "42556a6b43688bd9",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -205,7 +205,7 @@
       {
         "id": "e0b0afcc912cf2b1",
         "type": "tabs",
-        "dimension": 46.930693069306926,
+        "dimension": 65.56016597510373,
         "children": [
           {
             "id": "07766727dce5fd96",
@@ -227,7 +227,7 @@
       {
         "id": "9071511ae065c246",
         "type": "tabs",
-        "dimension": 24.653465346534652,
+        "dimension": 34.439834024896264,
         "children": [
           {
             "id": "f05afacf01780ff4",
@@ -263,23 +263,6 @@
             }
           }
         ]
-      },
-      {
-        "id": "1d9b4608d4cb9576",
-        "type": "tabs",
-        "dimension": 28.415841584158414,
-        "children": [
-          {
-            "id": "814453d4a90af9b5",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {},
-              "icon": "lucide-ghost",
-              "title": "calendar"
-            }
-          }
-        ]
       }
     ],
     "direction": "horizontal",
@@ -306,11 +289,11 @@
       "cmdr:QuickAdd: Block Composer": false
     }
   },
-  "active": "872373c1055f0c9f",
+  "active": "42556a6b43688bd9",
   "lastOpenFiles": [
     "Atlas/Home.md",
-    "Assets/Settings/Settings for Custom File Explorer Sorting.md",
     "README.md",
+    "Assets/Settings/Settings for Custom File Explorer Sorting.md",
     "Atlas/Task Board.md",
     "Nexus/Status/Wildflower.md",
     "Nexus/Status/Tree.md",
