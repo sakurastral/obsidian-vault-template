@@ -1,12 +1,12 @@
-<%* let title = tp.file.title -%>  
-<%* if (title.startsWith("Untitled")) { -%>  
+<%* let title = tp.file.title -%>
+<%* if (title.startsWith("Untitled")) { -%>
 <%*  
-	try{  
-		const modalForm = app.plugins.plugins.modalforms.api;  
-		const formResult = await modalForm.openForm('edit-note-title');  
-		const data = formResult.getData();  
-		if (!data.title) { return; }  
-		title = (data.prefix ?? "") + (data.textBeforeSymbol ?? "") + (data.symbol ?? "") + data.title;  
+	try{
+		const modalForm = app.plugins.plugins.modalforms.api;
+		const formResult = await modalForm.openForm('edit-note-title');
+		const data = formResult.getData();
+		if (!data.title) { return; }
+		title = (data.prefix ?? "") + (data.textBeforeSymbol ?? "") + (data.symbol ?? "") + data.title;
 		title = tp.obsidian.stripHeadingForLink(title);
 		
 		//https://www.reddit.com/r/ObsidianMD/comments/1bpoetv/seeking_advice_automating_file_naming_with/
@@ -31,11 +31,11 @@ title: <% (title) %>
 	const cat = await tp.file.include(tp.file.find_tfile("Add New Categories"))
 -%>
 ---
-<%* } -%>  
-<%*  
-	tp.hooks.on_all_templates_executed(async() => {  
-	  const file = tp.file.find_tfile(tp.file.path(true));  
-	  await app.workspace.activeLeaf.openFile(file);  
-	  await app.commands.executeCommandById("obsidian-linter:lint-file");  
-	});  
+<%* } -%>
+<%*
+	tp.hooks.on_all_templates_executed(async() => {
+	  const file = tp.file.find_tfile(tp.file.path(true));
+	  await app.workspace.activeLeaf.openFile(file);
+	  await app.commands.executeCommandById("obsidian-linter:lint-file"); 
+	});
 -%>
