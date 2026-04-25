@@ -166,68 +166,6 @@
       "version": "1"
     },
     {
-      "title": "Edit Journal Properties",
-      "name": "edit-journal-properties",
-      "fields": [
-        {
-          "name": "day-type",
-          "label": "Today's Day Type",
-          "description": "Is today a workday or a day off?",
-          "isRequired": false,
-          "input": {
-            "type": "select",
-            "source": "notes",
-            "folder": "Assets/Settings/Journal/Day Type"
-          }
-        },
-        {
-          "name": "national-holidays",
-          "label": "National Hoilidays",
-          "description": "",
-          "isRequired": false,
-          "input": {
-            "type": "multiselect",
-            "source": "notes",
-            "folder": "Assets/Settings/Journal/National Holidays"
-          }
-        },
-        {
-          "name": "makeup-type",
-          "label": "Makeup Type",
-          "description": "",
-          "isRequired": false,
-          "input": {
-            "type": "multiselect",
-            "source": "notes",
-            "folder": "Assets/Settings/Journal/Makeup Type"
-          }
-        },
-        {
-          "name": "events",
-          "label": "Special Events",
-          "description": "",
-          "isRequired": false,
-          "input": {
-            "type": "multiselect",
-            "source": "notes",
-            "folder": "Assets/Settings/Journal/Events"
-          }
-        },
-        {
-          "name": "work-status",
-          "label": "Work Status",
-          "description": "",
-          "isRequired": false,
-          "input": {
-            "type": "multiselect",
-            "source": "notes",
-            "folder": "Assets/Settings/Journal/Work Status"
-          }
-        }
-      ],
-      "version": "1"
-    },
-    {
       "title": "Edit Calendar Event",
       "name": "edit-calendar-event",
       "fields": [
