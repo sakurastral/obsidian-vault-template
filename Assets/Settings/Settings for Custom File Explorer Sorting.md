@@ -12,8 +12,6 @@ parent:
 references:
 sorting-spec: "target-folder: /
 
-  ...Home
-
   Collection
 
   Atlas
@@ -26,7 +24,7 @@ sorting-spec: "target-folder: /
 
   Inbox
 
-  Notes
+  Nexus
 
   < a-z
 
@@ -50,6 +48,8 @@ sorting-spec: "target-folder: /
 
   Task...
 
+  Event...
+
   Journal...
 
   Notes...
@@ -67,7 +67,9 @@ sorting-spec: "target-folder: /
 
   target-folder: Task
 
-  Task Board
+  Inbox
+
+  Archived
 
   /folders
 

@@ -86,7 +86,7 @@
             }
           },
           {
-            "id": "2647560f831e8a7b",
+            "id": "872373c1055f0c9f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -275,8 +275,8 @@
             "state": {
               "type": "calendar",
               "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
+              "icon": "lucide-ghost",
+              "title": "calendar"
             }
           }
         ]
@@ -306,9 +306,11 @@
       "cmdr:QuickAdd: Block Composer": false
     }
   },
-  "active": "2647560f831e8a7b",
+  "active": "872373c1055f0c9f",
   "lastOpenFiles": [
     "Atlas/Home.md",
+    "Assets/Settings/Settings for Custom File Explorer Sorting.md",
+    "README.md",
     "Atlas/Task Board.md",
     "Nexus/Status/Wildflower.md",
     "Nexus/Status/Tree.md",
@@ -319,7 +321,6 @@
     "Nexus/Categories/Vault Properties.md",
     "Nexus/Categories/MOC.md",
     "Nexus/Categories/Project.md",
-    "Nexus/Categories/Outdated.md",
-    "README.md"
+    "Nexus/Categories/Outdated.md"
   ]
 }
