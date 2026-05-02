@@ -115,7 +115,14 @@
         "optionsType": "manual"
       },
       "multiselect": {
-        "optionsType": "manual"
+        "optionsType": "dynamic",
+        "dynamicOptionsType": "filesInFolder",
+        "folderOptionsPaths": [
+          "Nexus/Categories",
+          "Nexus/Categories/Area",
+          "Nexus/Categories/Projects",
+          "Nexus/Categories/Others"
+        ]
       },
       "toggle": {},
       "title": {},
@@ -562,6 +569,84 @@
       "time": {},
       "numeric": {}
     },
+    "day：n-holiday": {
+      "general": {
+        "icon": "",
+        "hidden": false
+      },
+      "array": {},
+      "select": {
+        "useDefaultStyle": false,
+        "optionsType": "manual"
+      },
+      "multiselect": {
+        "optionsType": "manual"
+      },
+      "toggle": {},
+      "title": {},
+      "markdown": {},
+      "created": {},
+      "object": {},
+      "color": {},
+      "rating": {},
+      "relation": {},
+      "datecustom": {},
+      "slider": {},
+      "time": {},
+      "numeric": {}
+    },
+    "day：events": {
+      "general": {
+        "icon": "",
+        "hidden": false
+      },
+      "array": {},
+      "select": {
+        "useDefaultStyle": false,
+        "optionsType": "manual"
+      },
+      "multiselect": {
+        "optionsType": "manual"
+      },
+      "toggle": {},
+      "title": {},
+      "markdown": {},
+      "created": {},
+      "object": {},
+      "color": {},
+      "rating": {},
+      "relation": {},
+      "datecustom": {},
+      "slider": {},
+      "time": {},
+      "numeric": {}
+    },
+    "day：work": {
+      "general": {
+        "icon": "",
+        "hidden": false
+      },
+      "array": {},
+      "select": {
+        "useDefaultStyle": false,
+        "optionsType": "manual"
+      },
+      "multiselect": {
+        "optionsType": "manual"
+      },
+      "toggle": {},
+      "title": {},
+      "markdown": {},
+      "created": {},
+      "object": {},
+      "color": {},
+      "rating": {},
+      "relation": {},
+      "datecustom": {},
+      "slider": {},
+      "time": {},
+      "numeric": {}
+    },
     "sorting-spec": {
       "general": {
         "icon": "",
@@ -571,6 +656,92 @@
       "select": {
         "useDefaultStyle": false,
         "optionsType": "manual"
+      },
+      "multiselect": {
+        "optionsType": "manual"
+      },
+      "toggle": {},
+      "title": {},
+      "markdown": {},
+      "created": {},
+      "object": {},
+      "color": {},
+      "rating": {},
+      "relation": {},
+      "datecustom": {},
+      "slider": {},
+      "time": {},
+      "numeric": {}
+    },
+    "day：type": {
+      "general": {
+        "icon": "",
+        "hidden": false
+      },
+      "array": {},
+      "select": {
+        "useDefaultStyle": false,
+        "optionsType": "manual"
+      },
+      "multiselect": {
+        "optionsType": "manual"
+      },
+      "toggle": {},
+      "title": {},
+      "markdown": {},
+      "created": {},
+      "object": {},
+      "color": {},
+      "rating": {},
+      "relation": {},
+      "datecustom": {},
+      "slider": {},
+      "time": {},
+      "numeric": {}
+    },
+    "day：makeup": {
+      "general": {
+        "icon": "",
+        "hidden": false
+      },
+      "array": {},
+      "select": {
+        "useDefaultStyle": false,
+        "optionsType": "manual"
+      },
+      "multiselect": {
+        "optionsType": "manual"
+      },
+      "toggle": {},
+      "title": {},
+      "markdown": {},
+      "created": {},
+      "object": {},
+      "color": {},
+      "rating": {},
+      "relation": {},
+      "datecustom": {},
+      "slider": {},
+      "time": {},
+      "numeric": {}
+    },
+    "calendar-type": {
+      "general": {
+        "icon": "",
+        "hidden": true,
+        "collapsed": false
+      },
+      "array": {},
+      "select": {
+        "useDefaultStyle": true,
+        "optionsType": "dynamic",
+        "manualAllowCreate": true,
+        "manualOptions": [],
+        "dynamicOptionsType": "filesInFolder",
+        "dynamicEmptyLabel": "-",
+        "folderOptionsPaths": [
+          "Nexus/Calendar Scope"
+        ]
       },
       "multiselect": {
         "optionsType": "manual"

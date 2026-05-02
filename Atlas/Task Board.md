@@ -6,7 +6,7 @@ categories:
   - "[[Vault Management]]"
 tags:
 created: 2025-12-16T08:38:43+08:00
-modified: 2026-04-06T16:41:57+08:00
+modified: 2026-04-16T10:39:18+08:00
 status:
 parent:
 references:
@@ -14,16 +14,16 @@ references:
 
 ```base
 filters:
-  and:
+  or:
     - file.folder.startsWith("Task")
+    - file.folder.startsWith("Project/Calendar")
 formulas:
-  related-category: categories.filter(value!=("[[Task]]"))
   task-content-with-link: link(file, note["Task：Content"])
-  overdue: if(note["Task：Due"] < now(), "🚨", if(note["Task：Due"].format("YYYY-MM-DD") === today().format("YYYY-MM-DD"), "⚠️", ""))
-  Start Date: if(note["Task：Scheduled(Start)"], note["Task：Scheduled(Start)"], Task：Due)
-  End Date: if(note["Task：Scheduled(End)"], note["Task：Scheduled(End)"], Task：Due)
-  Relative Due: '"Due："+date(Task：Due).relative().toString()'
-  Task in Short: '"Task：" + Task：Content'
+  overdue: if(note["Task：Due"] < now(), "🚨", if(note["Task：Due"] - "3 day" <= today(), "⚠️", ""))
+  Relative Due: if(Task：Due, "Deadline："+date(Task：Due).relative().toString(),"")
+  Task in Short: if(Task：Content, "Task：" + Task：Content, if(note["calendar-event-title"], note["calendar-event-title"],"") )
+  Calendar Event Start: if(note["calendar-event-start"], note["calendar-event-start"],if(note["Task：Scheduled(Start)"], note["Task：Scheduled(Start)"], Task：Due))
+  Calendar Event End: if(note["calendar-event-end"], note["calendar-event-end"],if(note["Task：Scheduled(End)"], note["Task：Scheduled(End)"], Task：Due))
 properties:
   note.Task：Status:
     displayName: Status
@@ -46,18 +46,23 @@ views:
       - Task：Due
       - formula.overdue
       - formula.task-content-with-link
-      - formula.related-category
+      - Task：Scheduled(Start)
+      - Task：Scheduled(End)
     sort:
       - property: Task：Due
+        direction: ASC
+      - property: Task：Scheduled(End)
         direction: ASC
       - property: formula.related-category
         direction: DESC
       - property: tags
         direction: ASC
     columnSize:
+      note.Task：Status: 121
       note.Task：Due: 200
-      formula.overdue: 30
-      formula.task-content-with-link: 489
+      formula.overdue: 32
+      formula.task-content-with-link: 266
+      note.Task：Scheduled(Start): 199
     cardSize: 300
     calendarView: dayGridMonth
   - type: table
@@ -75,11 +80,13 @@ views:
     name: Calendar
     filters:
       and:
-        - file.folder == "Task/Inbox"
+        - file.folder != "Task/Archived"
     order:
       - formula.Task in Short
       - formula.Relative Due
-    startDate: formula.Start Date
-    endDate: formula.End Date
+      - formula.Calendar Event Start
+      - formula.Calendar Event End
+    startDate: formula.Calendar Event Start
+    endDate: formula.Calendar Event End
 
 ```

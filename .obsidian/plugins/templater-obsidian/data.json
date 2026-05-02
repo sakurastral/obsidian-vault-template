@@ -49,12 +49,12 @@
     "Assets/Template/Properties/Change Note Name.md",
     "Assets/Template/Properties/Add New Categories.md",
     "Assets/Template/Nexus/Add Base View to Existed Category.md",
-    "Assets/Template/Custom/Delete Selected Attachment's Link and File.md",
     "Assets/Template/Custom/Convert Color Codes to HTML Block.md",
     "Assets/Template/Custom/Update “Created” and “Modified” Properties Across All Vault Notes.md",
     "Assets/Template/Custom/Delete Example Notes.md",
     "Assets/Template/Project/Calendar/Add New Event.md",
-    "Assets/Template/Task/Edit Task.md"
+    "Assets/Template/Task/Edit Task.md",
+    "Assets/Template/Project/Journal/Add Daily Note.md"
   ],
   "startup_templates": [
     ""

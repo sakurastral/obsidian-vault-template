@@ -7,10 +7,10 @@
     "iconColor": null,
     "recentlyUsedIcons": [
       "LiCalendar",
-      "IcCalendar",
       "TiCalendarCog",
       "LiMapPin",
-      "RaFlowers"
+      "RaFlowers",
+      "LiTreePine"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -68,7 +68,6 @@
   "Nexus/Categories/Project.md": "RiAsterisk",
   "Nexus/Categories/Projects": "TiSquareLetterP",
   "Atlas/Vault Property Management.md": "BoBxCategory",
-  "Assets/Settings/Journal": "LiCalendar",
   "Nexus/Categories/Outdated.md": "RiAsterisk",
   "Nexus/Status": "TiSeeding",
   "Nexus/Task Status": "RiCheckDoubleLine",

@@ -29,7 +29,7 @@ status: "[[Tree]]"
 	let scope = data.type? "[["+data.type+"]]" : "";  
 	let start = data.start ?? "";
 	let end = (data.end || data.end !== "") ? data.end : (data.start ?? "");
-	let end2 = (start !== end && data.end !== "") ? "~" + end : "";
+	let end2 = (start !== end && data.end !== "") ? "～" + end : "";
 	
 	title = start + end2 + "《" + content + "》"; 
 	title = tp.obsidian.stripHeading(title);  

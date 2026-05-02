@@ -8,7 +8,31 @@
         "type": "tabs",
         "children": [
           {
-            "id": "872373c1055f0c9f",
+            "id": "f8e666ca44d7bff2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "README"
+            }
+          },
+          {
+            "id": "7e6a145473033c1d",
             "type": "leaf",
             "pinned": true,
             "state": {
@@ -84,33 +108,8 @@
               "icon": "lucide-file",
               "title": "Task Board"
             }
-          },
-          {
-            "id": "42556a6b43688bd9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "README"
-            }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -270,31 +269,33 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "daily-notes:Open today's daily note": false,
-      "bases:Create new base": false,
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "markdown-importer:Open format converter": false,
-      "workspaces:Manage workspace layouts": false,
-      "templater-obsidian:Templater": false,
       "custom-sort:Toggle custom sorting": false,
-      "cmdr:QuickAdd: Track Daily": false,
-      "obsidian42-brat:BRAT": false,
-      "modalforms:Edit forms": false,
-      "cmdr:QuickAdd: Task Management": false,
-      "cmdr:QuickAdd: Properties Management": false,
-      "cmdr:QuickAdd: Block Composer": false
+      "local-backup:Run local backup": false,
+      "obsidian-git:Open Git source control": false,
+      "daily-notes:Open today's daily note": true,
+      "bases:Create new base": true,
+      "switcher:Open quick switcher": true,
+      "graph:Open graph view": true,
+      "canvas:Create new canvas": true,
+      "templates:Insert template": true,
+      "command-palette:Open command palette": true,
+      "markdown-importer:Open format converter": true,
+      "workspaces:Manage workspace layouts": true,
+      "templater-obsidian:Templater": true,
+      "obsidian42-brat:BRAT": true,
+      "modalforms:Edit forms": true
     }
   },
-  "active": "42556a6b43688bd9",
+  "active": "f8e666ca44d7bff2",
   "lastOpenFiles": [
     "Atlas/Home.md",
     "README.md",
-    "Assets/Settings/Settings for Custom File Explorer Sorting.md",
+    "Atlas/Notes Management.md",
+    "Assets/Template/Custom/Delete Example Notes.md",
+    "Assets/Template/Custom/Update “Created” and “Modified” Properties Across All Vault Notes.md",
     "Atlas/Task Board.md",
+    "Task/Inbox/Vault Example Note (Empty).md",
+    "Assets/Settings/Settings for Custom File Explorer Sorting.md",
     "Nexus/Status/Wildflower.md",
     "Nexus/Status/Tree.md",
     "Nexus/Categories/Common.md",

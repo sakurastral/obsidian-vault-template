@@ -41,7 +41,6 @@
     "editor:toggle-bullet-list",
     "editor:toggle-numbered-list",
     "editor:toggle-checklist-status",
-    "quickadd:choice:6621a3b8-6471-413f-baa8-6e9a5d36e5f2",
     "editor:indent-list",
     "editor:unindent-list",
     "obsidian-admonition:insert-callout",
@@ -53,8 +52,6 @@
   "fileSortOrder": "alphabetical",
   "showInlineTitle": true,
   "propertiesInDocument": "visible",
-  "userIgnoreFilters": [
-    "Assets/@old/"
-  ],
+  "userIgnoreFilters": null,
   "newFileFolderPath": "Inbox"
 }

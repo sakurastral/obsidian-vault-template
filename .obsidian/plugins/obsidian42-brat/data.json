@@ -4,14 +4,13 @@
   ],
   "pluginSubListFrozenVersion": [
     {
-      "repo": "unxok/obsidian-better-properties",
-      "version": "latest"
+      "repo": "unxok/obsidian-better-properties"
     }
   ],
   "themesList": [
     {
       "repo": "sakurastral/Obsidian-March-Theme",
-      "lastUpdate": "10744224"
+      "lastUpdate": "12060433"
     }
   ],
   "updateAtStartup": true,

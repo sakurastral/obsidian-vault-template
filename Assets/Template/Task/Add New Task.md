@@ -1,15 +1,6 @@
 ---
-cover:
-title: Add New Task
-aliases:
 categories: 
    - "[[Task]]"  
-tags:
-created: 2025-06-24T09:30:38+08:00
-modified: 2026-04-25T14:41:17+08:00
-status:
-parent:
-references:
 Task：Content:   
 Task：Status: 
 Task：Priority:  

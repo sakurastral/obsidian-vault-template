@@ -5,7 +5,7 @@
     "tags": "tags",
     "created": "datetime",
     "modified": "datetime",
-    "categories": "multitext",
+    "categories": "better-properties:multiselect",
     "references": "multitext",
     "parent": "multitext",
     "Task：Priority": "better-properties:rating",
