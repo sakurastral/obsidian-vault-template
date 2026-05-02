@@ -17,8 +17,10 @@ This is an Obsidian vault.
 
 1. Download the whole vault
 2. Unzip the .zip file to a folder
-3. Open this folder in Obsidian
-4. Open Command Palette and Execute `QuickAdd: Vault Init`
+3. Open this folder in Obsidian (Required Version: v1.11)
+4. Open Command Palette and Run these Commands
+	1. `Templater: Create Custom/Update “Created” and “Modified” Properties Across All Vault Notes`
+	2. `Templater: Create Custom/Delete Example Notes`
 5. After that, you can start writing your notes!
 
 ## Vault Organization Method: CAPTAIN
@@ -37,8 +39,9 @@ This is an Obsidian vault.
 - Atlas: Provides **note navigation and higher-level overviews**, including index pages and base views for exploring the vault structure
 - Project: Holds **goal-oriented workspaces** with a clear scope, timeline, or outcome
 	- Journal: Daily notes, including progress tracking, reflections, and work records
-	- Nook: Stores **internal knowledge** created by myself,
-	- Other: Create new project folders under the "Project" folder for specialized needs
+	- Nook: Stores **internal knowledge** created by myself
+	- Calendar: Store Holidays or Events and their details
+	- Other(Custom Name): Create new project folders under the "Project" folder for specialized needs
 - Task: Contains all **task files**
 - Assets: Stores **non-note files** and resources used by the vault
 	- Attachments: Files attached directly to notes
@@ -63,7 +66,8 @@ aliases:
 categories:
 tags:
 created: 
-modified: 
+modified:
+status: 
 parent:
 references:
 ---
@@ -72,49 +76,6 @@ references:
 ## Categories
 
 Add your own categories in `Nexus/Categories/Area` and `Nexus/Categories/Others` folders. You can add the categories with no parent in `Nexus/Categories/Area` and the ones with parent in `Nexus/Categories/Others`. 
-
-## Plugins
-
-### Essential
-
-you may need to install some plugin listed below for the best experience of using this vault.
-
-#### Iconize 
-
-Icons used in this vault com from these predefined icon pack:
-- boxicons
-- octicons
-- remix-icons
-- tabler-icons  
-You can install more icons packs if you needed.
-
-### Optional
-
-#### Pretty properties 
-
-Github - @anareaty - [pretty-properties](https://github.com/anareaty/pretty-properties)
-
-This is another useful plugin if you would like to beautify your properties table in notes or table view in bases. This plugin is not installed in the vault.
-
-#### Markdown Furigana Plugin (Obsidian)
-
-[Github - @steven-kraft - obsidian-markdown-furigana](https://github.com/steven-kraft/obsidian-markdown-furigana)
-
-#### Interactive Ratings Plugin
-
-https://github.com/peritus/obsidian-interactive-ratings
-
-#### StoryLine
-
-https://github.com/PixeroJan/obsidian-storyline
-
-#### TaskNotes
-
-https://github.com/callumalpass/tasknotes
-
-#### Notebook Navigator
-
-https://github.com/johansan/notebook-navigator
 
 ## License
 
