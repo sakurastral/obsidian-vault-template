@@ -65,26 +65,6 @@
           }
         },
         {
-          "name": "textBeforeSymbol",
-          "label": "Subtitle",
-          "description": "",
-          "isRequired": false,
-          "input": {
-            "type": "text",
-            "hidden": false
-          }
-        },
-        {
-          "name": "symbol",
-          "label": "Separator",
-          "description": "",
-          "isRequired": false,
-          "input": {
-            "type": "note",
-            "folder": "Nexus/Title Separator"
-          }
-        },
-        {
           "name": "title",
           "label": "Main Title",
           "description": "",
