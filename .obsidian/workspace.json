@@ -232,8 +232,7 @@
               "title": "Source Control"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "9071511ae065c246",
@@ -298,10 +297,10 @@
       "modalforms:Edit forms": true
     }
   },
-  "active": "5ea2dc760c15e7e4",
+  "active": "07766727dce5fd96",
   "lastOpenFiles": [
-    "Atlas/Task Board.md",
     "README.md",
+    "Atlas/Task Board.md",
     "Nexus/Categories/Project.md",
     "Nexus/Categories/Projects/Vault Example Note (Empty).md",
     "Nexus/Categories/Outdated.md",

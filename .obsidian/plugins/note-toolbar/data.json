@@ -89,10 +89,8 @@
       "customClasses": "",
       "defaultItem": null,
       "defaultStyles": [
-        "border",
         "even",
-        "sticky",
-        "inactive"
+        "sticky"
       ],
       "hasCommand": false,
       "items": [
@@ -296,7 +294,7 @@
           }
         }
       },
-      "updated": "2026-04-29T06:57:49.971Z"
+      "updated": "2026-05-03T08:12:14.194Z"
     },
     {
       "uuid": "f5ede7cc-20f4-4069-aa20-ec52ebe4d27a",
