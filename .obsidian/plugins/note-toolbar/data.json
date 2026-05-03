@@ -1638,44 +1638,7 @@
         "sticky"
       ],
       "hasCommand": false,
-      "items": [
-        {
-          "uuid": "d7862070-a3ce-4d6b-9291-173d9ada4645",
-          "icon": "lucide-plus",
-          "label": "Add Base View",
-          "tooltip": "Add Base View to Existed Category",
-          "hasCommand": false,
-          "inGallery": false,
-          "link": "Templater: Insert Nexus/Add Base View to Existed Category",
-          "linkAttr": {
-            "commandCheck": false,
-            "commandId": "templater-obsidian:Assets/Template/Nexus/Add Base View to Existed Category.md",
-            "hasVars": false,
-            "type": "command"
-          },
-          "visibility": {
-            "desktop": {
-              "components": [
-                "icon",
-                "label"
-              ]
-            },
-            "mobile": {
-              "components": [
-                "icon",
-                "label"
-              ]
-            },
-            "tablet": {
-              "components": [
-                "icon",
-                "label"
-              ]
-            },
-            "viewMode": "all"
-          }
-        }
-      ],
+      "items": [],
       "mobileStyles": [],
       "name": "Dropdown - Category",
       "position": {
@@ -1695,7 +1658,7 @@
           }
         }
       },
-      "updated": "2026-04-29T06:19:28.077Z"
+      "updated": "2026-05-03T07:29:34.027Z"
     },
     {
       "uuid": "ddc6809e-1ff2-4b7b-87ea-a604ffe46c43",
@@ -2680,78 +2643,6 @@
             },
             "viewMode": "all"
           }
-        },
-        {
-          "uuid": "c34f7f7f-ba39-40b9-9f3f-1a41c3036ae7",
-          "icon": "",
-          "label": "",
-          "tooltip": "",
-          "hasCommand": false,
-          "inGallery": false,
-          "link": "",
-          "linkAttr": {
-            "commandCheck": false,
-            "commandId": "",
-            "hasVars": false,
-            "type": "separator"
-          },
-          "visibility": {
-            "desktop": {
-              "components": [
-                "icon",
-                "label"
-              ]
-            },
-            "mobile": {
-              "components": [
-                "icon",
-                "label"
-              ]
-            },
-            "tablet": {
-              "components": [
-                "icon",
-                "label"
-              ]
-            },
-            "viewMode": "all"
-          }
-        },
-        {
-          "uuid": "a99ab41d-7d94-496e-a81a-5c9724411a55",
-          "icon": "lucide-menu",
-          "label": "More",
-          "tooltip": "",
-          "hasCommand": false,
-          "inGallery": false,
-          "link": "a8dad269-5a2e-4a3c-a5ee-e1fe386fddaa",
-          "linkAttr": {
-            "commandCheck": false,
-            "commandId": "",
-            "hasVars": false,
-            "type": "menu"
-          },
-          "visibility": {
-            "desktop": {
-              "components": [
-                "icon",
-                "label"
-              ]
-            },
-            "mobile": {
-              "components": [
-                "icon",
-                "label"
-              ]
-            },
-            "tablet": {
-              "components": [
-                "icon",
-                "label"
-              ]
-            },
-            "viewMode": "all"
-          }
         }
       ],
       "mobileStyles": [],
@@ -2773,7 +2664,7 @@
           }
         }
       },
-      "updated": "2026-04-29T06:07:34.280Z"
+      "updated": "2026-05-03T07:30:42.488Z"
     },
     {
       "uuid": "defaa80e-dacd-4588-88d4-173e1d48f594",

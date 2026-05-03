@@ -1,0 +1,37 @@
+filters:
+  and:
+    - '!file.folder.startsWith("Assets")'
+properties:
+  formula.Related:
+    displayName: Related
+  file.name:
+    displayName: Name
+  note.tags:
+    displayName: Tags
+  note.categories:
+    displayName: Categories
+  note.status:
+    displayName: Status
+views:
+  - type: table
+    name: All
+    filters:
+      and:
+        - categories.contains(link(this.file.basename))
+    groupBy:
+      property: file.folder
+      direction: ASC
+    order:
+      - file.name
+      - status
+      - categories
+    columnSize:
+      file.name: 395
+      note.status: 124
+  - type: cards
+    name: All Sub Categories
+    filters:
+      and:
+        - parent.contains(link(this.file.basename))
+    order:
+      - file.name

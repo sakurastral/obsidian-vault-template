@@ -8,30 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f8e666ca44d7bff2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "README"
-            }
-          },
-          {
             "id": "7e6a145473033c1d",
             "type": "leaf",
             "pinned": true,
@@ -108,8 +84,33 @@
               "icon": "lucide-file",
               "title": "Task Board"
             }
+          },
+          {
+            "id": "5ea2dc760c15e7e4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "README"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -195,7 +196,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 453.5110321044922
+    "width": 455
   },
   "right": {
     "id": "f4e11ed4f564b370",
@@ -220,8 +221,19 @@
               "icon": "lucide-list",
               "title": "Outline of README"
             }
+          },
+          {
+            "id": "a6743f6c59e1b988",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "9071511ae065c246",
@@ -282,29 +294,30 @@
       "markdown-importer:Open format converter": true,
       "workspaces:Manage workspace layouts": true,
       "templater-obsidian:Templater": true,
-      "obsidian42-brat:BRAT": true,
+      "obsidian42-brat:BRAT": false,
       "modalforms:Edit forms": true
     }
   },
-  "active": "f8e666ca44d7bff2",
+  "active": "5ea2dc760c15e7e4",
   "lastOpenFiles": [
-    "Atlas/Home.md",
+    "Atlas/Task Board.md",
     "README.md",
+    "Nexus/Categories/Project.md",
+    "Nexus/Categories/Projects/Vault Example Note (Empty).md",
+    "Nexus/Categories/Outdated.md",
+    "Nexus/Categories/MOC.md",
+    "Nexus/Categories/Vault Properties.md",
+    "Nexus/Categories/Vault Management.md",
+    "Nexus/Categories/Task.md",
+    "Nexus/Categories/Journal.md",
+    "Nexus/Categories/Common.md",
+    "Atlas/Home.md",
     "Atlas/Notes Management.md",
     "Assets/Template/Custom/Delete Example Notes.md",
     "Assets/Template/Custom/Update “Created” and “Modified” Properties Across All Vault Notes.md",
-    "Atlas/Task Board.md",
     "Task/Inbox/Vault Example Note (Empty).md",
     "Assets/Settings/Settings for Custom File Explorer Sorting.md",
     "Nexus/Status/Wildflower.md",
-    "Nexus/Status/Tree.md",
-    "Nexus/Categories/Common.md",
-    "Nexus/Categories/Journal.md",
-    "Nexus/Categories/Task.md",
-    "Nexus/Categories/Vault Management.md",
-    "Nexus/Categories/Vault Properties.md",
-    "Nexus/Categories/MOC.md",
-    "Nexus/Categories/Project.md",
-    "Nexus/Categories/Outdated.md"
+    "Nexus/Status/Tree.md"
   ]
 }
