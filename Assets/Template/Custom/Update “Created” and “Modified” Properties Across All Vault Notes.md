@@ -34,9 +34,4 @@ if (confirmUpdate) {
 } else {  
     new Notice("Update cancelled.");  
 }  
-const file = app.workspace.getActiveFile();
-if (file) {
-    // 'true' sends to the system trash, 'false' sends to the Obsidian trash (.trash folder)
-    await app.vault.trash(file, true); 
-}
 %>
