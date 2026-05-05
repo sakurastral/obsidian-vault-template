@@ -1,5 +1,5 @@
 ---
-cover:
+cover: "[[task-pexels-ds-stories-6991353.jpg]]"
 title: Task Board
 aliases:
 categories:

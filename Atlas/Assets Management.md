@@ -1,12 +1,12 @@
 ---
-cover:
+cover: "[[lenzatic-nevada-8338929.jpg]]"
 title: Assets Management
 aliases:
 categories:
   - "[[Vault Management]]"
 tags:
 created: 2025-12-16T08:38:43+08:00
-modified: 2026-04-06T16:41:57+08:00
+modified: 2026-04-27T09:04:04+08:00
 status:
 parent:
 references:

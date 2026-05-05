@@ -294,7 +294,7 @@
           }
         }
       },
-      "updated": "2026-05-03T08:12:14.194Z"
+      "updated": "2026-05-05T08:16:10.412Z"
     },
     {
       "uuid": "f5ede7cc-20f4-4069-aa20-ec52ebe4d27a",
@@ -1496,6 +1496,42 @@
             },
             "viewMode": "all"
           }
+        },
+        {
+          "uuid": "c3f97889-e226-46aa-a49a-16b7df7a532b",
+          "icon": "lucide-image",
+          "label": "Cover",
+          "tooltip": "",
+          "hasCommand": false,
+          "inGallery": false,
+          "link": "Atlas/Cover Management.md",
+          "linkAttr": {
+            "commandCheck": false,
+            "commandId": "",
+            "hasVars": false,
+            "type": "file"
+          },
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "viewMode": "all"
+          }
         }
       ],
       "mobileStyles": [],
@@ -1517,7 +1553,7 @@
           }
         }
       },
-      "updated": "2026-04-29T06:19:48.707Z"
+      "updated": "2026-05-05T08:15:30.457Z"
     },
     {
       "uuid": "eadcec74-ba61-41aa-97c4-82cefddac261",

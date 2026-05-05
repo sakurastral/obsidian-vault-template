@@ -3508,6 +3508,7 @@ body {
   overflow-x: scroll;
   display: table-cell;
   vertical-align: middle;
+  scrollbar-width: none;
 }
 
 .bases-view {

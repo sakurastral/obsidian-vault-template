@@ -1,5 +1,5 @@
 ---
-cover:
+cover: "[[jplenio-forest-7023487.jpg]]"
 title: Vault Property Management
 aliases:
 categories:

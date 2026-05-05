@@ -1,15 +1,16 @@
 ---
-categories: 
-   - "[[Task]]"  
-Task：Content:   
-Task：Status: 
-Task：Priority:  
+categories:
+  - "[[Task]]"
+Task：Content:
+Task：Status:
+Task：Priority:
 Task：Scheduled(Start):
 Task：Scheduled(End):
-Task：Due: 
-Task：Done:  
-Task：Cancelled:  
-Task：Archived:  
+Task：Due:
+Task：Done:
+Task：Cancelled:
+Task：Archived:
+cover: "[[task-pexels-ds-stories-6991353.jpg]]"
 ---
 <%* let title = tp.file.title _%>
 <%* if (tp.file.title.includes("Untitled")) { -%>

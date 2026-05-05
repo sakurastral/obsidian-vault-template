@@ -21,6 +21,7 @@
     "calendar-event-end": "date",
     "calendar-event-start": "date",
     "calendar-event-title": "text",
-    "calendar-event-type": "better-properties:select"
+    "calendar-event-type": "better-properties:select",
+    "collection-url": "text"
   }
 }

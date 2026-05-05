@@ -4,35 +4,42 @@ filters:
     - file.folder == this.file.folder
 formulas:
   schedule: if(note["Task：Scheduled(Start)"] && note["Task：Scheduled(Start)"]!="",note["Task：Scheduled(Start)"].format("YYYY-MM-DD HH:mm"),"")+if(note["Task：Scheduled(End)"] && (note["Task：Scheduled(Start)"].toString() != note["Task：Scheduled(End)"].toString()), " ~ "+note["Task：Scheduled(End)"].format("YYYY-MM-DD HH:mm"), "")
+  due: Task：Due.format("YYYY-MM-DD HH:mm")
+  finish-state: |-
+    if(Task：Done, "Completed on "+Task：Done.format("YYYY/MM/DD")+"", "")+
+    if(Task：Cancelled, "Cancelled on "+Task：Cancelled.format("YYYY/MM/DD")+"","")+if(Task：Archived, " and is Archived", "")
 properties:
   note.Task：Content:
-    displayName: 任務內容
+    displayName: Content
   note.Task：Status:
-    displayName: 執行進度
+    displayName: Progress
   note.Task：Priority:
-    displayName: 重要性
+    displayName: Importance
   formula.schedule:
-    displayName: 預計執行日期
-  note.Task：Due:
-    displayName: 截止日期（死線）
+    displayName: Scheduled
+  formula.due:
+    displayName: Deadline
   note.Task：Done:
-    displayName: 完成日期
+    displayName: Completed
   note.Task：Cancelled:
-    displayName: 取消日期
+    displayName: Cancelled
   note.Task：Archived:
-    displayName: 歸檔日期
+    displayName: Archived
+  formula.finish-state:
+    displayName: Status(Completion)
 views:
-  - type: cards
+  - type: dynamic-views-grid
     name: View
     order:
       - Task：Content
       - Task：Status
       - Task：Priority
       - formula.schedule
-      - Task：Due
-      - Task：Done
-      - Task：Cancelled
-      - Task：Archived
-    imageAspectRatio: 0.35
+      - formula.due
+      - formula.finish-state
     cardSize: 400
-    image: note.cover
+    id: 05b109-View
+    fallbackToContent: false
+    imageProperty: note.cover
+    imageFormat: backdrop
+    pairProperties: false

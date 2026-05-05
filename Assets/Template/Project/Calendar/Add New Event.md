@@ -6,6 +6,7 @@ calendar-event-type:
 categories:
   - "[[Journal]]"
 status: "[[Tree]]"
+cover: "[[calendar-pexels-pnw-prod-8251157.jpg]]"
 ---
 <%* if (tp.file.title.includes("Untitled")) { %>
 ![[Event Information Board.base#Basic|no-toolbar]]

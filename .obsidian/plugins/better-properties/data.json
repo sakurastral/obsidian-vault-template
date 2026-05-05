@@ -866,6 +866,32 @@
       "slider": {},
       "time": {},
       "numeric": {}
+    },
+    "collection-url": {
+      "general": {
+        "icon": "",
+        "hidden": true
+      },
+      "array": {},
+      "select": {
+        "useDefaultStyle": false,
+        "optionsType": "manual"
+      },
+      "multiselect": {
+        "optionsType": "manual"
+      },
+      "toggle": {},
+      "title": {},
+      "markdown": {},
+      "created": {},
+      "object": {},
+      "color": {},
+      "rating": {},
+      "relation": {},
+      "datecustom": {},
+      "slider": {},
+      "time": {},
+      "numeric": {}
     }
   },
   "confirmPropertySettingsReset": true,

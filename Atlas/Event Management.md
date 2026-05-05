@@ -1,5 +1,5 @@
 ---
-cover:
+cover: "[[calendar-pexels-pnw-prod-8251157.jpg]]"
 title: Event Management
 aliases:
 categories:
@@ -23,5 +23,8 @@ views:
       - calendar-event-title
     startDate: note.calendar-event-start
     endDate: note.calendar-event-end
+  - type: list
+    name: List
 
 ```
+

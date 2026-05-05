@@ -1,12 +1,12 @@
 ---
-cover:
+cover: "[[john-fowler-RsRTIofe0HE-unsplash.jpg]]"
 title: Template Management
 aliases:
 categories:
   - "[[Vault Management]]"
 tags:
 created: 2025-12-16T08:38:43+08:00
-modified: 2026-04-06T16:41:57+08:00
+modified: 2026-04-25T18:54:01+08:00
 status:
 parent:
 references:

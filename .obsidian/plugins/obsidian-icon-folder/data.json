@@ -6,11 +6,11 @@
     "emojiStyle": "twemoji",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiImage",
       "LiCalendar",
       "TiCalendarCog",
       "LiMapPin",
-      "RaFlowers",
-      "LiTreePine"
+      "RaFlowers"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -74,5 +74,6 @@
   "Nexus/Title Prefix": "LiBraces",
   "Nexus/Calendar Scope": "TiCalendarCog",
   "Project/Calendar": "LiCalendar",
-  "Atlas/Event Management.md": "LiCalendar"
+  "Atlas/Event Management.md": "LiCalendar",
+  "Atlas/Cover Management.md": "LiImage"
 }

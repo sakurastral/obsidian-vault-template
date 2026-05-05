@@ -1,8 +1,13 @@
 {
   "pluginList": [
+    "churnish/dynamic-views",
     "unxok/obsidian-better-properties"
   ],
   "pluginSubListFrozenVersion": [
+    {
+      "repo": "churnish/dynamic-views",
+      "version": ""
+    },
     {
       "repo": "unxok/obsidian-better-properties"
     }
@@ -10,7 +15,7 @@
   "themesList": [
     {
       "repo": "sakurastral/Obsidian-March-Theme",
-      "lastUpdate": "12107267"
+      "lastUpdate": "12109323"
     }
   ],
   "updateAtStartup": true,

@@ -1,3 +1,7 @@
+---
+cover: "[[notes-pexels-pnw-prod-8251114.jpg]]"
+---
+
 <%* let title = tp.file.title -%>
 <%* 
 if (title.startsWith("Untitled")) { 
