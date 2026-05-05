@@ -294,11 +294,17 @@
       "workspaces:Manage workspace layouts": true,
       "templater-obsidian:Templater": true,
       "obsidian42-brat:BRAT": false,
-      "modalforms:Edit forms": true
+      "modalforms:Edit forms": true,
+      "dynamic-views:Create new Grid base": true,
+      "dynamic-views:Create new Masonry base": true,
+      "dynamic-views:Shuffle base": true,
+      "dynamic-views:Open random file from base": true
     }
   },
   "active": "5ea2dc760c15e7e4",
   "lastOpenFiles": [
+    "Atlas/Home.md",
+    "Atlas/Notes Management.md",
     "README.md",
     "Atlas/Task Board.md",
     "Nexus/Categories/Project.md",
@@ -310,8 +316,6 @@
     "Nexus/Categories/Task.md",
     "Nexus/Categories/Journal.md",
     "Nexus/Categories/Common.md",
-    "Atlas/Home.md",
-    "Atlas/Notes Management.md",
     "Assets/Template/Custom/Delete Example Notes.md",
     "Assets/Template/Custom/Update “Created” and “Modified” Properties Across All Vault Notes.md",
     "Task/Inbox/Vault Example Note (Empty).md",
