@@ -6,7 +6,6 @@ cover: "[[notes-pexels-pnw-prod-8251114.jpg]]"
 <%* 
 if (title.startsWith("Untitled")) { 
 	const customTitle = await tp.file.include(tp.file.find_tfile("Change Note Name"))
-	const cat = await tp.file.include(tp.file.find_tfile("Add New Categories"))
 } 
 -%>
 <%*

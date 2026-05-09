@@ -35,21 +35,20 @@ cover: "[[calendar-pexels-pnw-prod-8251157.jpg]]"
 	title = start + end2 + "《" + content + "》"; 
 	title = tp.obsidian.stripHeading(title);  
 	title = tp.obsidian.stripHeadingForLink(title); 
+
+	const file = tp.file.find_tfile(tp.file.path(true));  
+	
 	if(formResult.status === "ok"){
-	  await tp.file.rename(title); 
+		await app.fileManager.processFrontMatter(file, (frontmatter) => {  
+		    frontmatter["calendar-event-type"] = scope;
+			frontmatter["calendar-event-title"] = content;
+			frontmatter["calendar-event-start"] = start;
+			frontmatter["calendar-event-end"] = end;
+		}); 
+		await tp.file.rename(title); 
 	}
+
 _%>
-<%* 
-const file = tp.file.find_tfile(tp.file.path(true));  
-const add = await app.fileManager.processFrontMatter(file, (frontmatter) => {  
-	if(formResult.status === "ok"){
-	    frontmatter["calendar-event-type"] = scope;
-		frontmatter["calendar-event-title"] = content;
-		frontmatter["calendar-event-start"] = start;
-		frontmatter["calendar-event-end"] = end;
-	}
-});  
--%>
 <%*
 	tp.hooks.on_all_templates_executed(async() => {
 	  const file = tp.file.find_tfile(tp.file.path(true));
