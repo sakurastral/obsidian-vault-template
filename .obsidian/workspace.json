@@ -232,7 +232,8 @@
               "title": "Source Control"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "9071511ae065c246",
@@ -301,7 +302,7 @@
       "dynamic-views:Open random file from base": true
     }
   },
-  "active": "5ea2dc760c15e7e4",
+  "active": "a6743f6c59e1b988",
   "lastOpenFiles": [
     "Atlas/Home.md",
     "Atlas/Notes Management.md",

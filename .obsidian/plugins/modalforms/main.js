@@ -10721,11 +10721,12 @@ Fuse.config = Config;
 
 // src/suggesters/suggestFile.ts
 var FileSuggest = class extends import_obsidian8.AbstractInputSuggest {
-  constructor(app, inputEl, strategy, folder) {
+  constructor(app, inputEl, strategy, folder, getExcludedBasenames = () => []) {
     super(app, inputEl);
     this.app = app;
     this.inputEl = inputEl;
     this.strategy = strategy;
+    this.getExcludedBasenames = getExcludedBasenames;
     this.reportedErrors = /* @__PURE__ */ new Set();
     this.folders = Array.isArray(folder) ? folder : [folder];
   }
@@ -10737,8 +10738,10 @@ var FileSuggest = class extends import_obsidian8.AbstractInputSuggest {
         log_error(err);
       }
     });
+    const excluded = new Set(this.getExcludedBasenames());
     const enriched = pipe2(
       files,
+      Array_exports.filter((file) => !excluded.has(file.basename)),
       Array_exports.map((file) => enrich_tfile(file, this.app))
     );
     if (input_str === "")
@@ -11856,11 +11859,17 @@ async function MultiSelectModel(fieldInput, app, values) {
                 return file.basename;
               },
               selectSuggestion(file) {
-                values.update((x) => [...x, file.basename]);
+                values.update(
+                  (x) => x.includes(file.basename) ? x : [...x, file.basename]
+                );
                 return "";
               }
             },
-            folders
+            folders,
+            () => {
+              var _a;
+              return (_a = get_store_value(values)) != null ? _a : [];
+            }
           );
         },
         removeValue
