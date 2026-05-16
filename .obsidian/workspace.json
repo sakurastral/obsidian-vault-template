@@ -86,7 +86,7 @@
             }
           },
           {
-            "id": "5ea2dc760c15e7e4",
+            "id": "78e445b6fe3259a8",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -302,12 +302,12 @@
       "dynamic-views:Open random file from base": true
     }
   },
-  "active": "a6743f6c59e1b988",
+  "active": "78e445b6fe3259a8",
   "lastOpenFiles": [
+    "Atlas/Task Board.md",
+    "README.md",
     "Atlas/Home.md",
     "Atlas/Notes Management.md",
-    "README.md",
-    "Atlas/Task Board.md",
     "Nexus/Categories/Project.md",
     "Nexus/Categories/Projects/Vault Example Note (Empty).md",
     "Nexus/Categories/Outdated.md",

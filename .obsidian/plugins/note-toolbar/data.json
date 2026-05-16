@@ -762,7 +762,6 @@
         "border",
         "even",
         "sticky",
-        "inactive",
         "wide"
       ],
       "hasCommand": false,
@@ -1231,7 +1230,7 @@
           }
         }
       },
-      "updated": "2026-04-30T00:42:41.334Z"
+      "updated": "2026-05-12T00:33:23.458Z"
     },
     {
       "uuid": "c67b2bda-c8af-48a6-8d7d-e58b1cdf3a46",
@@ -1703,7 +1702,6 @@
         "border",
         "even",
         "sticky",
-        "inactive",
         "wide"
       ],
       "hasCommand": false,
@@ -1764,7 +1762,7 @@
           }
         }
       },
-      "updated": "2026-04-29T00:39:16.633Z"
+      "updated": "2026-05-12T00:36:48.503Z"
     },
     {
       "uuid": "f2ad6f03-923e-4844-8274-42e580d7040c",
@@ -1989,8 +1987,7 @@
       "defaultStyles": [
         "border",
         "even",
-        "sticky",
-        "inactive"
+        "sticky"
       ],
       "hasCommand": false,
       "items": [
@@ -2122,7 +2119,7 @@
           }
         }
       },
-      "updated": "2026-04-29T06:20:05.468Z"
+      "updated": "2026-05-12T00:36:37.357Z"
     },
     {
       "uuid": "d4085830-fd38-41bb-9c62-a90f5d090811",
@@ -2493,7 +2490,6 @@
         "border",
         "even",
         "sticky",
-        "inactive",
         "wide"
       ],
       "hasCommand": false,
@@ -2626,7 +2622,7 @@
           }
         }
       },
-      "updated": "2026-04-29T06:07:00.438Z"
+      "updated": "2026-05-12T00:33:45.293Z"
     },
     {
       "uuid": "dece0024-e181-45ef-8dd6-e2a41c0c7b69",
@@ -2637,7 +2633,6 @@
         "border",
         "even",
         "sticky",
-        "inactive",
         "wide"
       ],
       "hasCommand": false,
@@ -2698,7 +2693,7 @@
           }
         }
       },
-      "updated": "2026-05-03T07:30:42.488Z"
+      "updated": "2026-05-12T00:33:50.727Z"
     },
     {
       "uuid": "defaa80e-dacd-4588-88d4-173e1d48f594",
@@ -2709,7 +2704,6 @@
         "border",
         "even",
         "sticky",
-        "inactive",
         "wide"
       ],
       "hasCommand": false,
@@ -2842,7 +2836,7 @@
           }
         }
       },
-      "updated": "2026-04-29T01:10:28.654Z"
+      "updated": "2026-05-12T00:33:56.397Z"
     },
     {
       "uuid": "be9d94d7-0cc7-4857-aa58-8822dd0e2163",
@@ -2853,7 +2847,6 @@
         "border",
         "even",
         "sticky",
-        "inactive",
         "wide"
       ],
       "hasCommand": false,
@@ -2986,7 +2979,7 @@
           }
         }
       },
-      "updated": "2026-04-29T01:10:38.196Z"
+      "updated": "2026-05-12T00:34:00.174Z"
     },
     {
       "uuid": "f26041a0-8b84-4654-bb2a-6907ab48ee8e",
@@ -2997,7 +2990,6 @@
         "border",
         "even",
         "sticky",
-        "inactive",
         "wide"
       ],
       "hasCommand": false,
@@ -3130,7 +3122,7 @@
           }
         }
       },
-      "updated": "2026-04-29T01:10:50.204Z"
+      "updated": "2026-05-12T00:34:04.889Z"
     }
   ],
   "version": 20260122.1,
