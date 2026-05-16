@@ -35,3 +35,13 @@ views:
         - parent.contains(link(this.file.basename))
     order:
       - file.name
+  - type: table
+    name: All ( Including Notes in Sub Categories )
+    filters:
+      or:
+        - categories.contains(link(this.file.basename))
+        - categories.containsAny(this.file.backlinks.map(link(value)))
+    order:
+      - file.name
+      - status
+      - categories
