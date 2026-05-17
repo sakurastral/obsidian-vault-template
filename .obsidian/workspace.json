@@ -86,7 +86,7 @@
             }
           },
           {
-            "id": "78e445b6fe3259a8",
+            "id": "908dc8ab7954636a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -196,49 +196,33 @@
       }
     ],
     "direction": "horizontal",
-    "width": 455
+    "width": 452
   },
   "right": {
     "id": "f4e11ed4f564b370",
     "type": "split",
     "children": [
       {
-        "id": "e0b0afcc912cf2b1",
-        "type": "tabs",
-        "dimension": 65.56016597510373,
-        "children": [
-          {
-            "id": "07766727dce5fd96",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "README.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "Outline of README"
-            }
-          },
-          {
-            "id": "a6743f6c59e1b988",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
-            }
-          }
-        ],
-        "currentTab": 1
-      },
-      {
         "id": "9071511ae065c246",
         "type": "tabs",
-        "dimension": 34.439834024896264,
+        "dimension": 28.45849802371542,
+        "children": [
+          {
+            "id": "14135e88a53e4718",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      },
+      {
+        "id": "205879abebf0a12e",
+        "type": "tabs",
+        "dimension": 71.54150197628458,
         "children": [
           {
             "id": "f05afacf01780ff4",
@@ -246,7 +230,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -256,7 +239,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for README"
+              "title": "Backlinks"
             }
           },
           {
@@ -265,12 +248,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Inbox/@old/Internet/Embla Carousel (Predefined).md",
+                "file": "Assets/Template/Nexus/Category Information Board.base",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Embla Carousel (Predefined)"
+              "title": "Outgoing links from Category Information Board"
             }
           }
         ]
@@ -282,8 +265,8 @@
   "left-ribbon": {
     "hiddenItems": {
       "custom-sort:Toggle custom sorting": false,
-      "local-backup:Run local backup": false,
-      "obsidian-git:Open Git source control": false,
+      "modalforms:Edit forms": true,
+      "templater-obsidian:Templater": true,
       "daily-notes:Open today's daily note": true,
       "bases:Create new base": true,
       "switcher:Open quick switcher": true,
@@ -293,19 +276,23 @@
       "command-palette:Open command palette": true,
       "markdown-importer:Open format converter": true,
       "workspaces:Manage workspace layouts": true,
-      "templater-obsidian:Templater": true,
+      "local-backup:Run local backup": false,
+      "obsidian-git:Open Git source control": false,
       "obsidian42-brat:BRAT": false,
-      "modalforms:Edit forms": true,
       "dynamic-views:Create new Grid base": true,
       "dynamic-views:Create new Masonry base": true,
       "dynamic-views:Shuffle base": true,
       "dynamic-views:Open random file from base": true
     }
   },
-  "active": "78e445b6fe3259a8",
+  "active": "14135e88a53e4718",
   "lastOpenFiles": [
-    "Atlas/Task Board.md",
     "README.md",
+    "Assets/Template/Nexus/Category Information Board.base",
+    "Atlas/Task Board.md",
+    "Assets/Images/calendar-pexels-pnw-prod-8251157.jpg",
+    "Assets/Images/andrei-lazar-DNJzF0u3l9U-unsplash.jpg",
+    "Nexus/Title Prefix/NOTE｜.md",
     "Atlas/Home.md",
     "Atlas/Notes Management.md",
     "Nexus/Categories/Project.md",
