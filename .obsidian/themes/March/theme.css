@@ -3779,6 +3779,21 @@ body.enable-content-offset .workspace-leaf-content .floating-toc-div.pin:is(.flo
   cursor: move;
 }
 
+.floating-toc-div:has(.floating-toc-search-container:not([style*="display: none"])) .toolbar {
+  top: var(--floating-toc-y-position) !important;
+  transform: translateY(calc(var(--floating-toc-y-position) * -1));
+}
+
+.floating-toc-div:has(.floating-toc-search-container:not([style*="display: none"])) .floating-toc {
+  top: var(--floating-toc-y-position) !important;
+  transform: translateY(calc(var(--floating-toc-y-position) * -1));
+}
+
+.heading-list-item.search-highlight .text {
+  background-color: var(--march-formatted-text-highlight-bg) !important;
+  color: var(--march-formatted-text-highlight-fg) !important;
+}
+
 .cmdr-name-input-wrapper {
   width: calc(100% - var(--search-clear-button-size) - var(--size-4-6));
 }
