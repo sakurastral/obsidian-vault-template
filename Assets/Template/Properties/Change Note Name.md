@@ -38,6 +38,7 @@ if (data && data.title) {
 }
 
 title = tp.obsidian.stripHeadingForLink(title);
+title = tp.obsidian.stripHeading(title);
 
 let counter = 1;
 let baseTitle = title;

@@ -230,6 +230,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -239,7 +240,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for README"
             }
           },
           {
@@ -285,7 +286,7 @@
       "dynamic-views:Open random file from base": true
     }
   },
-  "active": "14135e88a53e4718",
+  "active": "908dc8ab7954636a",
   "lastOpenFiles": [
     "README.md",
     "Assets/Template/Nexus/Category Information Board.base",

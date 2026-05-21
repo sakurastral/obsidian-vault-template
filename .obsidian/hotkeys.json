@@ -3,8 +3,18 @@
   "editor:open-search": [],
   "editor:open-search-replace": [
     {
-      "modifiers": ["Mod"],
+      "modifiers": [
+        "Mod"
+      ],
       "key": "F"
+    }
+  ],
+  "editor:set-heading": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "H"
     }
   ]
 }

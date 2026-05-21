@@ -1992,6 +1992,78 @@
       "hasCommand": false,
       "items": [
         {
+          "uuid": "bcb71ea4-b1ae-4782-abcc-35c8436c1c45",
+          "icon": "lucide-toggle-right",
+          "label": "Open Properties View",
+          "tooltip": "",
+          "hasCommand": false,
+          "inGallery": false,
+          "link": "Properties view: Show file properties",
+          "linkAttr": {
+            "commandCheck": false,
+            "commandId": "properties:open-local",
+            "hasVars": false,
+            "type": "command"
+          },
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "viewMode": "all"
+          }
+        },
+        {
+          "uuid": "e0257b92-4af2-4345-a89d-53f2d1faf2d0",
+          "icon": "",
+          "label": "",
+          "tooltip": "",
+          "hasCommand": false,
+          "inGallery": false,
+          "link": "",
+          "linkAttr": {
+            "commandCheck": false,
+            "commandId": "",
+            "hasVars": false,
+            "type": "separator"
+          },
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "viewMode": "all"
+          }
+        },
+        {
           "uuid": "ec0cb119-ccdb-4701-ab24-b0b984f520a5",
           "icon": "lucide-pencil-line",
           "label": "Title",
@@ -2098,6 +2170,42 @@
             },
             "viewMode": "all"
           }
+        },
+        {
+          "uuid": "c155b846-352e-4384-b27e-fb5b6d31c245",
+          "icon": "lucide-plus",
+          "label": "Cover",
+          "tooltip": "",
+          "hasCommand": false,
+          "inGallery": false,
+          "link": "Pretty Properties: Select cover image",
+          "linkAttr": {
+            "commandCheck": false,
+            "commandId": "pretty-properties:select-cover-image",
+            "hasVars": false,
+            "type": "command"
+          },
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "viewMode": "all"
+          }
         }
       ],
       "mobileStyles": [],
@@ -2119,7 +2227,7 @@
           }
         }
       },
-      "updated": "2026-05-12T00:36:37.357Z"
+      "updated": "2026-05-21T01:37:46.085Z"
     },
     {
       "uuid": "d4085830-fd38-41bb-9c62-a90f5d090811",
@@ -3127,5 +3235,5 @@
   ],
   "version": 20260428.1,
   "webviewerToolbar": null,
-  "whatsnew_version": "1.30"
+  "whatsnew_version": "1.31"
 }
