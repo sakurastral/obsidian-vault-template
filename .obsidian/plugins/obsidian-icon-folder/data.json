@@ -1,16 +1,16 @@
 {
   "settings": {
     "migrated": 6,
-    "iconPacksPath": ".obsidian/icons",
+    "iconPacksPath": "Assets/Icons",
     "fontSize": 16,
     "emojiStyle": "twemoji",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "TiIcons",
       "LiImage",
       "LiCalendar",
       "TiCalendarCog",
-      "LiMapPin",
-      "RaFlowers"
+      "LiMapPin"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -75,5 +75,6 @@
   "Nexus/Calendar Scope": "TiCalendarCog",
   "Project/Calendar": "LiCalendar",
   "Atlas/Event Management.md": "LiCalendar",
-  "Atlas/Cover Management.md": "LiImage"
+  "Atlas/Cover Management.md": "LiImage",
+  "Assets/Icons": "TiIcons"
 }

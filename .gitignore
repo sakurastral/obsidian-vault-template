@@ -5,5 +5,4 @@
 .tmp*
 
 # Obsidian
-.obsidian/icons/*.zip
-.obsidian/files/*
+*/Icons/*.zip
