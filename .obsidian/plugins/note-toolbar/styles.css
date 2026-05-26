@@ -569,6 +569,7 @@ settings:
         id: launchpad
         title: 'New tab view (Launchpad)'
         title.zh: '新标签页视图（Launchpad 启动台）'
+        title.uk: 'Вигляд Нової вкладки (Launchpad)'
         description: 'Style the toolbar replacing the New tab view'
         description.zh: '为替换新标签页视图的工具栏设置样式'
         type: heading
@@ -587,6 +588,7 @@ settings:
         id: cg-nt-launchpad-item-bg-color
         title: 'Item: Background color'
         title.zh: '项目：背景颜色'
+        title.uk: 'Елемент: Колір фону'
         type: variable-themed-color
         opacity: true
         format: hex
@@ -605,18 +607,21 @@ settings:
         id: cg-nt-launchpad-cols-desktop
         title: 'Number of columns on desktop'
         title.zh: '桌面端列数'
+        title.uk: "Кількість колонок на комп'ютері"
         type: variable-number
         default: 2
     -
         id: cg-nt-launchpad-cols-mobile
         title: 'Number of columns on mobile 📱'
         title.zh: '移动端列数 📱'
+        title.uk: 'Кількість колонок на мобільному пристрої 📱'
         type: variable-number
         default: 2
     -
         id: cg-nt-launchpad-max-width
         title: 'Max width (in px units)'
         title.zh: '最大宽度（单位：px）'
+        title.uk: 'Максимальна ширина（пікселі)'
         type: variable-number
         default: 0
         format: px
@@ -624,6 +629,7 @@ settings:
         id: cg-nt-launchpad-item-font-size
         title: 'Item: Font size (in em units)'
         title.zh: '项目：字体大小（单位：em）'
+        title.uk: 'Елемент: Розмір шрифту (em)'
         type: variable-number
         default: 0
         format: em
@@ -631,6 +637,7 @@ settings:
         id: cg-nt-launchpad-item-icon-size
         title: 'Item: Icon size (in px units)'
         title.zh: '项目：图标大小（单位：px）'
+        title.uk: 'Елемент: Разміер іконки (пікселі)'
         type: variable-number
         default: 0
         format: px
@@ -647,6 +654,7 @@ settings:
         id: cg-nt-launchpad-item-border-radius
         title: 'Item: Border radius (in px units)'
         title.zh: '项目：边框圆角（单位：px）'
+        title.uk: 'Параметр: Радіус кутів (пікселі)'
         type: variable-number
         default: 0
         format: px
@@ -861,6 +869,7 @@ settings:
         id: cg-nt-tbar-z-index
         title: 'Z-index'
         description: "Controls stacking order relative to other elements. Increase if bottom or top-positioned toolbars appear behind other components, or decrease if it covers them."
+        description.uk: "Визначає порядок накладання відносно інших елементів. Збільшуйте значення, якщо панелі, розміщені внизу або вгорі, з’являються за іншими компонентами, або зменшуйте, якщо вони їх перекривають."
         type: variable-number
         default: 44
     -
@@ -1059,8 +1068,10 @@ settings:
         id: toolbar-text-tbar
         title: 'Toolbars (floating)'
         title.zh: '工具栏（文本）'
+        title.uk: 'Панелі інструментів (плаваючі)'
         description: 'Styles for floating toolbars (including text toolbars)'
         description.zh: '文本工具栏的样式'
+        description.uk: 'Стилі для плаваючих панелей інструментів (включно з текстовими панелями)'
         type: heading
         level: 1
         collapsed: true
@@ -1145,6 +1156,7 @@ settings:
         id: cg-nt-tbar-text-z-index
         title: 'Z-index'
         description: "Controls stacking order relative to other elements. Increase if floating toolbars appear behind other components, or decrease if it covers them."
+        description.uk: "Визначає порядок накладання відносно інших елементів. Збільшуйте значення, якщо плаваючі панелі з’являються за іншими компонентами, або зменшуйте, якщо вони їх перекривають."
         type: variable-number
         default: 44
     -
@@ -1160,6 +1172,7 @@ settings:
         id: cg-nt-tbar-text-max-width-desktop
         title: 'Max width on desktop (in px units)'
         title.zh: '桌面端最大宽度（单位：px）'
+        title.uk: "Максимальна ширина на комп'юторі (пікселі)"
         description: 'How wide the toolbar is allowed to be.'
         description.zh: '工具栏允许的最大宽度。'
         type: variable-number
@@ -1169,8 +1182,10 @@ settings:
         id: cg-nt-tbar-text-max-width-tablet
         title: 'Max width on tablets (in px units)'
         title.zh: '平板端最大宽度（单位：px）'
+        title.uk: 'Максимальна ширина на планшете (пікселі)'
         description: 'How wide the toolbar is allowed to be.'
         description.zh: '工具栏允许的最大宽度。'
+        description.uk: 'Яку максимальну ширину будуть мати ваши панелі'
         type: variable-number
         default: 650
         format: px
@@ -1178,6 +1193,7 @@ settings:
         id: cg-nt-tbar-text-margin-x
         title: 'Left + Right margin (in em units)'
         title.zh: '左右边距（单位：em）'
+        title.uk: 'Лівий + правий відступ (em)'
         type: variable-number
         default: 0.5
         format: em
@@ -1250,22 +1266,27 @@ settings:
         id: cg-nt-tbar-text-shadow
         title: 'Shadow'
         title.zh: '阴影'
+        title.uk: 'Тінь'
         description: 'Shadow behind the text toolbar'
         description.zh: '文本工具栏背后的阴影'
+        description.uk: 'Тінь за панелю для тексту'
         type: variable-select
         default: 'var(--shadow-s)'
         options:
             - 
                 label: 'None'
                 label.zh: '无'
+                label.uk: 'Вимкнута'
                 value: 'none'
             - 
                 label: 'Input style'
                 label.zh: '输入框样式'
+                label.uk: 'Стиль введення'
                 value: 'var(--input-shadow)'
             - 
                 label: 'Small style'
                 label.zh: '小型样式'
+                label.uk: 'Невеликий розмір'
                 value: 'var(--shadow-s)'
     -
         id: ui
@@ -1431,11 +1452,24 @@ body {
              --ntb-tbar-bottom-mb-phone: calc(var(--cg-nt-tbar-bottom-mb-phone) + var(--safe-area-inset-bottom));
          }
          &.ntb-remove-view-header {
-             --ntb-tbar-top-spacing: 0px;
-             --ntb-tbar-top-spacing-md: var(--size-4-2);
+            --ntb-tbar-top-spacing: 0px;
+            --ntb-tbar-top-spacing-md: var(--size-4-2);
+
+            --view-header-height: 0px;
+            & .view-header {
+                display: none !important;
+            }
+            & .view-content {
+                mask-image: var(--view-top-fade-mask);
+            }
          }
          &.ntb-remove-nav {
-             --ntb-tbar-bottom-mb-phone: calc(var(--cg-nt-tbar-bottom-mb-phone) + var(--safe-area-inset-bottom));
+            --ntb-tbar-bottom-mb-phone: calc(var(--cg-nt-tbar-bottom-mb-phone) + var(--safe-area-inset-bottom));
+
+            --navbar-height: 0px;
+            & .mobile-navbar {
+                display: none !important;
+            }
          }
     }
     
@@ -1485,67 +1519,9 @@ body {
     display: none !important;
 }
 
-body.is-phone.ntb-remove-nav {
-    --navbar-height: 0px;
-    & .mobile-navbar {
-        display: none !important;
-    }
-}
-
-body.is-phone.ntb-remove-view-header {
-    --view-header-height: 0px;
-    & .view-header {
-        display: none !important;
-    }
-    & .view-content {
-        mask-image: var(--view-top-fade-mask);
-    }
-}
-
 /* fix: tooltips appearing on elements below tapped elements */
 body.is-phone .tooltip {
     display: none !important;
-}
-/*
- * Default adjustments for various themes (CSS variables)
- */
-
-body {
-
-    &[data-ntb-csstheme="Baseline"] {
-        --cg-nt-tbar-top-sticky-pos-desktop: calc(var(--header-height) * -1 + 16px);
-        --cg-nt-tbar-top-sticky-pos-mobile: calc(1rem * -1 + 1px);
-    }
-    &[data-ntb-csstheme="Cupertino"] {
-        --cg-nt-tbar-top-sticky-pos-desktop: calc(var(--header-height) * -1 + 24px);
-        --ntb-anim-duration-moderate: var(--anim-duration-moderate);
-        --cg-nt-item-button-bg-color: var(--ntb-liquid-glass-background);
-        --cg-nt-item-border-radius: 32px;
-        --ntb-shadow-base: var(--shadow-base);
-        --ntb-shadow-xs: var(--shadow-xs);
-    }
-    &[data-ntb-csstheme="Baseline"], &[data-ntb-csstheme="Cupertino"] {     
-        --cg-nt-fab-inactive-opacity: 0.5;
-        --cg-nt-tbar-inactive-opacity-desktop: 0.5;
-        --cg-nt-tbar-inactive-opacity-mobile: 0.5;
-        --cg-nt-tbar-bg-color: rgba(0,0,0,0.0);
-        /* theme overrides this? so reset it */
-        --raised-blur: blur(2px) saturate(1.5) brightness(1.025);
-        &.is-phone {
-            --cg-nt-fab-pos-x-mobile: var(--navbar-side-offset);
-            --cg-nt-fab-pos-y-mobile: var(--navbar-bottom-offset);
-        }
-        &.is-mobile.theme-dark {
-            --cg-nt-tbar-bg-color: unset !important;
-        }
-    }
-    &[data-ntb-csstheme="Minimal"] {
-        --cg-nt-tbar-top-sticky-pos-desktop: calc(var(--header-height) * -1 + 16px);
-    }
-    &[data-ntb-csstheme="Velocity"] {
-        --cg-nt-tbar-top-sticky-pos-desktop: calc(var(--header-height) * -1 + 22px);      
-    }
-
 }
 /*
  * Callouts
@@ -2462,8 +2438,10 @@ body:not(.is-mobile):not(.is-focused) .callout[data-callout="note-toolbar"][data
  * FAB (Floating Action Button)
  */
 
-/* toolbar styles */
-.cg-note-toolbar-fab-container {
+ .cg-note-toolbar-fab-container {
+    
+    /* toolbar styles */
+
     & button[data-fab-metadata*="autohide"] {
         box-shadow: none;
         &:not(.is-mobile &) {
@@ -2488,10 +2466,9 @@ body:not(.is-mobile):not(.is-focused) .callout[data-callout="note-toolbar"][data
             display: none;
         }
     }
-}
 
-/* positioning */
-.cg-note-toolbar-fab-container {
+    /* positioning */
+
     bottom: var(--cg-nt-fab-pos-y-desktop);
     position: absolute;
     padding: 0;
@@ -2890,18 +2867,6 @@ body.is-tablet:has(.callout[data-callout="note-toolbar"][data-callout-metadata*=
     }
 }
 
-.note-toolbar-setting-modal-container {
-    .is-mobile & {
-        & .setting-group {
-            border-radius: var(--radius-m);
-            border: var(--border-width) solid var(--background-modifier-border);
-            & .setting-items {
-                border-radius: var(--radius-m);
-            }
-        }
-    }
-}
-
 .note-toolbar-setting-plugin-error,
 .note-toolbar-setting-plugin-onboarding {
     padding: 1em !important;
@@ -2999,7 +2964,7 @@ body.is-tablet:has(.callout[data-callout="note-toolbar"][data-callout-metadata*=
 
 .note-toolbar-setting-text-with-icon {
     display: inline-flex;
-    column-gap: 0.5em;
+    gap: 0 0.5em;
     align-items: center;
     & svg {
         color: var(--text-color) !important;
@@ -3080,7 +3045,7 @@ body.is-tablet:has(.callout[data-callout="note-toolbar"][data-callout-metadata*=
     flex-grow: 1;
     /* flex-wrap: wrap; */
     font-size: var(--font-ui-medium);
-    column-gap: 0.5em;
+    gap: 0 0.5em;
     padding: 8px;
     .is-mobile & {
         padding-inline-start: 0;
@@ -3192,7 +3157,7 @@ body.is-tablet:has(.callout[data-callout="note-toolbar"][data-callout-metadata*=
 
 .note-toolbar-setting-item-preview-edit-mobile {
     display: flex;
-    column-gap: 0.5em;
+    gap: 0 0.5em;
     justify-content: space-between;
     width: 100%;
 }
@@ -3639,8 +3604,7 @@ input[type="text"].note-toolbar-setting-error,
     display: flex;
     flex-grow: 1;
     flex-wrap: wrap;
-    column-gap: 1em;
-    /* row-gap: 1em; */
+    gap: 0 1em;
     & .setting-item {
         padding: 0;
     }
@@ -3817,7 +3781,6 @@ input[type="text"].note-toolbar-setting-error,
     }
     & .sortable-handle {
         cursor: move;
-        cursor: -webkit-grabbing;
     }
     & .sortable-handle:hover {
         cursor: grab;
@@ -4152,7 +4115,7 @@ input[type="text"].note-toolbar-setting-error,
 }
 
 .note-toolbar-setting-confirm-dialog-buttons {
-    column-gap: 0.5em;
+    gap: 0 0.5em;
     display: flex;
     justify-content: flex-end;
 }
@@ -4194,6 +4157,15 @@ input[type="text"].note-toolbar-setting-error,
     & .modal-close-button {
         z-index: 2; /* fix for modal title overlapping close button */
     }
+    .is-mobile & {
+        & .setting-group {
+            border-radius: var(--radius-m);
+            border: var(--border-width) solid var(--background-modifier-border);
+            & .setting-items {
+                border-radius: var(--radius-m);
+            }
+        }
+    }
 }
 
 .vertical-tab-content.note-toolbar-setting-modal {
@@ -4217,7 +4189,7 @@ input[type="text"].note-toolbar-setting-error,
     align-items: center;
     justify-content: space-between;
     display: flex;
-    column-gap: 1em;
+    gap: 0 1em;
     width: 100%;
 }
 
@@ -4241,7 +4213,7 @@ input[type="text"].note-toolbar-setting-error,
 }
 
 .note-toolbar-item-suggestion-container {
-    column-gap: 0.5em;
+    gap: 0 0.5em;
     display: flex;
     width: 100%;
 }
@@ -4250,7 +4222,7 @@ input[type="text"].note-toolbar-setting-error,
     align-items: center;
     display: flex;
     flex-direction: column;
-    column-gap: 0.5rem;
+    gap: 0 0.5rem;
     & svg {
         display: block;
         margin: 0 auto;
@@ -4426,7 +4398,7 @@ input[type="text"].note-toolbar-setting-error,
     width: 200px;
     &:focus-visible {
         border-radius: var(--radius-m);
-        box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+        /* box-shadow: inset 0 0 0 1px var(--background-modifier-border); */
         box-shadow: inset 0 0 0 3px var(--background-modifier-border-focus);
     }
     &:hover {
@@ -4516,12 +4488,12 @@ input[type="text"].note-toolbar-setting-error,
         color: var(--text-muted);
         display: inline-flex;
         &:focus-visible {
-            box-shadow: 0 0 0 1px var(--background-modifier-border);
+            /* box-shadow: 0 0 0 1px var(--background-modifier-border); */
             box-shadow: 0 0 0 2px var(--background-modifier-border-focus);
         }
     }
     .note-toolbar-setting-text-with-icon {
-        column-gap: 0.25em;
+        gap: 0 0.25em;
         & svg {
             height: var(--font-ui-smaller);
             width: var(--font-ui-smaller);
@@ -4862,7 +4834,7 @@ input[type="text"].note-toolbar-setting-error,
       .callout[data-callout="note-toolbar"] a.external-link, .callout[data-callout="note-toolbar"] a.internal-link {
         &:is(:focus-visible) {
             border-radius: var(--input-radius);
-            box-shadow: 0 0 0 1px var(--background-modifier-border);
+            /* box-shadow: 0 0 0 1px var(--background-modifier-border); */
             box-shadow: 0 0 0 2px var(--background-modifier-border-focus);
         }
     }
@@ -5044,6 +5016,11 @@ input[type="text"].note-toolbar-setting-error,
  * Needs to be imported last.
  */
 
+body[data-ntb-csstheme="Baseline"] {
+    --cg-nt-tbar-top-sticky-pos-desktop: calc(var(--header-height) * -1 + 16px);
+    --cg-nt-tbar-top-sticky-pos-mobile: calc(1rem * -1 + 1px);
+}
+
 body[data-ntb-csstheme="Border"] {
     & .cg-note-toolbar-container[data-tbar-position="bottom"],
     & .cg-note-toolbar-container[data-tbar-position="top"] {
@@ -5052,10 +5029,32 @@ body[data-ntb-csstheme="Border"] {
     }
 }
 
+body[data-ntb-csstheme="Baseline"], body[data-ntb-csstheme="Cupertino"] {     
+    --cg-nt-fab-inactive-opacity: 0.5;
+    --cg-nt-tbar-inactive-opacity-desktop: 0.5;
+    --cg-nt-tbar-inactive-opacity-mobile: 0.5;
+    --cg-nt-tbar-bg-color: rgba(0,0,0,0.0);
+    /* theme overrides this? so reset it */
+    --raised-blur: blur(2px) saturate(1.5) brightness(1.025);
+    &.is-phone {
+        --cg-nt-fab-pos-x-mobile: var(--navbar-side-offset);
+        --cg-nt-fab-pos-y-mobile: var(--navbar-bottom-offset);
+    }
+    &.is-mobile.theme-dark {
+        --cg-nt-tbar-bg-color: unset !important;
+    }
+}
+
 body[data-ntb-csstheme="Cupertino"] {
+    --cg-nt-tbar-top-sticky-pos-desktop: calc(var(--header-height) * -1 + 24px);
+    --ntb-anim-duration-moderate: var(--anim-duration-moderate);
+    --cg-nt-item-button-bg-color: var(--ntb-liquid-glass-background);
+    --cg-nt-item-border-radius: 32px;
+    --ntb-shadow-base: var(--shadow-base);
+    --ntb-shadow-xs: var(--shadow-xs);
     &.is-mobile.theme-dark {
         & .callout[data-callout="note-toolbar-output"] {
-            background-color: #000 !important;
+            background-color: #000000 !important;
         }
     }
     /* Liquid Glass effect for the Cupertino theme, thanks to @aaaaalexis */
@@ -5113,6 +5112,7 @@ body[data-ntb-csstheme="Cupertino"] {
 
 /* Minimal: width fix for props position #204 #216 */
 body[data-ntb-csstheme="Minimal"] {
+    --cg-nt-tbar-top-sticky-pos-desktop: calc(var(--header-height) * -1 + 16px);
     & .cg-note-toolbar-bar-container[data-tbar-position="props"] {
         .is-readable-line-width & {
             max-width: var(--max-width);
@@ -5124,6 +5124,7 @@ body[data-ntb-csstheme="Minimal"] {
 
 /* Velocity: fix: margins and padding incorrect */
 body[data-ntb-csstheme="Velocity"] {
+    --cg-nt-tbar-top-sticky-pos-desktop: calc(var(--header-height) * -1 + 22px);      
     & .callout[data-callout="note-toolbar"] .callout-content {
         margin-block-end: var(--cg-nt-tbar-margin-y);
         padding-inline: unset;

@@ -216,6 +216,21 @@
               "icon": "lucide-git-fork",
               "title": "Graph view"
             }
+          },
+          {
+            "id": "39a3638212cefe27",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of README"
+            }
           }
         ]
       },
@@ -279,11 +294,7 @@
       "workspaces:Manage workspace layouts": true,
       "local-backup:Run local backup": false,
       "obsidian-git:Open Git source control": false,
-      "obsidian42-brat:BRAT": false,
-      "dynamic-views:Create new Grid base": true,
-      "dynamic-views:Create new Masonry base": true,
-      "dynamic-views:Shuffle base": true,
-      "dynamic-views:Open random file from base": true
+      "obsidian42-brat:BRAT": false
     }
   },
   "active": "908dc8ab7954636a",

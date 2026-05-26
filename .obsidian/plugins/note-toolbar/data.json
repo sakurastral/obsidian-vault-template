@@ -751,7 +751,7 @@
           }
         }
       },
-      "updated": "2026-04-29T08:48:08.898Z"
+      "updated": "2026-05-25T04:27:45.098Z"
     },
     {
       "uuid": "f9699892-1fbd-4575-bcb3-79a4b54b771d",
@@ -968,6 +968,42 @@
           },
           "plugin": "",
           "tooltip": "Toggle Source mode",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "viewMode": "all"
+          }
+        },
+        {
+          "uuid": "a7190a05-c202-4abb-bfb8-ab587b8b7905",
+          "icon": "lucide-list",
+          "label": "Outline",
+          "tooltip": "",
+          "hasCommand": false,
+          "inGallery": false,
+          "link": "Outline: Show outline",
+          "linkAttr": {
+            "commandCheck": false,
+            "commandId": "outline:open",
+            "hasVars": false,
+            "type": "command"
+          },
           "visibility": {
             "desktop": {
               "components": [
@@ -1221,16 +1257,16 @@
         },
         "mobile": {
           "allViews": {
-            "position": "props"
+            "position": "fabl"
           }
         },
         "tablet": {
           "allViews": {
-            "position": "props"
+            "position": "fabl"
           }
         }
       },
-      "updated": "2026-05-12T00:33:23.458Z"
+      "updated": "2026-05-26T09:10:54.060Z"
     },
     {
       "uuid": "c67b2bda-c8af-48a6-8d7d-e58b1cdf3a46",
@@ -1244,6 +1280,42 @@
       ],
       "hasCommand": false,
       "items": [
+        {
+          "uuid": "af44bd02-2880-4be1-9846-c4dc457b8bf7",
+          "icon": "lucide-home",
+          "label": "Home",
+          "tooltip": "",
+          "hasCommand": false,
+          "inGallery": false,
+          "link": "Atlas/Home.md",
+          "linkAttr": {
+            "commandCheck": false,
+            "commandId": "",
+            "hasVars": false,
+            "type": "file"
+          },
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "viewMode": "all"
+          }
+        },
         {
           "uuid": "dc3be0a0-70bc-440f-a639-a96c6747774b",
           "icon": "lucide-check-circle",
@@ -1552,7 +1624,7 @@
           }
         }
       },
-      "updated": "2026-05-05T08:15:30.457Z"
+      "updated": "2026-05-26T08:54:52.010Z"
     },
     {
       "uuid": "eadcec74-ba61-41aa-97c4-82cefddac261",
@@ -2721,16 +2793,16 @@
         },
         "mobile": {
           "allViews": {
-            "position": "props"
+            "position": "fabl"
           }
         },
         "tablet": {
           "allViews": {
-            "position": "props"
+            "position": "fabl"
           }
         }
       },
-      "updated": "2026-05-12T00:33:45.293Z"
+      "updated": "2026-05-26T09:13:11.635Z"
     },
     {
       "uuid": "dece0024-e181-45ef-8dd6-e2a41c0c7b69",
@@ -2792,16 +2864,16 @@
         },
         "mobile": {
           "allViews": {
-            "position": "props"
+            "position": "fabl"
           }
         },
         "tablet": {
           "allViews": {
-            "position": "props"
+            "position": "fabl"
           }
         }
       },
-      "updated": "2026-05-12T00:33:50.727Z"
+      "updated": "2026-05-26T09:13:20.374Z"
     },
     {
       "uuid": "defaa80e-dacd-4588-88d4-173e1d48f594",
@@ -2935,16 +3007,16 @@
         },
         "mobile": {
           "allViews": {
-            "position": "props"
+            "position": "fabl"
           }
         },
         "tablet": {
           "allViews": {
-            "position": "props"
+            "position": "fabl"
           }
         }
       },
-      "updated": "2026-05-12T00:33:56.397Z"
+      "updated": "2026-05-26T09:13:26.566Z"
     },
     {
       "uuid": "be9d94d7-0cc7-4857-aa58-8822dd0e2163",
@@ -3078,16 +3150,16 @@
         },
         "mobile": {
           "allViews": {
-            "position": "props"
+            "position": "fabl"
           }
         },
         "tablet": {
           "allViews": {
-            "position": "props"
+            "position": "fabl"
           }
         }
       },
-      "updated": "2026-05-12T00:34:00.174Z"
+      "updated": "2026-05-26T09:13:34.074Z"
     },
     {
       "uuid": "f26041a0-8b84-4654-bb2a-6907ab48ee8e",
@@ -3221,19 +3293,19 @@
         },
         "mobile": {
           "allViews": {
-            "position": "props"
+            "position": "fabl"
           }
         },
         "tablet": {
           "allViews": {
-            "position": "props"
+            "position": "fabl"
           }
         }
       },
-      "updated": "2026-05-12T00:34:04.889Z"
+      "updated": "2026-05-26T09:13:43.231Z"
     }
   ],
   "version": 20260428.1,
   "webviewerToolbar": null,
-  "whatsnew_version": "1.31"
+  "whatsnew_version": "1.32"
 }

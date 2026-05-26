@@ -10,6 +10,7 @@ modified: 2026-04-17T08:10:29+08:00
 status:
 parent:
 references:
+banner: "[[jplenio-foggy-7725646.jpg]]"
 ---
 
 ```base
@@ -18,28 +19,21 @@ filters:
     - file.folder == "Atlas"
     - file.name != this.file.name
 views:
-  - type: dynamic-views-grid
+  - type: cards
     name: View
-    sort: []
-    dateProperty: file.name
-    titleProperty: note.Day：Type
-    startDate: note.title
-    imageProperty: note.cover
-    imageFormat: cover
-    imagePosition: bottom
-    imageFit: crop
-    fallbackToContent: false
-    cardSize: 150
+    cardSize: 250
+    image: note.cover
+    imageAspectRatio: 0.45
 
 ```
+
 ```base
 views:
   - type: table
-    name: New
+    name: 最近新增
     sort:
       - property: created
         direction: DESC
     limit: 10
 
 ```
-

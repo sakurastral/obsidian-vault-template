@@ -892,6 +892,32 @@
       "slider": {},
       "time": {},
       "numeric": {}
+    },
+    "banner": {
+      "general": {
+        "icon": "",
+        "hidden": false
+      },
+      "array": {},
+      "select": {
+        "useDefaultStyle": false,
+        "optionsType": "manual"
+      },
+      "multiselect": {
+        "optionsType": "manual"
+      },
+      "toggle": {},
+      "title": {},
+      "markdown": {},
+      "created": {},
+      "object": {},
+      "color": {},
+      "rating": {},
+      "relation": {},
+      "datecustom": {},
+      "slider": {},
+      "time": {},
+      "numeric": {}
     }
   },
   "confirmPropertySettingsReset": true,

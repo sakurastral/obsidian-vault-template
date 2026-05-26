@@ -1,13 +1,8 @@
 {
   "pluginList": [
-    "churnish/dynamic-views",
     "unxok/obsidian-better-properties"
   ],
   "pluginSubListFrozenVersion": [
-    {
-      "repo": "churnish/dynamic-views",
-      "version": ""
-    },
     {
       "repo": "unxok/obsidian-better-properties"
     }
