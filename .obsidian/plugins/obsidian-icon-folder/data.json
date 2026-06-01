@@ -6,11 +6,11 @@
     "emojiStyle": "twemoji",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "RiFontSize",
       "TiIcons",
       "LiImage",
       "LiCalendar",
-      "TiCalendarCog",
-      "LiMapPin"
+      "TiCalendarCog"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -60,7 +60,6 @@
   "Nexus/Categories/MOC.md": "RiAsterisk",
   "Nexus/Categories/Area": "TiSquareAsterisk",
   "Nexus/Categories/Others": "TiSquareLetterO",
-  "Assets/Settings": "OcGear16",
   "Nexus/Categories/Task.md": "RiAsterisk",
   "Nexus/Categories/Journal.md": "RiAsterisk",
   "Nexus/Categories/Vault Management.md": "RiAsterisk",

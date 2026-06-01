@@ -280,7 +280,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "custom-sort:Toggle custom sorting": false,
       "modalforms:Edit forms": true,
       "templater-obsidian:Templater": true,
       "daily-notes:Open today's daily note": true,

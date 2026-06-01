@@ -1,0 +1,894 @@
+{
+  "items": {
+    "/": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Collection",
+        "Atlas",
+        "Project",
+        "Task",
+        "Assets",
+        "Inbox",
+        "Nexus",
+        "README.md",
+        "LICENSE.txt"
+      ]
+    },
+    "Atlas": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Home.md",
+        "Task Board.md",
+        "Event Management.md",
+        "Journal Management.md",
+        "Notes Management.md",
+        "Assets Management.md",
+        "Vault Property Management.md",
+        "Template Management.md",
+        "Cover Management.md"
+      ]
+    },
+    "Atlas/Assets Management.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Atlas/Cover Management.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Atlas/Event Management.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Atlas/Home.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Atlas/Journal Management.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Atlas/Notes Management.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Atlas/Task Board.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Atlas/Template Management.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Atlas/Vault Property Management.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Template",
+        "Scripts",
+        "Attachments",
+        "Images",
+        "Icons"
+      ]
+    },
+    "Assets/Attachments": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Vault Example Note (Empty).md"
+      ]
+    },
+    "Assets/Icons": {
+      "isPinned": false,
+      "isHidden": true,
+      "sortOrder": "custom",
+      "customOrder": [
+        "boxicons",
+        "boxicons.zip",
+        "icomoon",
+        "icomoon.zip",
+        "lucide-icons",
+        "lucide-icons.zip",
+        "octicons",
+        "octicons.zip",
+        "remix-icons",
+        "remix-icons.zip",
+        "rpg-awesome",
+        "rpg-awesome.zip",
+        "tabler-icons",
+        "tabler-icons.zip"
+      ]
+    },
+    "Assets/Icons/boxicons": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "BxCategory.svg",
+        "BxCollection.svg"
+      ]
+    },
+    "Assets/Icons/boxicons/BxCategory.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/boxicons/BxCollection.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/boxicons.zip": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/icomoon": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Assets/Icons/icomoon.zip": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/lucide-icons": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Archive.svg",
+        "Braces.svg",
+        "Calendar.svg",
+        "Home.svg",
+        "Image.svg",
+        "Inbox.svg",
+        "Map.svg",
+        "NotebookPen.svg",
+        "Tags.svg",
+        "Terminal.svg",
+        "Vault.svg"
+      ]
+    },
+    "Assets/Icons/lucide-icons/Archive.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/lucide-icons/Braces.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/lucide-icons/Calendar.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/lucide-icons/Home.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/lucide-icons/Image.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/lucide-icons/Inbox.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/lucide-icons/Map.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/lucide-icons/NotebookPen.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/lucide-icons/Tags.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/lucide-icons/Terminal.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/lucide-icons/Vault.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/lucide-icons.zip": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/octicons": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Inbox16.svg",
+        "Project16.svg",
+        "Tasklist16.svg"
+      ]
+    },
+    "Assets/Icons/octicons/Inbox16.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/octicons/Project16.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/octicons/Tasklist16.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/octicons.zip": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/remix-icons": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Asterisk.svg",
+        "Attachment2.svg",
+        "AttachmentLine.svg",
+        "CheckDoubleLine.svg",
+        "Layout5Line.svg"
+      ]
+    },
+    "Assets/Icons/remix-icons/Asterisk.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/remix-icons/Attachment2.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/remix-icons/AttachmentLine.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/remix-icons/CheckDoubleLine.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/remix-icons/Layout5Line.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/remix-icons.zip": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/rpg-awesome": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Assets/Icons/rpg-awesome.zip": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/tabler-icons": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "CalendarCog.svg",
+        "Icons.svg",
+        "Seeding.svg",
+        "SquareAsterisk.svg",
+        "SquareLetterO.svg",
+        "SquareLetterP.svg",
+        "Template.svg"
+      ]
+    },
+    "Assets/Icons/tabler-icons/CalendarCog.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/tabler-icons/Icons.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/tabler-icons/Seeding.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/tabler-icons/SquareAsterisk.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/tabler-icons/SquareLetterO.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/tabler-icons/SquareLetterP.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/tabler-icons/Template.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Icons/tabler-icons.zip": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Images": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "andrei-lazar-DNJzF0u3l9U-unsplash.jpg",
+        "calendar-pexels-pnw-prod-8251157.jpg",
+        "john-fowler-RsRTIofe0HE-unsplash.jpg",
+        "jplenio-foggy-7725646.jpg",
+        "jplenio-forest-7023487.jpg",
+        "lenzatic-nevada-8338929.jpg",
+        "manuel-h-trees-7733878.jpg",
+        "notes-pexels-pnw-prod-8251114.jpg",
+        "pixifant-sunbeams-1547273.jpg",
+        "shogun-nature-7720825.jpg",
+        "sora-sagano-F6ZzivdSQ5k-unsplash.jpg",
+        "task-pexels-ds-stories-6991353.jpg",
+        "yousef-espanioly-0iOOw41DZ28-unsplash.jpg"
+      ]
+    },
+    "Assets/Images/andrei-lazar-DNJzF0u3l9U-unsplash.jpg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Images/calendar-pexels-pnw-prod-8251157.jpg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Images/john-fowler-RsRTIofe0HE-unsplash.jpg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Images/jplenio-foggy-7725646.jpg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Images/jplenio-forest-7023487.jpg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Images/lenzatic-nevada-8338929.jpg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Images/manuel-h-trees-7733878.jpg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Images/notes-pexels-pnw-prod-8251114.jpg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Images/pixifant-sunbeams-1547273.jpg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Images/shogun-nature-7720825.jpg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Images/sora-sagano-F6ZzivdSQ5k-unsplash.jpg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Images/task-pexels-ds-stories-6991353.jpg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Images/yousef-espanioly-0iOOw41DZ28-unsplash.jpg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Scripts": {
+      "isPinned": false,
+      "isHidden": true,
+      "sortOrder": "custom",
+      "customOrder": [
+        "datePicker.js"
+      ]
+    },
+    "Assets/Scripts/datePicker.js": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Template": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Custom",
+        "Inbox",
+        "Nexus",
+        "Project",
+        "Properties",
+        "Task"
+      ]
+    },
+    "Assets/Template/Custom": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Convert Color Codes to HTML Block.md",
+        "Delete Example Notes.md",
+        "Update “Created” and “Modified” Properties Across All Vault Notes.md"
+      ]
+    },
+    "Assets/Template/Custom/Convert Color Codes to HTML Block.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Template/Custom/Delete Example Notes.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Template/Custom/Update “Created” and “Modified” Properties Across All Vault Notes.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Template/Inbox": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Add New Note.md"
+      ]
+    },
+    "Assets/Template/Inbox/Add New Note.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Template/Nexus": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Add New Category.md",
+        "Category Information Board.base"
+      ]
+    },
+    "Assets/Template/Nexus/Add New Category.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Template/Nexus/Category Information Board.base": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Template/Project": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Add New Note.md",
+        "Calendar",
+        "Journal"
+      ]
+    },
+    "Assets/Template/Project/Add New Note.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Template/Project/Calendar": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Add New Event.md",
+        "Event Information Board.base"
+      ]
+    },
+    "Assets/Template/Project/Calendar/Add New Event.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Template/Project/Calendar/Event Information Board.base": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Template/Project/Journal": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Add Daily Note.md"
+      ]
+    },
+    "Assets/Template/Project/Journal/Add Daily Note.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Template/Properties": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Add New Categories.md",
+        "Add New Reference.md",
+        "Change Note Name.md"
+      ]
+    },
+    "Assets/Template/Properties/Add New Categories.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Template/Properties/Add New Reference.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Template/Properties/Change Note Name.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Template/Task": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Add New Task.md",
+        "Archive Task.md",
+        "Edit Task.md",
+        "Mark as Cancelled.md",
+        "Mark as Completed.md",
+        "Mark as In Progess.md",
+        "Task Information Board.base"
+      ]
+    },
+    "Assets/Template/Task/Add New Task.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Template/Task/Archive Task.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Template/Task/Edit Task.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Template/Task/Mark as Cancelled.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Template/Task/Mark as Completed.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Template/Task/Mark as In Progess.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Template/Task/Task Information Board.base": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Collection": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "byCreatedTimeReverse",
+      "customOrder": [
+        "Vault Example Note (Empty).md"
+      ]
+    },
+    "Inbox": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Vault Example Note (Empty).md"
+      ]
+    },
+    "Nexus": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Title Prefix",
+        "Categories",
+        "Status",
+        "Calendar Scope",
+        "Task Status"
+      ]
+    },
+    "Nexus/Calendar Scope": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Vault Example Note (Empty).md"
+      ]
+    },
+    "Nexus/Categories": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Common.md",
+        "Journal.md",
+        "Task.md",
+        "Vault Management.md",
+        "Vault Properties.md",
+        "MOC.md",
+        "Project.md",
+        "Outdated.md",
+        "Projects",
+        "Area",
+        "Others"
+      ]
+    },
+    "Nexus/Categories/Area": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Vault Example Note (Empty).md"
+      ]
+    },
+    "Nexus/Categories/Common.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Nexus/Categories/Journal.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Nexus/Categories/MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Nexus/Categories/Outdated.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Nexus/Categories/Project.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Nexus/Categories/Projects": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Vault Example Note (Empty).md"
+      ]
+    },
+    "Nexus/Categories/Task.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Nexus/Categories/Vault Properties.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Nexus/Categories/Vault Management.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Nexus/Categories/Others": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Vault Example Note (Empty).md"
+      ]
+    },
+    "Nexus/Status": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Seedling.md",
+        "Sapling.md",
+        "Tree.md",
+        "Path.md",
+        "Wildflower.md"
+      ]
+    },
+    "Nexus/Status/Sapling.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Nexus/Status/Path.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Nexus/Status/Seedling.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Nexus/Status/Tree.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Nexus/Status/Wildflower.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Nexus/Task Status": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Backlog.md",
+        "In Progress.md",
+        "Cancelled.md",
+        "Completed.md",
+        "Archived.md"
+      ]
+    },
+    "Nexus/Task Status/Archived.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Nexus/Task Status/Backlog.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Nexus/Task Status/Cancelled.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Nexus/Task Status/Completed.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Nexus/Task Status/In Progress.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Nexus/Title Prefix": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "NOTE｜.md",
+        "PROJ｜.md"
+      ]
+    },
+    "Nexus/Title Prefix/NOTE｜.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Nexus/Title Prefix/PROJ｜.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Project": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Journal",
+        "Nook",
+        "Calendar"
+      ]
+    },
+    "Project/Calendar": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Vault Example Note (Empty).md"
+      ]
+    },
+    "Project/Journal": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Vault Example Note (Empty).md"
+      ]
+    },
+    "Project/Nook": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Vault Example Note (Empty).md"
+      ]
+    },
+    "Task": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Inbox",
+        "Archived"
+      ]
+    },
+    "Task/Archived": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "byCreatedTimeReverse",
+      "customOrder": [
+        "Vault Example Note (Empty).md"
+      ]
+    },
+    "Task/Inbox": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "byCreatedTimeReverse",
+      "customOrder": [
+        "Vault Example Note (Empty).md"
+      ]
+    },
+    "Assets/Attachments/Vault Example Note (Empty).md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Collection/Vault Example Note (Empty).md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Inbox/Vault Example Note (Empty).md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "LICENSE.txt": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Nexus/Calendar Scope/Vault Example Note (Empty).md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Nexus/Categories/Area/Vault Example Note (Empty).md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Nexus/Categories/Others/Vault Example Note (Empty).md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Nexus/Categories/Projects/Vault Example Note (Empty).md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Project/Calendar/Vault Example Note (Empty).md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Project/Journal/Vault Example Note (Empty).md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Project/Nook/Vault Example Note (Empty).md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Task/Archived/Vault Example Note (Empty).md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Task/Inbox/Vault Example Note (Empty).md": {
+      "isPinned": false,
+      "isHidden": false
+    }
+  },
+  "pinnedFiles": [],
+  "showHidden": false,
+  "newItemPlacement": "top",
+  "persistOrderOnCreateDelete": true,
+  "debugMode": false
+}

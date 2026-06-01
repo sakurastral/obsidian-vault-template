@@ -1,7 +1,6 @@
 [
   "obsidian-memos",
   "obsidian42-brat",
-  "custom-sort",
   "obsidian-git",
   "obsidian-linter",
   "modalforms",
@@ -17,5 +16,7 @@
   "local-backup",
   "note-toolbar",
   "heading-outliner",
-  "pretty-properties"
+  "pretty-properties",
+  "advanced-canvas",
+  "flexplorer"
 ]
