@@ -820,7 +820,7 @@ settings:
 /* @settings
 
 name: March Theme - Layout
-id: march-theme-playout
+id: march-theme-layout
 settings:
     - 
         id: select-layout-style
@@ -897,7 +897,7 @@ settings:
         type: variable-color
         default: var(--text-on-accent)
         format: hex
-        opacity: false
+        opacity: true
     -
         id: tab-text-color
         title: Tab text color
@@ -966,7 +966,7 @@ settings:
         title: Letter Spacing
         type: variable-number-slider
         format: em
-        default: 0.1
+        default: 0
         min: 0
         max: 0.15
         step: 0.01
@@ -990,12 +990,64 @@ settings:
         min: 0
         max: 10
         step: 0.5
+    -
+        id: body-ligatures-section
+        title: Body Text Settings
+        type: heading
+        level: 1
+    -
+        id: march-font-variant-ligatures-body
+        title: Body Font Ligatures
+        description: Enable or disable standard font ligatures for body text.
+        type: variable-text
+        default: normal
+    -
+        id: march-font-feature-settings-body
+        title: Body Font Feature Settings
+        description: Custom OpenType feature tags for body text.
+        type: variable-text
+        default: "'liga' on, 'calt' on"
+        quotes: false
+    -
+        id: code-ligatures-section
+        title: Code Text Settings
+        type: heading
+        level: 1
+    -
+        id: march-font-variant-ligatures-code
+        title: Code Font Ligatures
+        description: Enable or disable standard font ligatures for code blocks and inline code.
+        type: variable-text
+        default: normal
+    -
+        id: march-font-feature-settings-code
+        title: Code Font Feature Settings
+        description: Custom OpenType feature tags for code blocks.
+        type: variable-text
+        default: "'liga' on, 'calt' on"
+        quotes: false
 */
 :is(body) {
   --font-ui-smaller: 0.75rem;
   --font-ui-small: 0.8125rem;
   --font-ui-medium: 0.9375rem;
   --font-ui-larger: 1.25rem;
+}
+
+:is(body) {
+  --march-font-variant-ligatures-body: normal;
+  --march-font-variant-ligatures-code: normal;
+  --march-font-feature-settings-body: 'liga' on, 'calt' on;
+  --march-font-feature-settings-code: 'liga' on, 'calt' on;
+}
+
+body {
+  font-variant-ligatures: var(--march-font-variant-ligatures-body);
+  font-feature-settings: var(--march-font-feature-settings-body);
+}
+body code, body .cm-inline-code, body .HyperMD-codeblock {
+  font-variant-ligatures: var(--march-font-variant-ligatures-code);
+  font-feature-settings: var(--march-font-feature-settings-code);
 }
 
 .theme-light,
@@ -1529,7 +1581,7 @@ body {
   --divider-color: var(--background-modifier-border);
   --divider-color-hover: var(--march-50-accent);
   --modal-border-color: var(--divider-color);
-  --tab-divider-color: transparent;
+  --tab-divider-color: #00000000;
   --tab-text-color: var(--text-muted);
   --tab-text-color-active: var(--text-normal);
   --tab-text-color-focused: var(--tab-text-color);
@@ -1537,7 +1589,6 @@ body {
   --tab-text-color-focused-highlighted: var(--text-accent);
   --tab-text-color-focused-active-current: var(--tab-text-color-active);
   --march-status-bar-height: calc(var(--status-bar-font-size) + var(--size-4-1) + var(--size-4-1) + 0.5rem);
-  --march-letter-spacing: 0.1em;
 }
 body .mod-root {
   --metadata-background: var(--background-primary-alt);
@@ -1665,10 +1716,6 @@ body .search-input-container input {
 body .workspace:has(.workspace-split.mod-horizontal.mod-sidedock.mod-right-split.is-sidedock-collapsed) .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-container {
   padding-right: 10px;
 }
-body .markdown-preview-view,
-body .markdown-source-view {
-  letter-spacing: var(--march-letter-spacing);
-}
 
 body.enable-colorful-frame-style-layout {
   --titlebar-background: var(--march-accent);
@@ -1686,7 +1733,6 @@ body.enable-colorful-frame-style-layout {
   --tab-text-color-focused-highlighted: var(--text-accent);
   --tab-text-color-focused-active-current: var(--text-accent);
   --march-status-bar-height: calc(var(--status-bar-font-size) + var(--size-4-1) + var(--size-4-1) + 0.5rem);
-  --march-letter-spacing: 0.1em;
 }
 body.enable-colorful-frame-style-layout .mod-root {
   --metadata-background: var(--background-primary-alt);
@@ -1848,10 +1894,6 @@ body.enable-colorful-frame-style-layout .search-input-container input {
 }
 body.enable-colorful-frame-style-layout .workspace:has(.workspace-split.mod-horizontal.mod-sidedock.mod-right-split.is-sidedock-collapsed) .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-container {
   padding-right: 10px;
-}
-body.enable-colorful-frame-style-layout .markdown-preview-view,
-body.enable-colorful-frame-style-layout .markdown-source-view {
-  letter-spacing: var(--march-letter-spacing);
 }
 
 body {
