@@ -328,6 +328,18 @@ settings:
         type: variable-color
         default: var(--background-secondary)
         format: hex
+    -
+        id: march-codeblock-comment-font-style
+        title: Codeblock Comment Style
+        type: variable-select
+        default: italic
+        options:
+            - 
+                label: Normal
+                value: normal
+            - 
+                label: Italic
+                value: italic
     - 
         id: heading-blockquotes
         title: Blockquotes
@@ -2192,6 +2204,14 @@ body .HyperMD-codeblock.cm-line .code-block-flair {
   top: 0;
   right: 0;
   border-radius: 0 0 0 var(--code-radius);
+}
+
+body {
+  --march-codeblock-comment-font-style: italic;
+}
+body .token.comment,
+body .cm-comment {
+  font-style: var(--march-codeblock-comment-font-style);
 }
 
 /* ========================================================================== */

@@ -2796,10 +2796,7 @@ body.is-tablet .note-toolbar-menu[data-ntb-meta*="mgls"] {
 .note-toolbar-setting-ui, .note-toolbar-setting-modal-container {
     & .setting-group {
         & .setting-items {
-            .is-mobile & {
-                /* fix: this padding is missing in Obsidian 1.13 */
-                padding: var(--size-4-5);
-            }
+            padding: var(--size-4-5);
             &:focus-within {
                 box-shadow: inset 0 0 0 2px var(--background-modifier-border-focus);
             }
@@ -3203,6 +3200,7 @@ body.is-tablet .note-toolbar-menu[data-ntb-meta*="mgls"] {
             gap: 0.25em;
             width: 100%;
             & .setting-item {
+                align-items: center;
                 /* box-shadow: blue 0px 0px 0px 1px !important; */
                 border-top: none;
                 border: dashed 1px var(--pill-color-remove);
@@ -3215,7 +3213,6 @@ body.is-tablet .note-toolbar-menu[data-ntb-meta*="mgls"] {
                 height: var(--input-height);
                 .is-mobile & {
                     flex-direction: row;
-                    align-items: center;
                 }
                 &:first-child {
                     border: dashed 1px var(--pill-color-remove);

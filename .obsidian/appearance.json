@@ -10,6 +10,6 @@
   "nativeMenus": false,
   "showViewHeader": true,
   "interfaceFontFamily": "",
-  "monospaceFontFamily": "Iosevka,Menlo",
+  "monospaceFontFamily": "Menlo,Consolas",
   "textFontFamily": ""
 }
