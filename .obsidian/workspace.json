@@ -236,8 +236,21 @@
               "icon": "lucide-list",
               "title": "Outline"
             }
+          },
+          {
+            "id": "d0b69ea30efe7807",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "README.md"
+              },
+              "icon": "lucide-info",
+              "title": "File properties"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "205879abebf0a12e",
@@ -303,13 +316,28 @@
   },
   "active": "908dc8ab7954636a",
   "lastOpenFiles": [
+    "Atlas/Journal Management.md",
+    "Atlas/Assets Management.md",
+    "Assets/Images/notes-pexels-pnw-prod-8251114.jpg",
+    "Assets/Template/Inbox/Add New Note.md",
+    "Assets/Template/Project/Add New Note.md",
+    "Atlas/Home.md",
+    "Assets/Images/jplenio-foggy-7725646.jpg",
+    "Assets/Images/calendar-pexels-pnw-prod-8251157.jpg",
+    "Assets/Template/Project/Calendar/Add New Event.md",
+    "Assets/Template/Task/Add New Task.md",
     "README.md",
+    "Atlas/Cover Management.md",
+    "Assets/Images/default-task-cover.png",
+    "Assets/Images/default-note-cover.png",
+    "Assets/Images/default-home-cover.png",
+    "Assets/Images/default-atlas-cover拷貝3.png",
+    "Assets/Images/default-atlas-cover拷貝2.png",
+    "Assets/Images/default-atlas-cover拷貝.png",
+    "Assets/Images/default-atlas-cover.png",
     "Assets/Template/Nexus/Category Information Board.base",
     "Atlas/Task Board.md",
-    "Assets/Images/calendar-pexels-pnw-prod-8251157.jpg",
-    "Assets/Images/andrei-lazar-DNJzF0u3l9U-unsplash.jpg",
     "Nexus/Title Prefix/NOTE｜.md",
-    "Atlas/Home.md",
     "Atlas/Notes Management.md",
     "Nexus/Categories/Project.md",
     "Nexus/Categories/Projects/Vault Example Note (Empty).md",
@@ -324,7 +352,6 @@
     "Assets/Template/Custom/Update “Created” and “Modified” Properties Across All Vault Notes.md",
     "Task/Inbox/Vault Example Note (Empty).md",
     "Assets/Settings/Settings for Custom File Explorer Sorting.md",
-    "Nexus/Status/Wildflower.md",
-    "Nexus/Status/Tree.md"
+    "Nexus/Status/Wildflower.md"
   ]
 }

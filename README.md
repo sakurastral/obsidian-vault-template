@@ -1,16 +1,3 @@
----
-cover:
-title: README
-aliases:
-categories:
-tags:
-created: 2025-12-19T16:35:48+08:00
-modified: 2026-04-06T16:41:04+08:00
-status:
-parent:
-references:
----
-
 This is an Obsidian vault.
 
 ## Get started

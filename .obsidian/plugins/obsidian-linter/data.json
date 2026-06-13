@@ -286,7 +286,13 @@
     "Assets/Template",
     ""
   ],
-  "filesToIgnore": [],
+  "filesToIgnore": [
+    {
+      "label": "",
+      "match": "^README",
+      "flags": "i"
+    }
+  ],
   "linterLocale": "zh-tw",
   "logLevel": "ERROR",
   "lintCommands": [],
