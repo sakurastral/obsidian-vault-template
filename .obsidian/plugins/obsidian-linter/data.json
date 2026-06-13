@@ -22,7 +22,7 @@
     },
     "insert-yaml-attributes": {
       "enabled": true,
-      "text-to-insert": "cover:\ntitle:\naliases:\ncategories:\ntags:\ncreated:\nmodified:\nstatus:\nparent:\nreferences:"
+      "text-to-insert": "cover:\ntitle:\naliases:\ncategories:\ntags:\ndescription:\ncreated:\nmodified:\nstatus:\nparent:\nrelated:\nreferences:"
     },
     "move-tags-to-yaml": {
       "enabled": true,
@@ -35,7 +35,7 @@
     },
     "yaml-key-sort": {
       "enabled": true,
-      "yaml-key-priority-sort-order": "cover:\ntitle:\naliases:\ncategories:\ntags:\ncreated:\nmodified:\nstatus:\nparent:\nreferences:\nTask：Content:\nTask：Status:\nTask：Priority:\nTask：Scheduled(Start):\nTask：Scheduled(End):\nTask：Due:\nTask：Done:\nTask：Cancelled:\nTask：Archive:\nDay：Type:\nDay：N-Holiday:\nDay：Makeup:\nDay：Events:\nDay：Work:",
+      "yaml-key-priority-sort-order": "cover:\ntitle:\naliases:\ncategories:\ntags:\ndescription:\ncreated:\nmodified:\nstatus:\nparent:\nrelated:\nreferences:\nTask：Content:\nTask：Status:\nTask：Priority:\nTask：Scheduled(Start):\nTask：Scheduled(End):\nTask：Due:\nTask：Done:\nTask：Cancelled:\nTask：Archived:",
       "priority-keys-at-start-of-yaml": true,
       "yaml-sort-order-for-other-keys": "Ascending Alphabetical"
     },

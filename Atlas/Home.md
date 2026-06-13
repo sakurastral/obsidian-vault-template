@@ -1,16 +1,17 @@
 ---
-cover: "[[jplenio-foggy-7725646.jpg]]"
+cover: "[[default-home-cover.png]]"
 title: Home
 aliases:
 categories:
   - "[[Vault Management]]"
 tags:
+description:
 created: 2024-09-30T14:29:33+08:00
-modified: 2026-04-17T08:10:29+08:00
+modified: 2026-06-13T16:38:40+08:00
 status:
 parent:
+related:
 references:
-banner: "[[jplenio-foggy-7725646.jpg]]"
 ---
 
 ```base

@@ -3083,6 +3083,9 @@ body.is-tablet .note-toolbar-menu[data-ntb-meta*="mgls"] {
         & #tbar-search {
             padding-top: 0;
             margin-bottom: 0;
+            &:not(.is-mobile &) {
+                padding-bottom: unset;
+            }
             & .setting-item-info {
                 display: none;
             }
@@ -3557,6 +3560,17 @@ body.is-tablet .note-toolbar-menu[data-ntb-meta*="mgls"] {
     }
 }
 
+.note-toolbar-setting-script-preview {
+    background-color: var(--background-secondary);
+    display: flex;
+    font-family: var(--font-monospace);
+    font-size: var(--font-ui-small);
+    max-width: 100%;
+    overflow-x: scroll;
+    padding: var(--size-4-2) var(--size-4-3);
+    white-space: normal;
+}
+
 .note-toolbar-setting-empty-message {
     align-items: center;
     color: var(--text-muted);
@@ -3859,6 +3873,12 @@ input[type="text"].note-toolbar-setting-error,
                         margin-top: 0;
                     }
                 }
+                & .setting-item[data-active="false"] {
+                    display: none;
+                }
+                & .setting-item.note-toolbar-setting-no-padding-bottom {
+                    padding-bottom: 0;
+                }
             }
         }
     }
@@ -3873,6 +3893,7 @@ input[type="text"].note-toolbar-setting-error,
 }
 
 .note-toolbar-setting-field-help,
+.note-toolbar-setting-field-help-copy,
 .note-toolbar-setting-field-error {
     color: var(--text-muted);
     font-size: var(--font-ui-smaller);
@@ -3895,6 +3916,10 @@ input[type="text"].note-toolbar-setting-error,
     &[data-active="false"] {
         display: none;
     }
+}
+
+.note-toolbar-setting-field-help-copy {
+    margin-top: 0;
 }
 
 .note-toolbar-setting-tbar-preview {
@@ -4086,6 +4111,11 @@ input[type="text"].note-toolbar-setting-error,
 
 .note-toolbar-setting-spacer {
     margin-block-start: 2em;    
+}
+
+.note-toolbar-setting-import-confirm-preview-container {
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 .note-toolbar-setting-import-confirm-preview {
@@ -4804,6 +4834,9 @@ input[type="text"].note-toolbar-setting-error,
         width: var(--cg-nt-ui-modal-width);
         & .view-header-left, .view-actions {
             display: none;
+        }
+        & .modal-header-button {
+            z-index: 2; /* fix for modal content overlapping close button */
         }
         & .modal-content {
             overflow-y: auto;

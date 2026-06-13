@@ -1,14 +1,16 @@
 ---
-cover: "[[task-pexels-ds-stories-6991353.jpg]]"
+cover: "[[default-task-cover.png]]"
 title: Task Board
 aliases:
 categories:
   - "[[Vault Management]]"
 tags:
+description:
 created: 2025-12-16T08:38:43+08:00
-modified: 2026-04-16T10:39:18+08:00
+modified: 2026-06-13T16:38:40+08:00
 status:
 parent:
+related:
 references:
 ---
 

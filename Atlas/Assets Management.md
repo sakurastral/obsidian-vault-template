@@ -1,14 +1,16 @@
 ---
-cover: "[[lenzatic-nevada-8338929.jpg]]"
+cover: "[[default-atlas-cover.png]]"
 title: Assets Management
 aliases:
 categories:
   - "[[Vault Management]]"
 tags:
+description:
 created: 2025-12-16T08:38:43+08:00
-modified: 2026-04-27T09:04:04+08:00
+modified: 2026-06-13T16:38:40+08:00
 status:
 parent:
+related:
 references:
 ---
 

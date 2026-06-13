@@ -1,14 +1,16 @@
 ---
-cover: "[[calendar-pexels-pnw-prod-8251157.jpg]]"
+cover: "[[default-atlas-cover.png]]"
 title: Journal Management
 aliases:
 categories:
   - "[[Vault Management]]"
 tags:
+description:
 created: 2025-12-16T08:38:43+08:00
-modified: 2026-04-25T18:37:24+08:00
+modified: 2026-06-13T16:38:40+08:00
 status:
 parent:
+related:
 references:
 ---
 

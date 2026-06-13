@@ -15365,6 +15365,9 @@ var FormResult = class {
    */
   asFrontmatterString(options) {
     const data = objectSelect(this.data, options);
+    if (Object.keys(data).length === 0) {
+      return "";
+    }
     return (0, import_obsidian12.stringifyYaml)(data);
   }
   /**
@@ -17487,7 +17490,9 @@ function asFrontmatterString(data) {
       return pick.includes(key) ? Option_exports.some(value) : Option_exports.none;
     }),
     filterMapWithIndex3((key, value) => !omit.includes(key) ? Option_exports.some(value) : Option_exports.none),
-    import_obsidian16.stringifyYaml
+    // stringifyYaml renders an empty object as the literal "{}",
+    // which is invalid when embedded inside a frontmatter block
+    (selected) => Object.keys(selected).length === 0 ? "" : (0, import_obsidian16.stringifyYaml)(selected)
   );
 }
 function executeTransformation(transformation2) {

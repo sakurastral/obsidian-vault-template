@@ -1,14 +1,16 @@
 ---
-cover: "[[yousef-espanioly-0iOOw41DZ28-unsplash.jpg]]"
+cover: "[[default-atlas-cover.png]]"
 title: Cover Management
 aliases:
 categories:
   - "[[Vault Management]]"
 tags:
+description:
 created: 2026-05-04T15:07:43+08:00
-modified: 2026-05-04T15:08:01+08:00
+modified: 2026-06-13T16:38:40+08:00
 status:
 parent:
+related:
 references:
 ---
 

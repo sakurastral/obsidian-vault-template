@@ -329,72 +329,11 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "andrei-lazar-DNJzF0u3l9U-unsplash.jpg",
-        "calendar-pexels-pnw-prod-8251157.jpg",
-        "john-fowler-RsRTIofe0HE-unsplash.jpg",
-        "jplenio-foggy-7725646.jpg",
-        "jplenio-forest-7023487.jpg",
-        "lenzatic-nevada-8338929.jpg",
-        "manuel-h-trees-7733878.jpg",
-        "notes-pexels-pnw-prod-8251114.jpg",
-        "pixifant-sunbeams-1547273.jpg",
-        "shogun-nature-7720825.jpg",
-        "sora-sagano-F6ZzivdSQ5k-unsplash.jpg",
-        "task-pexels-ds-stories-6991353.jpg",
-        "yousef-espanioly-0iOOw41DZ28-unsplash.jpg"
+        "default-task-cover.png",
+        "default-note-cover.png",
+        "default-home-cover.png",
+        "default-atlas-cover.png"
       ]
-    },
-    "Assets/Images/andrei-lazar-DNJzF0u3l9U-unsplash.jpg": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Assets/Images/calendar-pexels-pnw-prod-8251157.jpg": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Assets/Images/john-fowler-RsRTIofe0HE-unsplash.jpg": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Assets/Images/jplenio-foggy-7725646.jpg": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Assets/Images/jplenio-forest-7023487.jpg": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Assets/Images/lenzatic-nevada-8338929.jpg": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Assets/Images/manuel-h-trees-7733878.jpg": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Assets/Images/notes-pexels-pnw-prod-8251114.jpg": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Assets/Images/pixifant-sunbeams-1547273.jpg": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Assets/Images/shogun-nature-7720825.jpg": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Assets/Images/sora-sagano-F6ZzivdSQ5k-unsplash.jpg": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Assets/Images/task-pexels-ds-stories-6991353.jpg": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Assets/Images/yousef-espanioly-0iOOw41DZ28-unsplash.jpg": {
-      "isPinned": false,
-      "isHidden": false
     },
     "Assets/Scripts": {
       "isPinned": false,
@@ -882,6 +821,22 @@
       "isHidden": false
     },
     "Task/Inbox/Vault Example Note (Empty).md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Images/default-atlas-cover.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Images/default-home-cover.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Images/default-note-cover.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Images/default-task-cover.png": {
       "isPinned": false,
       "isHidden": false
     }

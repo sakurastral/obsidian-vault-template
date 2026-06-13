@@ -1,5 +1,5 @@
 ---
-cover: "[[notes-pexels-pnw-prod-8251114.jpg]]"
+cover: "[[default-note-cover.png]]"
 ---
 
 <%* let title = tp.file.title -%>

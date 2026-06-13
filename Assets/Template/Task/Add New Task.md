@@ -10,7 +10,7 @@ Task：Due:
 Task：Done:
 Task：Cancelled:
 Task：Archived:
-cover: "[[task-pexels-ds-stories-6991353.jpg]]"
+cover: "[[default-task-cover.png]]"
 ---
 <%* let title = tp.file.title _%>
 <%* if (tp.file.title.includes("Untitled")) { -%>
