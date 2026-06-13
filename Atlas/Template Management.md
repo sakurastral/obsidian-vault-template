@@ -33,5 +33,16 @@ views:
         direction: ASC
     columnSize:
       file.folder: 234
+  - type: table
+    name: Cover Management
+    filters:
+      and:
+        - file.ext == "md"
+    order:
+      - file.name
+      - cover
+    sort:
+      - property: cover
+        direction: ASC
 
 ```

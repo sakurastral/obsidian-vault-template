@@ -228,7 +228,6 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -236,21 +235,8 @@
               "icon": "lucide-list",
               "title": "Outline"
             }
-          },
-          {
-            "id": "d0b69ea30efe7807",
-            "type": "leaf",
-            "state": {
-              "type": "file-properties",
-              "state": {
-                "file": "README.md"
-              },
-              "icon": "lucide-info",
-              "title": "File properties"
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       },
       {
         "id": "205879abebf0a12e",
@@ -263,7 +249,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -314,8 +299,10 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "908dc8ab7954636a",
+  "active": "14135e88a53e4718",
   "lastOpenFiles": [
+    "README.md",
+    "Atlas/Template Management.md",
     "Atlas/Journal Management.md",
     "Atlas/Assets Management.md",
     "Assets/Images/notes-pexels-pnw-prod-8251114.jpg",
@@ -326,7 +313,6 @@
     "Assets/Images/calendar-pexels-pnw-prod-8251157.jpg",
     "Assets/Template/Project/Calendar/Add New Event.md",
     "Assets/Template/Task/Add New Task.md",
-    "README.md",
     "Atlas/Cover Management.md",
     "Assets/Images/default-task-cover.png",
     "Assets/Images/default-note-cover.png",
@@ -351,7 +337,6 @@
     "Assets/Template/Custom/Delete Example Notes.md",
     "Assets/Template/Custom/Update “Created” and “Modified” Properties Across All Vault Notes.md",
     "Task/Inbox/Vault Example Note (Empty).md",
-    "Assets/Settings/Settings for Custom File Explorer Sorting.md",
-    "Nexus/Status/Wildflower.md"
+    "Assets/Settings/Settings for Custom File Explorer Sorting.md"
   ]
 }

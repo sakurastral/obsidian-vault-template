@@ -1,3 +1,6 @@
+---
+cover: "[[default-note-cover.png]]"
+---
 <%* let title = tp.file.title -%>
 <%* if (title.startsWith("Untitled")) { -%>
 <%*
