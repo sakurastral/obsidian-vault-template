@@ -297,7 +297,7 @@
       "markdown-importer:Open format converter": true,
       "workspaces:Manage workspace layouts": true,
       "obsidian42-brat:BRAT": false,
-      "virtual-footer:Open virtual content in sidebar": false
+      "virtual-footer:Open virtual content in sidebar": true
     }
   },
   "active": "908dc8ab7954636a",

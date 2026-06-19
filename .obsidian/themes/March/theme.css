@@ -3164,6 +3164,10 @@ del {
   color: var(--text-faint);
 }
 
+.image-wrapper img {
+  border-radius: var(--radius-l);
+}
+
 img[src*="#circle"],
 .image-embed[src*="#circle"] img {
   aspect-ratio: 1;
