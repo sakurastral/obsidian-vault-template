@@ -201,78 +201,6 @@
             },
             "viewMode": "all"
           }
-        },
-        {
-          "uuid": "a7d0bc1d-8770-4329-aacd-57c5515b5a32",
-          "icon": "",
-          "label": "",
-          "tooltip": "",
-          "hasCommand": false,
-          "inGallery": false,
-          "link": "",
-          "linkAttr": {
-            "commandCheck": false,
-            "commandId": "",
-            "hasVars": false,
-            "type": "separator"
-          },
-          "visibility": {
-            "desktop": {
-              "components": [
-                "icon",
-                "label"
-              ]
-            },
-            "mobile": {
-              "components": [
-                "icon",
-                "label"
-              ]
-            },
-            "tablet": {
-              "components": [
-                "icon",
-                "label"
-              ]
-            },
-            "viewMode": "all"
-          }
-        },
-        {
-          "uuid": "f4f31377-7e2f-4b66-8b27-8b62e70aeec7",
-          "icon": "lucide-download",
-          "label": "Backup Whole Vault",
-          "tooltip": "",
-          "hasCommand": false,
-          "inGallery": false,
-          "link": "Local Backup: Run local backup",
-          "linkAttr": {
-            "commandCheck": false,
-            "commandId": "local-backup:run-local-backup",
-            "hasVars": false,
-            "type": "command"
-          },
-          "visibility": {
-            "desktop": {
-              "components": [
-                "icon",
-                "label"
-              ]
-            },
-            "mobile": {
-              "components": [
-                "icon",
-                "label"
-              ]
-            },
-            "tablet": {
-              "components": [
-                "icon",
-                "label"
-              ]
-            },
-            "viewMode": "all"
-          }
         }
       ],
       "mobileStyles": [],
@@ -294,7 +222,7 @@
           }
         }
       },
-      "updated": "2026-05-05T08:16:10.412Z"
+      "updated": "2026-06-19T03:33:38.701Z"
     },
     {
       "uuid": "f5ede7cc-20f4-4069-aa20-ec52ebe4d27a",
@@ -1743,7 +1671,44 @@
         "sticky"
       ],
       "hasCommand": false,
-      "items": [],
+      "items": [
+        {
+          "uuid": "ad1473ff-8815-4e61-9a77-e9df3281aad4",
+          "icon": "lucide-circle-dashed",
+          "label": "Empty",
+          "tooltip": "",
+          "hasCommand": false,
+          "inGallery": false,
+          "link": "",
+          "linkAttr": {
+            "commandCheck": false,
+            "commandId": "",
+            "hasVars": false,
+            "type": "command"
+          },
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "viewMode": "all"
+          }
+        }
+      ],
       "mobileStyles": [],
       "name": "Dropdown - Category",
       "position": {
@@ -1763,7 +1728,7 @@
           }
         }
       },
-      "updated": "2026-05-03T07:29:34.027Z"
+      "updated": "2026-06-19T03:39:08.027Z"
     },
     {
       "uuid": "ddc6809e-1ff2-4b7b-87ea-a604ffe46c43",
@@ -2852,6 +2817,78 @@
             },
             "viewMode": "all"
           }
+        },
+        {
+          "uuid": "c43f18f7-4f0f-4750-8fbe-0958c213fea7",
+          "icon": "",
+          "label": "",
+          "tooltip": "",
+          "hasCommand": false,
+          "inGallery": false,
+          "link": "",
+          "linkAttr": {
+            "commandCheck": false,
+            "commandId": "",
+            "hasVars": false,
+            "type": "separator"
+          },
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "viewMode": "all"
+          }
+        },
+        {
+          "uuid": "cf4b9b52-1c4a-4635-b37b-7fe33dc13e0c",
+          "icon": "lucide-menu",
+          "label": "More",
+          "tooltip": "",
+          "hasCommand": false,
+          "inGallery": false,
+          "link": "a8dad269-5a2e-4a3c-a5ee-e1fe386fddaa",
+          "linkAttr": {
+            "commandCheck": false,
+            "commandId": "",
+            "hasVars": false,
+            "type": "menu"
+          },
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "viewMode": "all"
+          }
         }
       ],
       "mobileStyles": [],
@@ -2873,7 +2910,7 @@
           }
         }
       },
-      "updated": "2026-05-26T09:13:20.374Z"
+      "updated": "2026-06-19T06:06:11.356Z"
     },
     {
       "uuid": "defaa80e-dacd-4588-88d4-173e1d48f594",

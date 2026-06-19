@@ -569,137 +569,7 @@
       "time": {},
       "numeric": {}
     },
-    "day：n-holiday": {
-      "general": {
-        "icon": "",
-        "hidden": false
-      },
-      "array": {},
-      "select": {
-        "useDefaultStyle": false,
-        "optionsType": "manual"
-      },
-      "multiselect": {
-        "optionsType": "manual"
-      },
-      "toggle": {},
-      "title": {},
-      "markdown": {},
-      "created": {},
-      "object": {},
-      "color": {},
-      "rating": {},
-      "relation": {},
-      "datecustom": {},
-      "slider": {},
-      "time": {},
-      "numeric": {}
-    },
-    "day：events": {
-      "general": {
-        "icon": "",
-        "hidden": false
-      },
-      "array": {},
-      "select": {
-        "useDefaultStyle": false,
-        "optionsType": "manual"
-      },
-      "multiselect": {
-        "optionsType": "manual"
-      },
-      "toggle": {},
-      "title": {},
-      "markdown": {},
-      "created": {},
-      "object": {},
-      "color": {},
-      "rating": {},
-      "relation": {},
-      "datecustom": {},
-      "slider": {},
-      "time": {},
-      "numeric": {}
-    },
-    "day：work": {
-      "general": {
-        "icon": "",
-        "hidden": false
-      },
-      "array": {},
-      "select": {
-        "useDefaultStyle": false,
-        "optionsType": "manual"
-      },
-      "multiselect": {
-        "optionsType": "manual"
-      },
-      "toggle": {},
-      "title": {},
-      "markdown": {},
-      "created": {},
-      "object": {},
-      "color": {},
-      "rating": {},
-      "relation": {},
-      "datecustom": {},
-      "slider": {},
-      "time": {},
-      "numeric": {}
-    },
     "sorting-spec": {
-      "general": {
-        "icon": "",
-        "hidden": false
-      },
-      "array": {},
-      "select": {
-        "useDefaultStyle": false,
-        "optionsType": "manual"
-      },
-      "multiselect": {
-        "optionsType": "manual"
-      },
-      "toggle": {},
-      "title": {},
-      "markdown": {},
-      "created": {},
-      "object": {},
-      "color": {},
-      "rating": {},
-      "relation": {},
-      "datecustom": {},
-      "slider": {},
-      "time": {},
-      "numeric": {}
-    },
-    "day：type": {
-      "general": {
-        "icon": "",
-        "hidden": false
-      },
-      "array": {},
-      "select": {
-        "useDefaultStyle": false,
-        "optionsType": "manual"
-      },
-      "multiselect": {
-        "optionsType": "manual"
-      },
-      "toggle": {},
-      "title": {},
-      "markdown": {},
-      "created": {},
-      "object": {},
-      "color": {},
-      "rating": {},
-      "relation": {},
-      "datecustom": {},
-      "slider": {},
-      "time": {},
-      "numeric": {}
-    },
-    "day：makeup": {
       "general": {
         "icon": "",
         "hidden": false
@@ -894,6 +764,58 @@
       "numeric": {}
     },
     "banner": {
+      "general": {
+        "icon": "",
+        "hidden": false
+      },
+      "array": {},
+      "select": {
+        "useDefaultStyle": false,
+        "optionsType": "manual"
+      },
+      "multiselect": {
+        "optionsType": "manual"
+      },
+      "toggle": {},
+      "title": {},
+      "markdown": {},
+      "created": {},
+      "object": {},
+      "color": {},
+      "rating": {},
+      "relation": {},
+      "datecustom": {},
+      "slider": {},
+      "time": {},
+      "numeric": {}
+    },
+    "description": {
+      "general": {
+        "icon": "",
+        "hidden": false
+      },
+      "array": {},
+      "select": {
+        "useDefaultStyle": false,
+        "optionsType": "manual"
+      },
+      "multiselect": {
+        "optionsType": "manual"
+      },
+      "toggle": {},
+      "title": {},
+      "markdown": {},
+      "created": {},
+      "object": {},
+      "color": {},
+      "rating": {},
+      "relation": {},
+      "datecustom": {},
+      "slider": {},
+      "time": {},
+      "numeric": {}
+    },
+    "related": {
       "general": {
         "icon": "",
         "hidden": false

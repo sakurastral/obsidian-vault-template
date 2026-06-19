@@ -1,7 +1,6 @@
 [
   "obsidian-memos",
   "obsidian42-brat",
-  "obsidian-git",
   "obsidian-linter",
   "modalforms",
   "obsidian-style-settings",
@@ -13,7 +12,6 @@
   "better-properties",
   "supercharged-links-obsidian",
   "obsidian-outliner",
-  "local-backup",
   "note-toolbar",
   "heading-outliner",
   "pretty-properties",
