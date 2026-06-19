@@ -1,0 +1,16 @@
+{
+  "devMode": false,
+  "ignoreCodeBlockRestrictions": false,
+  "preferredDateFormat": "YYYY-MM-DD",
+  "firstWeekday": "Monday",
+  "syncInterval": 200,
+  "enableJs": false,
+  "viewFieldDisplayNullAsEmpty": true,
+  "enableSyntaxHighlighting": true,
+  "enableEditorRightClickMenu": false,
+  "inputFieldTemplates": [],
+  "buttonTemplates": [],
+  "excludedFolders": [
+    "templates"
+  ]
+}

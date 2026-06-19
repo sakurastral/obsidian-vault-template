@@ -197,8 +197,7 @@
               "title": "Tags"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -229,7 +228,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "Inbox/Vault Example Note (Empty).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -251,7 +250,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Inbox/Vault Example Note (Empty).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -297,12 +296,16 @@
       "command-palette:Open command palette": true,
       "markdown-importer:Open format converter": true,
       "workspaces:Manage workspace layouts": true,
-      "obsidian42-brat:BRAT": false
+      "obsidian42-brat:BRAT": false,
+      "virtual-footer:Open virtual content in sidebar": false
     }
   },
-  "active": "908dc8ab7954636a",
+  "active": "a88538889e31003f",
   "lastOpenFiles": [
     "README.md",
+    "Assets/Template/Layout/Header.md",
+    "Assets/Template/Layout/Footer.md",
+    "Assets/Template/Layout",
     "Atlas/Template Management.md",
     "Atlas/Journal Management.md",
     "Atlas/Assets Management.md",
@@ -336,8 +339,6 @@
     "Nexus/Categories/Journal.md",
     "Nexus/Categories/Common.md",
     "Assets/Template/Custom/Delete Example Notes.md",
-    "Assets/Template/Custom/Update “Created” and “Modified” Properties Across All Vault Notes.md",
-    "Task/Inbox/Vault Example Note (Empty).md",
-    "Assets/Settings/Settings for Custom File Explorer Sorting.md"
+    "Assets/Template/Custom/Update “Created” and “Modified” Properties Across All Vault Notes.md"
   ]
 }

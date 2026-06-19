@@ -353,10 +353,11 @@
       "sortOrder": "custom",
       "customOrder": [
         "Custom",
+        "Properties",
+        "Layout",
         "Inbox",
         "Nexus",
         "Project",
-        "Properties",
         "Task"
       ]
     },
@@ -837,6 +838,23 @@
       "isHidden": false
     },
     "Assets/Images/default-task-cover.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Template/Layout": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Header.md",
+        "Footer.md"
+      ]
+    },
+    "Assets/Template/Layout/Footer.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Template/Layout/Header.md": {
       "isPinned": false,
       "isHidden": false
     }

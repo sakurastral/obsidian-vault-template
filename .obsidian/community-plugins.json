@@ -16,5 +16,7 @@
   "heading-outliner",
   "pretty-properties",
   "advanced-canvas",
-  "flexplorer"
+  "flexplorer",
+  "obsidian-meta-bind-plugin",
+  "virtual-footer"
 ]

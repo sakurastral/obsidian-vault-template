@@ -932,7 +932,7 @@
       "languageSpecificSyntaxThemes": {}
     }
   },
-  "ExcludeLangs": "dataview, ad-*, base",
+  "ExcludeLangs": "dataview, ad-*, base, meta-bind",
   "SelectedTheme": {
     "baseTheme": "Obsidian",
     "colors": {
@@ -1078,7 +1078,7 @@
   "newThemeName": "",
   "newPromptName": "",
   "alternateHighlightColorName": "remove",
-  "settingsType": "behavior",
+  "settingsType": "general",
   "langSpecificSettingsType": "",
   "languageSpecificLanguageName": "",
   "SyntaxThemes": {
