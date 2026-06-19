@@ -1576,6 +1576,12 @@ body code, body .cm-inline-code, body .HyperMD-codeblock {
   --background-modifier-border: hsl(var(--background-modifier-border-h), var(--background-modifier-border-s), var(--background-modifier-border-l));
 }
 
+@media print {
+  body {
+    --accent-s: 80% !important;
+    --accent-l: 20% !important;
+  }
+}
 :is(body) {
   --transition-default-property: all;
   --transition-default-duration: 300ms;
@@ -3689,6 +3695,69 @@ body {
 .metadata-side-image.initial .pp-cover-image {
   border-radius: var(--march-pretty-properties-initial-cover-border-radius);
   aspect-ratio: var(--march-pretty-properties-initial-cover-aspect-ratio);
+}
+
+/*
+=== === === === === === === === === === === === === 
+
+Fix Conflict with Better Properties Plugin
+
+=== === === === === === === === === === === === === 
+*/
+.autohide-props-with-banner .cm-scroller:has(.banner-image:not(:empty)) .metadata-container:has(.better-properties-mod-object) .metadata-container,
+.autohide-props-with-banner .markdown-preview-view:has(.banner-image:not(:empty)) .metadata-container:has(.better-properties-mod-object) .metadata-container {
+  position: relative;
+}
+
+.autohide-props-with-banner .cm-scroller:has(.banner-image:not(:empty)) .metadata-container:has(.better-properties-mod-object) .metadata-container:not(:hover, :focus, :focus-within),
+.autohide-props-with-banner .markdown-preview-view:has(.banner-image:not(:empty)) .metadata-container:has(.better-properties-mod-object) .metadata-container:not(:hover, :focus, :focus-within) {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.autohide-props-with-banner .cm-scroller:has(.banner-image:not(:empty)) .metadata-container .metadata-content,
+.autohide-props-with-banner .markdown-preview-view:has(.banner-image:not(:empty)) .metadata-container .metadata-content {
+  overflow: scroll;
+  max-height: 500px;
+}
+
+body .callout[data-callout=note-toolbar].march-notetoolbar-nowrap-on-desktop .callout-content ul,
+body .workspace .callout[data-callout=note-toolbar].march-notetoolbar-nowrap-on-desktop .callout-content ul {
+  display: flex;
+  flex-wrap: nowrap !important;
+}
+body .callout[data-callout=note-toolbar].march-notetoolbar-nowrap-on-desktop .callout-content::-webkit-scrollbar,
+body .workspace .callout[data-callout=note-toolbar].march-notetoolbar-nowrap-on-desktop .callout-content::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.mb-card {
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-l);
+  border: none;
+  padding: var(--font-text-size);
+}
+
+/*
+=== === === === === === === === === === === === === 
+
+Helper Class
+
+=== === === === === === === === === === === === === 
+*/
+.march-metabind-hide-list-input .mb-list-input {
+  height: 0;
+  display: none;
+}
+
+.virtual-footer-dynamic-content-element {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.virtual-footer-dynamic-content-element.virtual-footer-footer-group {
+  padding: var(--font-text-size) calc(var(--font-text-size) / 2) calc(var(--font-text-size) / 2 / 2);
+  border-top: 1px solid var(--background-modifier-border);
 }
 
 .cmdr-name-input-wrapper {

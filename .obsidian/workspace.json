@@ -91,7 +91,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Assets/Template/Layout/Footer.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -106,7 +106,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Footer"
             }
           }
         ],
@@ -228,7 +228,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Inbox/Vault Example Note (Empty).md",
+                "file": "Assets/Template/Layout/Footer.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -250,7 +250,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Inbox/Vault Example Note (Empty).md",
+                "file": "Assets/Template/Layout/Footer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -300,8 +300,9 @@
       "virtual-footer:Open virtual content in sidebar": false
     }
   },
-  "active": "a88538889e31003f",
+  "active": "908dc8ab7954636a",
   "lastOpenFiles": [
+    "Inbox/Vault Example Note (Empty).md",
     "README.md",
     "Assets/Template/Layout/Header.md",
     "Assets/Template/Layout/Footer.md",
@@ -338,7 +339,6 @@
     "Nexus/Categories/Task.md",
     "Nexus/Categories/Journal.md",
     "Nexus/Categories/Common.md",
-    "Assets/Template/Custom/Delete Example Notes.md",
-    "Assets/Template/Custom/Update “Created” and “Modified” Properties Across All Vault Notes.md"
+    "Assets/Template/Custom/Delete Example Notes.md"
   ]
 }
