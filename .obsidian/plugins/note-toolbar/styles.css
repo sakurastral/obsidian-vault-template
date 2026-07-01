@@ -1513,6 +1513,14 @@ body {
         }
     }
 
+    &.ntb-is-modal-displayed {
+        /* fix: popovers + hover editor appearing under modal #568 */
+        --layer-popover: calc(var(--layer-modal) + 1);
+        --he-popover-layer-new: calc(var(--layer-modal) + 1);
+        --he-popover-layer-active: calc(var(--layer-modal) + 1);
+        --he-popover-layer-inactive: calc(var(--layer-modal) + 1);
+    }
+
 }
 
 .ntb-hidden {
