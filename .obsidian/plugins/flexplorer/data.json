@@ -717,7 +717,8 @@
       "customOrder": [
         "Journal",
         "Nook",
-        "Calendar"
+        "Calendar",
+        "Archived"
       ]
     },
     "Project/Calendar": {
@@ -855,6 +856,18 @@
       "isHidden": false
     },
     "Assets/Template/Layout/Header.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Project/Archived": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Vault Example Note (Empty).md"
+      ]
+    },
+    "Project/Archived/Vault Example Note (Empty).md": {
       "isPinned": false,
       "isHidden": false
     }

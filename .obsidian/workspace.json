@@ -91,7 +91,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Assets/Template/Layout/Footer.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -106,7 +106,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Footer"
+              "title": "README"
             }
           }
         ],
@@ -250,7 +250,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Assets/Template/Layout/Footer.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -302,10 +302,12 @@
   },
   "active": "908dc8ab7954636a",
   "lastOpenFiles": [
+    "Assets/Template/Layout/Footer.md",
+    "Project/Archived/Vault Example Note (Empty).md",
+    "Project/Archived",
     "Inbox/Vault Example Note (Empty).md",
     "README.md",
     "Assets/Template/Layout/Header.md",
-    "Assets/Template/Layout/Footer.md",
     "Assets/Template/Layout",
     "Atlas/Template Management.md",
     "Atlas/Journal Management.md",
@@ -338,7 +340,6 @@
     "Nexus/Categories/Vault Management.md",
     "Nexus/Categories/Task.md",
     "Nexus/Categories/Journal.md",
-    "Nexus/Categories/Common.md",
-    "Assets/Template/Custom/Delete Example Notes.md"
+    "Nexus/Categories/Common.md"
   ]
 }

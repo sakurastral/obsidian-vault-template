@@ -1,5 +1,5 @@
 {
   "format": "YYYY/YYYY-MM-DD",
   "folder": "Project/Journal",
-  "template": "Assets/Template/Project/Journal/Add Daily Note"
+  "template": "Assets/Template/Project/Journal/Add Daily Note.md"
 }
