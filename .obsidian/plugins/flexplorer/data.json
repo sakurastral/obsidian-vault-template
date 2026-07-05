@@ -366,6 +366,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "Insert Bases Block to View Child Notes.md",
         "Convert Color Codes to HTML Block.md",
         "Delete Example Notes.md",
         "Update “Created” and “Modified” Properties Across All Vault Notes.md"
@@ -418,8 +419,7 @@
       "sortOrder": "custom",
       "customOrder": [
         "Add New Note.md",
-        "Calendar",
-        "Journal"
+        "Calendar"
       ]
     },
     "Assets/Template/Project/Add New Note.md": {
@@ -442,14 +442,6 @@
     "Assets/Template/Project/Calendar/Event Information Board.base": {
       "isPinned": false,
       "isHidden": false
-    },
-    "Assets/Template/Project/Journal": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Add Daily Note.md"
-      ]
     },
     "Assets/Template/Project/Journal/Add Daily Note.md": {
       "isPinned": false,
@@ -870,6 +862,19 @@
     "Project/Archived/Vault Example Note (Empty).md": {
       "isPinned": false,
       "isHidden": false
+    },
+    "Assets/Template/Custom/Insert Bases Block to View Child Notes.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Template/Project/Journal/Journal": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Journal",
+        "Add Daily Note.md"
+      ]
     }
   },
   "pinnedFiles": [],

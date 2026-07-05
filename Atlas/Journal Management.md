@@ -24,79 +24,43 @@ formulas:
     file, 
     date(file.basename).format("YYYY / MM / DD")
     )
-  weekday: date(file.basename).format("dd")
+  weekday: date(file.basename).format("ddd")
 properties:
-  note.tags:
-    displayName: Tags
   formula.date:
     displayName: Date
   formula.weekday:
-    displayName: Week day
-  note.Day：Type:
-    displayName: Type
-  note.Day：N-Holiday:
-    displayName: National Holiday
-  note.Day：Makeup:
-    displayName: Makeup Type
-  note.Day：Events:
-    displayName: Events
-  note.Day：Work:
-    displayName: Work Status
+    displayName: Day
 views:
   - type: table
     name: Current
     filters:
       and:
-        - file.folder.contains(now().date().format("YYYY"))
+        - file.basename.contains(now().date().format("YYYY"))
     order:
       - formula.date
       - formula.weekday
-      - Day：Type
-      - Day：N-Holiday
-      - Day：Makeup
-      - Day：Events
-      - Day：Work
-      - tags
+      - description
     sort:
       - property: file.basename
         direction: DESC
-    columnSize:
-      formula.date: 123
-      formula.weekday: 29
-      note.Day：N-Holiday: 158
-      note.Day：Makeup: 141
-      note.Day：Events: 134
-      note.Day：Work: 121
-      note.tags: 155
   - type: table
     name: Past
     filters:
       and:
-        - '!file.folder.contains(now().date().format("YYYY"))'
+        - '!file.basename.contains(now().date().format("YYYY"))'
     order:
       - formula.date
       - formula.weekday
-      - Day：Type
-      - Day：N-Holiday
-      - Day：Makeup
-      - Day：Events
-      - Day：Work
-      - tags
+      - description
     sort:
       - property: file.basename
         direction: DESC
-    columnSize:
-      formula.date: 123
-      formula.weekday: 29
-      note.Day：N-Holiday: 158
-      note.Day：Makeup: 141
-      note.Day：Events: 134
-      note.Day：Work: 121
-      note.tags: 155
   - type: table
-    name: View
+    name: All
     order:
-      - file.name
-      - journal
+      - formula.date
+      - formula.weekday
+      - description
 
 ```
+

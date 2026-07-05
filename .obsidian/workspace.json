@@ -86,7 +86,7 @@
             }
           },
           {
-            "id": "908dc8ab7954636a",
+            "id": "88a96870e04ca261",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -300,17 +300,21 @@
       "virtual-footer:Open virtual content in sidebar": true
     }
   },
-  "active": "908dc8ab7954636a",
+  "active": "88a96870e04ca261",
   "lastOpenFiles": [
+    "Assets/Template/Project/Journal/Add Daily Note.md",
+    "Project/Journal/Vault Example Note (Empty).md",
+    "README.md",
+    "Atlas/Task Board.md",
+    "Atlas/Journal Management.md",
+    "Assets/Template/Layout/Header.md",
+    "Assets/Template/Custom/Insert Bases Block to View Child Notes.md",
     "Assets/Template/Layout/Footer.md",
     "Project/Archived/Vault Example Note (Empty).md",
     "Project/Archived",
     "Inbox/Vault Example Note (Empty).md",
-    "README.md",
-    "Assets/Template/Layout/Header.md",
     "Assets/Template/Layout",
     "Atlas/Template Management.md",
-    "Atlas/Journal Management.md",
     "Atlas/Assets Management.md",
     "Assets/Images/notes-pexels-pnw-prod-8251114.jpg",
     "Assets/Template/Inbox/Add New Note.md",
@@ -329,7 +333,6 @@
     "Assets/Images/default-atlas-cover拷貝.png",
     "Assets/Images/default-atlas-cover.png",
     "Assets/Template/Nexus/Category Information Board.base",
-    "Atlas/Task Board.md",
     "Nexus/Title Prefix/NOTE｜.md",
     "Atlas/Notes Management.md",
     "Nexus/Categories/Project.md",
@@ -337,9 +340,6 @@
     "Nexus/Categories/Outdated.md",
     "Nexus/Categories/MOC.md",
     "Nexus/Categories/Vault Properties.md",
-    "Nexus/Categories/Vault Management.md",
-    "Nexus/Categories/Task.md",
-    "Nexus/Categories/Journal.md",
-    "Nexus/Categories/Common.md"
+    "Nexus/Categories/Vault Management.md"
   ]
 }

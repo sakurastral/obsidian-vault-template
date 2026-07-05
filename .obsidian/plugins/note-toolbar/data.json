@@ -1959,6 +1959,78 @@
       "hasCommand": false,
       "items": [
         {
+          "uuid": "d50ee2ba-0603-424a-acab-d88d813f73b4",
+          "icon": "lucide-image-plus",
+          "label": "Add Note Cover",
+          "tooltip": "",
+          "hasCommand": false,
+          "inGallery": false,
+          "link": "Pretty Properties: Select cover image",
+          "linkAttr": {
+            "commandCheck": false,
+            "commandId": "pretty-properties:select-cover-image",
+            "hasVars": false,
+            "type": "command"
+          },
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "viewMode": "all"
+          }
+        },
+        {
+          "uuid": "eb8f5a98-8cee-4635-9408-0a6c39ecd597",
+          "icon": "lucide-plus",
+          "label": "Insert Bases Block to View Child Notes",
+          "tooltip": "",
+          "hasCommand": false,
+          "inGallery": false,
+          "link": "Templater: Insert Custom/Insert Bases Block to View Child Notes",
+          "linkAttr": {
+            "commandCheck": false,
+            "commandId": "templater-obsidian:Assets/Template/Custom/Insert Bases Block to View Child Notes.md",
+            "hasVars": false,
+            "type": "command"
+          },
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "viewMode": "all"
+          }
+        },
+        {
           "uuid": "ed4a0ce8-7402-4dd7-a6b1-a3c4946bd843",
           "icon": "lucide-refresh-cw",
           "label": "Convert Color Codes to HTML Block",
@@ -2014,7 +2086,7 @@
           }
         }
       },
-      "updated": "2026-04-29T00:46:50.028Z"
+      "updated": "2026-07-05T08:57:48.177Z"
     },
     {
       "uuid": "aa7b6c98-6734-4759-b2c3-81feffb41dba",

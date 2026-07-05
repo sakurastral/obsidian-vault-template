@@ -28,6 +28,10 @@
     {
       "folder": "Project/Calendar",
       "template": "Assets/Template/Project/Calendar/Add New Event.md"
+    },
+    {
+      "folder": "Project/Journal",
+      "template": "Assets/Template/Project/Journal/Add Daily Note.md"
     }
   ],
   "file_templates": [],
@@ -47,7 +51,8 @@
     "Assets/Template/Custom/Delete Example Notes.md",
     "Assets/Template/Project/Calendar/Add New Event.md",
     "Assets/Template/Task/Edit Task.md",
-    "Assets/Template/Project/Journal/Add Daily Note.md"
+    "Assets/Template/Project/Journal/Add Daily Note.md",
+    "Assets/Template/Custom/Insert Bases Block to View Child Notes.md"
   ],
   "startup_templates": [],
   "intellisense_render": "1",

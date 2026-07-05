@@ -1,5 +1,16 @@
 ```meta-bind
 
-INPUT[inlineList(title(Aliases)):aliases]
+INPUT[inlineList(
+placeholder(Please Enter Aliases...), 
+class(march-metabind-aliases)
+):aliases]
+
+```
+```meta-bind
+
+INPUT[textArea(
+placeholder(Please Enter Description...), 
+class(march-metabind-description)
+):description]
 
 ```

@@ -31,6 +31,12 @@
           "negated": false,
           "path": "Inbox/",
           "recursive": true
+        },
+        {
+          "type": "folder",
+          "path": "Nexus/",
+          "recursive": true,
+          "negated": false
         }
       ],
       "multiConditionLogic": "any"
