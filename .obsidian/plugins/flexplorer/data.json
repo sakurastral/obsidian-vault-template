@@ -418,6 +418,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "Journal",
         "Add New Note.md",
         "Calendar"
       ]
@@ -867,12 +868,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Assets/Template/Project/Journal/Journal": {
+    "Assets/Template/Project/Journal": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "Journal",
         "Add Daily Note.md"
       ]
     }

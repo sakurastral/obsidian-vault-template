@@ -1471,8 +1471,13 @@ body {
                 display: none;
             }
          }
+
+         /* animate the top header's vertical position so it doesn't just pop into place when the toolbar adjusts */
+         & .mod-root .view-header {
+            transition: margin-top 100ms ease, padding-top 100ms ease;
+         }
     }
-    
+
     /*
      * Android styles
      */
@@ -2665,6 +2670,16 @@ body.is-mobile button.cg-note-toolbar-fab[data-fab-metadata*="mgls"] {
         .is-mobile & {
             padding-inline: var(--cg-nt-tbar-top-padding-x-mobile);
         }
+        .workspace-leaf-content[data-type="bases"] &, .workspace-leaf-content[data-type="canvas"] & {
+            &[data-ntb-meta*="wide"] {
+                padding-inline: 0;
+            }
+            &[data-ntb-meta*="mwd"] {
+                .is-mobile & {
+                    padding-inline: 0;
+                }
+            }
+        }
     }
 
     &[data-tbar-position="float"], &[data-tbar-position="text"] {
@@ -3213,6 +3228,13 @@ body.is-tablet .note-toolbar-menu[data-ntb-meta*="mgls"] {
             & svg {
             color: var(--interactive-accent);
             }
+        }
+    }
+
+    & .setting-items.note-toolbar-setting-styles-group {
+        padding: var(--size-4-4);
+        & .note-toolbar-setting-item-style .setting-item:not(.setting-item-heading)::before {
+            border-top: none;
         }
     }
 

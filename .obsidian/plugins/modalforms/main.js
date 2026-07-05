@@ -15063,263 +15063,6 @@ var FormModal_default = FormModal;
 // src/core/FormResult.ts
 var import_obsidian13 = require("obsidian");
 
-// src/core/ResultValue.ts
-function _toBulletList(value) {
-  if (Array.isArray(value)) {
-    return value.map((v) => `- ${v}`).join("\n");
-  }
-  return Object.entries(value).map(([key, value2]) => `- ${key}: ${value2}`).join("\n");
-}
-function isRecord(value) {
-  return typeof value === "object" && value !== null && !Array.isArray(value);
-}
-function deepMap(value, fn, iterations = 0) {
-  if (iterations > 10) {
-    return fn(value);
-  }
-  if (Array.isArray(value)) {
-    return value.map((v) => deepMap(v, fn, iterations + 1));
-  }
-  if (isRecord(value)) {
-    return Object.fromEntries(
-      Object.entries(value).map(([key, value2]) => [key, deepMap(value2, fn, iterations + 1)])
-    );
-  }
-  return fn(value);
-}
-var ResultValue = class {
-  constructor(value, name, notify2 = notify2) {
-    this.value = value;
-    this.name = name;
-    this.notify = notify2;
-    /** Alias for `toDataview` */
-    this.toDv = this.toDataview;
-    /** Alias for `toBulletList` */
-    this.toBullets = this.toBulletList;
-  }
-  static from(value, name, notify2 = notifyError) {
-    return new ResultValue(value, name, notify2);
-  }
-  /**
-   * Returns the value as a string.
-   * If the value is an array, it will be joined with a comma.
-   * If the value is an object, it will be stringified.
-   * This is convenient because it is the default method called automatically
-   * when the value needs to be rendered as a string, so you can just drop
-   * the value directly into a template without having to call this method.
-   * @returns string
-   */
-  toString() {
-    switch (typeof this.value) {
-      case "string":
-        return this.value;
-      case "number":
-      case "boolean":
-        return this.value.toString();
-      case "object":
-        if (Array.isArray(this.value)) {
-          return this.value.join(", ");
-        }
-        return JSON.stringify(this.value);
-      default:
-        return "";
-    }
-  }
-  /**
-   * Returns the value as a bullet list.
-   * If the value is empty or undefined, it will return an empty string.
-   * If the value is a single value, it will return as a single item bullet list.
-   * If the value is an array, it will return a bullet list with each item in the array.
-   * If the value is an object, it will return a bullet list with each key/value pair in the object.
-   * @returns string
-   */
-  toBulletList() {
-    switch (typeof this.value) {
-      case "boolean":
-      case "number":
-      case "string":
-        return `- ${this.value}`;
-      case "object": {
-        const value = this.value;
-        if (value == null)
-          return "";
-        if (value instanceof FileProxy) {
-          return `- ${value.name}`;
-        }
-        if (Array.isArray(value)) {
-          return _toBulletList(value);
-        }
-        if (isRecord(value)) {
-          return _toBulletList(value);
-        }
-        return `- ${JSON.stringify(value)}`;
-      }
-      default:
-        return "";
-    }
-  }
-  /**
-   * Converts the value to a dataview property using the field name as the key.
-   * If the value is empty or undefined, it will return an empty string and not render anything.
-   */
-  toDataview() {
-    const value = this.value;
-    if (value === void 0)
-      return "";
-    if (Array.isArray(value)) {
-      return `[${this.name}:: ${JSON.stringify(value).slice(1, -1)}]`;
-    }
-    return `[${this.name}:: ${this.toString()}]`;
-  }
-  /**
-   * Transforms the contained value using the provided function.
-   * If the value is undefined or null the function will not be called
-   * and the result will be the same as the original.
-   * This is useful if you want to apply somme modifications to the value
-   * before rendering it, for example if none of the existing format methods suit your needs.
-   * @param {function} fn the function to transform the values
-   * @returns a new FormValue with the transformed value
-   **/
-  map(fn) {
-    const safeFn = Either_exports.tryCatchK(fn, ensureError);
-    const unchanged = () => this;
-    return pipe2(
-      this.value,
-      Option_exports.fromNullable,
-      Option_exports.map(safeFn),
-      Option_exports.fold(
-        unchanged,
-        (v) => pipe2(
-          v,
-          Either_exports.fold(
-            (e) => {
-              this.notify("Error in map of " + this.name)(e.message);
-              return unchanged();
-            },
-            (v2) => ResultValue.from(v2, this.name, this.notify)
-          )
-        )
-      )
-    );
-  }
-  /**
-   * Convenient getter to get the value as bullets, so you don't need to call `toBulletList` manually.
-   * example:
-   * ```ts
-   *  result.getValue("myField").bullets;
-   * ```
-   */
-  get bullets() {
-    return this.toBulletList();
-  }
-  /**
-   * getter that returns all the string values uppercased.
-   * If the value is an array, it will return an array with all the strings uppercased.
-   * The usage of map is important for safety and method chaining.
-   */
-  get upper() {
-    if (this.value instanceof FileProxy) {
-      return new ResultValue(this.value.name.toLocaleUpperCase(), this.name, this.notify);
-    }
-    return this.map(
-      (v) => deepMap(v, (it) => typeof it === "string" ? it.toLocaleUpperCase() : it)
-    );
-  }
-  /**
-   * getter that returns all the string values lowercased.
-   * If the value is an array, it will return an array with all the strings lowercased.
-   * If the value is an object, it will return an object with all the string values lowercased.
-   * The usage of map is important for safety and method chaining.
-   * @returns FormValue
-   */
-  get lower() {
-    if (this.value instanceof FileProxy) {
-      return new ResultValue(this.value.name.toLocaleLowerCase(), this.name, this.notify);
-    }
-    return this.map(
-      (v) => deepMap(v, (it) => typeof it === "string" ? it.toLocaleLowerCase() : it)
-    );
-  }
-  /**
-   * getter that returns all the string values trimmed.
-   * */
-  get trimmed() {
-    if (this.value instanceof FileProxy) {
-      return new ResultValue(this.value.name.trim(), this.name, this.notify);
-    }
-    return this.map((v) => deepMap(v, (it) => typeof it === "string" ? it.trim() : it));
-  }
-  /**
-   * getter that returns the value with the first character uppercased.
-   * Strings nested in arrays/objects are capitalized individually; non-string
-   * values are returned unchanged. Empty strings stay empty.
-   */
-  get capitalized() {
-    const cap = (s) => s.length === 0 ? s : s.charAt(0).toLocaleUpperCase() + s.slice(1);
-    if (this.value instanceof FileProxy) {
-      return new ResultValue(cap(this.value.name), this.name, this.notify);
-    }
-    return this.map((v) => deepMap(v, (it) => typeof it === "string" ? cap(it) : it));
-  }
-  /**
-   * renders the value as a markdown link.
-   * If the value is a string, it will be rendered as a markdown link.
-   * If the value is a FileProxy (right now just used for images), it will be rendered as an embedded link.
-   * Any other type of value will be rendered as an empty string.
-   */
-  get link() {
-    switch (true) {
-      case typeof this.value === "string":
-        return `[[${this.value}]]`;
-      case this.value instanceof FileProxy:
-        return `![[${this.value.path}]]`;
-      default:
-        return "";
-    }
-  }
-};
-
-// src/core/objectSelect.ts
-var KeysSchema = array2(coerce(string(), String));
-var PickOmitSchema = object({
-  pick: optional(KeysSchema),
-  omit: optional(KeysSchema)
-});
-function picKeys(obj) {
-  return (keys) => pipe2(
-    obj,
-    filterWithIndex3((k) => keys.includes(k))
-  );
-}
-function omitKeys(obj) {
-  return (keys) => pipe2(
-    obj,
-    filterWithIndex3((k) => !keys.includes(k))
-  );
-}
-function objectSelect(obj, opts) {
-  return pipe2(
-    parse2(PickOmitSchema, opts, { abortEarly: true }),
-    Either_exports.map(
-      (opts2) => {
-        const picked = pipe2(
-          fromNullable2(opts2.pick),
-          flatMap3(fromArray),
-          map4(picKeys(obj)),
-          getOrElse2(() => obj)
-        );
-        return pipe2(
-          fromNullable2(opts2.omit),
-          flatMap3(fromArray),
-          map4(omitKeys(picked)),
-          getOrElse2(() => picked)
-        );
-      }
-    ),
-    Either_exports.getOrElse(() => obj)
-  );
-}
-
 // src/core/template/templateParser.ts
 var import_obsidian12 = require("obsidian");
 
@@ -15806,7 +15549,8 @@ var transformations = union4([
   literal("lower"),
   literal("trim"),
   literal("stringify"),
-  literal("capitalize")
+  literal("capitalize"),
+  literal("slug")
 ]);
 var TemplateVariableSchema = object({
   _tag: literal("variable"),
@@ -15991,6 +15735,9 @@ function asFrontmatterString(data) {
     (selected) => Object.keys(selected).length === 0 ? "" : (0, import_obsidian12.stringifyYaml)(selected)
   );
 }
+function toSlug(value) {
+  return value.toLocaleLowerCase().replace(/[\s_]+/g, "-").replace(/[^\p{L}\p{N}-]+/gu, "").replace(/-+/g, "-").replace(/^-+|-+$/g, "");
+}
 function executeTransformation(transformation2) {
   return (value) => {
     if (transformation2 === void 0) {
@@ -16010,6 +15757,8 @@ function executeTransformation(transformation2) {
         const first2 = str.charAt(0).toUpperCase();
         return first2 + str.slice(1);
       }
+      case "slug":
+        return toSlug(String(value));
       default:
         return absurd(transformation2);
     }
@@ -16042,6 +15791,276 @@ function executeTemplate(parsedTemplate, formData) {
       )
     ),
     foldMap3(Monoid)(String)
+  );
+}
+
+// src/core/ResultValue.ts
+function _toBulletList(value) {
+  if (Array.isArray(value)) {
+    return value.map((v) => `- ${v}`).join("\n");
+  }
+  return Object.entries(value).map(([key, value2]) => `- ${key}: ${value2}`).join("\n");
+}
+function isRecord(value) {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
+}
+function deepMap(value, fn, iterations = 0) {
+  if (iterations > 10) {
+    return fn(value);
+  }
+  if (Array.isArray(value)) {
+    return value.map((v) => deepMap(v, fn, iterations + 1));
+  }
+  if (isRecord(value)) {
+    return Object.fromEntries(
+      Object.entries(value).map(([key, value2]) => [key, deepMap(value2, fn, iterations + 1)])
+    );
+  }
+  return fn(value);
+}
+var ResultValue = class {
+  constructor(value, name, notify2 = notify2) {
+    this.value = value;
+    this.name = name;
+    this.notify = notify2;
+    /** Alias for `toDataview` */
+    this.toDv = this.toDataview;
+    /** Alias for `toBulletList` */
+    this.toBullets = this.toBulletList;
+  }
+  static from(value, name, notify2 = notifyError) {
+    return new ResultValue(value, name, notify2);
+  }
+  /**
+   * Returns the value as a string.
+   * If the value is an array, it will be joined with a comma.
+   * If the value is an object, it will be stringified.
+   * This is convenient because it is the default method called automatically
+   * when the value needs to be rendered as a string, so you can just drop
+   * the value directly into a template without having to call this method.
+   * @returns string
+   */
+  toString() {
+    switch (typeof this.value) {
+      case "string":
+        return this.value;
+      case "number":
+      case "boolean":
+        return this.value.toString();
+      case "object":
+        if (Array.isArray(this.value)) {
+          return this.value.join(", ");
+        }
+        return JSON.stringify(this.value);
+      default:
+        return "";
+    }
+  }
+  /**
+   * Returns the value as a bullet list.
+   * If the value is empty or undefined, it will return an empty string.
+   * If the value is a single value, it will return as a single item bullet list.
+   * If the value is an array, it will return a bullet list with each item in the array.
+   * If the value is an object, it will return a bullet list with each key/value pair in the object.
+   * @returns string
+   */
+  toBulletList() {
+    switch (typeof this.value) {
+      case "boolean":
+      case "number":
+      case "string":
+        return `- ${this.value}`;
+      case "object": {
+        const value = this.value;
+        if (value == null)
+          return "";
+        if (value instanceof FileProxy) {
+          return `- ${value.name}`;
+        }
+        if (Array.isArray(value)) {
+          return _toBulletList(value);
+        }
+        if (isRecord(value)) {
+          return _toBulletList(value);
+        }
+        return `- ${JSON.stringify(value)}`;
+      }
+      default:
+        return "";
+    }
+  }
+  /**
+   * Converts the value to a dataview property using the field name as the key.
+   * If the value is empty or undefined, it will return an empty string and not render anything.
+   */
+  toDataview() {
+    const value = this.value;
+    if (value === void 0)
+      return "";
+    if (Array.isArray(value)) {
+      return `[${this.name}:: ${JSON.stringify(value).slice(1, -1)}]`;
+    }
+    return `[${this.name}:: ${this.toString()}]`;
+  }
+  /**
+   * Transforms the contained value using the provided function.
+   * If the value is undefined or null the function will not be called
+   * and the result will be the same as the original.
+   * This is useful if you want to apply somme modifications to the value
+   * before rendering it, for example if none of the existing format methods suit your needs.
+   * @param {function} fn the function to transform the values
+   * @returns a new FormValue with the transformed value
+   **/
+  map(fn) {
+    const safeFn = Either_exports.tryCatchK(fn, ensureError);
+    const unchanged = () => this;
+    return pipe2(
+      this.value,
+      Option_exports.fromNullable,
+      Option_exports.map(safeFn),
+      Option_exports.fold(
+        unchanged,
+        (v) => pipe2(
+          v,
+          Either_exports.fold(
+            (e) => {
+              this.notify("Error in map of " + this.name)(e.message);
+              return unchanged();
+            },
+            (v2) => ResultValue.from(v2, this.name, this.notify)
+          )
+        )
+      )
+    );
+  }
+  /**
+   * Convenient getter to get the value as bullets, so you don't need to call `toBulletList` manually.
+   * example:
+   * ```ts
+   *  result.getValue("myField").bullets;
+   * ```
+   */
+  get bullets() {
+    return this.toBulletList();
+  }
+  /**
+   * getter that returns all the string values uppercased.
+   * If the value is an array, it will return an array with all the strings uppercased.
+   * The usage of map is important for safety and method chaining.
+   */
+  get upper() {
+    if (this.value instanceof FileProxy) {
+      return new ResultValue(this.value.name.toLocaleUpperCase(), this.name, this.notify);
+    }
+    return this.map(
+      (v) => deepMap(v, (it) => typeof it === "string" ? it.toLocaleUpperCase() : it)
+    );
+  }
+  /**
+   * getter that returns all the string values lowercased.
+   * If the value is an array, it will return an array with all the strings lowercased.
+   * If the value is an object, it will return an object with all the string values lowercased.
+   * The usage of map is important for safety and method chaining.
+   * @returns FormValue
+   */
+  get lower() {
+    if (this.value instanceof FileProxy) {
+      return new ResultValue(this.value.name.toLocaleLowerCase(), this.name, this.notify);
+    }
+    return this.map(
+      (v) => deepMap(v, (it) => typeof it === "string" ? it.toLocaleLowerCase() : it)
+    );
+  }
+  /**
+   * getter that returns all the string values trimmed.
+   * */
+  get trimmed() {
+    if (this.value instanceof FileProxy) {
+      return new ResultValue(this.value.name.trim(), this.name, this.notify);
+    }
+    return this.map((v) => deepMap(v, (it) => typeof it === "string" ? it.trim() : it));
+  }
+  /**
+   * getter that returns the value with the first character uppercased.
+   * Strings nested in arrays/objects are capitalized individually; non-string
+   * values are returned unchanged. Empty strings stay empty.
+   */
+  get capitalized() {
+    const cap = (s) => s.length === 0 ? s : s.charAt(0).toLocaleUpperCase() + s.slice(1);
+    if (this.value instanceof FileProxy) {
+      return new ResultValue(cap(this.value.name), this.name, this.notify);
+    }
+    return this.map((v) => deepMap(v, (it) => typeof it === "string" ? cap(it) : it));
+  }
+  /**
+   * getter that returns the value converted to a URL/filename-friendly slug.
+   * Strings nested in arrays/objects are slugified individually; non-string
+   * values are returned unchanged. `FileProxy` values are slugified from the
+   * file name so `result.getValue('image').slug` can drive filename
+   * generation.
+   */
+  get slug() {
+    if (this.value instanceof FileProxy) {
+      return new ResultValue(toSlug(this.value.name), this.name, this.notify);
+    }
+    return this.map((v) => deepMap(v, (it) => typeof it === "string" ? toSlug(it) : it));
+  }
+  /**
+   * renders the value as a markdown link.
+   * If the value is a string, it will be rendered as a markdown link.
+   * If the value is a FileProxy (right now just used for images), it will be rendered as an embedded link.
+   * Any other type of value will be rendered as an empty string.
+   */
+  get link() {
+    switch (true) {
+      case typeof this.value === "string":
+        return `[[${this.value}]]`;
+      case this.value instanceof FileProxy:
+        return `![[${this.value.path}]]`;
+      default:
+        return "";
+    }
+  }
+};
+
+// src/core/objectSelect.ts
+var KeysSchema = array2(coerce(string(), String));
+var PickOmitSchema = object({
+  pick: optional(KeysSchema),
+  omit: optional(KeysSchema)
+});
+function picKeys(obj) {
+  return (keys) => pipe2(
+    obj,
+    filterWithIndex3((k) => keys.includes(k))
+  );
+}
+function omitKeys(obj) {
+  return (keys) => pipe2(
+    obj,
+    filterWithIndex3((k) => !keys.includes(k))
+  );
+}
+function objectSelect(obj, opts) {
+  return pipe2(
+    parse2(PickOmitSchema, opts, { abortEarly: true }),
+    Either_exports.map(
+      (opts2) => {
+        const picked = pipe2(
+          fromNullable2(opts2.pick),
+          flatMap3(fromArray),
+          map4(picKeys(obj)),
+          getOrElse2(() => obj)
+        );
+        return pipe2(
+          fromNullable2(opts2.omit),
+          flatMap3(fromArray),
+          map4(omitKeys(picked)),
+          getOrElse2(() => picked)
+        );
+      }
+    ),
+    Either_exports.getOrElse(() => obj)
   );
 }
 
