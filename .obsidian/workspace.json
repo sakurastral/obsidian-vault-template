@@ -302,10 +302,12 @@
   },
   "active": "88a96870e04ca261",
   "lastOpenFiles": [
+    "Assets/Attachments/Vault Example Note (Empty).md",
+    "Atlas/Notes Management.md",
+    "Atlas/Task Board.md",
+    "README.md",
     "Assets/Template/Project/Journal/Add Daily Note.md",
     "Project/Journal/Vault Example Note (Empty).md",
-    "README.md",
-    "Atlas/Task Board.md",
     "Atlas/Journal Management.md",
     "Assets/Template/Layout/Header.md",
     "Assets/Template/Custom/Insert Bases Block to View Child Notes.md",
@@ -334,12 +336,10 @@
     "Assets/Images/default-atlas-cover.png",
     "Assets/Template/Nexus/Category Information Board.base",
     "Nexus/Title Prefix/NOTE｜.md",
-    "Atlas/Notes Management.md",
     "Nexus/Categories/Project.md",
     "Nexus/Categories/Projects/Vault Example Note (Empty).md",
     "Nexus/Categories/Outdated.md",
     "Nexus/Categories/MOC.md",
-    "Nexus/Categories/Vault Properties.md",
-    "Nexus/Categories/Vault Management.md"
+    "Nexus/Categories/Vault Properties.md"
   ]
 }

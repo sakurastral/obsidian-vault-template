@@ -1914,6 +1914,14 @@ body.enable-colorful-frame-style-layout .workspace:has(.workspace-split.mod-hori
   padding-right: 10px;
 }
 
+.is-mobile .cm-sizer .cm-contentContainer {
+  padding: 0 var(--font-text-size);
+}
+.is-mobile .metadata-content {
+  width: calc(90% - var(--size-4-6));
+  transform: none;
+}
+
 body {
   --scrollbar-bg: hsl(var(--accent-h), var(--accent-s), var(--accent-l), 0);
   --scrollbar-thumb-bg: hsl(var(--accent-h), var(--accent-s), var(--accent-l), 0.3);
@@ -3037,6 +3045,7 @@ body {
   --table-header-background-hover: var(--table-header-background);
   --table-header-color: var(--march-accent);
   --table-border-color: var(--march-50-accent);
+  --table-row-alt-background: var(--background-primary-alt);
 }
 
 /* ========================================================================== */
@@ -3647,8 +3656,14 @@ li[data-task="-"].task-list-item.is-checked span.dataview.inline-field-value {
   color: var(--text-faint);
 }
 
+/* https://docs.obsidian.md/Reference/CSS+variables/Editor/Bases */
+/* https://docs.obsidian.md/Reference/CSS+variables/Editor/Table */
 body {
-  --bases-embed-radius: 8px;
+  --bases-table-column-border-width: 0px;
+  --bases-table-row-border-width: 0px;
+  --bases-table-header-background: var(--background-secondary);
+  --bases-table-row-background-hover: var(--background-secondary);
+  --bases-embed-radius: var(--radius-l);
 }
 
 :is(.bases-no-toolbar, .bases-embed[alt~=no-toolbar]) .bases-toolbar-item {
@@ -3679,6 +3694,15 @@ body {
 
 .bases-view {
   scrollbar-gutter: auto;
+}
+
+/* https://forum.obsidian.md/t/enable-styling-row-in-base-based-on-its-row-number/108651 */
+.bases-tr:nth-of-type(even) {
+  background: var(--background-primary-alt);
+}
+
+.bases-table .bases-group-heading {
+  background: var(--background-secondary-alt);
 }
 
 .better-properties-select,
@@ -3760,6 +3784,27 @@ Helper Class
 .march-metabind-hide-list-input .mb-list-input {
   height: 0;
   display: none;
+}
+
+.march-metabind-aliases {
+  display: flex;
+  justify-content: center;
+  background: var(--background-secondary);
+  border-radius: var(--radius-l);
+  padding: 10px 5px;
+  --mb-border-width: 0;
+}
+.march-metabind-aliases .mb-inline-list-item {
+  background: var(--background-secondary-alt);
+  border-radius: 50px;
+}
+
+.march-metabind-description textArea {
+  height: 2.3rem;
+  padding: 0.6rem;
+  border-radius: var(--radius-l);
+  margin-top: calc(var(--font-text-size) / 2);
+  text-align: center;
 }
 
 .virtual-footer-dynamic-content-element {
