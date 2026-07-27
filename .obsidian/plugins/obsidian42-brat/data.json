@@ -1,10 +1,11 @@
 {
   "pluginList": [
-    "unxok/obsidian-better-properties"
+    "sakurastral/obsidian-property-panels"
   ],
   "pluginSubListFrozenVersion": [
     {
-      "repo": "unxok/obsidian-better-properties"
+      "repo": "sakurastral/obsidian-property-panels",
+      "version": ""
     }
   ],
   "themesList": [

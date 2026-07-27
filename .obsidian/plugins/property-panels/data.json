@@ -1,0 +1,423 @@
+{
+  "defaultConfig": {
+    "panels": [
+      {
+        "id": "240e98e0-06bc-4549-8331-6f8fd7d900c2",
+        "name": "Simple Info",
+        "enabled": true,
+        "position": "after-properties",
+        "fields": [
+          {
+            "id": "72a77133-1069-45f9-9300-04802a35966c",
+            "property": "aliases",
+            "type": "multi-select",
+            "labelDisplay": "visible",
+            "editable": true,
+            "visible": true,
+            "showWhenEmpty": true,
+            "longText": "wrap",
+            "columnSpan": 1,
+            "label": "Aliases",
+            "allowCustom": true,
+            "optionSource": {
+              "type": "folder",
+              "path": "",
+              "recursive": true,
+              "value": "basename",
+              "wikilink": true,
+              "sort": true
+            }
+          },
+          {
+            "id": "98dbf8da-35de-41f0-8cc9-d884937a2870",
+            "property": "collection-url",
+            "type": "text",
+            "labelDisplay": "visible",
+            "editable": true,
+            "visible": true,
+            "showWhenEmpty": false,
+            "longText": "wrap",
+            "columnSpan": 1,
+            "label": "Collection URL",
+            "allowCustom": true
+          },
+          {
+            "id": "ae756a36-d9a5-4a4c-a677-99250a21b794",
+            "property": "description",
+            "type": "text",
+            "label": "Description",
+            "labelDisplay": "visible",
+            "editable": true,
+            "visible": true,
+            "showWhenEmpty": true,
+            "longText": "wrap",
+            "columnSpan": 1,
+            "allowCustom": true,
+            "placeholder": "Enter Here..."
+          }
+        ],
+        "showTitle": false,
+        "collapsible": false,
+        "defaultCollapsed": false,
+        "layout": {
+          "labelPosition": "inline",
+          "density": "compact",
+          "columns": 1
+        }
+      },
+      {
+        "id": "details",
+        "name": "Details",
+        "enabled": true,
+        "position": "after-properties",
+        "fields": [
+          {
+            "id": "9429f9ac-f689-4bfa-ad6b-ae7af2837c12",
+            "property": "status",
+            "type": "select",
+            "labelDisplay": "visible",
+            "editable": true,
+            "visible": true,
+            "showWhenEmpty": true,
+            "longText": "wrap",
+            "columnSpan": 12,
+            "label": "Status",
+            "allowCustom": true,
+            "optionSource": {
+              "type": "folder",
+              "path": "Nexus/Status",
+              "recursive": true,
+              "value": "basename",
+              "wikilink": true,
+              "sort": true
+            }
+          },
+          {
+            "id": "93d855e9-8b24-4ad0-a69b-94a89e79f071",
+            "property": "",
+            "type": "divider",
+            "labelDisplay": "hidden",
+            "editable": false,
+            "visible": true,
+            "showWhenEmpty": true,
+            "longText": "wrap",
+            "columnSpan": 12,
+            "allowCustom": true
+          },
+          {
+            "id": "16b9eb0d-b293-4251-a4c6-5c97e8606371",
+            "property": "categories",
+            "type": "multi-select",
+            "labelDisplay": "visible",
+            "editable": true,
+            "visible": true,
+            "showWhenEmpty": true,
+            "longText": "wrap",
+            "columnSpan": 12,
+            "label": "Categories",
+            "allowCustom": true,
+            "optionSource": {
+              "type": "folder",
+              "path": "Nexus/Categories",
+              "recursive": true,
+              "value": "basename",
+              "wikilink": true,
+              "sort": true
+            }
+          },
+          {
+            "id": "6dd9f4bb-ac6b-44e5-adc7-64d34bc4e52f",
+            "property": "",
+            "type": "divider",
+            "labelDisplay": "hidden",
+            "editable": false,
+            "visible": true,
+            "showWhenEmpty": true,
+            "longText": "wrap",
+            "columnSpan": 12,
+            "allowCustom": true
+          },
+          {
+            "id": "72596290-bf73-4cc8-8b25-23e0a21f5d40",
+            "property": "parent",
+            "type": "multi-select",
+            "label": "Parent",
+            "labelDisplay": "visible",
+            "editable": true,
+            "visible": true,
+            "showWhenEmpty": true,
+            "longText": "truncate",
+            "columnSpan": 1,
+            "allowCustom": true,
+            "optionSource": {
+              "type": "folder",
+              "path": "",
+              "recursive": true,
+              "value": "basename",
+              "wikilink": true,
+              "sort": true
+            }
+          }
+        ],
+        "showTitle": true,
+        "collapsible": true,
+        "defaultCollapsed": true,
+        "layout": {
+          "columns": 4,
+          "labelPosition": "top"
+        }
+      },
+      {
+        "id": "621b1cf4-330d-403f-a0a1-04545c0516da",
+        "name": "Relationship",
+        "enabled": true,
+        "position": "before-linked-mentions",
+        "fields": [
+          {
+            "id": "fd905395-f412-4062-b41c-78ad36c756e3",
+            "property": "related",
+            "type": "multi-select",
+            "labelDisplay": "visible",
+            "editable": true,
+            "visible": true,
+            "showWhenEmpty": true,
+            "longText": "truncate",
+            "columnSpan": 1,
+            "label": "Related",
+            "allowCustom": true,
+            "optionSource": {
+              "type": "folder",
+              "path": "",
+              "recursive": true,
+              "value": "basename",
+              "wikilink": true,
+              "sort": true
+            }
+          },
+          {
+            "id": "d807e32d-2109-4141-a47a-780f6ab2fbd9",
+            "property": "references",
+            "type": "multi-select",
+            "labelDisplay": "visible",
+            "editable": true,
+            "visible": true,
+            "showWhenEmpty": true,
+            "longText": "truncate",
+            "columnSpan": 1,
+            "label": "References",
+            "allowCustom": true,
+            "optionSource": {
+              "type": "folder",
+              "path": "",
+              "recursive": true,
+              "value": "basename",
+              "wikilink": true,
+              "sort": true
+            }
+          }
+        ],
+        "showTitle": true,
+        "collapsible": true,
+        "defaultCollapsed": false,
+        "layout": {
+          "columns": 2
+        }
+      }
+    ],
+    "layout": {
+      "columns": 2,
+      "density": "normal",
+      "labelPosition": "top",
+      "fieldGap": 10,
+      "panelGap": 5
+    }
+  },
+  "folderRules": [
+    {
+      "id": "f6e729d2-385b-460e-b0c1-a58d25951141",
+      "name": "Assets",
+      "path": "Assets",
+      "enabled": true,
+      "matchMode": "folder-and-children",
+      "inheritance": "replace",
+      "priority": 0,
+      "config": {
+        "panels": []
+      }
+    },
+    {
+      "id": "038e5b93-6d25-4239-9514-d2ab2ca99337",
+      "name": "Task",
+      "path": "Task",
+      "enabled": true,
+      "matchMode": "folder-and-children",
+      "inheritance": "replace",
+      "priority": 0,
+      "config": {
+        "panels": [
+          {
+            "id": "df7d834c-a262-46b9-831d-33c1bd19d96a",
+            "name": "Task Detail",
+            "enabled": true,
+            "position": "after-properties",
+            "fields": [
+              {
+                "id": "58ef4e19-bae2-48be-a936-6d52787ecf82",
+                "property": "task-due",
+                "type": "datetime",
+                "labelDisplay": "visible",
+                "editable": true,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 2,
+                "label": "DUE",
+                "allowCustom": true
+              },
+              {
+                "id": "6e01d6d0-109f-4124-8b53-e00591d3e530",
+                "property": "task-content",
+                "type": "text",
+                "labelDisplay": "visible",
+                "editable": true,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 4,
+                "label": "Content",
+                "allowCustom": true
+              },
+              {
+                "id": "b84232cb-49e7-4c23-9bb6-be8ad1cedafa",
+                "property": "task-status",
+                "type": "select",
+                "labelDisplay": "visible",
+                "editable": false,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 5,
+                "label": "Status",
+                "allowCustom": true,
+                "optionSource": {
+                  "type": "folder",
+                  "path": "Nexus/Task Status",
+                  "recursive": true,
+                  "value": "basename",
+                  "wikilink": true,
+                  "sort": true
+                }
+              },
+              {
+                "id": "ad23efc6-f8ee-4c94-a844-edb6eaad2380",
+                "property": "task-priority",
+                "type": "rating",
+                "labelDisplay": "visible",
+                "editable": true,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 1,
+                "label": "Priority",
+                "allowCustom": true,
+                "rating": {
+                  "max": 5,
+                  "allowClear": true
+                }
+              },
+              {
+                "id": "247f7cce-46e6-4d29-8236-ced63de84ddd",
+                "property": "task-scheduled-start",
+                "type": "datetime",
+                "labelDisplay": "visible",
+                "editable": true,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 3,
+                "label": "Scheduled (Start)",
+                "allowCustom": true
+              },
+              {
+                "id": "9d9e2a53-8f19-417a-94f8-4e89bd77dfea",
+                "property": "task-scheduled-end",
+                "type": "datetime",
+                "labelDisplay": "visible",
+                "editable": true,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 3,
+                "label": "Scheduled (End)",
+                "allowCustom": true
+              },
+              {
+                "id": "d87fc52f-3061-4896-9cf7-a3ad1c918623",
+                "property": "task-done",
+                "type": "datetime",
+                "labelDisplay": "visible",
+                "editable": false,
+                "visible": true,
+                "showWhenEmpty": false,
+                "longText": "wrap",
+                "columnSpan": 2,
+                "label": "Done",
+                "allowCustom": true
+              },
+              {
+                "id": "4003528a-d7be-4248-87c9-4b0e908865bc",
+                "property": "task-cancelled",
+                "type": "datetime",
+                "labelDisplay": "visible",
+                "editable": false,
+                "visible": true,
+                "showWhenEmpty": false,
+                "longText": "wrap",
+                "columnSpan": 2,
+                "label": "Cancelled",
+                "allowCustom": true
+              },
+              {
+                "id": "d1c7f426-c387-4bca-9d0c-a122d07f10a6",
+                "property": "task-archived",
+                "type": "datetime",
+                "labelDisplay": "visible",
+                "editable": false,
+                "visible": true,
+                "showWhenEmpty": false,
+                "longText": "wrap",
+                "columnSpan": 2,
+                "label": "Archived",
+                "allowCustom": true
+              }
+            ],
+            "showTitle": false,
+            "collapsible": false,
+            "defaultCollapsed": false,
+            "layout": {
+              "columns": 6
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "fc063f24-28d8-45b1-9a06-3aa680b5de50",
+      "name": "Atlas",
+      "path": "Atlas",
+      "enabled": true,
+      "matchMode": "folder-and-children",
+      "inheritance": "replace",
+      "priority": 0,
+      "config": {
+        "panels": []
+      }
+    }
+  ],
+  "behavior": {
+    "textSaveDelay": 500,
+    "deleteEmptyValues": false,
+    "showInSourceView": false,
+    "debugLogging": false
+  }
+}

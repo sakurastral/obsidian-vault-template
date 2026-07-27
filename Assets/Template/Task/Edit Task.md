@@ -1,11 +1,11 @@
 <%* let title = tp.file.title _%>
 <%*   
-	let content = tp.frontmatter["Task：Content"] ?? "";  
-	let status = tp.frontmatter["Task：Status"]?.replace(/[\[\]]/g, "") ?? "[[Backlog]]".replace(/[\[\]]/g, "");  
-	let priority = tp.frontmatter["Task：Priority"] ?? undefined;  
-	let start = tp.frontmatter["Task：Scheduled(Start)"] ?? "";  
-	let end = tp.frontmatter["Task：Scheduled(End)"] ?? "";  
-    let due = tp.frontmatter["Task：Due"] ?? tp.date.now("YYYY-MM-DDT17:00");
+	let content = tp.frontmatter["task-content"] ?? "";  
+	let status = tp.frontmatter["task-status"]?.replace(/[\[\]]/g, "") ?? "[[Backlog]]".replace(/[\[\]]/g, "");  
+	let priority = tp.frontmatter["task-priority"] ?? undefined;  
+	let start = tp.frontmatter["task-scheduled-start"] ?? "";  
+	let end = tp.frontmatter["task-scheduled-end"] ?? "";  
+    let due = tp.frontmatter["task-due"] ?? tp.date.now("YYYY-MM-DDT17:00");
 	
 	let values = {
 		content, 
@@ -34,12 +34,12 @@
 	const file = tp.file.find_tfile(tp.file.path(true));  
 	const add = await app.fileManager.processFrontMatter(file, (frontmatter) => {  
 		if(formResult.status === "ok"){  
-		    frontmatter["Task：Content"] = content;  
-		    frontmatter["Task：Status"] =  status;  
-		    if (priority) { frontmatter["Task：Priority"] = priority;  }
-		    frontmatter["Task：Scheduled(Start)"] = start;  
-		    frontmatter["Task：Scheduled(End)"] = end;  
-		    frontmatter["Task：Due"] =  due;  
+		    frontmatter["task-content"] = content;  
+		    frontmatter["task-status"] =  status;  
+		    if (priority) { frontmatter["task-priority"] = priority;  }
+		    frontmatter["task-scheduled-start"] = start;  
+		    frontmatter["task-scheduled-end"] = end;  
+		    frontmatter["task-due"] =  due;  
 		}  
 	});  
 -%>

@@ -1,17 +1,17 @@
 ---
-cover: "[[default-task-cover.png]]"
 title: Task Board
+cover: "[[default-task-cover.png]]"
+created: 2025-12-16T08:38:43+08:00
+modified: 2026-07-27T23:01:03+08:00
 aliases:
+description:
 categories:
   - "[[Vault Management]]"
-tags:
-description:
-created: 2025-12-16T08:38:43+08:00
-modified: 2026-06-13T16:38:40+08:00
 status:
 parent:
 related:
 references:
+tags:
 ---
 
 ```base
@@ -20,16 +20,16 @@ filters:
     - file.folder.startsWith("Task")
     - file.folder.startsWith("Project/Calendar")
 formulas:
-  task-content-with-link: link(file, note["Task：Content"])
-  overdue: if(note["Task：Due"] < now(), "🚨", if(note["Task：Due"] - "3 day" <= today(), "⚠️", ""))
-  Relative Due: if(Task：Due, "Deadline："+date(Task：Due).relative().toString(),"")
-  Task in Short: if(Task：Content, "Task：" + Task：Content, if(note["calendar-event-title"], note["calendar-event-title"],"") )
-  Calendar Event Start: if(note["calendar-event-start"], note["calendar-event-start"],if(note["Task：Scheduled(Start)"], note["Task：Scheduled(Start)"], Task：Due))
-  Calendar Event End: if(note["calendar-event-end"], note["calendar-event-end"],if(note["Task：Scheduled(End)"], note["Task：Scheduled(End)"], Task：Due))
+  task-content-with-link: link(file, note["task-content"])
+  overdue: if(note["task-due"] < now(), "🚨", if(note["task-due"] - "3 day" <= today(), "⚠️", ""))
+  Relative Due: if(task-due, "Due："+date(task-due).relative().toString(),"")
+  Task in Short: if(task-content, "Task：" + task-content, if(note["calendar-event-title"], note["calendar-event-title"],"") )
+  Calendar Event Start: if(note["calendar-event-start"], note["calendar-event-start"],if(note["task-scheduled-start"], note["task-scheduled-start"], task-due))
+  Calendar Event End: if(note["calendar-event-end"], note["calendar-event-end"],if(note["task-scheduled-end"], note["task-scheduled-end"], task-due))
 properties:
-  note.Task：Status:
+  note.task-status:
     displayName: Status
-  note.Task：Due:
+  note.task-due:
     displayName: Due
   formula.task-content-with-link:
     displayName: Task
@@ -44,27 +44,27 @@ views:
       and:
         - file.folder == "Task/Inbox"
     order:
-      - Task：Status
-      - Task：Due
+      - task-status
+      - task-due
       - formula.overdue
       - formula.task-content-with-link
-      - Task：Scheduled(Start)
-      - Task：Scheduled(End)
+      - task-scheduled-start
+      - task-scheduled-end
     sort:
-      - property: Task：Due
+      - property: task-due
         direction: ASC
-      - property: Task：Scheduled(End)
+      - property: task-scheduled-end
         direction: ASC
       - property: formula.related-category
         direction: DESC
       - property: tags
         direction: ASC
     columnSize:
-      note.Task：Status: 121
-      note.Task：Due: 200
+      note.task-status: 121
+      note.task-due: 200
       formula.overdue: 32
       formula.task-content-with-link: 266
-      note.Task：Scheduled(Start): 199
+      note.task-scheduled-start: 199
     cardSize: 300
     calendarView: dayGridMonth
   - type: table
@@ -73,10 +73,10 @@ views:
       and:
         - file.folder == "Task/Archived"
     order:
-      - Task：Archived
+      - task-archived
       - formula.task-content-with-link
     columnSize:
-      note.Task：Archived: 308
+      note.task-archived: 308
       formula.task-content-with-link: 400
   - type: calendar
     name: Calendar

@@ -35,7 +35,7 @@
     },
     "yaml-key-sort": {
       "enabled": true,
-      "yaml-key-priority-sort-order": "cover:\ntitle:\naliases:\ncategories:\ntags:\ndescription:\ncreated:\nmodified:\nstatus:\nparent:\nrelated:\nreferences:\nTask：Content:\nTask：Status:\nTask：Priority:\nTask：Scheduled(Start):\nTask：Scheduled(End):\nTask：Due:\nTask：Done:\nTask：Cancelled:\nTask：Archived:",
+      "yaml-key-priority-sort-order": "title:\ncover:\ncreated:\nmodified:\naliases:\ndescription:\ncategories:\nstatus:\nparent:\nrelated:\nreferences:",
       "priority-keys-at-start-of-yaml": true,
       "yaml-sort-order-for-other-keys": "Ascending Alphabetical"
     },
@@ -168,10 +168,10 @@
       "tabsize": 4
     },
     "empty-line-around-blockquotes": {
-      "enabled": false
+      "enabled": true
     },
     "empty-line-around-code-fences": {
-      "enabled": false
+      "enabled": true
     },
     "empty-line-around-math-blocks": {
       "enabled": true
@@ -270,7 +270,7 @@
       "sort-order": "Ascending Alphabetical"
     },
     "empty-line-around-horizontal-rules": {
-      "enabled": false
+      "enabled": true
     }
   },
   "lintOnSave": true,

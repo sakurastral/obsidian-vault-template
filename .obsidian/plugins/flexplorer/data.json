@@ -354,7 +354,6 @@
       "customOrder": [
         "Custom",
         "Properties",
-        "Layout",
         "Inbox",
         "Nexus",
         "Project",
@@ -480,8 +479,7 @@
         "Edit Task.md",
         "Mark as Cancelled.md",
         "Mark as Completed.md",
-        "Mark as In Progess.md",
-        "Task Information Board.base"
+        "Mark as In Progess.md"
       ]
     },
     "Assets/Template/Task/Add New Task.md": {
@@ -505,10 +503,6 @@
       "isHidden": false
     },
     "Assets/Template/Task/Mark as In Progess.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Assets/Template/Task/Task Information Board.base": {
       "isPinned": false,
       "isHidden": false
     },
@@ -832,23 +826,6 @@
       "isHidden": false
     },
     "Assets/Images/default-task-cover.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Assets/Template/Layout": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Header.md",
-        "Footer.md"
-      ]
-    },
-    "Assets/Template/Layout/Footer.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Assets/Template/Layout/Header.md": {
       "isPinned": false,
       "isHidden": false
     },

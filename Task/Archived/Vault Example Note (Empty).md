@@ -1,14 +1,14 @@
 ---
-cover:
 title: Vault Example Note (Empty)
-aliases:
-categories:
-tags:
-description:
+cover:
 created: 2025-12-25T15:19:55+08:00
-modified: 2026-06-13T16:38:40+08:00
+modified: 2026-07-27T22:48:24+08:00
+aliases:
+description:
+categories:
 status:
 parent:
 related:
 references:
+tags:
 ---

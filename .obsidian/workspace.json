@@ -86,7 +86,7 @@
             }
           },
           {
-            "id": "88a96870e04ca261",
+            "id": "c66a54554c61e5e7",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -157,7 +157,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "[\"Task：Priority\"]",
+                "query": "[\"Task：Archived\"]",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -236,8 +236,21 @@
               "icon": "lucide-list",
               "title": "Outline"
             }
+          },
+          {
+            "id": "c39793a5aa7933aa",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "README.md"
+              },
+              "icon": "lucide-info",
+              "title": "File properties"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "205879abebf0a12e",
@@ -296,16 +309,25 @@
       "command-palette:Open command palette": true,
       "markdown-importer:Open format converter": true,
       "workspaces:Manage workspace layouts": true,
-      "obsidian42-brat:BRAT": false,
-      "virtual-footer:Open virtual content in sidebar": true
+      "obsidian42-brat:BRAT": false
     }
   },
-  "active": "88a96870e04ca261",
+  "active": "c66a54554c61e5e7",
   "lastOpenFiles": [
+    "Atlas/Task Board.md",
+    "Assets/Template/Task/Mark as In Progess.md",
+    "Inbox/Vault Example Note (Empty).md",
+    "Assets/Template/Task/Edit Task.md",
+    "Task/Inbox/Vault Example Note (Empty).md",
+    "Assets/Template/Task/Task Information Board.base",
+    "Assets/Template/Task/Mark as Completed.md",
+    "Assets/Template/Task/Mark as Cancelled.md",
+    "Assets/Template/Task/Archive Task.md",
+    "Assets/Template/Task/Add New Task.md",
+    "Task/Archived/Vault Example Note (Empty).md",
+    "README.md",
     "Assets/Attachments/Vault Example Note (Empty).md",
     "Atlas/Notes Management.md",
-    "Atlas/Task Board.md",
-    "README.md",
     "Assets/Template/Project/Journal/Add Daily Note.md",
     "Project/Journal/Vault Example Note (Empty).md",
     "Atlas/Journal Management.md",
@@ -314,7 +336,6 @@
     "Assets/Template/Layout/Footer.md",
     "Project/Archived/Vault Example Note (Empty).md",
     "Project/Archived",
-    "Inbox/Vault Example Note (Empty).md",
     "Assets/Template/Layout",
     "Atlas/Template Management.md",
     "Atlas/Assets Management.md",
@@ -324,9 +345,6 @@
     "Atlas/Home.md",
     "Assets/Images/jplenio-foggy-7725646.jpg",
     "Assets/Images/calendar-pexels-pnw-prod-8251157.jpg",
-    "Assets/Template/Project/Calendar/Add New Event.md",
-    "Assets/Template/Task/Add New Task.md",
-    "Atlas/Cover Management.md",
     "Assets/Images/default-task-cover.png",
     "Assets/Images/default-note-cover.png",
     "Assets/Images/default-home-cover.png",
@@ -334,12 +352,6 @@
     "Assets/Images/default-atlas-cover拷貝2.png",
     "Assets/Images/default-atlas-cover拷貝.png",
     "Assets/Images/default-atlas-cover.png",
-    "Assets/Template/Nexus/Category Information Board.base",
-    "Nexus/Title Prefix/NOTE｜.md",
-    "Nexus/Categories/Project.md",
-    "Nexus/Categories/Projects/Vault Example Note (Empty).md",
-    "Nexus/Categories/Outdated.md",
-    "Nexus/Categories/MOC.md",
-    "Nexus/Categories/Vault Properties.md"
+    "Assets/Template/Nexus/Category Information Board.base"
   ]
 }

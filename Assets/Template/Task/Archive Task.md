@@ -2,12 +2,12 @@
 const file = tp.file.find_tfile(tp.file.path(true));
 let shouldMove = false;
 await app.fileManager.processFrontMatter(file, (frontmatter) => {
-  if (!frontmatter["Task：Status"]) {  return; }
-  if (frontmatter["Task：Status"] == "[[Archived]]") { new Notice(`This is already archived.`); return; }  
-  if (frontmatter["Task：Status"] == "[[Completed]]" || frontmatter["Task：Status"] == "[[Cancelled]]") {
-    if (frontmatter["Task：Done"] !== null || frontmatter["Task：Cancelled"] !== null) {
-	  frontmatter["Task：Status"] = "[[Archived]]";
-      frontmatter["Task：Archived"] = tp.date.now("YYYY-MM-DDTHH:mm:ssZ");
+  if (!frontmatter["task-status"]) {  return; }
+  if (frontmatter["task-status"] == "[[Archived]]") { new Notice(`This is already archived.`); return; }  
+  if (frontmatter["task-status"] == "[[Completed]]" || frontmatter["task-status"] == "[[Cancelled]]") {
+    if (frontmatter["task-done"] !== null || frontmatter["task-cancelled"] !== null) {
+	  frontmatter["task-status"] = "[[Archived]]";
+      frontmatter["task-archived"] = tp.date.now("YYYY-MM-DDTHH:mm:ssZ");
 	  shouldMove = true;
 	} else {
       new Notice(`Missing task complete or cancel time`)

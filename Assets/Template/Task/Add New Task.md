@@ -1,21 +1,18 @@
 ---
 categories:
   - "[[Task]]"
-Task：Content:
-Task：Status:
-Task：Priority:
-Task：Scheduled(Start):
-Task：Scheduled(End):
-Task：Due:
-Task：Done:
-Task：Cancelled:
-Task：Archived:
+task-content:
+task-status:
+task-priority:
+task-scheduled-start:
+task-scheduled-end:
+task-due:
+task-done:
+task-cancelled:
+task-archived:
 cover: "[[default-task-cover.png]]"
 ---
 <%* let title = tp.file.title _%>
-<%* if (tp.file.title.includes("Untitled")) { -%>
-![[Task Information Board.base#View|no-toolbar]]  
-<%* } -%>
 <%*
 
 if ( title.startsWith("Untitled") ) { 

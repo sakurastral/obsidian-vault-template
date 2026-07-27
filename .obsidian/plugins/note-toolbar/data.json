@@ -61,8 +61,7 @@
     "startup-help-welcome": true,
     "default-d4085830-fd38-41bb-9c62-a90f5d090811": true
   },
-  "ribbonAction": "toolbar",
-  "ribbonToolbar": null,
+  "ribbon": [],
   "rules": [],
   "scriptingEnabled": false,
   "showEditInFabMenu": false,
@@ -1959,42 +1958,6 @@
       "hasCommand": false,
       "items": [
         {
-          "uuid": "d50ee2ba-0603-424a-acab-d88d813f73b4",
-          "icon": "lucide-image-plus",
-          "label": "Add Note Cover",
-          "tooltip": "",
-          "hasCommand": false,
-          "inGallery": false,
-          "link": "Pretty Properties: Select cover image",
-          "linkAttr": {
-            "commandCheck": false,
-            "commandId": "pretty-properties:select-cover-image",
-            "hasVars": false,
-            "type": "command"
-          },
-          "visibility": {
-            "desktop": {
-              "components": [
-                "icon",
-                "label"
-              ]
-            },
-            "mobile": {
-              "components": [
-                "icon",
-                "label"
-              ]
-            },
-            "tablet": {
-              "components": [
-                "icon",
-                "label"
-              ]
-            },
-            "viewMode": "all"
-          }
-        },
-        {
           "uuid": "eb8f5a98-8cee-4635-9408-0a6c39ecd597",
           "icon": "lucide-plus",
           "label": "Insert Bases Block to View Child Notes",
@@ -2086,7 +2049,7 @@
           }
         }
       },
-      "updated": "2026-07-05T08:57:48.177Z"
+      "updated": "2026-07-26T09:02:20.379Z"
     },
     {
       "uuid": "aa7b6c98-6734-4759-b2c3-81feffb41dba",
@@ -2283,14 +2246,14 @@
         {
           "uuid": "c155b846-352e-4384-b27e-fb5b6d31c245",
           "icon": "lucide-plus",
-          "label": "Cover",
+          "label": "Banner",
           "tooltip": "",
           "hasCommand": false,
           "inGallery": false,
-          "link": "Pretty Properties: Select cover image",
+          "link": "Pretty Properties: Select banner image",
           "linkAttr": {
             "commandCheck": false,
-            "commandId": "pretty-properties:select-cover-image",
+            "commandId": "pretty-properties:select-banner-image",
             "hasVars": false,
             "type": "command"
           },
@@ -2336,7 +2299,7 @@
           }
         }
       },
-      "updated": "2026-05-21T01:37:46.085Z"
+      "updated": "2026-07-26T09:02:41.025Z"
     },
     {
       "uuid": "d4085830-fd38-41bb-9c62-a90f5d090811",
@@ -3414,7 +3377,7 @@
       "updated": "2026-05-26T09:13:43.231Z"
     }
   ],
-  "version": 20260428.1,
+  "version": 20260703.1,
   "webviewerToolbar": null,
   "whatsnew_version": "1.32"
 }
