@@ -78,17 +78,5 @@ views:
     columnSize:
       note.task-archived: 308
       formula.task-content-with-link: 400
-  - type: calendar
-    name: Calendar
-    filters:
-      and:
-        - file.folder != "Task/Archived"
-    order:
-      - formula.Task in Short
-      - formula.Relative Due
-      - formula.Calendar Event Start
-      - formula.Calendar Event End
-    startDate: formula.Calendar Event Start
-    endDate: formula.Calendar Event End
 
 ```

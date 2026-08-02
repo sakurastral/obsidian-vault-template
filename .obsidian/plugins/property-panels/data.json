@@ -8,6 +8,20 @@
         "position": "after-properties",
         "fields": [
           {
+            "id": "98dbf8da-35de-41f0-8cc9-d884937a2870",
+            "property": "collection-url",
+            "type": "link",
+            "labelDisplay": "icon-only",
+            "editable": false,
+            "visible": true,
+            "showWhenEmpty": false,
+            "longText": "wrap",
+            "columnSpan": 1,
+            "label": "URL",
+            "icon": "link",
+            "allowCustom": true
+          },
+          {
             "id": "72a77133-1069-45f9-9300-04802a35966c",
             "property": "aliases",
             "type": "multi-select",
@@ -18,6 +32,7 @@
             "longText": "wrap",
             "columnSpan": 1,
             "label": "Aliases",
+            "icon": "lucide-whole-word",
             "allowCustom": true,
             "optionSource": {
               "type": "folder",
@@ -29,40 +44,28 @@
             }
           },
           {
-            "id": "98dbf8da-35de-41f0-8cc9-d884937a2870",
-            "property": "collection-url",
-            "type": "text",
-            "labelDisplay": "visible",
-            "editable": true,
-            "visible": true,
-            "showWhenEmpty": false,
-            "longText": "wrap",
-            "columnSpan": 1,
-            "label": "Collection URL",
-            "allowCustom": true
-          },
-          {
             "id": "ae756a36-d9a5-4a4c-a677-99250a21b794",
             "property": "description",
             "type": "text",
-            "label": "Description",
             "labelDisplay": "visible",
             "editable": true,
             "visible": true,
             "showWhenEmpty": true,
             "longText": "wrap",
             "columnSpan": 1,
-            "allowCustom": true,
-            "placeholder": "Enter Here..."
+            "label": "Description",
+            "icon": "lucide-feather",
+            "placeholder": "Enter Here...",
+            "allowCustom": true
           }
         ],
         "showTitle": false,
         "collapsible": false,
         "defaultCollapsed": false,
         "layout": {
-          "labelPosition": "inline",
+          "columns": 1,
           "density": "compact",
-          "columns": 1
+          "labelPosition": "left-end"
         }
       },
       {
@@ -80,8 +83,9 @@
             "visible": true,
             "showWhenEmpty": true,
             "longText": "wrap",
-            "columnSpan": 12,
+            "columnSpan": 1,
             "label": "Status",
+            "icon": "circle",
             "allowCustom": true,
             "optionSource": {
               "type": "folder",
@@ -93,16 +97,26 @@
             }
           },
           {
-            "id": "93d855e9-8b24-4ad0-a69b-94a89e79f071",
-            "property": "",
-            "type": "divider",
-            "labelDisplay": "hidden",
-            "editable": false,
+            "id": "72596290-bf73-4cc8-8b25-23e0a21f5d40",
+            "property": "parent",
+            "type": "multi-select",
+            "labelDisplay": "visible",
+            "editable": true,
             "visible": true,
             "showWhenEmpty": true,
             "longText": "wrap",
-            "columnSpan": 12,
-            "allowCustom": true
+            "columnSpan": 3,
+            "label": "Parent",
+            "icon": "circle",
+            "allowCustom": true,
+            "optionSource": {
+              "type": "folder",
+              "path": "",
+              "recursive": true,
+              "value": "basename",
+              "wikilink": true,
+              "sort": true
+            }
           },
           {
             "id": "16b9eb0d-b293-4251-a4c6-5c97e8606371",
@@ -113,8 +127,9 @@
             "visible": true,
             "showWhenEmpty": true,
             "longText": "wrap",
-            "columnSpan": 12,
+            "columnSpan": 4,
             "label": "Categories",
+            "icon": "circle",
             "allowCustom": true,
             "optionSource": {
               "type": "folder",
@@ -126,50 +141,31 @@
             }
           },
           {
-            "id": "6dd9f4bb-ac6b-44e5-adc7-64d34bc4e52f",
-            "property": "",
-            "type": "divider",
-            "labelDisplay": "hidden",
-            "editable": false,
-            "visible": true,
-            "showWhenEmpty": true,
-            "longText": "wrap",
-            "columnSpan": 12,
-            "allowCustom": true
-          },
-          {
-            "id": "72596290-bf73-4cc8-8b25-23e0a21f5d40",
-            "property": "parent",
-            "type": "multi-select",
-            "label": "Parent",
+            "id": "9577b6b8-2006-47e8-8f4b-87ae345d690d",
+            "property": "collection-url",
+            "type": "text",
+            "label": "Collection URL",
+            "icon": "circle",
             "labelDisplay": "visible",
             "editable": true,
             "visible": true,
-            "showWhenEmpty": true,
-            "longText": "truncate",
-            "columnSpan": 1,
-            "allowCustom": true,
-            "optionSource": {
-              "type": "folder",
-              "path": "",
-              "recursive": true,
-              "value": "basename",
-              "wikilink": true,
-              "sort": true
-            }
+            "showWhenEmpty": false,
+            "longText": "wrap",
+            "columnSpan": 4,
+            "allowCustom": true
           }
         ],
         "showTitle": true,
         "collapsible": true,
         "defaultCollapsed": true,
         "layout": {
-          "columns": 4,
-          "labelPosition": "top"
+          "labelPosition": "top",
+          "columns": 4
         }
       },
       {
         "id": "621b1cf4-330d-403f-a0a1-04545c0516da",
-        "name": "Relationship",
+        "name": "Connections",
         "enabled": true,
         "position": "before-linked-mentions",
         "fields": [
@@ -184,6 +180,7 @@
             "longText": "truncate",
             "columnSpan": 1,
             "label": "Related",
+            "icon": "circle",
             "allowCustom": true,
             "optionSource": {
               "type": "folder",
@@ -205,6 +202,7 @@
             "longText": "truncate",
             "columnSpan": 1,
             "label": "References",
+            "icon": "circle",
             "allowCustom": true,
             "optionSource": {
               "type": "folder",
@@ -232,11 +230,12 @@
       "panelGap": 5
     }
   },
-  "folderRules": [
+  "rules": [
     {
       "id": "f6e729d2-385b-460e-b0c1-a58d25951141",
       "name": "Assets",
-      "path": "Assets",
+      "matchType": "folder",
+      "value": "Assets",
       "enabled": true,
       "matchMode": "folder-and-children",
       "inheritance": "replace",
@@ -248,7 +247,8 @@
     {
       "id": "038e5b93-6d25-4239-9514-d2ab2ca99337",
       "name": "Task",
-      "path": "Task",
+      "matchType": "folder",
+      "value": "Task",
       "enabled": true,
       "matchMode": "folder-and-children",
       "inheritance": "replace",
@@ -272,6 +272,7 @@
                 "longText": "wrap",
                 "columnSpan": 2,
                 "label": "DUE",
+                "icon": "circle",
                 "allowCustom": true
               },
               {
@@ -285,6 +286,7 @@
                 "longText": "wrap",
                 "columnSpan": 4,
                 "label": "Content",
+                "icon": "circle",
                 "allowCustom": true
               },
               {
@@ -298,6 +300,7 @@
                 "longText": "wrap",
                 "columnSpan": 5,
                 "label": "Status",
+                "icon": "circle",
                 "allowCustom": true,
                 "optionSource": {
                   "type": "folder",
@@ -319,6 +322,7 @@
                 "longText": "wrap",
                 "columnSpan": 1,
                 "label": "Priority",
+                "icon": "circle",
                 "allowCustom": true,
                 "rating": {
                   "max": 5,
@@ -336,6 +340,7 @@
                 "longText": "wrap",
                 "columnSpan": 3,
                 "label": "Scheduled (Start)",
+                "icon": "circle",
                 "allowCustom": true
               },
               {
@@ -349,6 +354,7 @@
                 "longText": "wrap",
                 "columnSpan": 3,
                 "label": "Scheduled (End)",
+                "icon": "circle",
                 "allowCustom": true
               },
               {
@@ -362,6 +368,7 @@
                 "longText": "wrap",
                 "columnSpan": 2,
                 "label": "Done",
+                "icon": "circle",
                 "allowCustom": true
               },
               {
@@ -375,6 +382,7 @@
                 "longText": "wrap",
                 "columnSpan": 2,
                 "label": "Cancelled",
+                "icon": "circle",
                 "allowCustom": true
               },
               {
@@ -388,6 +396,7 @@
                 "longText": "wrap",
                 "columnSpan": 2,
                 "label": "Archived",
+                "icon": "circle",
                 "allowCustom": true
               }
             ],
@@ -404,7 +413,8 @@
     {
       "id": "fc063f24-28d8-45b1-9a06-3aa680b5de50",
       "name": "Atlas",
-      "path": "Atlas",
+      "matchType": "folder",
+      "value": "Atlas",
       "enabled": true,
       "matchMode": "folder-and-children",
       "inheritance": "replace",

@@ -19,12 +19,6 @@ filters:
   and:
     - file.folder == "Project/Calendar"
 views:
-  - type: calendar
-    name: View
-    order:
-      - calendar-event-title
-    startDate: note.calendar-event-start
-    endDate: note.calendar-event-end
   - type: list
     name: List
 

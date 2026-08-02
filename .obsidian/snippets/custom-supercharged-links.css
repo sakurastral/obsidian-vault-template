@@ -147,14 +147,10 @@
 /*                    Apply styles to rendered icon                           */
 /* ========================================================================== */
 
-.data-link-icon[data-link-path]::before {
+.data-link-icon[data-link-path]::before,
+.tree-item-self[data-path] .tree-item-inner::before  {
   content: var(--link-icon-content);
-  color: var(--link-icon-color);
-}
-
-.tree-item-self[data-path] .tree-item-inner::before {
-  content: var(--link-icon-content);
-  color: var(--link-icon-color, var(--text-muted));
+  color: var(--link-icon-color, inherit);
 }
 
 /* ========================================================================== */
@@ -163,47 +159,38 @@
 
 [data-link-path="Atlas/Home.md"] {
   --link-icon-content: var(--vault-md-icon-atlas-home);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-link-path="Atlas/Notes Management.md"] {
   --link-icon-content: var(--vault-md-icon-atlas-notes-management);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-link-path="Atlas/Assets Management.md"] {
   --link-icon-content: var(--vault-md-icon-atlas-assets-management);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-link-path="Atlas/Journal Management.md"] {
   --link-icon-content: var(--vault-md-icon-atlas-journal-management);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-link-path="Atlas/Task Board.md"] {
   --link-icon-content: var(--vault-md-icon-atlas-task-board);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-link-path="Atlas/Template Management.md"] {
   --link-icon-content: var(--vault-md-icon-atlas-template-management);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-link-path="Atlas/Vault Property Management.md"] {
   --link-icon-content: var(--vault-md-icon-atlas-vault-property-management);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-link-path="Atlas/Event Management.md"] {
   --link-icon-content: var(--vault-md-icon-atlas-event-management);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-link-path="Atlas/Cover Management.md"] {
   --link-icon-content: var(--vault-md-icon-atlas-cover-management);
-  --link-icon-color: var(--text-muted);
 }
 
 /* ========================================================================== */
@@ -212,42 +199,34 @@
 
 [data-link-path="Nexus/Categories/Common.md"] {
   --link-icon-content: var(--vault-md-icon-category-common);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-link-path="Nexus/Categories/MOC.md"] {
   --link-icon-content: var(--vault-md-icon-category-moc);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-link-path="Nexus/Categories/Task.md"] {
   --link-icon-content: var(--vault-md-icon-category-task);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-link-path="Nexus/Categories/Journal.md"] {
   --link-icon-content: var(--vault-md-icon-category-journal);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-link-path="Nexus/Categories/Project.md"] {
   --link-icon-content: var(--vault-md-icon-category-project);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-link-path="Nexus/Categories/Outdated.md"] {
   --link-icon-content: var(--vault-md-icon-category-outdated);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-link-path="Nexus/Categories/Vault Management.md"] {
   --link-icon-content: var(--vault-md-icon-category-vault-management);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-link-path="Nexus/Categories/Vault Properties.md"] {
   --link-icon-content: var(--vault-md-icon-category-vault-properties);
-  --link-icon-color: var(--text-muted);
 }
 
 /* ========================================================================== */
@@ -285,7 +264,6 @@
 
 [data-link-path="Nexus/Task Status/Backlog.md"] {
   --link-icon-content: var(--vault-md-icon-nexus-task-status-backlog);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-link-path="Nexus/Task Status/In Progress.md"] {
@@ -314,130 +292,104 @@
 
 [data-path="Collection"] {
   --link-icon-content: var(--vault-icon-collection);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-path="Atlas"] {
   --link-icon-content: var(--vault-icon-atlas);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-path="Project"] {
   --link-icon-content: var(--vault-icon-project);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-path="Task"] {
   --link-icon-content: var(--vault-icon-task);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-path="Assets"] {
   --link-icon-content: var(--vault-icon-assets);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-path="Inbox"] {
   --link-icon-content: var(--vault-icon-inbox);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-path="Nexus"] {
   --link-icon-content: var(--vault-icon-nexus);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-path="Assets/Scripts"] {
   --link-icon-content: var(--vault-icon-assets-scripts);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-path="Assets/Template"] {
   --link-icon-content: var(--vault-icon-assets-template);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-path="Assets/Attachments"] {
   --link-icon-content: var(--vault-icon-assets-attachments);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-path="Assets/Images"] {
   --link-icon-content: var(--vault-icon-assets-images);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-path="Assets/Icons"] {
   --link-icon-content: var(--vault-icon-assets-icons);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-path="Task/Archived"] {
   --link-icon-content: var(--vault-icon-task-archived);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-path="Task/Inbox"] {
   --link-icon-content: var(--vault-icon-task-inbox);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-path="Project/Journal"] {
   --link-icon-content: var(--vault-icon-project-journal);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-path="Project/Nook"] {
   --link-icon-content: var(--vault-icon-project-nook);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-path="Project/Calendar"] {
   --link-icon-content: var(--vault-icon-project-calendar);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-path="Project/Archived"] {
   --link-icon-content: var(--vault-icon-project-archived);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-path="Nexus/Categories"] {
   --link-icon-content: var(--vault-icon-nexus-categories);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-path="Nexus/Categories/Area"] {
   --link-icon-content: var(--vault-icon-category-group-area);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-path="Nexus/Categories/Projects"] {
   --link-icon-content: var(--vault-icon-category-group-projects);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-path="Nexus/Categories/Others"] {
   --link-icon-content: var(--vault-icon-category-group-others);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-path="Nexus/Status"] {
   --link-icon-content: var(--vault-icon-nexus-status);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-path="Nexus/Task Status"] {
   --link-icon-content: var(--vault-icon-nexus-task-status);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-path="Nexus/Title Prefix"] {
   --link-icon-content: var(--vault-icon-nexus-title-prefix);
-  --link-icon-color: var(--text-muted);
 }
 
 [data-path="Nexus/Calendar Scope"] {
   --link-icon-content: var(--vault-icon-nexus-calendar-scope);
-  --link-icon-color: var(--text-muted);
 }

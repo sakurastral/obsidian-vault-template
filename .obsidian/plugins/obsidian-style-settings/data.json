@@ -4,8 +4,11 @@
   "note-toolbar@@cg-nt-tbar-text-item-padding-y": 0.2,
   "note-toolbar@@cg-nt-tbar-z-index": 0,
   "note-toolbar@@cg-nt-tbar-text-z-index": 0,
-  "property-panels@@property-panels-background-choice": "var(--background-primary-alt)",
+  "property-panels@@property-panels-chip-background-choice": "var(--background-secondary)",
+  "property-panels@@property-panels-field-input-style": "property-panels-input-borderless",
+  "property-panels@@property-panels-input-background-choice": "var(--background-secondary)",
   "property-panels@@property-panels-border-width": 0,
-  "property-panels@@property-panels-field-value-size-choice": "var(--font-smallest)",
-  "property-panels@@property-panels-field-input-style": "property-panels-input-borderless"
+  "property-panels@@property-panels-background-choice": "var(--background-primary-alt)",
+  "property-panels@@property-panels-title-color-choice": "var(--text-muted)",
+  "property-panels@@property-panels-label-color-choice": "var(--text-faint)"
 }
