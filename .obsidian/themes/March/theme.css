@@ -1544,6 +1544,14 @@ body {
   --march-status-bar-height: calc(var(--status-bar-font-size) + var(--size-4-1) + var(--size-4-1) + 0.5rem);
   --button-radius: 50px;
 }
+body .markdown-source-view,
+body .markdown-source-view.mod-cm6 .cm-scroller,
+body .markdown-preview-view,
+body .community-modal-readme,
+body .sync-history-preview {
+  --march-text-body: color-mix(in srgb, var(--text-normal) 88%, var(--background-primary));
+  color: var(--march-text-body);
+}
 body .mod-root {
   --metadata-background: var(--background-primary-alt);
   --metadata-border-width: 0px;
@@ -2787,65 +2795,65 @@ body .cm-s-obsidian .cm-line.HyperMD-header {
   padding-top: 0;
 }
 body .HyperMD-header-1,
-body h-1 {
+body h1 {
   text-align: var(--march-h1-align);
 }
 body .HyperMD-header-2,
-body h-2 {
+body h2 {
   text-align: var(--march-h2-align);
 }
 body .HyperMD-header-3,
-body h-3 {
+body h3 {
   text-align: var(--march-h3-align);
 }
 body .HyperMD-header-4,
-body h-4 {
+body h4 {
   text-align: var(--march-h4-align);
 }
 body .HyperMD-header-5,
-body h-5 {
+body h5 {
   text-align: var(--march-h5-align);
 }
 body .HyperMD-header-6,
-body h-6 {
+body h6 {
   text-align: var(--march-h6-align);
 }
 body .cm-line:hover .collapse-indicator,
 body .HyperMD-header-1:hover .collapse-indicator,
-body h-1:hover .collapse-indicator {
+body h1:hover .collapse-indicator {
   opacity: 1;
 }
 body .cm-line:hover .collapse-indicator,
 body .HyperMD-header-2:hover .collapse-indicator,
-body h-2:hover .collapse-indicator {
+body h2:hover .collapse-indicator {
   opacity: 1;
 }
 body .cm-line:hover .collapse-indicator,
 body .HyperMD-header-3:hover .collapse-indicator,
-body h-3:hover .collapse-indicator {
+body h3:hover .collapse-indicator {
   opacity: 1;
 }
 body .cm-line:hover .collapse-indicator,
 body .HyperMD-header-4:hover .collapse-indicator,
-body h-4:hover .collapse-indicator {
+body h4:hover .collapse-indicator {
   opacity: 1;
 }
 body .cm-line:hover .collapse-indicator,
 body .HyperMD-header-5:hover .collapse-indicator,
-body h-5:hover .collapse-indicator {
+body h5:hover .collapse-indicator {
   opacity: 1;
 }
 body .cm-line:hover .collapse-indicator,
 body .HyperMD-header-6:hover .collapse-indicator,
-body h-6:hover .collapse-indicator {
+body h6:hover .collapse-indicator {
   opacity: 1;
 }
 body .HyperMD-header-1 .collapse-indicator,
-body h-1 .collapse-indicator {
+body h1 .collapse-indicator {
   opacity: var(--march-h1-indicator-opacity);
 }
 body .HyperMD-header-1 .collapse-indicator.collapse-icon svg,
-body h-1 .collapse-indicator.collapse-icon svg {
+body h1 .collapse-indicator.collapse-icon svg {
   -webkit-mask-image: var(--march-h1-indicator-icon);
   mask-image: var(--march-h1-indicator-icon);
   -webkit-mask-size: 95%;
@@ -2861,15 +2869,15 @@ body h-1 .collapse-indicator.collapse-icon svg {
   width: 20px;
 }
 body .HyperMD-header-1 .collapse-indicator.collapse-icon svg:hover,
-body h-1 .collapse-indicator.collapse-icon svg:hover {
+body h1 .collapse-indicator.collapse-icon svg:hover {
   --march-h1-indicator-color: var(--h1-color);
 }
 body .HyperMD-header-2 .collapse-indicator,
-body h-2 .collapse-indicator {
+body h2 .collapse-indicator {
   opacity: var(--march-h2-indicator-opacity);
 }
 body .HyperMD-header-2 .collapse-indicator.collapse-icon svg,
-body h-2 .collapse-indicator.collapse-icon svg {
+body h2 .collapse-indicator.collapse-icon svg {
   -webkit-mask-image: var(--march-h2-indicator-icon);
   mask-image: var(--march-h2-indicator-icon);
   -webkit-mask-size: 95%;
@@ -2885,15 +2893,15 @@ body h-2 .collapse-indicator.collapse-icon svg {
   width: 20px;
 }
 body .HyperMD-header-2 .collapse-indicator.collapse-icon svg:hover,
-body h-2 .collapse-indicator.collapse-icon svg:hover {
+body h2 .collapse-indicator.collapse-icon svg:hover {
   --march-h2-indicator-color: var(--h2-color);
 }
 body .HyperMD-header-3 .collapse-indicator,
-body h-3 .collapse-indicator {
+body h3 .collapse-indicator {
   opacity: var(--march-h3-indicator-opacity);
 }
 body .HyperMD-header-3 .collapse-indicator.collapse-icon svg,
-body h-3 .collapse-indicator.collapse-icon svg {
+body h3 .collapse-indicator.collapse-icon svg {
   -webkit-mask-image: var(--march-h3-indicator-icon);
   mask-image: var(--march-h3-indicator-icon);
   -webkit-mask-size: 95%;
@@ -2909,15 +2917,15 @@ body h-3 .collapse-indicator.collapse-icon svg {
   width: 20px;
 }
 body .HyperMD-header-3 .collapse-indicator.collapse-icon svg:hover,
-body h-3 .collapse-indicator.collapse-icon svg:hover {
+body h3 .collapse-indicator.collapse-icon svg:hover {
   --march-h3-indicator-color: var(--h3-color);
 }
 body .HyperMD-header-4 .collapse-indicator,
-body h-4 .collapse-indicator {
+body h4 .collapse-indicator {
   opacity: var(--march-h4-indicator-opacity);
 }
 body .HyperMD-header-4 .collapse-indicator.collapse-icon svg,
-body h-4 .collapse-indicator.collapse-icon svg {
+body h4 .collapse-indicator.collapse-icon svg {
   -webkit-mask-image: var(--march-h4-indicator-icon);
   mask-image: var(--march-h4-indicator-icon);
   -webkit-mask-size: 95%;
@@ -2933,15 +2941,15 @@ body h-4 .collapse-indicator.collapse-icon svg {
   width: 20px;
 }
 body .HyperMD-header-4 .collapse-indicator.collapse-icon svg:hover,
-body h-4 .collapse-indicator.collapse-icon svg:hover {
+body h4 .collapse-indicator.collapse-icon svg:hover {
   --march-h4-indicator-color: var(--h4-color);
 }
 body .HyperMD-header-5 .collapse-indicator,
-body h-5 .collapse-indicator {
+body h5 .collapse-indicator {
   opacity: var(--march-h5-indicator-opacity);
 }
 body .HyperMD-header-5 .collapse-indicator.collapse-icon svg,
-body h-5 .collapse-indicator.collapse-icon svg {
+body h5 .collapse-indicator.collapse-icon svg {
   -webkit-mask-image: var(--march-h5-indicator-icon);
   mask-image: var(--march-h5-indicator-icon);
   -webkit-mask-size: 95%;
@@ -2957,15 +2965,15 @@ body h-5 .collapse-indicator.collapse-icon svg {
   width: 20px;
 }
 body .HyperMD-header-5 .collapse-indicator.collapse-icon svg:hover,
-body h-5 .collapse-indicator.collapse-icon svg:hover {
+body h5 .collapse-indicator.collapse-icon svg:hover {
   --march-h5-indicator-color: var(--h5-color);
 }
 body .HyperMD-header-6 .collapse-indicator,
-body h-6 .collapse-indicator {
+body h6 .collapse-indicator {
   opacity: var(--march-h6-indicator-opacity);
 }
 body .HyperMD-header-6 .collapse-indicator.collapse-icon svg,
-body h-6 .collapse-indicator.collapse-icon svg {
+body h6 .collapse-indicator.collapse-icon svg {
   -webkit-mask-image: var(--march-h6-indicator-icon);
   mask-image: var(--march-h6-indicator-icon);
   -webkit-mask-size: 95%;
@@ -2981,7 +2989,7 @@ body h-6 .collapse-indicator.collapse-icon svg {
   width: 20px;
 }
 body .HyperMD-header-6 .collapse-indicator.collapse-icon svg:hover,
-body h-6 .collapse-indicator.collapse-icon svg:hover {
+body h6 .collapse-indicator.collapse-icon svg:hover {
   --march-h6-indicator-color: var(--h6-color);
 }
 

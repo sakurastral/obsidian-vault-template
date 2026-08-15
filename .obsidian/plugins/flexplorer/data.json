@@ -773,10 +773,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Nexus/Calendar Scope/Vault Example Note (Empty).md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Nexus/Categories/Area/Vault Example Note (Empty).md": {
       "isPinned": false,
       "isHidden": false
@@ -852,6 +848,10 @@
       "customOrder": [
         "Add Daily Note.md"
       ]
+    },
+    "Nexus/Calendar Scope/Vault Example Note (Empty).md": {
+      "isPinned": false,
+      "isHidden": false
     }
   },
   "pinnedFiles": [],

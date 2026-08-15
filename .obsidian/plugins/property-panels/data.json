@@ -60,6 +60,7 @@
           }
         ],
         "showTitle": false,
+        "showOnlyEmptyFields": false,
         "collapsible": false,
         "defaultCollapsed": false,
         "layout": {
@@ -144,23 +145,24 @@
             "id": "9577b6b8-2006-47e8-8f4b-87ae345d690d",
             "property": "collection-url",
             "type": "text",
-            "label": "Collection URL",
-            "icon": "circle",
             "labelDisplay": "visible",
             "editable": true,
             "visible": true,
             "showWhenEmpty": false,
             "longText": "wrap",
             "columnSpan": 4,
+            "label": "Collection URL",
+            "icon": "circle",
             "allowCustom": true
           }
         ],
         "showTitle": true,
+        "showOnlyEmptyFields": false,
         "collapsible": true,
         "defaultCollapsed": true,
         "layout": {
-          "labelPosition": "top",
-          "columns": 4
+          "columns": 4,
+          "labelPosition": "top"
         }
       },
       {
@@ -215,6 +217,7 @@
           }
         ],
         "showTitle": true,
+        "showOnlyEmptyFields": false,
         "collapsible": true,
         "defaultCollapsed": false,
         "layout": {
@@ -401,6 +404,7 @@
               }
             ],
             "showTitle": false,
+            "showOnlyEmptyFields": false,
             "collapsible": false,
             "defaultCollapsed": false,
             "layout": {

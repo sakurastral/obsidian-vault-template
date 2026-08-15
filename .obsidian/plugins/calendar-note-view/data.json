@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 9,
+  "calendarLocale": "system",
+  "firstDayOfWeek": 1,
+  "weekendDays": [
+    0,
+    6
+  ],
+  "timeZone": {
+    "mode": "system"
+  },
+  "displayDateFormat": "YYYY-MM-DD",
+  "eventPropertyDateFormat": "YYYY-MM-DD",
+  "confirmBeforeCreatingDailyNote": true,
+  "maxIndicatorsPerDay": 3,
+  "sourceProfiles": [
+    {
+      "id": "profile-f19d233a-fca5-4e17-ade6-df7d65cc65ea",
+      "name": "Calendar events",
+      "order": 1,
+      "enabled": true,
+      "sidebarIndicatorMode": "icons",
+      "matchMode": "all",
+      "folders": [
+        "Project/Calendar"
+      ],
+      "tags": [],
+      "wikiLinkTargets": [],
+      "matchFilesWithStartPropertyOnly": false,
+      "startProperty": "calendar-event-start",
+      "endProperty": "calendar-event-end",
+      "titleProperty": "calendar-event-title",
+      "typeProperty": "calendar-event-type",
+      "defaultIcon": "lucide-calendar",
+      "allowCreate": false,
+      "createFolder": "Events",
+      "fileNameTemplate": "{date-range} {title}",
+      "generatedTitleProperty": "title",
+      "generatedTitleTemplate": "{date-range} {title}",
+      "titleDateFormat": "YYYY-MM-DD"
+    }
+  ],
+  "typeStyleRules": []
+}
