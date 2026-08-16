@@ -9,7 +9,7 @@
         "fields": [
           {
             "id": "98dbf8da-35de-41f0-8cc9-d884937a2870",
-            "property": "collection-url",
+            "property": "source",
             "type": "link",
             "labelDisplay": "icon-only",
             "editable": false,
@@ -143,7 +143,7 @@
           },
           {
             "id": "9577b6b8-2006-47e8-8f4b-87ae345d690d",
-            "property": "collection-url",
+            "property": "source",
             "type": "text",
             "labelDisplay": "visible",
             "editable": true,
@@ -151,7 +151,7 @@
             "showWhenEmpty": false,
             "longText": "wrap",
             "columnSpan": 4,
-            "label": "Collection URL",
+            "label": "Source URL",
             "icon": "circle",
             "allowCustom": true
           }
@@ -425,6 +425,297 @@
       "priority": 0,
       "config": {
         "panels": []
+      }
+    },
+    {
+      "id": "62a6639c-4780-4bf9-be1b-fe2d9c64dafd",
+      "name": "Event",
+      "matchType": "folder",
+      "value": "Project/Calendar",
+      "enabled": true,
+      "matchMode": "folder-and-children",
+      "inheritance": "replace",
+      "priority": 0,
+      "config": {
+        "panels": [
+          {
+            "id": "ceb02f0a-4f8f-47c2-a9bc-f7fa339cbf50",
+            "name": "Event Info",
+            "enabled": true,
+            "position": "after-properties",
+            "fields": [
+              {
+                "id": "c3a7deee-227f-4d19-ac05-45f4fa2faa4d",
+                "property": "calendar-event-start",
+                "type": "date",
+                "labelDisplay": "visible",
+                "editable": true,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 1,
+                "label": "Start",
+                "icon": "circle",
+                "allowCustom": true
+              },
+              {
+                "id": "594a3f8c-7edc-4964-8ef1-c847e31492da",
+                "property": "calendar-event-end",
+                "type": "date",
+                "labelDisplay": "visible",
+                "editable": true,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 1,
+                "label": "End",
+                "icon": "circle",
+                "allowCustom": true
+              },
+              {
+                "id": "22ab8540-444b-4b8d-82a8-30a10c3423fb",
+                "property": "calendar-event-title",
+                "type": "text",
+                "labelDisplay": "visible",
+                "editable": true,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 2,
+                "label": "Title",
+                "icon": "circle",
+                "allowCustom": true
+              },
+              {
+                "id": "3394908c-57fd-49f0-9556-525d090b5825",
+                "property": "calendar-event-type",
+                "type": "multi-select",
+                "labelDisplay": "visible",
+                "editable": true,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 2,
+                "label": "Type",
+                "icon": "circle",
+                "allowCustom": true,
+                "optionSource": {
+                  "type": "folder",
+                  "path": "Nexus/Calendar Scope",
+                  "recursive": true,
+                  "value": "basename",
+                  "wikilink": true,
+                  "sort": true
+                }
+              }
+            ],
+            "showTitle": false,
+            "showOnlyEmptyFields": false,
+            "collapsible": false,
+            "defaultCollapsed": false,
+            "layout": {
+              "columns": 2
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "16079603-7795-4ae0-8ae5-76e0c83464fa",
+      "name": "Source",
+      "matchType": "folder",
+      "value": "Collection",
+      "enabled": true,
+      "matchMode": "folder-and-children",
+      "inheritance": "extend",
+      "priority": 0,
+      "config": {
+        "panels": [
+          {
+            "id": "60991a50-491f-4993-8291-a2b3cc28487e",
+            "name": "Source License",
+            "enabled": true,
+            "position": "before-linked-mentions",
+            "fields": [
+              {
+                "id": "a2e02ca9-77ed-4670-a15a-fb278c4df701",
+                "property": "source-license",
+                "type": "text",
+                "labelDisplay": "visible",
+                "editable": true,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 2,
+                "label": "License",
+                "icon": "circle",
+                "allowCustom": true
+              },
+              {
+                "id": "0a0764eb-e346-425a-960d-730d317c2d0c",
+                "property": "source-license-attribution",
+                "type": "text",
+                "labelDisplay": "visible",
+                "editable": true,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 1,
+                "label": "Attribution",
+                "icon": "circle",
+                "allowCustom": true
+              },
+              {
+                "id": "fd4a3a30-8b27-4035-9d7c-24f2aca9ff57",
+                "property": "source-license-commercial-use",
+                "type": "text",
+                "labelDisplay": "visible",
+                "editable": true,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 1,
+                "label": "Commercial use",
+                "icon": "circle",
+                "allowCustom": true
+              },
+              {
+                "id": "dbc61a75-3b8f-4549-8689-b4bc70434e4f",
+                "property": "source-license-modification",
+                "type": "text",
+                "labelDisplay": "visible",
+                "editable": true,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 1,
+                "label": "Modification",
+                "icon": "circle",
+                "allowCustom": true
+              },
+              {
+                "id": "4088adb9-d1c8-4375-bcd3-578980393658",
+                "property": "source-license-redistribution",
+                "type": "text",
+                "labelDisplay": "visible",
+                "editable": true,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 1,
+                "label": "Redistribution",
+                "icon": "circle",
+                "allowCustom": true
+              },
+              {
+                "id": "70c8e286-e549-4c93-8fff-9cc234f219f1",
+                "property": "source-license-share-alike",
+                "type": "text",
+                "labelDisplay": "visible",
+                "editable": true,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 1,
+                "label": "Share alike",
+                "icon": "circle",
+                "allowCustom": true
+              }
+            ],
+            "showTitle": true,
+            "showOnlyEmptyFields": false,
+            "collapsible": true,
+            "defaultCollapsed": true,
+            "layout": {
+              "columns": 2
+            }
+          },
+          {
+            "id": "4550f1b8-2f3d-43f3-be77-6952b5b75568",
+            "name": "Source Service",
+            "enabled": true,
+            "position": "before-linked-mentions",
+            "fields": [
+              {
+                "id": "6aba35f8-02a5-40ee-b8f1-4158584fc281",
+                "property": "source-service-terms",
+                "type": "text",
+                "labelDisplay": "visible",
+                "editable": true,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 2,
+                "label": "Terms",
+                "icon": "circle",
+                "allowCustom": true
+              },
+              {
+                "id": "ad87a3f4-1756-4487-888a-e5c6667ca535",
+                "property": "source-service-commercial-use",
+                "type": "text",
+                "labelDisplay": "visible",
+                "editable": true,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 1,
+                "label": "Commercial use",
+                "icon": "circle",
+                "allowCustom": true
+              },
+              {
+                "id": "e552aaa9-07e2-4d41-b7dc-93175d771285",
+                "property": "source-service-api-key",
+                "type": "text",
+                "labelDisplay": "visible",
+                "editable": true,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 1,
+                "label": "API key",
+                "icon": "circle",
+                "allowCustom": true
+              },
+              {
+                "id": "067570d2-b025-470b-abb1-395d88694f0b",
+                "property": "source-service-price",
+                "type": "text",
+                "labelDisplay": "visible",
+                "editable": true,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 1,
+                "label": "Price",
+                "icon": "circle",
+                "allowCustom": true
+              },
+              {
+                "id": "cd66351c-04b4-472f-92f8-929751695e72",
+                "property": "source-service-free-tier-limit",
+                "type": "text",
+                "labelDisplay": "visible",
+                "editable": true,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 1,
+                "label": "Free-tier limit",
+                "icon": "circle",
+                "allowCustom": true
+              }
+            ],
+            "showTitle": true,
+            "showOnlyEmptyFields": false,
+            "collapsible": true,
+            "defaultCollapsed": true,
+            "layout": {
+              "columns": 2
+            }
+          }
+        ]
       }
     }
   ],

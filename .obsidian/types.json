@@ -22,7 +22,7 @@
     "calendar-event-start": "date",
     "calendar-event-title": "text",
     "calendar-event-type": "multitext",
-    "collection-url": "text",
+    "source": "text",
     "related": "multitext",
     "description": "text"
   }
