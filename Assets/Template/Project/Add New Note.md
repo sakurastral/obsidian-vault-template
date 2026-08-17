@@ -6,7 +6,6 @@ cover: "[[default-note-cover.png]]"
 <%* 
 if (title.startsWith("Untitled")) { 
 	const customTitle = await tp.file.include(tp.file.find_tfile("Change Note Name"))
-	// const cat = await tp.file.include(tp.file.find_tfile("Add New Categories"))
 } 
 -%>
 <%*

@@ -431,15 +431,10 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "Add New Event.md",
-        "Event Information Board.base"
+        "Add New Event.md"
       ]
     },
     "Assets/Template/Project/Calendar/Add New Event.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Assets/Template/Project/Calendar/Event Information Board.base": {
       "isPinned": false,
       "isHidden": false
     },
@@ -452,18 +447,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "Add New Categories.md",
-        "Add New Reference.md",
         "Change Note Name.md"
       ]
-    },
-    "Assets/Template/Properties/Add New Categories.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Assets/Template/Properties/Add New Reference.md": {
-      "isPinned": false,
-      "isHidden": false
     },
     "Assets/Template/Properties/Change Note Name.md": {
       "isPinned": false,
@@ -476,7 +461,6 @@
       "customOrder": [
         "Add New Task.md",
         "Archive Task.md",
-        "Edit Task.md",
         "Mark as Cancelled.md",
         "Mark as Completed.md",
         "Mark as In Progess.md"
@@ -487,10 +471,6 @@
       "isHidden": false
     },
     "Assets/Template/Task/Archive Task.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Assets/Template/Task/Edit Task.md": {
       "isPinned": false,
       "isHidden": false
     },

@@ -25,6 +25,7 @@ views:
       - file.name
       - status
       - categories
+    sort: []
     columnSize:
       file.name: 395
       note.status: 124

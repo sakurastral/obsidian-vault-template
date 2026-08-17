@@ -1,7 +1,7 @@
 ---
 categories:
   - "[[Journal]]"
-cover: "[[default-task-cover.png]]"
+cover: "[[default-journal-cover.png]]"
 ---
 
 ## <% tp.date.now("HH:mm") %>

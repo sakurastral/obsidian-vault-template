@@ -2,7 +2,7 @@
 categories:
   - "[[Task]]"
 task-content:
-task-status:
+task-status: "[[Backlog]]"
 task-priority:
 task-scheduled-start:
 task-scheduled-end:
