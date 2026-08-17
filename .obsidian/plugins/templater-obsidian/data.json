@@ -18,6 +18,10 @@
       "template": "Assets/Template/Project/Add New Note.md"
     },
     {
+      "folder": "Knowledge",
+      "template": "Assets/Template/Inbox/Add New Note.md"
+    },
+    {
       "folder": "Task/Inbox",
       "template": "Assets/Template/Task/Add New Task.md"
     },
@@ -26,12 +30,12 @@
       "template": "Assets/Template/Nexus/Add New Category.md"
     },
     {
-      "folder": "Project/Calendar",
-      "template": "Assets/Template/Project/Calendar/Add New Event.md"
+      "folder": "Calendar",
+      "template": "Assets/Template/Calendar/Add New Event.md"
     },
     {
-      "folder": "Project/Journal",
-      "template": "Assets/Template/Project/Journal/Add Daily Note.md"
+      "folder": "Journal",
+      "template": "Assets/Template/Journal/Add Daily Note.md"
     }
   ],
   "file_templates": [],

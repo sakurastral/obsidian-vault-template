@@ -12,32 +12,32 @@
   },
   "folderMappings": [
     {
-      "folder": "Collection",
-      "toolbar": "be9d94d7-0cc7-4857-aa58-8822dd0e2163"
-    },
-    {
       "folder": "Atlas",
       "toolbar": "f9699892-1fbd-4575-bcb3-79a4b54b771d"
     },
     {
-      "folder": "Project/Journal",
-      "toolbar": "defaa80e-dacd-4588-88d4-173e1d48f594"
-    },
-    {
-      "folder": "Project/Calendar",
-      "toolbar": "b091c5bb-7e77-4425-b47d-c8c075b623a1"
+      "folder": "Knowledge",
+      "toolbar": "be9d94d7-0cc7-4857-aa58-8822dd0e2163"
     },
     {
       "folder": "Project",
       "toolbar": "be9d94d7-0cc7-4857-aa58-8822dd0e2163"
     },
     {
-      "folder": "Task",
-      "toolbar": "f26041a0-8b84-4654-bb2a-6907ab48ee8e"
-    },
-    {
       "folder": "Inbox",
       "toolbar": "be9d94d7-0cc7-4857-aa58-8822dd0e2163"
+    },
+    {
+      "folder": "Journal",
+      "toolbar": "defaa80e-dacd-4588-88d4-173e1d48f594"
+    },
+    {
+      "folder": "Calendar",
+      "toolbar": "b091c5bb-7e77-4425-b47d-c8c075b623a1"
+    },
+    {
+      "folder": "Task",
+      "toolbar": "f26041a0-8b84-4654-bb2a-6907ab48ee8e"
     },
     {
       "folder": "Nexus/Categories",

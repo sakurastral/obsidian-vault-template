@@ -308,7 +308,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "modalforms:Edit forms": true,
       "templater-obsidian:Templater": true,
       "daily-notes:Open today's daily note": true,
       "bases:Create new base": true,
@@ -324,6 +323,7 @@
   },
   "active": "a88538889e31003f",
   "lastOpenFiles": [
+    "Knowledge",
     "Nexus/Calendar Scope/Holiday.md",
     "Nexus/Calendar Scope/Vault Example Note (Empty).md",
     "README.md",
@@ -347,13 +347,12 @@
     "Assets/Template/Custom/Insert Bases Block to View Child Notes.md",
     "Assets/Template/Layout/Footer.md",
     "Project/Archived/Vault Example Note (Empty).md",
-    "Project/Archived",
+    "Knowledge/Archived",
     "Assets/Template/Layout",
     "Atlas/Template Management.md",
     "Atlas/Assets Management.md",
     "Assets/Images/notes-pexels-pnw-prod-8251114.jpg",
     "Assets/Template/Inbox/Add New Note.md",
-    "Assets/Template/Project/Add New Note.md",
     "Assets/Images/jplenio-foggy-7725646.jpg",
     "Assets/Images/calendar-pexels-pnw-prod-8251157.jpg",
     "Assets/Images/default-task-cover.png",

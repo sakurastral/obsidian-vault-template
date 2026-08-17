@@ -5,9 +5,11 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "Collection",
         "Atlas",
+        "Knowledge",
         "Project",
+        "Journal",
+        "Calendar",
         "Task",
         "Assets",
         "Inbox",
@@ -84,9 +86,7 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": [
-        "Vault Example Note (Empty).md"
-      ]
+      "customOrder": []
     },
     "Assets/Icons": {
       "isPinned": false,
@@ -352,6 +352,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "Calendar",
+        "Journal",
         "Custom",
         "Properties",
         "Inbox",
@@ -367,15 +369,10 @@
       "customOrder": [
         "Insert Bases Block to View Child Notes.md",
         "Convert Color Codes to HTML Block.md",
-        "Delete Example Notes.md",
         "Update “Created” and “Modified” Properties Across All Vault Notes.md"
       ]
     },
     "Assets/Template/Custom/Convert Color Codes to HTML Block.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Assets/Template/Custom/Delete Example Notes.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -417,28 +414,10 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "Journal",
-        "Add New Note.md",
-        "Calendar"
+        "Add New Note.md"
       ]
     },
     "Assets/Template/Project/Add New Note.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Assets/Template/Project/Calendar": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Add New Event.md"
-      ]
-    },
-    "Assets/Template/Project/Calendar/Add New Event.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Assets/Template/Project/Journal/Add Daily Note.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -486,21 +465,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Collection": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "byCreatedTimeReverse",
-      "customOrder": [
-        "Vault Example Note (Empty).md"
-      ]
-    },
     "Inbox": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": [
-        "Vault Example Note (Empty).md"
-      ]
+      "customOrder": []
     },
     "Nexus": {
       "isPinned": false,
@@ -518,9 +487,7 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": [
-        "Vault Example Note (Empty).md"
-      ]
+      "customOrder": []
     },
     "Nexus/Categories": {
       "isPinned": false,
@@ -544,9 +511,7 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": [
-        "Vault Example Note (Empty).md"
-      ]
+      "customOrder": []
     },
     "Nexus/Categories/Common.md": {
       "isPinned": false,
@@ -572,9 +537,7 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": [
-        "Vault Example Note (Empty).md"
-      ]
+      "customOrder": []
     },
     "Nexus/Categories/Task.md": {
       "isPinned": false,
@@ -592,9 +555,7 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": [
-        "Vault Example Note (Empty).md"
-      ]
+      "customOrder": []
     },
     "Nexus/Status": {
       "isPinned": false,
@@ -681,36 +642,7 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": [
-        "Journal",
-        "Nook",
-        "Calendar",
-        "Archived"
-      ]
-    },
-    "Project/Calendar": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Vault Example Note (Empty).md"
-      ]
-    },
-    "Project/Journal": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Vault Example Note (Empty).md"
-      ]
-    },
-    "Project/Nook": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Vault Example Note (Empty).md"
-      ]
+      "customOrder": []
     },
     "Task": {
       "isPinned": false,
@@ -725,67 +657,19 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "byCreatedTimeReverse",
-      "customOrder": [
-        "Vault Example Note (Empty).md"
-      ]
+      "customOrder": []
     },
     "Task/Inbox": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "byCreatedTimeReverse",
-      "customOrder": [
-        "Vault Example Note (Empty).md"
-      ]
-    },
-    "Assets/Attachments/Vault Example Note (Empty).md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Collection/Vault Example Note (Empty).md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Inbox/Vault Example Note (Empty).md": {
-      "isPinned": false,
-      "isHidden": false
+      "customOrder": []
     },
     "LICENSE.txt": {
       "isPinned": false,
       "isHidden": false
     },
-    "Nexus/Categories/Area/Vault Example Note (Empty).md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Nexus/Categories/Others/Vault Example Note (Empty).md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Nexus/Categories/Projects/Vault Example Note (Empty).md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Project/Calendar/Vault Example Note (Empty).md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Project/Journal/Vault Example Note (Empty).md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Project/Nook/Vault Example Note (Empty).md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "README.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Task/Archived/Vault Example Note (Empty).md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Task/Inbox/Vault Example Note (Empty).md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -805,23 +689,63 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Project/Archived": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Vault Example Note (Empty).md"
-      ]
-    },
-    "Project/Archived/Vault Example Note (Empty).md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Assets/Template/Custom/Insert Bases Block to View Child Notes.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "Assets/Template/Project/Journal": {
+    "Knowledge": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Sources",
+        "Original",
+        "Archived"
+      ]
+    },
+    "Knowledge/Archived": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Journal": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Calendar": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Knowledge/Sources": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "byCreatedTimeReverse",
+      "customOrder": []
+    },
+    "Knowledge/Original": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Assets/Template/Calendar": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Add New Event.md"
+      ]
+    },
+    "Assets/Template/Calendar/Add New Event.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Assets/Template/Journal": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
@@ -829,7 +753,7 @@
         "Add Daily Note.md"
       ]
     },
-    "Nexus/Calendar Scope/Vault Example Note (Empty).md": {
+    "Assets/Template/Journal/Add Daily Note.md": {
       "isPinned": false,
       "isHidden": false
     }
