@@ -8,20 +8,6 @@
         "position": "after-properties",
         "fields": [
           {
-            "id": "98dbf8da-35de-41f0-8cc9-d884937a2870",
-            "property": "source",
-            "type": "link",
-            "labelDisplay": "icon-only",
-            "editable": false,
-            "visible": true,
-            "showWhenEmpty": false,
-            "longText": "wrap",
-            "columnSpan": 1,
-            "label": "URL",
-            "icon": "link",
-            "allowCustom": true
-          },
-          {
             "id": "72a77133-1069-45f9-9300-04802a35966c",
             "property": "aliases",
             "type": "multi-select",
@@ -140,26 +126,12 @@
               "wikilink": true,
               "sort": true
             }
-          },
-          {
-            "id": "9577b6b8-2006-47e8-8f4b-87ae345d690d",
-            "property": "source",
-            "type": "text",
-            "labelDisplay": "visible",
-            "editable": true,
-            "visible": true,
-            "showWhenEmpty": false,
-            "longText": "wrap",
-            "columnSpan": 4,
-            "label": "Source URL",
-            "icon": "circle",
-            "allowCustom": true
           }
         ],
         "showTitle": true,
         "showOnlyEmptyFields": false,
         "collapsible": true,
-        "defaultCollapsed": true,
+        "defaultCollapsed": false,
         "layout": {
           "columns": 4,
           "labelPosition": "top"
@@ -431,7 +403,7 @@
       "id": "62a6639c-4780-4bf9-be1b-fe2d9c64dafd",
       "name": "Event",
       "matchType": "folder",
-      "value": "Project/Calendar",
+      "value": "Calendar",
       "enabled": true,
       "matchMode": "folder-and-children",
       "inheritance": "replace",
@@ -439,13 +411,13 @@
       "config": {
         "panels": [
           {
-            "id": "ceb02f0a-4f8f-47c2-a9bc-f7fa339cbf50",
+            "id": "4a9e56e0-caef-4e66-b68f-3d0e32d630ec",
             "name": "Event Info",
             "enabled": true,
             "position": "after-properties",
             "fields": [
               {
-                "id": "c3a7deee-227f-4d19-ac05-45f4fa2faa4d",
+                "id": "daab0d72-102c-46ec-97dd-2eedf8a92534",
                 "property": "calendar-event-start",
                 "type": "date",
                 "labelDisplay": "visible",
@@ -459,7 +431,7 @@
                 "allowCustom": true
               },
               {
-                "id": "594a3f8c-7edc-4964-8ef1-c847e31492da",
+                "id": "711150c6-7645-49a1-a4c6-cea75e17b30a",
                 "property": "calendar-event-end",
                 "type": "date",
                 "labelDisplay": "visible",
@@ -473,7 +445,7 @@
                 "allowCustom": true
               },
               {
-                "id": "22ab8540-444b-4b8d-82a8-30a10c3423fb",
+                "id": "eabf0063-602a-47df-b1f7-89da9a262c6d",
                 "property": "calendar-event-title",
                 "type": "text",
                 "labelDisplay": "visible",
@@ -487,7 +459,7 @@
                 "allowCustom": true
               },
               {
-                "id": "3394908c-57fd-49f0-9556-525d090b5825",
+                "id": "ddd40963-21b3-43bd-958d-abc966fe5967",
                 "property": "calendar-event-type",
                 "type": "multi-select",
                 "labelDisplay": "visible",
@@ -523,14 +495,100 @@
     {
       "id": "16079603-7795-4ae0-8ae5-76e0c83464fa",
       "name": "Source",
-      "matchType": "folder",
-      "value": "Collection",
+      "matchType": "wikilink",
+      "value": "Wildflower",
       "enabled": true,
       "matchMode": "folder-and-children",
       "inheritance": "extend",
       "priority": 0,
       "config": {
         "panels": [
+          {
+            "id": "671345ba-ce7d-4bb7-a2c3-acfb3bb7ef27",
+            "name": "Source Info",
+            "enabled": true,
+            "position": "after-properties",
+            "fields": [
+              {
+                "id": "1e26e52b-bc05-4385-aa42-8b71e15ae20b",
+                "property": "source-title",
+                "type": "text",
+                "labelDisplay": "visible",
+                "editable": true,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 1,
+                "label": "Title",
+                "icon": "circle",
+                "allowCustom": true
+              },
+              {
+                "id": "e3547e20-e01f-42c8-b0b7-8349c499fa8d",
+                "property": "source-author",
+                "type": "text",
+                "labelDisplay": "visible",
+                "editable": true,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 1,
+                "label": "Author",
+                "icon": "circle",
+                "allowCustom": true
+              },
+              {
+                "id": "a66b2ffc-e022-4b0e-8dbf-7c51fc25a218",
+                "property": "source-site",
+                "type": "text",
+                "labelDisplay": "visible",
+                "editable": true,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 1,
+                "label": "Site",
+                "icon": "circle",
+                "allowCustom": true
+              },
+              {
+                "id": "bf71539b-0403-44ee-bd6f-94d422e0a922",
+                "property": "source",
+                "type": "text",
+                "labelDisplay": "visible",
+                "editable": true,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 2,
+                "label": "URL",
+                "icon": "circle",
+                "allowCustom": true
+              },
+              {
+                "id": "bc263fca-a5a1-4953-b64d-0e8c9d36acc5",
+                "property": "source-accessed",
+                "type": "date",
+                "labelDisplay": "visible",
+                "editable": true,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 1,
+                "label": "Accessed on",
+                "icon": "circle",
+                "allowCustom": true
+              }
+            ],
+            "showTitle": true,
+            "showOnlyEmptyFields": false,
+            "collapsible": true,
+            "defaultCollapsed": false,
+            "layout": {
+              "columns": 3,
+              "labelPosition": "inline"
+            }
+          },
           {
             "id": "60991a50-491f-4993-8291-a2b3cc28487e",
             "name": "Source License",
