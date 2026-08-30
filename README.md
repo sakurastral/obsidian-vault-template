@@ -10,56 +10,6 @@ This is an Obsidian vault.
 	2. `Templater: Create Custom/Delete Example Notes`
 5. After that, you can start writing your notes!
 
-## Vault Organization Method: CAPTAIN
-
-- C ollection
-- A tlas
-- P roject
-- T ask
-- A ssets
-- I nbox
-- N exus
-
-### Detailed Description
-
-- Collection: Collects all **external sources** from the internet or other platforms
-- Atlas: Provides **note navigation and higher-level overviews**, including index pages and base views for exploring the vault structure
-- Project: Holds **goal-oriented workspaces** with a clear scope, timeline, or outcome
-	- Journal: Daily notes, including progress tracking, reflections, and work records
-	- Nook: Stores **internal knowledge** created by myself
-	- Calendar: Store Holidays or Events and their details
-	- Other(Custom Name): Create new project folders under the "Project" folder for specialized needs
-- Task: Contains all **task files**
-- Assets: Stores **non-note files** and resources used by the vault
-	- Attachments: Files attached directly to notes
-	- Images: Images used globally across the vault.
-	- Scripts: Custom scripts, mainly for Templater or automation
-	- Settings: Centralized configuration and metadata for vault-level behaviors.
-		- Custom File Explorer Sorting: Defines custom file and folder ordering rules for File Explorer. This is for the Custom File Explorer Sorting plugin.
-		- Task Status: Configuration for task states
-		- Title Prefix: Options for standardized title prefixes
-		- Title Separator: Defines separators used in note titles for consistency
-	- Template: Templates used by Templater for note creation and automation
-- Inbox: All new internal or external notes are first placed here before being processed, categorized, and moved to their final location.
-- Nexus: Defines the **core category system** of the vault.
-
-## Basic Properties in Notes
-
-```yaml
----
-cover:
-title: 
-aliases:
-categories:
-tags:
-created: 
-modified:
-status: 
-parent:
-references:
----
-```
-
 ## Categories
 
 Add your own categories in `Nexus/Categories/Area` and `Nexus/Categories/Others` folders. You can add the categories with no parent in `Nexus/Categories/Area` and the ones with parent in `Nexus/Categories/Others`. 
