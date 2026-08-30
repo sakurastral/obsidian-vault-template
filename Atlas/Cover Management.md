@@ -25,7 +25,7 @@ views:
     filters:
       and:
         - '!file.folder.startsWith("Task")'
-        - '!file.path.startsWith("Project/Calendar/")'
+        - '!file.path.startsWith("Calendar/")'
         - '!file.path.startsWith("Project/Journal/")'
         - '!file.folder.startsWith("Nexus")'
         - '!file.folder.startsWith("Atlas")'
@@ -52,7 +52,7 @@ views:
     name: Calendar & Journal
     filters:
       or:
-        - file.path.startsWith("Project/Calendar/")
+        - file.path.startsWith("Calendar/")
         - file.path.startsWith("Project/Journal/")
     order:
       - file.folder

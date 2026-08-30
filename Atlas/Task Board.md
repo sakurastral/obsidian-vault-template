@@ -18,7 +18,7 @@ tags:
 filters:
   or:
     - file.folder.startsWith("Task")
-    - file.folder.startsWith("Project/Calendar")
+    - file.folder.startsWith("Calendar")
 formulas:
   task-content-with-link: link(file, note["task-content"])
   overdue: if(note["task-due"] < now(), "🚨", if(note["task-due"] - "3 day" <= today(), "⚠️", ""))

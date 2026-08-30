@@ -17,7 +17,7 @@ references:
 ```base
 filters:
   and:
-    - file.folder == "Project/Calendar"
+    - file.folder == "Calendar"
 views:
   - type: list
     name: List

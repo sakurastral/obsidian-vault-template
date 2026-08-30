@@ -91,7 +91,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Atlas/Home.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -106,7 +106,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Home"
             }
           }
         ],
@@ -253,7 +253,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "README.md"
+                "file": "Atlas/Home.md"
               },
               "icon": "lucide-info",
               "title": "File properties"
@@ -273,7 +273,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Atlas/Home.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -321,12 +321,12 @@
       "calendar-note-view:Open Sidebar Calendar": false
     }
   },
-  "active": "a88538889e31003f",
+  "active": "d8575e65146a9c18",
   "lastOpenFiles": [
+    "README.md",
     "Knowledge",
     "Nexus/Calendar Scope/Holiday.md",
     "Nexus/Calendar Scope/Vault Example Note (Empty).md",
-    "README.md",
     "Atlas/Task Board.md",
     "Assets/Template/Task/Mark as In Progess.md",
     "Inbox/Vault Example Note (Empty).md",
