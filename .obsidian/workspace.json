@@ -86,12 +86,12 @@
             }
           },
           {
-            "id": "d8575e65146a9c18",
+            "id": "3df60d295b37115c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Atlas/Home.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -106,7 +106,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Home"
+              "title": "README"
             }
           }
         ],
@@ -253,7 +253,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Atlas/Home.md"
+                "file": "README.md"
               },
               "icon": "lucide-info",
               "title": "File properties"
@@ -273,7 +273,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Atlas/Home.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -321,13 +321,21 @@
       "calendar-note-view:Open Sidebar Calendar": false
     }
   },
-  "active": "d8575e65146a9c18",
+  "active": "3df60d295b37115c",
   "lastOpenFiles": [
+    "Atlas/Home.md",
+    "Atlas/Journal Management.md",
+    "Atlas/Vault Property Management.md",
+    "Atlas/Template Management.md",
+    "Atlas/Task Board.md",
+    "Atlas/Notes Management.md",
+    "Atlas/Event Management.md",
+    "Atlas/Cover Management.md",
+    "Atlas/Assets Management.md",
     "README.md",
     "Knowledge",
     "Nexus/Calendar Scope/Holiday.md",
     "Nexus/Calendar Scope/Vault Example Note (Empty).md",
-    "Atlas/Task Board.md",
     "Assets/Template/Task/Mark as In Progess.md",
     "Inbox/Vault Example Note (Empty).md",
     "Assets/Template/Task/Edit Task.md",
@@ -339,20 +347,13 @@
     "Assets/Template/Task/Add New Task.md",
     "Task/Archived/Vault Example Note (Empty).md",
     "Assets/Attachments/Vault Example Note (Empty).md",
-    "Atlas/Notes Management.md",
     "Assets/Template/Project/Journal/Add Daily Note.md",
     "Project/Journal/Vault Example Note (Empty).md",
-    "Atlas/Journal Management.md",
     "Assets/Template/Layout/Header.md",
     "Assets/Template/Custom/Insert Bases Block to View Child Notes.md",
-    "Assets/Template/Layout/Footer.md",
-    "Project/Archived/Vault Example Note (Empty).md",
     "Knowledge/Archived",
     "Assets/Template/Layout",
-    "Atlas/Template Management.md",
-    "Atlas/Assets Management.md",
     "Assets/Images/notes-pexels-pnw-prod-8251114.jpg",
-    "Assets/Template/Inbox/Add New Note.md",
     "Assets/Images/jplenio-foggy-7725646.jpg",
     "Assets/Images/calendar-pexels-pnw-prod-8251157.jpg",
     "Assets/Images/default-task-cover.png",

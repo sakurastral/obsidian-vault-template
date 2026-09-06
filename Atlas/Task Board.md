@@ -2,7 +2,7 @@
 title: Task Board
 cover: "[[default-task-cover.png]]"
 created: 2025-12-16T08:38:43+08:00
-modified: 2026-07-27T23:01:03+08:00
+modified: 2026-09-06T15:23:14+08:00
 aliases:
 description:
 categories:
@@ -11,6 +11,7 @@ status:
 parent:
 related:
 references:
+sort-order: 2
 tags:
 ---
 
@@ -22,8 +23,8 @@ filters:
 formulas:
   task-content-with-link: link(file, note["task-content"])
   overdue: if(note["task-due"] < now(), "🚨", if(note["task-due"] - "3 day" <= today(), "⚠️", ""))
-  Relative Due: if(task-due, "Due："+date(task-due).relative().toString(),"")
-  Task in Short: if(task-content, "Task：" + task-content, if(note["calendar-event-title"], note["calendar-event-title"],"") )
+  Relative Due: if(task-due, "截止："+date(task-due).relative().toString(),"")
+  Task in Short: if(task-content, "任務：" + task-content, if(note["calendar-event-title"], note["calendar-event-title"],"") )
   Calendar Event Start: if(note["calendar-event-start"], note["calendar-event-start"],if(note["task-scheduled-start"], note["task-scheduled-start"], task-due))
   Calendar Event End: if(note["calendar-event-end"], note["calendar-event-end"],if(note["task-scheduled-end"], note["task-scheduled-end"], task-due))
 properties:
@@ -60,7 +61,7 @@ views:
       - property: tags
         direction: ASC
     columnSize:
-      note.task-status: 121
+      note.task-status: 151
       note.task-due: 200
       formula.overdue: 32
       formula.task-content-with-link: 266

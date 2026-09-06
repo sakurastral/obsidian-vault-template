@@ -20,5 +20,6 @@
   "calendar-note-view@@calendar-note-today-text-source": "var(--text-on-accent)",
   "calendar-note-view@@calendar-note-event-icon-size": 12,
   "calendar-note-view@@calendar-note-bases-weekday-bg-source": "transparent",
-  "calendar-note-view@@calendar-note-bases-cell-border-source": "transparent"
+  "calendar-note-view@@calendar-note-bases-cell-border-source": "transparent",
+  "property-panels@@property-panels-multiselect-layout": "property-panels-multiselect-nowrap"
 }

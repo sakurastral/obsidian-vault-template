@@ -1,28 +1,30 @@
 ---
-cover: "[[default-atlas-cover.png]]"
 title: Notes Management
+cover: "[[default-atlas-cover.png]]"
+created: 2025-12-16T08:38:43+08:00
+modified: 2026-09-06T15:23:14+08:00
 aliases:
+description:
 categories:
   - "[[Vault Management]]"
-tags:
-description:
-created: 2025-12-16T08:38:43+08:00
-modified: 2026-06-13T16:38:40+08:00
 status:
 parent:
 related:
 references:
+sort-order: 5
+tags:
 ---
 
 ```base
 filters:
   and:
     - file.ext.containsAny("md", "base", "canvas")
-    - '!file.folder.startsWith("Project/Journal")'
+    - '!file.folder.startsWith("Journal")'
     - '!file.folder.startsWith("Task")'
     - '!file.folder.startsWith("Assets/Template")'
     - '!file.folder.startsWith("Nexus")'
-    - '!file.folder.startsWith("Assets/Settings")'
+	- '!file.folder.startsWith("Calendar")'
+	- '!file.folder.startsWith("Atlas")'
 views:
   - type: table
     name: All
@@ -34,11 +36,12 @@ views:
       - file.name
       - categories
       - tags
+      - aliases
     sort:
+      - property: file.folder
+        direction: DESC
       - property: categories
         direction: DESC
-      - property: file.folder
-        direction: ASC
       - property: type
         direction: ASC
       - property: file.name
@@ -61,6 +64,17 @@ views:
       - categories
     sort:
       - property: file.folder
+        direction: ASC
+  - type: table
+    name: View
+    order:
+      - file.name
+      - created
+      - file.ctime
+    sort:
+      - property: created
+        direction: ASC
+      - property: file.ctime
         direction: ASC
 
 ```

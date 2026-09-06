@@ -1,23 +1,24 @@
 ---
-cover: "[[default-atlas-cover.png]]"
 title: Journal Management
+cover: "[[default-journal-cover.png]]"
+created: 2025-12-16T08:38:43+08:00
+modified: 2026-09-06T15:23:14+08:00
 aliases:
+description:
 categories:
   - "[[Vault Management]]"
-tags:
-description:
-created: 2025-12-16T08:38:43+08:00
-modified: 2026-06-13T16:38:40+08:00
 status:
 parent:
 related:
 references:
+sort-order: 4
+tags:
 ---
 
 ```base
 filters:
   and:
-    - file.folder.startsWith("Project/Journal")
+    - file.folder.startsWith("Journal")
 formulas:
   date: |-
     link(
@@ -27,12 +28,12 @@ formulas:
   weekday: date(file.basename).format("ddd")
 properties:
   formula.date:
-    displayName: Date
+    displayName: 日期
   formula.weekday:
-    displayName: Day
+    displayName: 星期
 views:
   - type: table
-    name: Current
+    name: 今年
     filters:
       and:
         - file.basename.contains(now().date().format("YYYY"))
@@ -44,7 +45,7 @@ views:
       - property: file.basename
         direction: DESC
   - type: table
-    name: Past
+    name: 歷年
     filters:
       and:
         - '!file.basename.contains(now().date().format("YYYY"))'
@@ -56,11 +57,10 @@ views:
       - property: file.basename
         direction: DESC
   - type: table
-    name: All
+    name: 全部
     order:
       - formula.date
       - formula.weekday
       - description
 
 ```
-

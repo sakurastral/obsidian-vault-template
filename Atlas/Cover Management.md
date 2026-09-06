@@ -1,17 +1,18 @@
 ---
-cover: "[[default-atlas-cover.png]]"
 title: Cover Management
+cover: "[[default-atlas-cover.png]]"
+created: 2026-05-04T15:07:43+08:00
+modified: 2026-09-06T15:23:14+08:00
 aliases:
+description:
 categories:
   - "[[Vault Management]]"
-tags:
-description:
-created: 2026-05-04T15:07:43+08:00
-modified: 2026-06-13T16:38:40+08:00
 status:
 parent:
 related:
 references:
+sort-order: 9
+tags:
 ---
 
 ```base
@@ -26,7 +27,7 @@ views:
       and:
         - '!file.folder.startsWith("Task")'
         - '!file.path.startsWith("Calendar/")'
-        - '!file.path.startsWith("Project/Journal/")'
+        - '!file.path.startsWith("Journal/")'
         - '!file.folder.startsWith("Nexus")'
         - '!file.folder.startsWith("Atlas")'
     order:
@@ -34,6 +35,8 @@ views:
       - file.name
       - cover
     sort:
+      - property: cover
+        direction: ASC
       - property: file.folder
         direction: DESC
   - type: table
@@ -53,7 +56,7 @@ views:
     filters:
       or:
         - file.path.startsWith("Calendar/")
-        - file.path.startsWith("Project/Journal/")
+        - file.path.startsWith("Journal/")
     order:
       - file.folder
       - file.name

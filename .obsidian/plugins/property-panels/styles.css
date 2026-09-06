@@ -477,6 +477,18 @@ settings:
     type: heading
     level: 2
     collapsed: true
+  - id: property-panels-multiselect-layout
+    title: Multi-select layout
+    title.zh-TW: 多選排列樣式
+    description: Keep chips and search on one line with horizontally scrollable chips.
+    description.zh-TW: 單行模式將標籤與搜尋框放在同一行，標籤超出寬度時可水平捲動。
+    type: class-select
+    default: property-panels-multiselect-wrap
+    options:
+      - label: Wrap (default)
+        value: property-panels-multiselect-wrap
+      - label: Single line
+        value: property-panels-multiselect-nowrap
   - id: property-panels-chip-background-choice
     title: Multi-select chip background
     title.zh-TW: 多選標籤背景
@@ -778,6 +790,63 @@ settings:
 .property-panels-options [role="option"].is-active { background: var(--background-modifier-hover); color: var(--text-normal); }
 .property-panels-option-status { margin-top: 4px; color: var(--text-muted); font-size: var(--font-ui-smaller); }
 .property-panels-option-status.mod-error { color: var(--text-error); }
+/* Only the chip strip scrolls; suggestions and status messages stay outside it. */
+.property-panels-multiselect-nowrap .property-panels-field-multi-select {
+  overflow: visible;
+}
+.property-panels-multiselect-nowrap .property-panels-field-multi-select .property-panels-multiselect {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, min(calc(var(--font-text-size) * 5), 50%));
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+  overflow: visible;
+  gap: calc(var(--font-text-size) / 4);
+}
+.property-panels-multiselect-nowrap .property-panels-field-multi-select .property-panels-chips {
+  flex-wrap: nowrap;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 0;
+  padding: calc(var(--font-text-size) / 4) 0;
+  box-sizing: border-box;
+  gap: calc(var(--font-text-size) / 4);
+}
+.property-panels-multiselect-nowrap .property-panels-field-multi-select .property-panels-chip {
+  flex: 0 0 auto;
+  max-width: none;
+  white-space: nowrap;
+}
+.property-panels-multiselect-nowrap .property-panels-field-multi-select .property-panels-chip-value,
+.property-panels-multiselect-nowrap .property-panels-field-multi-select .property-panels-value-text {
+  flex: 0 0 auto;
+  max-width: none;
+  overflow: visible;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: normal;
+  text-overflow: clip;
+}
+.property-panels-multiselect-nowrap .property-panels-field-multi-select .property-panels-multiselect > input[type="search"] {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+.property-panels-multiselect-nowrap .property-panels-field-multi-select .property-panels-chips:empty {
+  display: none;
+}
+.property-panels-multiselect-nowrap .property-panels-field-multi-select .property-panels-chips:empty + input[type="search"],
+.property-panels-multiselect-nowrap .property-panels-field-multi-select .property-panels-option-status {
+  grid-column: 1 / -1;
+}
+.property-panels-multiselect-nowrap .property-panels-field-multi-select .property-panels-options {
+  top: calc(100% + var(--font-text-size) / 4);
+  left: 0;
+  right: 0;
+  width: auto;
+  box-sizing: border-box;
+}
 .property-panels-readonly { overflow-wrap: anywhere; color: var(--property-panels-value-color-choice, var(--text-normal)); }
 .property-panels-field > label.property-panels-visually-hidden {
   position: absolute;

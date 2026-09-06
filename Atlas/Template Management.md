@@ -1,17 +1,18 @@
 ---
-cover: "[[default-atlas-cover.png]]"
 title: Template Management
+cover: "[[default-atlas-cover.png]]"
+created: 2025-12-16T08:38:43+08:00
+modified: 2026-09-06T15:23:14+08:00
 aliases:
+description:
 categories:
   - "[[Vault Management]]"
-tags:
-description:
-created: 2025-12-16T08:38:43+08:00
-modified: 2026-06-13T16:38:40+08:00
 status:
 parent:
 related:
 references:
+sort-order: 8
+tags:
 ---
 
 ```base
