@@ -4,9 +4,6 @@ categories:
 cover: "[[default-journal-cover.png]]"
 ---
 
-## <% tp.date.now("HH:mm") %>
-
-<% tp.file.cursor() %>
 <%*
 	tp.hooks.on_all_templates_executed(async() => {
 	  const file = tp.file.find_tfile(tp.file.path(true));

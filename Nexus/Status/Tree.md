@@ -7,7 +7,7 @@ aliases:
 description:
 categories:
   - "[[Vault Properties]]"
-status: "[[Tree]]"
+status: "[[Path]]"
 parent:
 related:
 references:

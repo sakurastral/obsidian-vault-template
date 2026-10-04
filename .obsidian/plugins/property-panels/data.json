@@ -524,9 +524,9 @@
               {
                 "id": "e3547e20-e01f-42c8-b0b7-8349c499fa8d",
                 "property": "source-author",
-                "type": "multi-select",
+                "type": "link",
                 "labelDisplay": "visible",
-                "editable": true,
+                "editable": false,
                 "visible": true,
                 "showWhenEmpty": true,
                 "longText": "wrap",
@@ -861,6 +861,172 @@
             "defaultCollapsed": true,
             "layout": {
               "columns": 2
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "502a9844-8829-49f7-8202-a8b732ed2a0b",
+      "name": "Google Maps",
+      "matchType": "wikilink",
+      "value": "HUB｜Google Maps",
+      "enabled": true,
+      "matchMode": "folder-and-children",
+      "inheritance": "extend",
+      "priority": 0,
+      "config": {
+        "panels": [
+          {
+            "id": "fb9fd6f4-d1ec-45f7-8a74-b01748248944",
+            "name": "Info",
+            "enabled": true,
+            "position": "after-properties",
+            "fields": [
+              {
+                "id": "831dfb28-27c1-48b5-a76d-10e58f5bd055",
+                "property": "spot-address",
+                "type": "text",
+                "labelDisplay": "icon-label",
+                "editable": true,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 1,
+                "label": "Address",
+                "icon": "lucide-map-pin",
+                "allowCustom": true
+              },
+              {
+                "id": "b9dac67a-d75e-42d0-85f9-1e9e4aa356d7",
+                "property": "spot-coordinates",
+                "type": "multi-select",
+                "labelDisplay": "icon-label",
+                "editable": true,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 1,
+                "label": "Coordinates",
+                "icon": "lucide-map-pin",
+                "allowCustom": true,
+                "optionSource": {
+                  "type": "static",
+                  "options": []
+                }
+              },
+              {
+                "id": "ba83e158-6738-4041-9c9c-eb8eca0943d9",
+                "property": "spot-googlescore",
+                "type": "number",
+                "labelDisplay": "icon-label",
+                "editable": false,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 1,
+                "label": "Google Score",
+                "icon": "lucide-star",
+                "allowCustom": true,
+                "progress": {
+                  "min": 0,
+                  "max": 100,
+                  "step": 1,
+                  "display": "percent",
+                  "showValue": true
+                },
+                "rating": {
+                  "max": 5,
+                  "allowClear": true
+                },
+                "number": {
+                  "max": 5,
+                  "step": 0.1
+                }
+              },
+              {
+                "id": "898652db-08bb-4177-86e4-80c072110f26",
+                "property": "spot-official-site",
+                "type": "link",
+                "labelDisplay": "icon-label",
+                "editable": false,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 1,
+                "label": "Site",
+                "icon": "link",
+                "allowCustom": true,
+                "rating": {
+                  "max": 5,
+                  "allowClear": true
+                },
+                "number": {
+                  "max": 5,
+                  "step": 0.1
+                }
+              }
+            ],
+            "showTitle": false,
+            "showOnlyEmptyFields": false,
+            "collapsible": true,
+            "defaultCollapsed": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "352a935b-ba07-44e9-bcf3-0f55514adb8c",
+      "name": "Github Repo",
+      "matchType": "wikilink",
+      "value": "HUB｜GitHub Repo",
+      "enabled": true,
+      "matchMode": "folder-and-children",
+      "inheritance": "extend",
+      "priority": 0,
+      "config": {
+        "panels": [
+          {
+            "id": "678a1a9a-71f9-42b0-9d94-1f75e482355b",
+            "name": "Repo Info",
+            "enabled": true,
+            "position": "after-properties",
+            "fields": [
+              {
+                "id": "2db48ea4-e874-4a54-b06f-6fc856f29042",
+                "property": "repo-stars",
+                "type": "text",
+                "labelDisplay": "icon-only",
+                "editable": true,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 1,
+                "label": "Stars",
+                "icon": "lucide-star",
+                "allowCustom": true
+              },
+              {
+                "id": "78e4d009-c834-42c6-9388-ec45621b2774",
+                "property": "repo-homepage",
+                "type": "link",
+                "labelDisplay": "icon-only",
+                "editable": false,
+                "visible": true,
+                "showWhenEmpty": true,
+                "longText": "wrap",
+                "columnSpan": 1,
+                "label": "Homepage",
+                "icon": "link",
+                "allowCustom": true
+              }
+            ],
+            "showTitle": false,
+            "showOnlyEmptyFields": false,
+            "collapsible": false,
+            "defaultCollapsed": false,
+            "layout": {
+              "labelPosition": "inline"
             }
           }
         ]

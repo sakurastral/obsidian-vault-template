@@ -7,7 +7,7 @@ aliases:
 description:
 categories:
   - "[[Vault Properties]]"
-status:
+status: "[[Path]]"
 parent:
   - "[[Common]]"
 related:

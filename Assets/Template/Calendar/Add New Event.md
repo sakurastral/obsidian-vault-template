@@ -5,7 +5,7 @@ calendar-event-end:
 calendar-event-type:
 categories:
   - "[[Journal]]"
-status: "[[Tree]]"
+status: "[[Dove]]"
 cover: "[[default-task-cover.png]]"
 ---
 

@@ -1,0 +1,10 @@
+{
+  "tileSets": [
+    {
+      "id": "1791096828625",
+      "name": "Default",
+      "lightTiles": "https://tiles.openfreemap.org/styles/liberty",
+      "darkTiles": "https://tiles.openfreemap.org/styles/liberty"
+    }
+  ]
+}

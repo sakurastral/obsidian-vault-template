@@ -1,287 +1,105 @@
 <%*
 const originalTitle = tp.file.title;
-
-let titleContent = originalTitle;
-let originalPrefix = "";
-let author = "";
-let detectedFormat = "prefix";
-
 const prefixFolderPath = "Nexus/Title Prefix";
+let titleContent = originalTitle;
+let selectedPrefix = "";
+let author = "";
 
-// ─────────────────────────────
-// 解析目前標題
-// ─────────────────────────────
-
-let match = originalTitle.match(/^剪藏《(.+?)》作者：(.+)$/);
-
-if (match) {
-    detectedFormat = "clip-author";
-    titleContent = match[1].trim();
-    author = match[2].trim();
-} else if ((match = originalTitle.match(/^剪藏《(.+?)》$/))) {
-    detectedFormat = "clip";
-    titleContent = match[1].trim();
-} else if ((match = originalTitle.match(/^(【.*?】)(.*)$/))) {
-    detectedFormat = "prefix";
-    originalPrefix = match[1];
-    titleContent = match[2].trim();
-} else if (originalTitle.includes("｜")) {
-    detectedFormat = "prefix";
-
-    const parts = originalTitle.split("｜");
-
-    originalPrefix = parts[0] + "｜";
-    titleContent = parts.slice(1).join("｜").trim();
-}
-
-// ─────────────────────────────
-// 取得 Prefix 選項
-// ─────────────────────────────
-
+// 前綴選項來自資料夾內的筆記檔名。
 const folder = app.vault.getAbstractFileByPath(prefixFolderPath);
+const prefixes = [...new Set((folder?.children ?? [])
+    .filter(f => f instanceof tp.obsidian.TFile && f.extension === "md")
+    .map(f => f.basename))]
+    .sort((a, b) => a.localeCompare(b));
 
-let prefixes = [];
+// 相容舊剪藏格式，重新套用時轉成 CLIP｜標題 by 作者。
+const oldClip = originalTitle.match(/^剪藏《(.+?)》(?:作者：\s*(.*))?$/);
+if (oldClip) {
+    selectedPrefix = "CLIP｜";
+    titleContent = oldClip[1].trim();
+    author = (oldClip[2] ?? "").trim();
+} else {
+    const knownPrefix = [...prefixes].sort((a, b) => b.length - a.length)
+        .find(prefix => originalTitle.startsWith(prefix));
+    const legacyPrefix = originalTitle.match(/^(【.*?】|[^｜]+｜)/)?.[1];
+    selectedPrefix = knownPrefix ?? legacyPrefix ?? "";
+    titleContent = originalTitle.slice(selectedPrefix.length).trim();
 
-if (folder?.children) {
-    prefixes = folder.children
-        .filter(f => f instanceof tp.obsidian.TFile)
-        .map(f => f.basename)
-        .sort((a, b) => a.localeCompare(b));
+    // 僅 CLIP 將最後一個「 by 」視為作者分隔符。
+    if (selectedPrefix === "CLIP｜") {
+        const separator = titleContent.lastIndexOf(" by ");
+        if (separator > 0) {
+            author = titleContent.slice(separator + 4).trim();
+            titleContent = titleContent.slice(0, separator).trim();
+        }
+    }
 }
-
-if (
-    originalPrefix &&
-    !prefixes.includes(originalPrefix)
-) {
-    prefixes.unshift(originalPrefix);
-}
-
-// ─────────────────────────────
-// 標題設定流程
-// ─────────────────────────────
-
-let finalTitle = null;
 
 while (true) {
-    let prefix = originalPrefix;
-    let format = detectedFormat;
+    const options = ["", ...prefixes];
+    // 目前的前綴優先顯示；不新增資料夾以外的選項。
+    const currentIndex = options.indexOf(selectedPrefix);
+    if (currentIndex > 0) options.unshift(...options.splice(currentIndex, 1));
 
-    // ─────────────────────────
-    // 選擇格式
-    // ─────────────────────────
-
-    const formatOptions = [
-        {
-            label: "一般標題",
-            value: "prefix"
-        },
-        {
-            label: "剪藏《標題》",
-            value: "clip"
-        },
-        {
-            label: "剪藏《標題》作者：作者",
-            value: "clip-author"
-        }
-    ];
-
-    // 把目前格式放第一個
-    formatOptions.sort((a, b) => {
-        if (a.value === detectedFormat) return -1;
-        if (b.value === detectedFormat) return 1;
-        return 0;
-    });
-
-    const selectedFormat = await tp.system.suggester(
-        formatOptions.map(item => item.label),
-        formatOptions.map(item => item.value),
-        false,
-        "選擇標題格式",
-        undefined,
-        detectedFormat
+    const prefix = await tp.system.suggester(
+        options.map(value => value || "（無前綴）"),
+        options, false, "選擇標題前綴"
     );
-
-    // Esc / Cancel
-    if (selectedFormat === null) {
-        return;
-    }
-
-    format = selectedFormat;
-
-    // ─────────────────────────
-    // 選擇 Prefix
-    // ─────────────────────────
-
-    if (format === "prefix") {
-        const noPrefixLabel = "（無前綴）";
-
-        const selectedPrefix = await tp.system.suggester(
-            [noPrefixLabel, ...prefixes],
-            ["", ...prefixes],
-            false,
-            "選擇標題前綴",
-            undefined,
-            originalPrefix
-        );
-
-        if (selectedPrefix === null) {
-            return;
-        }
-
-        prefix = selectedPrefix;
-    }
-
-    // ─────────────────────────
-    // 輸入標題
-    // ─────────────────────────
+    if (prefix == null) return;
+    selectedPrefix = prefix;
 
     const inputTitle = await tp.system.prompt(
-        "修改筆記標題",
-        titleContent,
-        false,
-        false,
-        true
+        `標題內容（不含前綴${prefix === "CLIP｜" ? `；CLIP 作者於下一步填寫` : ""}）`,
+        titleContent, false, false
     );
-
-    if (inputTitle === null) {
-        return;
-    }
-
-    if (!inputTitle.trim()) {
+    if (inputTitle == null) return;
+    titleContent = inputTitle.trim();
+    if (!titleContent) {
+        new tp.obsidian.Notice("標題內容不可空白，請重新設定。");
         continue;
     }
 
-    const newTitleContent = inputTitle.trim();
-
-    // ─────────────────────────
-    // 輸入作者
-    // ─────────────────────────
-
-    let newAuthor = author;
-
-    if (format === "clip-author") {
+    if (prefix === "CLIP｜") {
         const inputAuthor = await tp.system.prompt(
-            "作者",
-            author,
-            false,
-            false,
-            true
+            "作者（選填，留空即不加上 {by 作者} ）", author, false, false
         );
-
-        if (inputAuthor === null) {
-            return;
-        }
-
-        if (!inputAuthor.trim()) {
-            continue;
-        }
-
-        newAuthor = inputAuthor.trim();
+        if (inputAuthor == null) return;
+        author = inputAuthor.trim();
     }
 
-    // ─────────────────────────
-    // 組合標題
-    // ─────────────────────────
-
-    let previewTitle;
-
-    switch (format) {
-        case "clip":
-            previewTitle = `剪藏《${newTitleContent}》`;
-            break;
-
-        case "clip-author":
-            previewTitle =
-                `剪藏《${newTitleContent}》作者：${newAuthor}`;
-            break;
-
-        default:
-            previewTitle = `${prefix}${newTitleContent}`;
-            break;
+    const baseTitle = `${prefix}${titleContent}${prefix === "CLIP｜" && author ? ` by ${author}` : ""}`;
+    // 避免路徑分隔符及跨平台不合法檔名；不默默刪除標題文字。
+    if (/[\\/:*?"<>|\u0000-\u001f]/.test(baseTitle) || /[. ]$/.test(baseTitle) || /^(con|prn|aux|nul|com[1-9]|lpt[1-9])(?:\.|$)/i.test(baseTitle)) {
+        new tp.obsidian.Notice('標題含有不適合檔名的字元或名稱，請修改後再試。可使用全形標點。');
+        continue;
     }
 
-    previewTitle =
-        tp.obsidian.stripHeadingForLink(previewTitle);
-
-    previewTitle =
-        tp.obsidian.stripHeading(previewTitle);
-
-    // ─────────────────────────
-    // 最後確認
-    // ─────────────────────────
+    // 在確認前處理同資料夾的撞名，預覽即為實際套用名稱。
+    const folderPath = tp.file.folder(true).replace(/^\/+|\/+$/g, "");
+    const pathFor = name => `${folderPath ? `${folderPath}/` : ""}${name}.md`;
+    let finalTitle = baseTitle;
+    let counter = 1;
+    while (finalTitle !== originalTitle && await tp.file.exists(pathFor(finalTitle))) {
+        finalTitle = `${baseTitle}_${counter++}`;
+    }
 
     const action = await tp.system.suggester(
-        [
-            `✓ 套用：${previewTitle}`,
-            "↻ 重新設定",
-            "✕ 取消"
-        ],
-        [
-            "apply",
-            "retry",
-            "cancel"
-        ],
-        false,
-        "確認新的筆記標題"
+        [`✓ 套用：${finalTitle}`, "↻ 重新設定", "✕ 取消"],
+        ["apply", "retry", "cancel"], false, "確認新的筆記標題"
     );
+    if (action == null || action === "cancel") return;
+    if (action === "retry") continue;
 
-    if (action === null || action === "cancel") {
-        return;
-    }
+    if (finalTitle !== originalTitle) await tp.file.rename(finalTitle);
 
-    if (action === "retry") {
-        // 保留剛才輸入的內容，重新開始
-        titleContent = newTitleContent;
-        author = newAuthor;
-        originalPrefix = prefix;
-        detectedFormat = format;
-
-        continue;
-    }
-
-    finalTitle = previewTitle;
+    // 套用後保留原本的重新開啟與 Linter 流程。
+    const file = tp.file.find_tfile(tp.file.path(true));
+    tp.hooks.on_all_templates_executed(async () => {
+        if (file && app.workspace.activeLeaf) {
+            await app.workspace.activeLeaf.openFile(file);
+            await app.commands.executeCommandById("obsidian-linter:lint-file");
+        }
+    });
     break;
 }
-
-// ─────────────────────────────
-// 避免撞名
-// ─────────────────────────────
-
-let counter = 1;
-const baseTitle = finalTitle;
-const folderPath = tp.file.folder(true);
-
-while (
-    await tp.file.exists(
-        `${folderPath}/${finalTitle}.md`
-    ) &&
-    finalTitle !== originalTitle
-) {
-    finalTitle = `${baseTitle}_${counter}`;
-    counter++;
-}
-
-// ─────────────────────────────
-// Rename
-// ─────────────────────────────
-
-if (finalTitle !== originalTitle) {
-    await tp.file.rename(finalTitle);
-}
--%>
-
-<%*
-tp.hooks.on_all_templates_executed(async () => {
-    const file = tp.file.find_tfile(
-        tp.file.path(true)
-    );
-
-    if (file) {
-        await app.workspace.activeLeaf.openFile(file);
-
-        await app.commands.executeCommandById(
-            "obsidian-linter:lint-file"
-        );
-    }
-});
 -%>

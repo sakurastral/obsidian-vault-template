@@ -7,7 +7,7 @@ aliases:
 description:
 categories:
   - "[[Vault Management]]"
-status:
+status: "[[Path]]"
 parent:
 related:
 references:

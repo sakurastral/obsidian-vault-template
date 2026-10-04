@@ -1,5 +1,6 @@
 ---
 cover: "[[default-nexus-cover.png]]"
+status: "[[Path]]"
 ---
 <%* let title = tp.file.title -%>
 <%* if (title.startsWith("Untitled")) { -%>

@@ -59,12 +59,109 @@
   "onboarding": {
     "startup-help-view": true,
     "startup-help-welcome": true,
-    "default-d4085830-fd38-41bb-9c62-a90f5d090811": true
+    "default-d4085830-fd38-41bb-9c62-a90f5d090811": true,
+    "onboarding-whats-new": "1.35"
   },
   "ribbon": [],
-  "rules": [],
+  "rules": [
+    {
+      "id": "d5852044-9fa8-4108-ad38-9429a4d7441b",
+      "conjunction": "or",
+      "conditions": [
+        {
+          "id": "de557476-1f21-40aa-9052-fa4dad62dc09",
+          "field": "folder",
+          "operator": "startsWith",
+          "value": "Atlas"
+        },
+        {
+          "id": "d73fd970-334f-459c-9bf2-2ad1cd170f45",
+          "field": "folder",
+          "operator": "startsWith",
+          "value": "Nexus"
+        }
+      ],
+      "toolbar": "f9699892-1fbd-4575-bcb3-79a4b54b771d"
+    },
+    {
+      "id": "ad8bd9ab-9f1c-41be-9701-1dce5feab3e8",
+      "conjunction": "or",
+      "conditions": [
+        {
+          "id": "c7c6ec3b-79d0-4290-8329-712a46930f3a",
+          "field": "folder",
+          "operator": "startsWith",
+          "value": "Knowledge"
+        },
+        {
+          "id": "fc863c59-982e-49d8-b107-667f82751869",
+          "field": "folder",
+          "operator": "startsWith",
+          "value": "Project"
+        },
+        {
+          "id": "b81d9211-56fb-47d9-a488-2eeeb0ae35e4",
+          "field": "folder",
+          "operator": "startsWith",
+          "value": "Inbox"
+        }
+      ],
+      "toolbar": "be9d94d7-0cc7-4857-aa58-8822dd0e2163"
+    },
+    {
+      "id": "f5706833-e2b6-4672-9aba-32cb8f69c538",
+      "conjunction": "and",
+      "conditions": [
+        {
+          "id": "d46c2c31-f865-49f4-a07b-72811716f82c",
+          "field": "folder",
+          "operator": "startsWith",
+          "value": "Journal"
+        }
+      ],
+      "toolbar": "defaa80e-dacd-4588-88d4-173e1d48f594"
+    },
+    {
+      "id": "d3a62e54-389e-40e8-88fb-df88e49dfc4e",
+      "conjunction": "and",
+      "conditions": [
+        {
+          "id": "a0c99af6-e925-4c13-8cf4-155f7bacfb66",
+          "field": "folder",
+          "operator": "startsWith",
+          "value": "Calendar"
+        }
+      ],
+      "toolbar": "b091c5bb-7e77-4425-b47d-c8c075b623a1"
+    },
+    {
+      "id": "e16126cb-42fd-4038-b334-e99958253fa5",
+      "conjunction": "and",
+      "conditions": [
+        {
+          "id": "dcf89e72-f1d8-4125-a04d-fc5542ca2b20",
+          "field": "folder",
+          "operator": "startsWith",
+          "value": "Task"
+        }
+      ],
+      "toolbar": "f26041a0-8b84-4654-bb2a-6907ab48ee8e"
+    },
+    {
+      "id": "c72adbee-cbb4-489b-b18a-4a68c5b4d2f9",
+      "conjunction": "and",
+      "conditions": [
+        {
+          "id": "f324dc32-be5d-4e2f-824d-cdb354ed3553",
+          "field": "folder",
+          "operator": "startsWith",
+          "value": "Nexus/Categories"
+        }
+      ],
+      "toolbar": "dece0024-e181-45ef-8dd6-e2a41c0c7b69"
+    }
+  ],
   "scriptingEnabled": false,
-  "showEditInFabMenu": false,
   "showLaunchpad": true,
   "showToolbarIn": {
     "audio": false,
@@ -1956,42 +2053,6 @@
             },
             "viewMode": "all"
           }
-        },
-        {
-          "uuid": "ed4a0ce8-7402-4dd7-a6b1-a3c4946bd843",
-          "icon": "lucide-refresh-cw",
-          "label": "Convert Color Codes to HTML Block",
-          "tooltip": "Convert Color Codes to HTML Block",
-          "hasCommand": false,
-          "inGallery": false,
-          "link": "Templater: Insert Custom/Convert Color Codes to HTML Block",
-          "linkAttr": {
-            "commandCheck": false,
-            "commandId": "templater-obsidian:Assets/Template/Custom/Convert Color Codes to HTML Block.md",
-            "hasVars": false,
-            "type": "command"
-          },
-          "visibility": {
-            "desktop": {
-              "components": [
-                "icon",
-                "label"
-              ]
-            },
-            "mobile": {
-              "components": [
-                "icon",
-                "label"
-              ]
-            },
-            "tablet": {
-              "components": [
-                "icon",
-                "label"
-              ]
-            },
-            "viewMode": "all"
-          }
         }
       ],
       "mobileStyles": [],
@@ -2013,7 +2074,7 @@
           }
         }
       },
-      "updated": "2026-07-24T05:45:13.972Z"
+      "updated": "2026-09-15T00:35:56.056Z"
     },
     {
       "uuid": "aa7b6c98-6734-4759-b2c3-81feffb41dba",
@@ -3161,7 +3222,8 @@
       "updated": "2026-05-26T09:13:43.231Z"
     }
   ],
-  "version": 20260703.1,
+  "version": 20260812.1,
   "webviewerToolbar": null,
-  "whatsnew_version": "1.32"
+  "whatsnew_version": "1.32",
+  "showEditInFabMenu": false
 }
