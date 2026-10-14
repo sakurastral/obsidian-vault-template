@@ -6,7 +6,7 @@ calendar-event-type:
 categories:
   - "[[Journal]]"
 status: "[[Dove]]"
-cover: "[[default-task-cover.png]]"
+cover: "[[default-cover.png]]"
 ---
 
 <%*

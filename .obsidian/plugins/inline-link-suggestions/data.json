@@ -1,0 +1,19 @@
+{
+  "enabled": true,
+  "readingView": false,
+  "caseSensitive": false,
+  "minTermLength": 3,
+  "includeAliases": true,
+  "includeFrontmatterTitles": true,
+  "ignoredTerms": [],
+  "excludedFolders": [
+    "Assets"
+  ],
+  "disabledFolders": [
+    "Assets"
+  ],
+  "underlineStyle": "wavy",
+  "underlineThickness": 2,
+  "underlineColor": "accent",
+  "underlineCustomColor": "#888888"
+}

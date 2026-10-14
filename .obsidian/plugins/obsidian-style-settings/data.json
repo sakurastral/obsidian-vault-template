@@ -15,11 +15,10 @@
   "calendar-note-view@@calendar-note-date-cell-bg-source": "var(--background-primary-alt)",
   "calendar-note-view@@calendar-note-date-hover-bg-source": "var(--interactive-accent-hover)",
   "calendar-note-view@@calendar-note-adjacent-bg-source": "transparent",
-  "calendar-note-view@@calendar-note-weekend-bg-source": "var(--background-secondary)",
   "calendar-note-view@@calendar-note-today-bg-source": "var(--interactive-accent)",
   "calendar-note-view@@calendar-note-today-text-source": "var(--text-on-accent)",
   "calendar-note-view@@calendar-note-event-icon-size": 12,
   "calendar-note-view@@calendar-note-bases-weekday-bg-source": "transparent",
   "calendar-note-view@@calendar-note-bases-cell-border-source": "transparent",
-  "property-panels@@property-panels-multiselect-layout": "property-panels-multiselect-nowrap"
+  "property-panels@@property-panels-multiselect-layout": "property-panels-multiselect-wrap"
 }

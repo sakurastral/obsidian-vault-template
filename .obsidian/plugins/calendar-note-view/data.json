@@ -1,6 +1,7 @@
 {
   "schemaVersion": 9,
   "calendarLocale": "system",
+  "sidebarSide": "right",
   "firstDayOfWeek": 1,
   "weekendDays": [
     0,

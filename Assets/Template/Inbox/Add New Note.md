@@ -19,7 +19,7 @@ tp.hooks.on_all_templates_executed(async () => {
             cover == null ||
             (typeof cover === "string" && cover.trim() === "")
         ) {
-            frontmatter.cover = "[[default-note-cover.png]]";
+            frontmatter.cover = "[[default-cover.png]]";
         }
     });
 });

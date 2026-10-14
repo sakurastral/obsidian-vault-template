@@ -10,7 +10,7 @@ task-due:
 task-done:
 task-cancelled:
 task-archived:
-cover: "[[default-task-cover.png]]"
+cover: "[[default-cover.png]]"
 status: "[[Dove]]"
 ---
 <%* let title = tp.file.title _%>

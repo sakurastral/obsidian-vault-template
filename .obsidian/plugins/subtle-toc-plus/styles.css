@@ -1,0 +1,688 @@
+/* ============================================================================
+   Subtle TOC — floating, Capacities-style table of contents
+   ========================================================================== */
+
+.subtle-toc-host {
+	/* anchor the absolutely-positioned overlay to the note view */
+	position: relative;
+}
+
+.subtle-toc-root {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	z-index: var(--layer-popover, 30);
+	pointer-events: none;
+	display: flex;
+	align-items: center;
+}
+
+.subtle-toc-root.is-right {
+	right: 10px;
+}
+
+.subtle-toc-root.is-left {
+	left: 8px;
+}
+
+.subtle-toc-root.is-empty {
+	display: none;
+}
+
+.subtle-toc-group {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.subtle-toc-root.is-left .subtle-toc-group {
+	flex-direction: row-reverse;
+}
+
+/* ---- minimap (the dashes on the edge) ------------------------------------ */
+
+.subtle-toc-minimap {
+	pointer-events: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: var(--toc-gap, 8px);
+	padding: 6px 4px;
+	max-height: 60vh;
+	overflow: hidden;
+	opacity: 0.75;
+	transition: opacity 120ms ease;
+}
+
+.subtle-toc-root.is-left .subtle-toc-minimap {
+	align-items: flex-start;
+}
+
+.subtle-toc-minimap:hover {
+	opacity: 1;
+}
+
+/* fade the minimap out while the popover is open — kept in layout (opacity,
+   not display) so the group keeps its width and the popover stays anchored */
+.subtle-toc-root.is-open .subtle-toc-minimap {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.subtle-toc-minimap.is-hidden {
+	display: none;
+}
+
+.subtle-toc-dash {
+	/* never let flexbox shrink the bars — that rounds 2px to 1px unevenly */
+	flex: 0 0 auto;
+	/* height is pinned to whole device pixels from JS (see applyMinimapSizing) */
+	height: var(--toc-dash-h, 2px);
+	width: var(--toc-dash-w, 16px);
+	/* square ends + solid color so the 2px hairline antialiases uniformly
+	   instead of reading as ~1px when dimmed */
+	border-radius: 3px;
+	background: var(--text-muted);
+	opacity: 0.2;
+	cursor: pointer;
+	transition: width 120ms ease, background-color 120ms ease, opacity 120ms ease;
+}
+
+.subtle-toc-dash:hover {
+	background: var(--text-normal);
+	width: var(--toc-dash-hover-w, 22px);
+}
+
+.subtle-toc-dash.is-active {
+	background: #eee;
+	opacity: 0.75;
+	width: var(--toc-dash-active-w, 14px);
+}
+
+/* Keep the existing pale active marker in dark mode; use dark gray at full
+   opacity in light mode so it remains clearly visible against the note. */
+.theme-light .subtle-toc-dash.is-active {
+	background: #444;
+	opacity: 1;
+}
+
+/* shorter dashes for deeper headings: linear 14px (H1) -> 6px (H6) */
+.subtle-toc-dash.subtle-toc-level-1 { width: var(--toc-level-1-w, 14px); }
+.subtle-toc-dash.subtle-toc-level-2 { width: var(--toc-level-2-w, 12.4px); }
+.subtle-toc-dash.subtle-toc-level-3 { width: var(--toc-level-3-w, 10.8px); }
+.subtle-toc-dash.subtle-toc-level-4 { width: var(--toc-level-4-w, 9.2px); }
+.subtle-toc-dash.subtle-toc-level-5 { width: var(--toc-level-5-w, 7.6px); }
+.subtle-toc-dash.subtle-toc-level-6 { width: var(--toc-level-6-w, 6px); }
+
+.subtle-toc-dash.is-active.subtle-toc-level-1 { width: var(--toc-active-level-1-w, 14px); }
+.subtle-toc-dash.is-active.subtle-toc-level-2 { width: var(--toc-active-level-2-w, 14px); }
+.subtle-toc-dash.is-active.subtle-toc-level-3 { width: var(--toc-active-level-3-w, 14px); }
+.subtle-toc-dash.is-active.subtle-toc-level-4 { width: var(--toc-active-level-4-w, 14px); }
+.subtle-toc-dash.is-active.subtle-toc-level-5 { width: var(--toc-active-level-5-w, 14px); }
+.subtle-toc-dash.is-active.subtle-toc-level-6 { width: var(--toc-active-level-6-w, 14px); }
+
+/* ---- edge: dashes minimap stacked over the task badge -------------------- */
+
+.subtle-toc-icon {
+	width: 1em;
+	height: 1em;
+	flex: 0 0 auto;
+}
+
+.subtle-toc-edge {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 6px;
+}
+
+.subtle-toc-root.is-left .subtle-toc-edge {
+	align-items: flex-start;
+}
+
+/* task badge — edge indicator for open tasks, sits below the dashes (or alone
+   when there are no headings) */
+.subtle-toc-task-badge {
+	pointer-events: auto;
+	display: flex;
+	align-items: start;
+	gap: 4px;
+	padding: 3px 4px;
+	margin-right: 3px;
+	border-radius: 5px;
+	background: var(--background-secondary);
+	border: 1px solid var(--background-modifier-border);
+	color: var(--text-muted);
+	font-size: var(--font-ui-smaller);
+	cursor: pointer;
+	opacity: 0.75;
+	transition: color 120ms ease, border-color 120ms ease, opacity 120ms ease;
+}
+
+.subtle-toc-root.is-left .subtle-toc-task-badge {
+	margin-right: 0;
+	margin-left: 3px;
+}
+
+.subtle-toc-task-badge:hover {
+	opacity: 1;
+	color: var(--text-normal);
+	border-color: var(--background-modifier-border-hover, var(--background-modifier-border));
+}
+
+.subtle-toc-task-badge.is-hidden {
+	display: none;
+}
+
+/* fade out while the popover is open, like the minimap */
+.subtle-toc-root.is-open .subtle-toc-task-badge {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.subtle-toc-task-badge .subtle-toc-icon {
+	width: 13px;
+	height: 13px;
+}
+
+.subtle-toc-task-badge-count {
+	font-weight: var(--font-semibold, 600);
+	line-height: 1;
+}
+
+/* ---- popover ------------------------------------------------------------- */
+
+.subtle-toc-popover {
+	/* absolutely positioned so it can slide in without reserving layout space
+	   (and shoving the minimap off the edge) while closed */
+	position: absolute;
+	top: 50%;
+	right: 0;
+	pointer-events: none;
+	display: flex;
+	flex-direction: column;
+	width: var(--toc-popover-width, 264px);
+	max-height: var(--toc-panel-height, 50vh);
+	background: color-mix(in srgb, var(--background-secondary) var(--toc-panel-opacity, 100%), transparent);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 12px;
+	box-shadow: var(--shadow-s, 0 8px 24px rgba(0, 0, 0, 0.35));
+	overflow: hidden;
+	/* closed state: nudged toward the edge and faded out */
+	opacity: 0;
+	transform: translate(10px, -50%);
+	transition: opacity 140ms ease, transform 140ms ease;
+}
+
+/* left-side minimap: anchor to the left edge and slide out rightward */
+.subtle-toc-root.is-left .subtle-toc-popover {
+	right: auto;
+	left: 0;
+	transform: translate(-10px, -50%);
+}
+
+.subtle-toc-root.is-open .subtle-toc-popover {
+	pointer-events: auto;
+	opacity: 1;
+	transform: translate(0, -50%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.subtle-toc-popover {
+		transition: opacity 140ms ease;
+		transform: translate(0, -50%);
+	}
+}
+
+.subtle-toc-body {
+	flex: 1 1 auto;
+	min-height: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+/* ---- tabs (only shown when the note has both headings and tasks) --------- */
+
+.subtle-toc-tabs {
+	display: flex;
+	gap: 4px;
+	padding: 8px 8px 2px;
+}
+
+.subtle-toc-tabs.is-hidden {
+	display: none;
+}
+
+.subtle-toc-tab.is-hidden {
+	display: none;
+}
+
+.subtle-toc-tab {
+	flex: 1 1 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	padding: 5px 8px;
+	border-radius: 6px;
+	color: var(--text-muted);
+	font-size: var(--font-ui-small);
+	cursor: pointer;
+	user-select: none;
+	transition: background-color 100ms ease, color 100ms ease;
+}
+
+.subtle-toc-tab:hover {
+	background: var(--background-modifier-hover);
+	color: var(--text-normal);
+}
+
+.subtle-toc-tab.is-active {
+	/* --toc-active-tab-bg is set from settings; unset = follow the theme */
+	background: var(--toc-active-tab-bg, var(--background-modifier-hover));
+	color: var(--text-normal);
+	font-weight: var(--font-semibold, 600);
+}
+
+.subtle-toc-tab-icon {
+	display: inline-flex;
+}
+
+.subtle-toc-tab-icon .subtle-toc-icon {
+	width: 14px;
+	height: 14px;
+}
+
+.subtle-toc-tab-count {
+	min-width: 18px;
+	padding: 1px 6px;
+	border-radius: 999px;
+	background: var(--background-modifier-border);
+	color: var(--text-muted);
+	font-size: var(--font-ui-smaller);
+	font-weight: var(--font-semibold, 600);
+	line-height: 1.4;
+	text-align: center;
+}
+
+.subtle-toc-tab.is-active .subtle-toc-tab-count {
+	background: var(--interactive-accent);
+	color: var(--text-on-accent, #fff);
+}
+
+/* outline list */
+.subtle-toc-list {
+	position: relative;
+	flex: 1 1 auto;
+	min-height: 0;
+	overflow-y: auto;
+	padding: 8px 6px;
+	display: flex;
+	flex-direction: column;
+	gap: 1px;
+}
+
+/* Only the active tab's list is shown (the .is-tab-* class lives on the root).
+   Placed after .subtle-toc-list so the equal-specificity `display: none` wins. */
+.subtle-toc-headings,
+.subtle-toc-tasks {
+	display: none;
+}
+
+.subtle-toc-root.is-tab-headings .subtle-toc-headings,
+.subtle-toc-root.is-tab-tasks .subtle-toc-tasks {
+	display: flex;
+}
+
+.subtle-toc-item {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	padding: 4px 10px 4px 12px;
+	padding-left: calc(12px + var(--toc-indent, 0) * 18px);
+	border-radius: 6px;
+	color: var(--text-muted);
+	font-size: var(--font-ui-small);
+	line-height: 1.35;
+	cursor: pointer;
+	transition: background-color 100ms ease, color 100ms ease;
+}
+
+.subtle-toc-tree-line {
+	content: "";
+	position: absolute;
+	width: 1px;
+	background: repeating-linear-gradient(
+		to bottom,
+		color-mix(in srgb, var(--text-muted) 35%, transparent) 0 4px,
+		transparent 4px 8px
+	);
+	opacity: 1;
+	pointer-events: none;
+	z-index: 0;
+}
+
+.subtle-toc-tree-line.is-hidden {
+	display: none;
+}
+
+.subtle-toc-item:hover,
+.subtle-toc-item.is-peek {
+	background: var(--background-modifier-hover);
+	color: var(--text-normal);
+}
+
+.subtle-toc-item.is-active {
+	color: var(--text-normal);
+	font-weight: var(--font-semibold, 600);
+}
+
+.subtle-toc-item.is-active::before {
+	content: "";
+	position: absolute;
+	left: 3px;
+	top: 4px;
+	bottom: 4px;
+	width: 3px;
+	border-radius: 2px;
+	background: var(--interactive-accent);
+}
+
+.subtle-toc-item-text {
+	flex: 1 1 0;
+	min-width: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	opacity: var(--toc-heading-opacity, 1);
+}
+
+/* "Show multiple lines": wrap the full text instead of cutting it — no tooltip
+   is set on these rows, since nothing is hidden */
+.subtle-toc-root.is-multiline .subtle-toc-item-text {
+	white-space: normal;
+	overflow: visible;
+	text-overflow: clip;
+	overflow-wrap: anywhere;
+}
+
+.subtle-toc-level-1 > .subtle-toc-item-text {
+	font-weight: var(--font-semibold, 600);
+}
+
+/* Level badge (H1-H6) on the right side of heading items */
+.subtle-toc-level-badge {
+	flex: 0 0 auto;
+	margin-left: auto;
+	padding: 0 5px;
+	border-radius: 3px;
+	font-size: var(--font-ui-smaller, 11px);
+	font-weight: var(--font-semibold, 600);
+	line-height: 1.5;
+	color: color-mix(in srgb, var(--badge-color, var(--text-muted)) 65%, var(--text-muted));
+	background: color-mix(in srgb, var(--badge-color, var(--text-muted)) 8%, transparent);
+	user-select: none;
+}
+
+/* ---- task rows (optional checkbox + strike-through on completion) --------- */
+
+.subtle-toc-task-item {
+	display: flex;
+	/* first-line alignment: task text can wrap to several lines */
+	align-items: flex-start;
+	gap: 7px;
+}
+
+.subtle-toc-task-item .subtle-toc-item-text {
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+.subtle-toc-task-check {
+	flex: 0 0 auto;
+	/* nudge onto the first text line */
+	margin-top: 1px;
+	width: 15px;
+	height: 15px;
+	border: 1.5px solid var(--text-faint);
+	border-radius: 4px;
+	cursor: pointer;
+	position: relative;
+	transition: border-color 100ms ease, background-color 100ms ease;
+}
+
+.subtle-toc-task-check:hover {
+	border-color: var(--text-muted);
+}
+
+.subtle-toc-task-item.is-done .subtle-toc-task-check {
+	background: var(--interactive-accent);
+	border-color: var(--interactive-accent);
+}
+
+/* checkmark drawn with a rotated border */
+.subtle-toc-task-item.is-done .subtle-toc-task-check::after {
+	content: "";
+	position: absolute;
+	left: 4.5px;
+	top: 1px;
+	width: 3.5px;
+	height: 8px;
+	border: solid var(--text-on-accent, #fff);
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+}
+
+.subtle-toc-task-item.is-done .subtle-toc-item-text {
+	text-decoration: line-through;
+	color: var(--text-faint);
+}
+
+.subtle-toc-empty-msg {
+	padding: 12px;
+	color: var(--text-faint);
+	font-size: var(--font-ui-small);
+	text-align: center;
+}
+
+.subtle-toc-empty-msg.is-hidden {
+	display: none;
+}
+
+/* ---- toolbar (pin + expand/collapse buttons) ----------------------------- */
+
+.subtle-toc-toolbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 4px 8px 0;
+}
+
+.subtle-toc-toolbar.is-hidden {
+	display: none;
+}
+
+.subtle-toc-toolbar-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 22px;
+	height: 22px;
+	border-radius: 5px;
+	color: var(--text-faint);
+	cursor: pointer;
+	transition: background-color 100ms ease, color 100ms ease;
+	user-select: none;
+}
+
+.subtle-toc-toolbar-btn:hover {
+	background: var(--background-modifier-hover);
+	color: var(--text-normal);
+}
+
+.subtle-toc-toolbar-btn.is-active {
+	color: var(--interactive-accent);
+}
+
+.subtle-toc-toolbar-btn.is-hidden {
+	display: none;
+}
+
+.subtle-toc-toolbar-btn .subtle-toc-icon {
+	width: 14px;
+	height: 14px;
+}
+
+.subtle-toc-search-row {
+	position: relative;
+	display: none;
+	padding: 6px 8px 0;
+}
+
+.subtle-toc-root.is-search-active .subtle-toc-search-row {
+	display: block;
+}
+
+.subtle-toc-search-input {
+	width: 100%;
+	height: 28px;
+	padding: 4px 28px 4px 8px;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 6px;
+	background: var(--background-primary);
+	color: var(--text-normal);
+	font-size: var(--font-ui-small);
+	line-height: 1.4;
+}
+
+.subtle-toc-search-input:focus {
+	border-color: var(--interactive-accent);
+	box-shadow: 0 0 0 1px var(--interactive-accent);
+	outline: none;
+}
+
+.subtle-toc-search-clear-btn {
+	position: absolute;
+	right: 12px;
+	top: 9px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	border-radius: 5px;
+	color: var(--text-faint);
+	cursor: pointer;
+	transition: background-color 100ms ease, color 100ms ease;
+}
+
+.subtle-toc-search-clear-btn:hover {
+	background: var(--background-modifier-hover);
+	color: var(--text-normal);
+}
+
+.subtle-toc-search-clear-btn.is-hidden {
+	display: none;
+}
+
+.subtle-toc-search-clear-btn .subtle-toc-icon {
+	width: 13px;
+	height: 13px;
+}
+
+/* ---- pinned state -------------------------------------------------------- */
+
+/* Keep the popover fully visible when pinned, overriding the normal
+   is-open fade-out that dims the minimap and task badge. */
+.subtle-toc-root.is-pinned .subtle-toc-popover {
+	pointer-events: auto;
+	opacity: 1;
+	transform: translate(0, -50%);
+}
+
+.subtle-toc-root.is-pinned .subtle-toc-minimap {
+	opacity: 0.75;
+	pointer-events: auto;
+}
+
+.subtle-toc-root.is-pinned.is-open .subtle-toc-minimap {
+	opacity: 0.75;
+	pointer-events: auto;
+}
+
+.subtle-toc-root.is-pinned .subtle-toc-task-badge {
+	opacity: 0.75;
+	pointer-events: auto;
+}
+
+.subtle-toc-root.is-pinned.is-open .subtle-toc-task-badge {
+	opacity: 0.75;
+	pointer-events: auto;
+}
+
+/* Visual indicator: accent the pin icon when pinned */
+.subtle-toc-root.is-pinned .subtle-toc-pin-btn {
+	color: var(--interactive-accent);
+}
+
+/* ---- per-item tree collapse --------------------------------------------- */
+
+.subtle-toc-item.is-hidden {
+	display: none;
+}
+
+/* Toggle arrow on each parent heading row */
+.subtle-toc-toggle {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 16px;
+	height: 16px;
+	flex: 0 0 auto;
+	cursor: pointer;
+	border-radius: 3px;
+	transition: background-color 100ms ease;
+}
+
+.subtle-toc-toggle:hover {
+	background: var(--background-modifier-hover);
+}
+
+.subtle-toc-toggle.is-placeholder {
+	visibility: hidden;
+	pointer-events: none;
+}
+
+/* Toggle arrow — drawn on a real span child (not ::after) for reliable clicks */
+.subtle-toc-toggle-arrow {
+	display: block;
+	width: 6.5px;
+	height: 6.5px;
+	border-right: 1.8px solid currentColor;
+	border-bottom: 1.8px solid currentColor;
+	transform: rotate(-45deg);
+	transition: transform 150ms ease;
+}
+
+.subtle-toc-toggle.is-expanded > .subtle-toc-toggle-arrow {
+	transform: rotate(45deg);
+}
+
+/* Toolbar expand-all button: two separate SVGs, swap via display */
+.subtle-toc-expand-all-btn .collapse-icon {
+	display: block;
+}
+
+.subtle-toc-expand-all-btn .expand-icon {
+	display: none;
+}
+
+.subtle-toc-expand-all-btn.is-all-collapsed .collapse-icon {
+	display: none;
+}
+
+.subtle-toc-expand-all-btn.is-all-collapsed .expand-icon {
+	display: block;
+}

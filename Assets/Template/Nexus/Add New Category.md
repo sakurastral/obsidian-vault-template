@@ -1,5 +1,5 @@
 ---
-cover: "[[default-nexus-cover.png]]"
+cover: "[[default-cover.png]]"
 status: "[[Path]]"
 ---
 <%* let title = tp.file.title -%>
