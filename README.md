@@ -1,3 +1,18 @@
+---
+title: README
+cover:
+created: 2026-01-17T22:37:24+08:00
+modified: 2026-10-18T12:41:31+08:00
+aliases:
+description:
+categories:
+status:
+parent:
+related:
+references:
+tags:
+---
+
 This is an Obsidian vault.
 
 ## Get started
@@ -12,7 +27,7 @@ This is an Obsidian vault.
 
 ## Categories
 
-Add your own categories in `Nexus/Categories/Area` and `Nexus/Categories/Others` folders. You can add the categories with no parent in `Nexus/Categories/Area` and the ones with parent in `Nexus/Categories/Others`. 
+Add your own categories in `Nexus/Categories/Area` and `Nexus/Categories/Others` folders. You can add the categories with no parent in `Nexus/Categories/Area` and the ones with parent in `Nexus/Categories/Others`.
 
 ## License
 

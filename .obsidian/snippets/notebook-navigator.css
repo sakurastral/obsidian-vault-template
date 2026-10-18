@@ -1,0 +1,88 @@
+/* Notebook Navigator */
+.notebook-navigator {
+  --nn-theme-divider-border-color: transparent;
+}
+
+/* File Item settings */
+.notebook-navigator .nn-list-pane {
+  --nn-card-gap: 12px;
+  --nn-separator-height: 0px;
+  --nn-theme-file-border-width: 0px;
+}
+
+/* File Item background */
+.notebook-navigator .nn-list-pane .nn-file-content {
+  background-color: var(--background-primary-alt);
+}
+
+/* Hide empty icon slots */
+.notebook-navigator .nn-file-icon-slot:not(:has(.nn-file-icon)) {
+  display: none;
+}
+
+/* Card spacing */
+.notebook-navigator .nn-virtual-file-item > .nn-file:not(.nn-compact) {
+  height: calc(100% - var(--nn-card-gap));
+}
+
+/* Reduce padding to preserve text content */
+.notebook-navigator .nn-virtual-file-item > .nn-file:not(.nn-compact) > .nn-file-content {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+/* Notebook Navigator - Quick Actions */
+.notebook-navigator .nn-list-pane {
+  --nn-theme-quick-actions-bg: color-mix(in srgb, var(--background-primary) 20%, transparent);
+  --nn-theme-quick-actions-border: transparent;
+  --nn-theme-quick-actions-border-radius: 8px;
+  --nn-theme-quick-actions-separator-color: transparent;
+}
+
+/* Glassmorphism */
+.notebook-navigator .nn-quick-actions-panel {
+  border: none;
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  box-shadow: none;
+}
+
+/* Notebook Navigator - Minimal List */
+.notebook-navigator .nn-list-pane {
+  /* File items */
+  --nn-theme-file-name-font-weight: 500;
+  --nn-theme-file-preview-font-weight: 400;
+  --nn-theme-file-preview-color: var(--text-muted);
+
+  /* Background and border */
+  --nn-theme-file-border-width: 0px;
+  --nn-theme-file-border-radius: 6px;
+  --nn-theme-file-selected-bg: var(--background-modifier-hover);
+  --nn-theme-file-selected-inactive-bg: var(--background-modifier-hover);
+
+  /* Group headers */
+  --nn-theme-list-group-header-font-weight: 500;
+  --nn-theme-list-group-header-color: var(--text-muted);
+
+  /* Property pills (if enabled) */
+  --nn-theme-file-pill-border-width: 0px;
+  --nn-theme-file-property-bg: var(--background-secondary);
+  --nn-theme-file-property-color: var(--text-muted);
+}
+
+/* Notebook Navigator - Navigation Separator */
+
+.notebook-navigator .nn-nav-spacer--with-separator::after {
+  left: 12px;
+  right: 12px;
+}
+/* .notebook-navigator {
+  --nn-theme-nav-separator-background: var(--nn-theme-nav-separator-color);
+  --nn-theme-nav-separator-height: 1px;
+  --nn-theme-nav-separator-opacity: 0.3;
+} */
+.notebook-navigator {
+  --nn-theme-nav-separator-background: repeating-linear-gradient(90deg, var(--nn-theme-nav-separator-color) 0 8px, transparent 8px 14px, var(--interactive-accent) 14px 22px, transparent 22px 28px);
+  --nn-theme-nav-separator-height: 2px;
+  --nn-theme-nav-separator-opacity: 0.3;
+}
