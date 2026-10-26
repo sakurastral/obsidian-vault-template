@@ -491,6 +491,25 @@ settings:
         default: var(--march-50-accent)
         format: hsl
         opacity: true
+    - 
+        id: heading-table
+        title: Table
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: march-table-style
+        title: Table Style
+        type: class-select
+        allowEmpty: false
+        default: none
+        options:
+            - 
+                label: Default
+                value: none
+            - 
+                label: Filled
+                value: march-table-style-two
 */
 /* @settings
 
@@ -3004,6 +3023,66 @@ body {
   --table-row-alt-background: var(--background-primary-alt);
 }
 
+.march-table-style-two {
+  --table-header-background: var(--march-bg-accent);
+  --table-row-alt-background: transparent;
+  /* --table-border-width: 0; */
+  --table-header-border-width: 0;
+  --table-column-first-border-width: 0;
+  --table-column-last-border-width: 0;
+  --table-row-last-border-width: 0;
+  /* --table-header-background-hover: var(--background-primary-alt); */
+  --table-row-background-hover: var(--background-primary-alt);
+  --table-row-alt-background-hover: var(--background-primary-alt);
+  --table-add-button-background: var(--text-accent);
+}
+.march-table-style-two .markdown-source-view.mod-cm6 .cm-table-widget .table-col-btn,
+.march-table-style-two .markdown-source-view.mod-cm6 .cm-table-widget .table-row-btn {
+  color: var(--text-on-accent);
+}
+.march-table-style-two .markdown-source-view.mod-cm6 .cm-table-widget .table-col-btn {
+  border-radius: var(--radius-l);
+}
+.march-table-style-two .markdown-source-view.mod-cm6 .cm-table-widget .table-row-btn {
+  border-radius: var(--radius-l);
+}
+.march-table-style-two table tbody {
+  background-color: var(--background-secondary);
+}
+.march-table-style-two .cm-html-embed td,
+.march-table-style-two .markdown-rendered td,
+.march-table-style-two .cm-html-embed th,
+.march-table-style-two .markdown-rendered th {
+  border-width: 0;
+}
+.march-table-style-two table thead tr:first-child th:first-child {
+  border-top-left-radius: var(--radius-l);
+}
+.march-table-style-two table thead tr:first-child th:last-child {
+  border-top-right-radius: var(--radius-l);
+}
+.march-table-style-two table tbody tr:first-child td {
+  border-top-color: transparent;
+}
+.march-table-style-two table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: var(--radius-l);
+}
+.march-table-style-two table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: var(--radius-l);
+}
+.march-table-style-two .cm-html-embed th,
+.march-table-style-two .markdown-rendered th {
+  padding: 0.55rem 0.25rem !important;
+}
+.march-table-style-two .cm-html-embed td,
+.march-table-style-two .markdown-rendered td {
+  padding: 1rem 0.25rem !important;
+}
+.march-table-style-two .cm-html-embed th.table-cell-wrapper,
+.march-table-style-two .markdown-rendered th .table-cell-wrapper {
+  align-content: center;
+}
+
 /* ========================================================================== */
 /*                           Editor - Formatted Text                          */
 /* ========================================================================== */
@@ -3343,9 +3422,13 @@ span[src*="#center"] {
 body {
   --bases-table-column-border-width: 0px;
   --bases-table-row-border-width: 0px;
-  --bases-table-header-background: var(--background-secondary);
+  --bases-table-header-background: var(--march-50-accent);
+  --bases-table-group-background: transparent;
   --bases-table-row-background-hover: var(--background-secondary);
   --bases-embed-radius: var(--radius-l);
+  --bases-embed-border-color: var(--background-primary);
+  --bases-cards-cover-background: transparent;
+  --bases-cards-shadow: none;
 }
 
 :is(.bases-no-toolbar, .bases-embed[alt~=no-toolbar]) .bases-toolbar-item {
@@ -3353,6 +3436,10 @@ body {
 }
 
 :is(.bases-no-toolbar, .bases-embed[alt~=no-toolbar]) .bases-header {
+  display: none;
+}
+
+:is(.bases-no-cards-label, .bases-embed[alt~=no-cards-label]) .bases-cards-label {
   display: none;
 }
 
@@ -3369,8 +3456,13 @@ body {
 .bases-rendered-value {
   overflow-y: hidden;
   overflow-x: scroll;
-  display: table-cell;
-  vertical-align: middle;
+  scrollbar-width: none;
+}
+
+.bases-td .multi-select-container {
+  overflow: scroll;
+  width: 100%;
+  height: 100%;
   scrollbar-width: none;
 }
 
@@ -3378,13 +3470,16 @@ body {
   scrollbar-gutter: auto;
 }
 
-/* https://forum.obsidian.md/t/enable-styling-row-in-base-based-on-its-row-number/108651 */
-.bases-tr:nth-of-type(even) {
+.bases-tbody .bases-tr {
   background: var(--background-primary-alt);
 }
 
 .bases-table .bases-group-heading {
-  background: var(--background-secondary-alt);
+  background: var(--bases-table-header-background);
+}
+
+.bases-table:not(:first-of-type) > .bases-group-heading {
+  margin-top: -10px;
 }
 
 :root {
