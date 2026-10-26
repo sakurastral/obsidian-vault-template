@@ -22,7 +22,7 @@
     "insert-yaml-attributes": {
       "enabled": true,
       "text-to-insert": [
-        "cover:",
+        "banner:",
         "title:",
         "aliases:",
         "categories:",
@@ -49,7 +49,7 @@
       "enabled": true,
       "yaml-key-priority-sort-order": [
         "title:",
-        "cover:",
+        "banner:",
         "created:",
         "modified:",
         "aliases:",

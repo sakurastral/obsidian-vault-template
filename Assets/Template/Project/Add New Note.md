@@ -1,5 +1,5 @@
 ---
-cover: "[[default-cover.png]]"
+banner: "[[default-cover.png]]"
 ---
 
 <%* let title = tp.file.title -%>

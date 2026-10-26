@@ -1,6 +1,6 @@
 ---
 title: Task
-cover:
+banner:
 created: 2025-06-15T00:38:58+08:00
 modified: 2026-09-06T15:23:14+08:00
 aliases:

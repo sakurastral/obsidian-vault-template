@@ -1,6 +1,6 @@
 ---
 title: Vault Management
-cover:
+banner:
 created: 2025-08-24T16:29:30+08:00
 modified: 2026-09-06T15:23:14+08:00
 aliases:

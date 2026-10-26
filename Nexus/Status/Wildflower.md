@@ -1,6 +1,6 @@
 ---
 title: Wildflower
-cover:
+banner:
 created: 2026-04-20T10:11:06+08:00
 modified: 2026-09-06T15:23:14+08:00
 aliases:

@@ -1,7 +1,7 @@
 ---
 categories:
   - "[[Journal]]"
-cover: "[[default-cover.png]]"
+banner: "[[default-cover.png]]"
 ---
 
 <%*

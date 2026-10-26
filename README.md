@@ -1,6 +1,6 @@
 ---
 title: README
-cover:
+banner:
 created: 2026-01-17T22:37:24+08:00
 modified: 2026-10-18T12:41:31+08:00
 aliases:

@@ -1,6 +1,6 @@
 ---
 title: Journal Management
-cover: "[[default-cover.png]]"
+banner: "[[default-cover.png]]"
 created: 2025-12-16T08:38:43+08:00
 modified: 2026-09-06T15:23:14+08:00
 aliases:

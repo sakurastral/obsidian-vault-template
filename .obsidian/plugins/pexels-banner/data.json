@@ -14,7 +14,7 @@
   "xPosition": 50,
   "yPosition": 60,
   "customBannerField": [
-    "cover"
+    "banner"
   ],
   "customXPositionField": [
     "banner-x",

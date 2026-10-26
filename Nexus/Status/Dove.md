@@ -1,6 +1,6 @@
 ---
 title: Dove
-cover:
+banner:
 created: 2026-10-04T14:56:57+08:00
 modified: 2026-10-04T14:57:08+08:00
 aliases:
