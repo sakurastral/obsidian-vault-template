@@ -27,7 +27,7 @@ views:
       - property: sort-order
         direction: ASC
     cardSize: 250
-    image: note.cover
+    image: note.banner
     imageAspectRatio: 0.45
   - type: table
     name: View 2
