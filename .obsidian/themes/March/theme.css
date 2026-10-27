@@ -1698,6 +1698,10 @@ body .workspace:has(.workspace-split.mod-horizontal.mod-sidedock.mod-right-split
   padding-right: 10px;
 }
 
+.workspace-ribbon.mod-primary:before {
+  border-bottom: none;
+}
+
 body.enable-colorful-frame-style-layout {
   --titlebar-background: var(--march-accent);
   --titlebar-background-focused: var(--titlebar-background);
@@ -3429,6 +3433,8 @@ body {
   --bases-embed-border-color: var(--background-primary);
   --bases-cards-cover-background: transparent;
   --bases-cards-shadow: none;
+  --bases-table-header-color: var(--text-accent);
+  --bases-group-heading-property-color: var(--text-accent);
 }
 
 :is(.bases-no-toolbar, .bases-embed[alt~=no-toolbar]) .bases-toolbar-item {

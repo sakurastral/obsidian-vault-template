@@ -22,5 +22,14 @@ filters:
 views:
   - type: list
     name: List
+  - type: calendar-note-month
+    name: View
+    order:
+      - file.name
+      - calendar-event-title
+    startProperty: note.calendar-event-start
+    endProperty: note.calendar-event-end
+    titleProperty: note.calendar-event-title
+    typeProperty: note.calendar-event-type
 
 ```

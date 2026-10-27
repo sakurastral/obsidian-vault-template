@@ -301,15 +301,15 @@
       "canvas:Create new canvas": true,
       "templates:Insert template": true,
       "command-palette:Open command palette": true,
-      "markdown-importer:Open format converter": true,
       "workspaces:Manage workspace layouts": true,
       "calendar-note-view:Open Sidebar Calendar": false,
       "pexels-banner:🚩 Pixel Banner Menu": false,
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "3df60d295b37115c",
+  "active": "651c9aea4bb5d838",
   "lastOpenFiles": [
+    "Atlas/Banner Management.md",
     "Atlas/Home.md",
     "README.md",
     "Atlas/Cover Management.md",
