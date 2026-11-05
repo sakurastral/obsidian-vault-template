@@ -50,7 +50,7 @@
     "editor:toggle-keyboard"
   ],
   "fileSortOrder": "alphabetical",
-  "showInlineTitle": true,
+  "showInlineTitle": false,
   "propertiesInDocument": "hidden",
   "userIgnoreFilters": null,
   "newFileFolderPath": "Inbox"

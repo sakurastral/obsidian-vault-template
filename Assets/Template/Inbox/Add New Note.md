@@ -13,13 +13,13 @@ tp.hooks.on_all_templates_executed(async () => {
     if (!file) return;
 
     await tp.app.fileManager.processFrontMatter(file, (frontmatter) => {
-        const cover = frontmatter.cover;
+        const banner = frontmatter.banner;
 
         if (
-            cover == null ||
-            (typeof cover === "string" && cover.trim() === "")
+            banner == null ||
+            (typeof banner === "string" && banner.trim() === "")
         ) {
-            frontmatter.cover = "[[default-cover.png]]";
+            frontmatter.banner = "[[default-cover.png]]";
         }
     });
 });

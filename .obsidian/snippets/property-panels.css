@@ -1,0 +1,43 @@
+.march-pp-helper-transparent-bg {
+  &.property-panels-panel {
+    background-color: transparent;
+  }
+  button,
+  button:hover {
+    border-radius: 8px;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .property-panels-field-title textarea.property-panels-title-editor {
+    &,
+    &:hover,
+    &:focus,
+    &:focus-visible {
+      background-color: transparent;
+      border-color: transparent;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+}
+
+.march-pp-helper-inline-title-spacing {
+  .property-panels-field-title,
+  .property-panels-title-surface {
+    padding: 0;
+    white-space: normal;
+    letter-spacing: -0.015em;
+  }
+}
+
+.march-pp-helper-inline-title-align {
+  .property-panels-field,
+  .property-panels-field-title,
+  .property-panels-display-control {
+    justify-content: center;
+  }
+  h1,
+  textarea {
+    text-align: center;
+  }
+}

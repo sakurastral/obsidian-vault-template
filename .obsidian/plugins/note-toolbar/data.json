@@ -130,7 +130,7 @@
       "toolbar": "f26041a0-8b84-4654-bb2a-6907ab48ee8e"
     }
   ],
-  "scriptingEnabled": false,
+  "scriptingEnabled": true,
   "showLaunchpad": true,
   "showToolbarIn": {
     "audio": false,
@@ -2700,6 +2700,46 @@
             },
             "viewMode": "all"
           }
+        },
+        {
+          "uuid": "c545ed88-cc62-4c1c-8c12-b6860ca8c960",
+          "icon": "lucide-image",
+          "label": "Cover",
+          "tooltip": "",
+          "hasCommand": false,
+          "inGallery": false,
+          "link": "",
+          "linkAttr": {
+            "commandCheck": false,
+            "commandId": "",
+            "hasVars": false,
+            "type": "javascript"
+          },
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "viewMode": "all"
+          },
+          "scriptConfig": {
+            "pluginFunction": "evaluate",
+            "expression": "\nconst app = ntb.app;\nconst note = app.workspace.getActiveFile();\n\nif (!note || note.extension !== \"md\") {\n  new Notice(\"請先開啟一篇筆記\");\n} else {\n  // 取得目前的 Cover\n  const rawCover = ntb.getProperty(\"cover\");\n  const currentCover = String(rawCover ?? \"\").trim();\n\n  // 取得 Vault 中的圖片\n  const extensions = new Set([\n    \"png\", \"jpg\", \"jpeg\", \"webp\", \"gif\", \"svg\", \"avif\"\n  ]);\n\n  const images = app.vault.getFiles()\n    .filter(file =>\n      extensions.has(file.extension.toLowerCase())\n    );\n\n  // 建立選單\n  const entries = [];\n\n  if (currentCover) {\n    entries.push(\n      {\n        label: \"📋 Copy Current Cover\",\n        value: { type: \"copy\" }\n      },\n      {\n        label: \"🗑️ Remove Cover\",\n        value: { type: \"remove\" }\n      }\n    );\n  }\n\n  // 將圖片加入選單\n  for (const file of images) {\n    entries.push({\n      label: file.path,\n      value: { type: \"image\", file }\n    });\n  }\n\n  // 顯示選單\n  const selected = await ntb.suggester(\n    entries.map(item => item.label),\n    entries.map(item => item.value),\n    {\n      label: currentCover\n        ? `目前的 Cover：\\`${currentCover}\\``\n        : \"目前的 Cover：尚未設定\",\n      placeholder: \"搜尋 Cover 圖片或選擇操作...\",\n      limit: 50,\n      rendermd: false,\n      class: \"march-cover-picker\"\n    }\n  );\n\n  if (selected?.type === \"copy\") {\n    // 複製目前的 Cover\n    await activeWindow.navigator.clipboard.writeText(\n      currentCover\n    );\n\n    new Notice(\"Cover 已複製到剪貼簿\");\n\n  } else if (selected?.type === \"remove\") {\n    // 移除 Cover Property，不刪除圖片\n    await ntb.setProperty(\"cover\", null);\n\n    new Notice(\"Cover 已移除\");\n\n  } else if (selected?.type === \"image\") {\n    // 設定新 Cover\n    const file = selected.file;\n\n    const link = app.metadataCache.fileToLinktext(\n      file,\n      note.path\n    );\n\n    await ntb.setProperty(\"cover\", `[[${link}]]`);\n\n    new Notice(`Cover 已更新：${file.name}`);\n  }\n}\n"
+          }
         }
       ],
       "mobileStyles": [],
@@ -2721,7 +2761,7 @@
           }
         }
       },
-      "updated": "2026-10-14T08:08:00.764Z"
+      "updated": "2026-11-04T06:38:41.552Z"
     },
     {
       "uuid": "d4085830-fd38-41bb-9c62-a90f5d090811",

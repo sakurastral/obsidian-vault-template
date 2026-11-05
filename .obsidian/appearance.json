@@ -4,7 +4,8 @@
   "translucency": false,
   "cssTheme": "March",
   "enabledCssSnippets": [
-    "notebook-navigator"
+    "notebook-navigator",
+    "property-panels"
   ],
   "accentColor": "#45b0a9",
   "nativeMenus": false,

@@ -1,14 +1,23 @@
 {
   "schemaVersion": 2,
   "fieldDefaults": {
-    "multiSelectLayout": "wrap",
+    "multiSelectLayout": "single-line",
     "multiSelectEntry": "button",
     "longText": "wrap",
     "inputStyle": "borderless"
   },
   "panelOrder": {
     "before-properties": [],
-    "after-properties": [],
+    "after-properties": [
+      "5b9a5a84-d765-4212-a7f8-f6c6ffc0e8ba",
+      "240e98e0-06bc-4549-8331-6f8fd7d900c2",
+      "df7d834c-a262-46b9-831d-33c1bd19d96a",
+      "4a9e56e0-caef-4e66-b68f-3d0e32d630ec",
+      "671345ba-ce7d-4bb7-a2c3-acfb3bb7ef27",
+      "fb9fd6f4-d1ec-45f7-8a74-b01748248944",
+      "678a1a9a-71f9-42b0-9d94-1f75e482355b",
+      "621b1cf4-330d-403f-a0a1-04545c0516da"
+    ],
     "before-content": [],
     "after-content": [],
     "before-linked-mentions": [],
@@ -55,8 +64,8 @@
             "editable": true,
             "visible": true,
             "showWhenEmpty": true,
-            "longText": "wrap",
-            "multiSelectLayout": "inherit",
+            "longText": "scroll",
+            "multiSelectLayout": "single-line",
             "multiSelectEntry": "inherit",
             "inputStyle": "inherit",
             "columnSpan": 1,
@@ -98,8 +107,8 @@
             "editable": true,
             "visible": true,
             "showWhenEmpty": true,
-            "longText": "wrap",
-            "multiSelectLayout": "inherit",
+            "longText": "scroll",
+            "multiSelectLayout": "single-line",
             "multiSelectEntry": "inherit",
             "inputStyle": "inherit",
             "columnSpan": 4,
@@ -130,7 +139,7 @@
         "id": "621b1cf4-330d-403f-a0a1-04545c0516da",
         "name": "Connections",
         "enabled": true,
-        "position": "before-linked-mentions",
+        "position": "after-properties",
         "fields": [
           {
             "id": "72596290-bf73-4cc8-8b25-23e0a21f5d40",
@@ -140,8 +149,8 @@
             "editable": true,
             "visible": true,
             "showWhenEmpty": true,
-            "longText": "wrap",
-            "multiSelectLayout": "inherit",
+            "longText": "scroll",
+            "multiSelectLayout": "wrap",
             "multiSelectEntry": "inherit",
             "inputStyle": "inherit",
             "columnSpan": 1,
@@ -165,8 +174,8 @@
             "editable": true,
             "visible": true,
             "showWhenEmpty": true,
-            "longText": "truncate",
-            "multiSelectLayout": "inherit",
+            "longText": "scroll",
+            "multiSelectLayout": "wrap",
             "multiSelectEntry": "inherit",
             "inputStyle": "inherit",
             "columnSpan": 1,
@@ -190,8 +199,8 @@
             "editable": true,
             "visible": true,
             "showWhenEmpty": true,
-            "longText": "truncate",
-            "multiSelectLayout": "inherit",
+            "longText": "scroll",
+            "multiSelectLayout": "wrap",
             "multiSelectEntry": "inherit",
             "inputStyle": "inherit",
             "columnSpan": 1,
@@ -211,10 +220,90 @@
         "showTitle": true,
         "showOnlyEmptyFields": false,
         "collapsible": true,
-        "defaultCollapsed": false,
+        "defaultCollapsed": true,
         "layout": {
           "columns": 3
         }
+      },
+      {
+        "id": "9dbb62b2-2a6b-4f02-9d9f-f6771216684f",
+        "name": "Cover",
+        "enabled": true,
+        "position": "before-content",
+        "fields": [
+          {
+            "id": "baf25f9c-a592-447b-951a-fc69f84d4953",
+            "property": "cover",
+            "type": "image",
+            "label": "cover",
+            "icon": "circle",
+            "labelDisplay": "hidden",
+            "editable": true,
+            "visible": true,
+            "showWhenEmpty": false,
+            "longText": "inherit",
+            "columnSpan": 1,
+            "allowCustom": true,
+            "image": {
+              "fit": "cover",
+              "height": 200
+            }
+          },
+          {
+            "id": "8c754a5f-4502-4af4-a2cf-de434cd6a262",
+            "property": "title",
+            "type": "title",
+            "label": "title",
+            "icon": "circle",
+            "labelDisplay": "hidden",
+            "editable": true,
+            "visible": true,
+            "showWhenEmpty": true,
+            "longText": "inherit",
+            "columnSpan": 1,
+            "allowCustom": true,
+            "title": {
+              "source": "filename",
+              "level": 1
+            },
+            "optionSource": {
+              "type": "folder",
+              "path": "Nexus/Title Prefix",
+              "recursive": true,
+              "value": "basename",
+              "wikilink": false,
+              "sort": true
+            }
+          }
+        ],
+        "showTitle": false,
+        "showOnlyEmptyFields": false,
+        "collapsible": false,
+        "defaultCollapsed": false,
+        "cssClass": "march-pp-helper-transparent-bg march-pp-helper-inline-title-spacing march-pp-helper-inline-title-align",
+        "content": [
+          {
+            "columnSpan": "full",
+            "kind": "group",
+            "id": "71a6ec15-0ec8-4a35-8c94-38e34e9982f7",
+            "name": "Block",
+            "direction": "horizontal",
+            "gap": 20,
+            "align": "stretch",
+            "stackOnNarrow": true,
+            "weights": [],
+            "children": [
+              {
+                "kind": "field",
+                "fieldId": "8c754a5f-4502-4af4-a2cf-de434cd6a262"
+              },
+              {
+                "kind": "field",
+                "fieldId": "baf25f9c-a592-447b-951a-fc69f84d4953"
+              }
+            ]
+          }
+        ]
       }
     ],
     "layout": {
