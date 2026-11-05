@@ -856,6 +856,7 @@
   "suppressLintAllFilesConfirmationModal": false,
   "suppressLintAllFilesInFolderConfirmationModal": false,
   "lintOnFileChange": true,
+  "ignoreFilesOutsideVault": false,
   "displayLintOnFileChangeNotice": false,
   "settingsConvertedToConfigKeyValues": true,
   "textAreaSettingsConvertedToListItemSettings": true,

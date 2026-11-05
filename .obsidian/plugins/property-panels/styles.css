@@ -241,18 +241,6 @@ settings:
     max: 32
     step: 1
     format: px
-  - id: property-panels-field-input-style
-    title: Field input style
-    title.zh-TW: 欄位輸入框樣式
-    description: Use the active theme's controls or remove their border and background.
-    description.zh-TW: 使用目前主題的控制元件樣式，或移除輸入框的邊框與背景。
-    type: class-select
-    default: property-panels-input-theme
-    options:
-      - label: Theme default
-        value: property-panels-input-theme
-      - label: Borderless
-        value: property-panels-input-borderless
   - id: property-panels-input-text-color-choice
     title: Field input text
     title.zh-TW: 欄位輸入文字
@@ -477,18 +465,6 @@ settings:
     type: heading
     level: 2
     collapsed: true
-  - id: property-panels-multiselect-layout
-    title: Multi-select layout
-    title.zh-TW: 多選排列樣式
-    description: Keep chips and search on one line with horizontally scrollable chips.
-    description.zh-TW: 單行模式將標籤與搜尋框放在同一行，標籤超出寬度時可水平捲動。
-    type: class-select
-    default: property-panels-multiselect-wrap
-    options:
-      - label: Wrap (default)
-        value: property-panels-multiselect-wrap
-      - label: Single line
-        value: property-panels-multiselect-nowrap
   - id: property-panels-chip-background-choice
     title: Multi-select chip background
     title.zh-TW: 多選標籤背景
@@ -685,11 +661,11 @@ settings:
   background-color: var(--property-panels-select-background-choice, var(--interactive-normal));
 }
 .property-panels-field select { border-radius: 999px; }
-.property-panels-input-borderless .property-panels-field :is(input[type="text"], input[type="number"], input[type="search"], input[type="date"], input[type="datetime-local"], textarea, select) {
+.property-panels-field.property-panels-field-input-borderless :is(input[type="text"], input[type="number"], input[type="search"], input[type="date"], input[type="datetime-local"], textarea, select) {
   border-color: transparent;
   box-shadow: none;
 }
-.property-panels-input-borderless .property-panels-field :is(input[type="text"], input[type="number"], input[type="search"], input[type="date"], input[type="datetime-local"], textarea, select):focus-visible {
+.property-panels-field.property-panels-field-input-borderless :is(input[type="text"], input[type="number"], input[type="search"], input[type="date"], input[type="datetime-local"], textarea, select):focus-visible {
   outline: 1px solid var(--background-modifier-border-focus);
   outline-offset: 1px;
 }
@@ -790,62 +766,60 @@ settings:
 .property-panels-options [role="option"].is-active { background: var(--background-modifier-hover); color: var(--text-normal); }
 .property-panels-option-status { margin-top: 4px; color: var(--text-muted); font-size: var(--font-ui-smaller); }
 .property-panels-option-status.mod-error { color: var(--text-error); }
-/* Only the chip strip scrolls; suggestions and status messages stay outside it. */
-.property-panels-multiselect-nowrap .property-panels-field-multi-select {
-  overflow: visible;
-}
-.property-panels-multiselect-nowrap .property-panels-field-multi-select .property-panels-multiselect {
+/* Per-field layout; chip text keeps its independent long-value preference. */
+.property-panels-multiselect.is-single-line {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, min(calc(var(--font-text-size) * 5), 50%));
   align-items: center;
-  width: 100%;
-  min-width: 0;
-  overflow: visible;
   gap: calc(var(--font-text-size) / 4);
-}
-.property-panels-multiselect-nowrap .property-panels-field-multi-select .property-panels-chips {
-  flex-wrap: nowrap;
   min-width: 0;
-  overflow-x: auto;
-  overflow-y: hidden;
+}
+.property-panels-multiselect.is-single-line > .property-panels-chips {
+  flex-wrap: nowrap; min-width: 0; overflow-x: auto; overflow-y: hidden;
+  margin: 0; padding: calc(var(--font-text-size) / 4) 0;
+}
+.property-panels-multiselect.is-single-line .property-panels-chip { flex: 0 0 auto; }
+.property-panels-multiselect.is-single-line.has-entry-button { grid-template-columns: minmax(0, 1fr) auto; }
+.property-panels-multiselect.has-entry-button > input[type="search"],
+.property-panels-multiselect .property-panels-option-status,
+.property-panels-multiselect.is-single-line > .property-panels-chips:empty + input { grid-column: 1 / -1; }
+.property-panels-multiselect > .property-panels-chips:empty { display: none; }
+.property-panels-multiselect.is-single-line > .property-panels-options { top: calc(100% + var(--font-text-size) / 4); left: 0; right: 0; width: auto; box-sizing: border-box; }
+.property-panels-add-value { display: inline-flex; align-items: center; justify-content: center; padding: 4px; }
+.property-panels-long-scroll > .property-panels-readonly,
+.property-panels-long-scroll .property-panels-chip-value { overflow-x: auto; white-space: nowrap; min-width: 0; }
+.property-panels-long-scroll .property-panels-value-text { white-space: nowrap; overflow-wrap: normal; word-break: normal; }
+.property-panels-long-scroll > .property-panels-readonly:not(.property-panels-chips) { display: block; }
+.property-panels-panel { container-type: inline-size; }
+.property-panels-group { display: grid; min-width: 0; grid-column: span var(--property-panels-group-column-span, 1); }
+.property-panels-group-horizontal { grid-template-columns: var(--property-panels-group-columns); }
+.property-panels-group-vertical { grid-template-columns: minmax(0, 1fr); }
+.property-panels-group > .property-panels-group { grid-column: auto; }
+.property-panels-group > .property-panels-field { grid-column: auto; }
+@container (max-width: 480px) {
+  .property-panels-group-horizontal.property-panels-group-stack { grid-template-columns: minmax(0, 1fr); }
+}
+.property-panels-title-edit { height: auto; text-align: start; background: transparent; box-shadow: none; }
+.property-panels-heading { margin: 0; color: var(--text-normal); }
+.property-panels-page-card { padding: 0 16px; background: var(--background-secondary); border-radius: var(--radius-l); }
+.property-panels-content-editor { --property-panels-content-indent: 1.5rem; }
+.property-panels-content-editor .property-panels-content-row { padding-inline: 0; }
+.property-panels-content-editor .property-panels-content-group {
   margin: 0;
-  padding: calc(var(--font-text-size) / 4) 0;
-  box-sizing: border-box;
-  gap: calc(var(--font-text-size) / 4);
+  padding: 0;
+  padding-inline-start: var(--property-panels-content-indent);
+  border: none;
+  border-inline-start: 1px solid var(--background-modifier-border);
 }
-.property-panels-multiselect-nowrap .property-panels-field-multi-select .property-panels-chip {
-  flex: 0 0 auto;
-  max-width: none;
-  white-space: nowrap;
-}
-.property-panels-multiselect-nowrap .property-panels-field-multi-select .property-panels-chip-value,
-.property-panels-multiselect-nowrap .property-panels-field-multi-select .property-panels-value-text {
-  flex: 0 0 auto;
-  max-width: none;
-  overflow: visible;
-  white-space: nowrap;
-  overflow-wrap: normal;
-  word-break: normal;
-  text-overflow: clip;
-}
-.property-panels-multiselect-nowrap .property-panels-field-multi-select .property-panels-multiselect > input[type="search"] {
-  width: 100%;
-  min-width: 0;
-  box-sizing: border-box;
-}
-.property-panels-multiselect-nowrap .property-panels-field-multi-select .property-panels-chips:empty {
-  display: none;
-}
-.property-panels-multiselect-nowrap .property-panels-field-multi-select .property-panels-chips:empty + input[type="search"],
-.property-panels-multiselect-nowrap .property-panels-field-multi-select .property-panels-option-status {
-  grid-column: 1 / -1;
-}
-.property-panels-multiselect-nowrap .property-panels-field-multi-select .property-panels-options {
-  top: calc(100% + var(--font-text-size) / 4);
-  left: 0;
-  right: 0;
-  width: auto;
-  box-sizing: border-box;
+.property-panels-content-group-children { padding: 0; border: none; }
+.property-panels-content-group > summary { cursor: pointer; color: var(--text-muted); padding-block: .375rem; list-style-position: inside; }
+.property-panels-content-group-children > .setting-item { padding-inline: 0; }
+.property-panels-content-row .setting-item-control { flex-wrap: wrap; }
+.property-panels-edit-modal { width: min(760px, 95vw); }
+.property-panels-edit-modal .property-panels-editor-grid { display: block; }
+@media (max-width: 600px) {
+  .property-panels-page-card { padding: 0 8px; }
+  .property-panels-content-editor { --property-panels-content-indent: 1rem; }
 }
 .property-panels-readonly { overflow-wrap: anywhere; color: var(--property-panels-value-color-choice, var(--text-normal)); }
 .property-panels-field > label.property-panels-visually-hidden {
@@ -876,8 +850,6 @@ settings:
   vertical-align: middle;
 }
 .property-panels-icon-suggest-preview svg { display: block; width: 100%; height: 100%; }
-.property-panels-settings-json { width: 100%; min-height: 360px; font-family: var(--font-monospace); resize: vertical; }
-.property-panels-rule-test { padding: 10px; background: var(--background-secondary); border-radius: 6px; white-space: pre-wrap; }
 .property-panels-settings { --property-panels-editor-border: var(--background-modifier-border); }
 .property-panels-editor-section { margin: 24px 0; padding-top: 4px; }
 .property-panels-editor-section > .setting-item-heading { margin-bottom: 4px; }
@@ -921,8 +893,6 @@ settings:
 .property-panels-editor-subsection h6 { margin: 2px 0 4px; }
 .property-panels-editor-layout > summary { cursor: pointer; color: var(--text-muted); font-weight: var(--font-medium); }
 .property-panels-editor-empty { padding: 12px; border: 1px dashed var(--property-panels-editor-border); border-radius: 6px; color: var(--text-muted); }
-.property-panels-advanced-json { border-top: 1px solid var(--property-panels-editor-border); padding-top: 8px; }
-.property-panels-advanced-json > summary { padding-left: 0; }
 .property-panels-editor-subsection textarea { width: min(420px, 100%); min-height: 100px; font-family: var(--font-monospace); }
 .property-panels-folder-suggest-name { font-weight: var(--font-medium); }
 .property-panels-folder-suggest-path { display: block; color: var(--text-muted); }
@@ -941,3 +911,66 @@ settings:
   .property-panels-editor-panel > summary,
   .property-panels-editor-rule > summary { align-items: flex-start; flex-direction: column; }
 }
+
+.property-panels-long-scroll .property-panels-heading { white-space: nowrap; overflow-x: auto; }
+.property-panels-long-truncate .property-panels-heading { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.property-panels-grid .property-panels-field.property-panels-label-is-hidden { display: flex; flex-direction: column; }
+/* Keep the active panel's suggestion list above neighboring panel containers. */
+.property-panels-root:focus-within { position: relative; z-index: var(--layer-popover, 100); }
+
+.property-panels-settings .property-panels-custom-setting-definition { display: block; min-width: 0; }
+
+.property-panels-settings .property-panels-navigation-row {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--size-4-2, 8px);
+}
+.property-panels-settings .property-panels-navigation-row > .setting-item-info {
+  flex: none;
+  width: 100%;
+  margin-inline-end: 0;
+}
+.property-panels-settings :is(.property-panels-navigation-row, .property-panels-back-row) > .setting-item-control {
+  flex: none;
+  align-self: flex-start;
+  justify-content: flex-start;
+  margin-inline-start: 0;
+  width: 100%;
+}
+.property-panels-settings .property-panels-back-row > .setting-item-info { display: none; }
+
+/* Image and Title share normal field input colors and per-field border behavior. */
+.property-panels-display-control { min-width: 0; }
+.property-panels-display-control.is-image { display: flex; flex-direction: column; gap: .5rem; }
+.property-panels-image-preview { display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: var(--radius-s); }
+.property-panels-image-preview img { display: block; width: 100%; min-width: 0; }
+.property-panels-image-preview.is-fill { position: relative; flex: 1 1 auto; min-height: 7.5rem; }
+.property-panels-image-preview.is-fill img { position: absolute; inset: 0; }
+.property-panels-image-preview[tabindex]:focus-visible { outline: 2px solid var(--interactive-accent); outline-offset: 2px; }
+.property-panels-suggestion-editor { position: relative; min-width: 0; }
+.property-panels-suggestion-editor > .property-panels-options { top: calc(100% + .25rem); left: 0; box-sizing: border-box; font-size: var(--font-text-size); font-weight: normal; line-height: var(--line-height-normal, 1.5); }
+.property-panels-image-path { display: block; color: var(--text-muted); overflow-wrap: anywhere; }
+.property-panels-field-title .property-panels-display-control.is-title {
+  font-size: var(--property-panels-heading-size);
+  font-weight: var(--property-panels-heading-weight);
+  line-height: var(--property-panels-heading-line-height);
+}
+.property-panels-field-title :is(.property-panels-title-surface, .property-panels-heading, textarea.property-panels-title-editor) {
+  font-size: inherit; font-weight: inherit; line-height: inherit; font-family: inherit;
+}
+.property-panels-field-title .property-panels-title-surface {
+  display: block; width: 100%; min-height: 0; margin: 0;
+  padding: .15em .25em; box-sizing: border-box;
+  border-width: var(--input-border-width, 1px); border-style: solid;
+  white-space: pre-wrap; overflow-wrap: anywhere; letter-spacing: inherit;
+}
+.property-panels-field-title .property-panels-title-surface:not(textarea) { border-color: transparent; }
+.property-panels-field-title .property-panels-heading { padding: 0; border: none; letter-spacing: inherit; }
+.property-panels-field-title textarea.property-panels-title-editor {
+  resize: none; overflow: hidden;
+}
+.property-panels-field-title .property-panels-option-status { font-size: var(--font-ui-small); font-weight: normal; }
+@media (max-width: 600px) { .property-panels-grid > .property-panels-group { grid-column: span 1; } }
+
+.property-panels-field-image > .property-panels-display-control { flex: 1 1 auto; }
