@@ -1,6 +1,6 @@
 ---
 title: Banner Management
-banner: "[[default-cover.png]]"
+banner: "[[default-banner.png]]"
 created: 2026-05-04T15:07:43+08:00
 modified: 2026-10-27T14:51:05+08:00
 aliases:

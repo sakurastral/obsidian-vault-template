@@ -19,7 +19,7 @@ tp.hooks.on_all_templates_executed(async () => {
             banner == null ||
             (typeof banner === "string" && banner.trim() === "")
         ) {
-            frontmatter.banner = "[[default-cover.png]]";
+            frontmatter.banner = "[[default-banner.png]]";
         }
     });
 });
