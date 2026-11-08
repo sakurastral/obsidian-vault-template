@@ -932,7 +932,7 @@
       "languageSpecificSyntaxThemes": {}
     }
   },
-  "ExcludeLangs": "dataview, ad-*, base, meta-bind",
+  "ExcludeLangs": "dataview, ad-*, base, meta-bind, mermaid",
   "SelectedTheme": {
     "baseTheme": "Obsidian",
     "colors": {

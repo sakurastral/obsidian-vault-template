@@ -66,36 +66,22 @@
   "rules": [
     {
       "id": "ad8bd9ab-9f1c-41be-9701-1dce5feab3e8",
-      "conjunction": "and",
+      "conjunction": "or",
       "conditions": [
         {
           "id": "c7c6ec3b-79d0-4290-8329-712a46930f3a",
           "field": "folder",
-          "operator": "is",
+          "operator": "startsWith",
           "value": "Knowledge"
-        }
-      ],
-      "toolbar": "be9d94d7-0cc7-4857-aa58-8822dd0e2163"
-    },
-    {
-      "id": "e47c1152-573a-4867-8f30-75404f1e40de",
-      "conjunction": "and",
-      "conditions": [
+        },
         {
-          "id": "f065bb3f-5305-499c-ba21-b355d5eb51b7",
+          "id": "c1208c09-a0a2-4c09-b4be-1d974f8c43d7",
           "field": "folder",
-          "operator": "is",
+          "operator": "startsWith",
           "value": "Project"
-        }
-      ],
-      "toolbar": "be9d94d7-0cc7-4857-aa58-8822dd0e2163"
-    },
-    {
-      "id": "fcd0f4c1-1ba5-4db7-91a3-ac24a74024de",
-      "conjunction": "and",
-      "conditions": [
+        },
         {
-          "id": "dd844fad-1bca-4cea-b7db-7ba6170d488e",
+          "id": "a2e10986-99f7-41d9-9ab9-2d57d0c47d06",
           "field": "folder",
           "operator": "startsWith",
           "value": "Inbox"
@@ -419,7 +405,7 @@
           }
         },
         {
-          "uuid": "b6dd858e-54b8-45dd-9755-cc65bd2e6b84",
+          "uuid": "e74fdc75-a706-4d27-a5c8-494a36608aa1",
           "icon": "",
           "label": "",
           "tooltip": "",
@@ -455,57 +441,17 @@
           }
         },
         {
-          "uuid": "e27488b2-2fb8-4f26-a39c-02c30e06b9dd",
-          "hasCommand": false,
-          "icon": "line-horizontal",
-          "inGallery": false,
-          "label": "",
-          "link": "",
-          "linkAttr": {
-            "commandCheck": true,
-            "commandId": "editor:insert-horizontal-rule",
-            "focus": "editor",
-            "hasVars": false,
-            "target": "",
-            "type": "command"
-          },
-          "plugin": "",
-          "tooltip": "Insert horizontal rule",
-          "visibility": {
-            "desktop": {
-              "components": [
-                "icon",
-                "label"
-              ]
-            },
-            "mobile": {
-              "components": [
-                "icon",
-                "label"
-              ]
-            },
-            "tablet": {
-              "components": [
-                "icon",
-                "label"
-              ]
-            },
-            "viewMode": "all"
-          }
-        },
-        {
-          "uuid": "eb6f71c8-c652-49cc-9d40-c2111f975b15",
+          "uuid": "b2fab943-d65b-419b-90a3-d404da84308e",
           "hasCommand": false,
           "icon": "check-square",
           "inGallery": false,
           "label": "",
           "link": "",
           "linkAttr": {
-            "commandCheck": true,
+            "commandCheck": false,
             "commandId": "editor:cycle-list-checklist",
             "focus": "editor",
             "hasVars": false,
-            "target": "",
             "type": "command"
           },
           "plugin": "",
@@ -533,22 +479,21 @@
           }
         },
         {
-          "uuid": "a139a082-4b06-4d3f-b6bb-ccc598f1a725",
+          "uuid": "b6a95628-7ff0-440a-bc20-1f857774968c",
           "hasCommand": false,
-          "icon": "table",
+          "icon": "code",
           "inGallery": false,
           "label": "",
           "link": "",
           "linkAttr": {
-            "commandCheck": true,
-            "commandId": "editor:insert-table",
+            "commandCheck": false,
+            "commandId": "editor:toggle-code",
             "focus": "editor",
             "hasVars": false,
-            "target": "",
             "type": "command"
           },
           "plugin": "",
-          "tooltip": "Insert table",
+          "tooltip": "Toggle code",
           "visibility": {
             "desktop": {
               "components": [
@@ -572,22 +517,23 @@
           }
         },
         {
-          "uuid": "f70c07a8-e712-4ec5-a746-e2c7fb715bea",
-          "hasCommand": false,
-          "icon": "code-square",
-          "inGallery": false,
+          "uuid": "eb8dc363-cfe3-4e8a-a6c4-57c44848e47d",
+          "icon": "lucide-clipboard-copy",
           "label": "",
+          "tooltip": "Copy",
+          "hasCommand": false,
+          "inGallery": false,
           "link": "",
           "linkAttr": {
-            "commandCheck": true,
-            "commandId": "editor:insert-codeblock",
-            "focus": "editor",
+            "commandCheck": false,
+            "commandId": "",
             "hasVars": false,
-            "target": "",
-            "type": "command"
+            "type": "javascript"
           },
-          "plugin": "",
-          "tooltip": "Insert code block",
+          "scriptConfig": {
+            "pluginFunction": "evaluate",
+            "expression": "const e = ntb.app.workspace.activeLeaf.view?.editor; try { await activeWindow.navigator.clipboard.writeText(e.getSelection()); e?.focus(); } catch (e) { console.error(e); new Notice('Error: Please check console for details'); }"
+          },
           "visibility": {
             "desktop": {
               "components": [
@@ -611,22 +557,23 @@
           }
         },
         {
-          "uuid": "a3631841-2fa9-4bcd-808a-febd224b65ed",
-          "hasCommand": false,
-          "icon": "quote",
-          "inGallery": false,
+          "uuid": "bb7abf70-81e9-4aeb-a15f-cc5a443920fd",
+          "icon": "lucide-clipboard-paste",
           "label": "",
+          "tooltip": "Paste",
+          "hasCommand": false,
+          "inGallery": false,
           "link": "",
           "linkAttr": {
-            "commandCheck": true,
-            "commandId": "editor:insert-callout",
-            "focus": "editor",
+            "commandCheck": false,
+            "commandId": "",
             "hasVars": false,
-            "target": "",
-            "type": "command"
+            "type": "javascript"
           },
-          "plugin": "",
-          "tooltip": "Insert callout",
+          "scriptConfig": {
+            "pluginFunction": "evaluate",
+            "expression": "const e = ntb.app.workspace.activeLeaf.view?.editor; try { let rs = e.replaceSelection; let text = await activeWindow.navigator.clipboard.readText(); if (text) rs.apply(e, [text]); e?.focus(); } catch (e) { console.error(e); new Notice('Error: Please check console for details'); }"
+          },
           "visibility": {
             "desktop": {
               "components": [
@@ -650,7 +597,7 @@
           }
         },
         {
-          "uuid": "d27d19c5-e83e-4c6a-8ffa-824abf043e5e",
+          "uuid": "b6dd858e-54b8-45dd-9755-cc65bd2e6b84",
           "icon": "",
           "label": "",
           "tooltip": "",
@@ -744,7 +691,7 @@
           }
         }
       },
-      "updated": "2026-08-16T08:25:04.280Z"
+      "updated": "2026-11-08T10:56:16.856Z"
     },
     {
       "uuid": "f9699892-1fbd-4575-bcb3-79a4b54b771d",
@@ -2740,6 +2687,129 @@
             "pluginFunction": "evaluate",
             "expression": "\nconst app = ntb.app;\nconst note = app.workspace.getActiveFile();\n\nif (!note || note.extension !== \"md\") {\n  new Notice(\"請先開啟一篇筆記\");\n} else {\n  // 取得目前的 Cover\n  const rawCover = ntb.getProperty(\"cover\");\n  const currentCover = String(rawCover ?? \"\").trim();\n\n  // 取得 Vault 中的圖片\n  const extensions = new Set([\n    \"png\", \"jpg\", \"jpeg\", \"webp\", \"gif\", \"svg\", \"avif\"\n  ]);\n\n  const images = app.vault.getFiles()\n    .filter(file =>\n      extensions.has(file.extension.toLowerCase())\n    );\n\n  // 建立選單\n  const entries = [];\n\n  if (currentCover) {\n    entries.push(\n      {\n        label: \"📋 Copy Current Cover\",\n        value: { type: \"copy\" }\n      },\n      {\n        label: \"🗑️ Remove Cover\",\n        value: { type: \"remove\" }\n      }\n    );\n  }\n\n  // 將圖片加入選單\n  for (const file of images) {\n    entries.push({\n      label: file.path,\n      value: { type: \"image\", file }\n    });\n  }\n\n  // 顯示選單\n  const selected = await ntb.suggester(\n    entries.map(item => item.label),\n    entries.map(item => item.value),\n    {\n      label: currentCover\n        ? `目前的 Cover：\\`${currentCover}\\``\n        : \"目前的 Cover：尚未設定\",\n      placeholder: \"搜尋 Cover 圖片或選擇操作...\",\n      limit: 50,\n      rendermd: false,\n      class: \"march-cover-picker\"\n    }\n  );\n\n  if (selected?.type === \"copy\") {\n    // 複製目前的 Cover\n    await activeWindow.navigator.clipboard.writeText(\n      currentCover\n    );\n\n    new Notice(\"Cover 已複製到剪貼簿\");\n\n  } else if (selected?.type === \"remove\") {\n    // 移除 Cover Property，不刪除圖片\n    await ntb.setProperty(\"cover\", null);\n\n    new Notice(\"Cover 已移除\");\n\n  } else if (selected?.type === \"image\") {\n    // 設定新 Cover\n    const file = selected.file;\n\n    const link = app.metadataCache.fileToLinktext(\n      file,\n      note.path\n    );\n\n    await ntb.setProperty(\"cover\", `[[${link}]]`);\n\n    new Notice(`Cover 已更新：${file.name}`);\n  }\n}\n"
           }
+        },
+        {
+          "uuid": "d3b2d9fa-fe80-4679-82c0-1d43e074a76a",
+          "icon": "lucide-book",
+          "label": "Parent",
+          "tooltip": "",
+          "hasCommand": false,
+          "inGallery": false,
+          "link": "",
+          "linkAttr": {
+            "commandCheck": false,
+            "commandId": "",
+            "hasVars": false,
+            "type": "javascript",
+            "focus": "none"
+          },
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "viewMode": "all"
+          },
+          "scriptConfig": {
+            "pluginFunction": "evaluate",
+            "expression": "\n/*\n * Note Toolbar — Manage References v2.1\n * 保留 Markdown 連結名稱、避免重複網址、\n * Vault Autocomplete、Heading 分組\n */\n(async () => {\n  const app = ntb.app;\n  const { Modal, Setting, Notice } = ntb.o;\n  const file = app.workspace.getActiveFile();\n\n  const SCAN_MODE = \"auto\"; // \"auto\" | \"all\"\n  const PROPERTY = \"parent\";\n  const MAX_SUGGESTIONS = 8;\n\n  if (!file || file.extension !== \"md\") {\n    new Notice(\"請先開啟 Markdown 筆記\");\n    return;\n  }\n\n  // ===== 連結識別 =====\n\n  const isMarkdownUrl = (value) =>\n    /^\\[[^\\]\\n]+\\]\\(https?:\\/\\/[^\\s)]+\\)$/.test(value);\n\n  // 裸網址與 Markdown 連結使用相同的識別 Key\n  const identity = (value) => {\n    const md = value.match(\n      /^\\[[^\\]\\n]+\\]\\((https?:\\/\\/[^\\s)]+)\\)$/\n    );\n    if (md) return `url:${md[1]}`;\n\n    if (/^https?:\\/\\/\\S+$/.test(value)) {\n      return `url:${value}`;\n    }\n\n    const wiki = value.match(/^\\[\\[([^\\]\\n]+)\\]\\]$/);\n    if (wiki) {\n      return `wiki:${wiki[1].split(\"|\")[0].trim()}`;\n    }\n\n    return `text:${value}`;\n  };\n\n  const isRefHeading = (title) => {\n    const name = title\n      .replace(/^\\s*\\d+\\s*[｜|.、:：-]\\s*/, \"\")\n      .replace(/\\s+#+\\s*$/, \"\")\n      .trim()\n      .toLowerCase();\n\n    return /^(參考資料|參考文獻|參考文件|參考連結|資料來源|來源與參考|引用資料|延伸閱讀|相關連結|references?|sources?|bibliography|further reading)$/.test(name);\n  };\n\n  // ===== 掃描筆記 =====\n\n  const markdown = await app.vault.cachedRead(file);\n  const body = markdown.replace(\n    /^---[ \\t]*\\r?\\n[\\s\\S]*?\\r?\\n---[ \\t]*(?:\\r?\\n|$)/,\n    \"\"\n  );\n  const lines = body.split(/\\r?\\n/);\n\n  const hasRefHeading = lines.some((line) => {\n    const h = line.match(/^\\s{0,3}(#{1,6})\\s+(.+)$/);\n    return h && isRefHeading(h[2]);\n  });\n\n  const referenceOnly =\n    SCAN_MODE === \"auto\" && hasRefHeading;\n\n  const groups = new Map();\n  const candidates = new Map();\n\n  const addCandidate = (\n    value, label, heading, type, inReferences\n  ) => {\n    value = value.trim();\n    if (!value) return;\n\n    const key = identity(value);\n    const old = candidates.get(key);\n\n    if (old) {\n      // 相同 URL 優先保留 [名稱](URL)\n      if (\n        isMarkdownUrl(value) &&\n        !isMarkdownUrl(old.value)\n      ) {\n        old.value = value;\n        old.label = label;\n      }\n\n      old.inReferences ||= inReferences;\n      return;\n    }\n\n    const item = {\n      key, value, label, heading, type, inReferences\n    };\n\n    candidates.set(key, item);\n\n    if (!groups.has(heading)) {\n      groups.set(heading, []);\n    }\n\n    groups.get(heading).push(item);\n  };\n\n  let heading = \"未分類\";\n  let refLevel = null;\n  let fenceChar = null;\n  let fenceLength = 0;\n\n  const markdownUrlRegex =\n    /(!?)\\[([^\\]\\n]+)\\]\\((https?:\\/\\/[^\\s)]+)\\)/g;\n\n  for (const raw of lines) {\n    const fence = raw.match(\n      /^\\s{0,3}(`{3,}|~{3,})/\n    );\n\n    if (fence) {\n      const token = fence[1];\n\n      if (!fenceChar) {\n        fenceChar = token[0];\n        fenceLength = token.length;\n      } else if (\n        token[0] === fenceChar &&\n        token.length >= fenceLength\n      ) {\n        fenceChar = null;\n        fenceLength = 0;\n      }\n\n      continue;\n    }\n\n    if (fenceChar) continue;\n\n    const h = raw.match(\n      /^\\s{0,3}(#{1,6})\\s+(.+?)\\s*#*\\s*$/\n    );\n\n    if (h) {\n      const level = h[1].length;\n      heading = h[2].trim();\n\n      if (isRefHeading(heading)) {\n        refLevel = level;\n      } else if (\n        refLevel !== null &&\n        level <= refLevel\n      ) {\n        refLevel = null;\n      }\n\n      continue;\n    }\n\n    if (referenceOnly && refLevel === null) {\n      continue;\n    }\n\n    const line = raw.replace(/`+[^`\\n]*`+/g, \"\");\n\n    const groupName =\n      /^\\s*\\[\\^[^\\]]+\\]:/.test(line)\n        ? \"註腳來源\"\n        : heading;\n\n    const inReferences = refLevel !== null;\n\n    // ===== Wikilink =====\n\n    for (const m of line.matchAll(\n      /(!?)\\[\\[([^\\]\\n]+)\\]\\]/g\n    )) {\n      if (m[1]) continue;\n\n      const [target, alias] = m[2].split(\n        /\\|(.+)/, 2\n      );\n\n      if (target.trim()) {\n        addCandidate(\n          `[[${target.trim()}]]`,\n          alias?.trim() || target.trim(),\n          groupName,\n          \"wiki\",\n          inReferences\n        );\n      }\n    }\n\n    // ===== Markdown URL =====\n    // 保留完整 [名稱](URL)\n\n    for (const m of line.matchAll(markdownUrlRegex)) {\n      if (m[1]) continue;\n\n      addCandidate(\n        m[0],\n        m[2],\n        groupName,\n        \"url\",\n        inReferences\n      );\n    }\n\n    // ===== 純文字 URL =====\n    // 排除已擷取的 Markdown 連結\n\n    const plainLine = line.replace(\n      markdownUrlRegex, \" \"\n    );\n\n    for (const m of plainLine.matchAll(\n      /https?:\\/\\/[^\\s<>\\])]+/g\n    )) {\n      const url = m[0].replace(\n        /[.,;!?，。；]+$/, \"\"\n      );\n\n      addCandidate(\n        url,\n        url,\n        groupName,\n        \"url\",\n        inReferences\n      );\n    }\n  }\n\n  // ===== 既有 references =====\n\n  const fm = app.metadataCache\n    .getFileCache(file)?.frontmatter;\n\n  const rawReferences = fm?.[PROPERTY];\n\n  const existing = (\n    Array.isArray(rawReferences)\n      ? rawReferences\n      : rawReferences\n        ? [rawReferences]\n        : []\n  )\n    .map(String)\n    .map((v) => v.trim())\n    .filter(Boolean);\n\n  for (const value of existing) {\n    const key = identity(value);\n\n    if (!candidates.has(key)) {\n      addCandidate(\n        value,\n        value,\n        \"原有 references（本文未找到）\",\n        \"existing\",\n        false\n      );\n    } else if (\n      isMarkdownUrl(value) &&\n      !isMarkdownUrl(candidates.get(key).value)\n    ) {\n      const item = candidates.get(key);\n      item.value = value;\n      item.label = value.match(\n        /^\\[([^\\]]+)\\]/\n      )[1];\n    }\n  }\n\n  const selected = new Set(existing.map(identity));\n  const manual = new Map();\n\n  const allFiles = app.vault\n    .getFiles()\n    .filter((f) => f.path !== file.path);\n\n  const toWiki = (target) =>\n    `[[${app.metadataCache.fileToLinktext(\n      target, file.path, true\n    )}]]`;\n\n  // ===== Modal =====\n\n  const modal = new Modal(app);\n  modal.setTitle(\"管理 references\");\n\n  modal.contentEl.createEl(\"p\", {\n    text: referenceOnly\n      ? \"已掃描參考資料章節；也可以手動加入網址或 Vault 檔案。\"\n      : \"已掃描全文；也可以手動加入網址或 Vault 檔案。\"\n  });\n\n  const tools = modal.contentEl.createDiv({\n    cls: \"modal-button-container\"\n  });\n\n  const recommend = tools.createEl(\"button\", {\n    text: \"勾選建議來源\"\n  });\n\n  const clear = tools.createEl(\"button\", {\n    text: \"取消全部勾選\"\n  });\n\n  const counter = modal.contentEl.createEl(\"p\");\n  counter.style.color = \"var(--text-muted)\";\n\n  const toggleMap = new Map();\n\n  const updateCount = () => {\n    counter.setText(\n      `已勾選 ${selected.size + manual.size} 項`\n    );\n  };\n\n  const refresh = () => {\n    for (const [key, toggle] of toggleMap) {\n      toggle.setValue(selected.has(key));\n    }\n    updateCount();\n  };\n\n  recommend.onclick = () => {\n    for (const item of candidates.values()) {\n      const attachment =\n        /\\.(pdf|png|jpe?g|gif|webp|svg|zip)(?:[#?\\]]|$)/i\n          .test(item.value);\n\n      const tool =\n        /(工具|檢測|下載|tools?)/i\n          .test(item.heading);\n\n      const sourceNote =\n        item.type === \"wiki\" &&\n        /^\\[\\[(CLIP｜|NOTE｜)/.test(item.value);\n\n      if (\n        item.inReferences &&\n        !attachment &&\n        !tool &&\n        (item.type === \"url\" || sourceNote)\n      ) {\n        selected.add(item.key);\n      }\n    }\n\n    refresh();\n  };\n\n  // ===== 掃描來源清單 =====\n\n  const foundList = modal.contentEl.createDiv();\n\n  Object.assign(foundList.style, {\n    maxHeight: \"36vh\",\n    overflowY: \"auto\",\n    paddingRight: \"6px\"\n  });\n\n  for (const [name, items] of groups) {\n    // Heading 獨立一行\n    foundList.createEl(\"h4\", { text: name });\n\n    for (const item of items) {\n      new Setting(foundList)\n        .setName(item.label)\n        .setDesc(item.value)\n        .addToggle((toggle) => {\n          toggleMap.set(item.key, toggle);\n          toggle.setValue(\n            selected.has(item.key)\n          );\n\n          toggle.onChange((on) => {\n            if (on) {\n              selected.add(item.key);\n            } else {\n              selected.delete(item.key);\n            }\n            updateCount();\n          });\n        });\n    }\n  }\n\n  if (!candidates.size) {\n    foundList.createEl(\"p\", {\n      text: \"沒有掃描到連結，可以手動新增。\"\n    });\n  }\n\n  // ===== 手動新增 =====\n\n  const section = modal.contentEl.createDiv();\n  section.style.marginTop = \"14px\";\n\n  const header = section.createDiv();\n\n  Object.assign(header.style, {\n    display: \"flex\",\n    alignItems: \"center\",\n    justifyContent: \"space-between\"\n  });\n\n  header.createEl(\"h4\", { text: \"手動新增\" });\n\n  const plus = header.createEl(\"button\", {\n    text: \"+\"\n  });\n\n  plus.title = \"搜尋 Vault 檔案或貼上網址\";\n\n  const manualList = section.createDiv();\n  const inputArea = section.createDiv();\n\n  Object.assign(inputArea.style, {\n    position: \"relative\",\n    marginTop: \"8px\"\n  });\n\n  const inputRow = inputArea.createDiv();\n\n  Object.assign(inputRow.style, {\n    display: \"flex\",\n    alignItems: \"center\",\n    gap: \"8px\"\n  });\n\n  const input = inputRow.createEl(\"input\");\n  input.type = \"text\";\n  input.placeholder =\n    \"搜尋 Vault 檔案或貼上 [名稱](網址)…\";\n\n  Object.assign(input.style, {\n    flex: \"1\",\n    minWidth: \"0\"\n  });\n\n  const addButton = inputRow.createEl(\"button\", {\n    text: \"加入\"\n  });\n\n  const dropdown = inputArea.createDiv();\n\n  Object.assign(dropdown.style, {\n    display: \"none\",\n    position: \"absolute\",\n    bottom: \"100%\",\n    left: \"0\",\n    right: \"0\",\n    zIndex: \"30\",\n    maxHeight: \"240px\",\n    overflowY: \"auto\",\n    border: \"1px solid var(--background-modifier-border)\",\n    background: \"var(--background-primary)\",\n    borderRadius: \"8px\",\n    boxShadow: \"var(--shadow-s)\"\n  });\n\n  function renderManual() {\n    manualList.empty();\n\n    for (const [key, value] of manual) {\n      const row = manualList.createDiv();\n\n      Object.assign(row.style, {\n        display: \"flex\",\n        alignItems: \"center\",\n        justifyContent: \"space-between\",\n        gap: \"12px\",\n        padding: \"10px 2px\",\n        borderBottom:\n          \"1px solid var(--background-modifier-border)\"\n      });\n\n      const label = row.createDiv();\n\n      Object.assign(label.style, {\n        minWidth: \"0\",\n        overflowWrap: \"anywhere\"\n      });\n\n      const display = isMarkdownUrl(value)\n        ? value.match(/^\\[([^\\]]+)\\]/)[1]\n        : value.startsWith(\"[[\")\n          ? value.slice(2, -2)\n              .split(\"|\")[0]\n              .split(\"/\").pop()\n          : value;\n\n      label.createEl(\"div\", { text: display });\n\n      if (display !== value) {\n        const detail = label.createEl(\"small\", {\n          text: value\n        });\n        detail.style.color = \"var(--text-muted)\";\n      }\n\n      const remove = row.createEl(\"button\", {\n        text: \"×\"\n      });\n\n      remove.title = \"移除此項\";\n\n      remove.onclick = () => {\n        manual.delete(key);\n        renderManual();\n        updateCount();\n      };\n    }\n  }\n\n  clear.onclick = () => {\n    selected.clear();\n    manual.clear();\n    renderManual();\n    refresh();\n  };\n\n  // ===== Vault Autocomplete =====\n\n  const getMatches = (text) => {\n    const q = text\n      .toLowerCase()\n      .replace(/^\\[\\[/, \"\")\n      .replace(/\\]\\]$/, \"\")\n      .trim();\n\n    if (\n      !q ||\n      /^https?:\\/\\//.test(q) ||\n      isMarkdownUrl(text)\n    ) {\n      return [];\n    }\n\n    return allFiles\n      .map((f) => {\n        const base = f.basename.toLowerCase();\n        const name = f.name.toLowerCase();\n        const path = f.path.toLowerCase();\n\n        const score =\n          base === q || name === q || path === q\n            ? 0\n            : base.startsWith(q) ? 1\n            : name.startsWith(q) ? 2\n            : base.includes(q) ? 3\n            : path.includes(q) ? 4\n            : 99;\n\n        return { f, score };\n      })\n      .filter((x) => x.score < 99)\n      .sort(\n        (a, b) =>\n          a.score - b.score ||\n          a.f.path.localeCompare(b.f.path)\n      )\n      .slice(0, MAX_SUGGESTIONS)\n      .map((x) => x.f);\n  };\n\n  let matches = [];\n  let active = 0;\n\n  const hideDropdown = () => {\n    dropdown.style.display = \"none\";\n  };\n\n  const addValue = (text) => {\n    const value = text.trim();\n    if (!value) return;\n\n    const key = identity(value);\n\n    if (candidates.has(key)) {\n      const item = candidates.get(key);\n\n      if (\n        isMarkdownUrl(value) &&\n        !isMarkdownUrl(item.value)\n      ) {\n        item.value = value;\n      }\n\n      selected.add(key);\n      refresh();\n\n      new Notice(\n        \"來源已在上方清單中，已勾選\"\n      );\n    } else if (!manual.has(key)) {\n      manual.set(key, value);\n      renderManual();\n      updateCount();\n    } else {\n      // 相同 URL 可改用新的 Markdown 名稱\n      if (isMarkdownUrl(value)) {\n        manual.set(key, value);\n      }\n\n      renderManual();\n    }\n\n    input.value = \"\";\n    matches = [];\n    hideDropdown();\n    input.focus();\n  };\n\n  const renderSuggestions = () => {\n    dropdown.empty();\n\n    if (!matches.length) {\n      hideDropdown();\n      return;\n    }\n\n    dropdown.style.display = \"block\";\n\n    matches.forEach((target, i) => {\n      const option = dropdown.createEl(\"button\");\n      option.type = \"button\";\n\n      Object.assign(option.style, {\n        display: \"block\",\n        width: \"100%\",\n        textAlign: \"left\",\n        height: \"auto\",\n        padding: \"8px 12px\",\n        whiteSpace: \"normal\",\n        border: \"none\",\n        borderRadius: \"0\",\n        boxShadow: \"none\",\n        background:\n          i === active\n            ? \"var(--background-modifier-hover)\"\n            : \"transparent\"\n      });\n\n      option.createEl(\"div\", {\n        text: target.name\n      });\n\n      const path = option.createEl(\"small\", {\n        text: target.path\n      });\n\n      path.style.color = \"var(--text-muted)\";\n\n      option.addEventListener(\"mouseenter\", () => {\n        active = i;\n\n        for (const [index, element] of\n          [...dropdown.children].entries()) {\n          element.style.background =\n            index === active\n              ? \"var(--background-modifier-hover)\"\n              : \"transparent\";\n        }\n      });\n\n      option.addEventListener(\"mousedown\", (event) => {\n        event.preventDefault();\n        addValue(toWiki(target));\n      });\n    });\n  };\n\n  const updateSuggestions = () => {\n    matches = getMatches(input.value);\n    active = 0;\n    renderSuggestions();\n  };\n\n  input.addEventListener(\"input\", updateSuggestions);\n  input.addEventListener(\"blur\", hideDropdown);\n\n  plus.onclick = () => {\n    input.focus();\n    updateSuggestions();\n  };\n\n  // ===== 輸入提交 =====\n\n  const submitInput = () => {\n    const text = input.value.trim();\n    if (!text) return;\n\n    // 保留完整 Markdown 連結\n    if (\n      isMarkdownUrl(text) ||\n      /^https?:\\/\\/\\S+$/.test(text) ||\n      /^\\[\\[[^\\]\\n]+\\]\\]$/.test(text)\n    ) {\n      addValue(text);\n    } else if (matches.length) {\n      addValue(toWiki(matches[active]));\n    } else {\n      new Notice(\n        \"請選擇 Vault 檔案，或輸入 URL / [名稱](URL) / [[連結]]\"\n      );\n    }\n  };\n\n  addButton.onclick = submitInput;\n\n  input.addEventListener(\"keydown\", (event) => {\n    if (\n      event.key === \"ArrowDown\" &&\n      matches.length\n    ) {\n      event.preventDefault();\n      active = (active + 1) % matches.length;\n      renderSuggestions();\n    } else if (\n      event.key === \"ArrowUp\" &&\n      matches.length\n    ) {\n      event.preventDefault();\n      active =\n        (active + matches.length - 1) %\n        matches.length;\n      renderSuggestions();\n    } else if (event.key === \"Enter\") {\n      event.preventDefault();\n      submitInput();\n    } else if (\n      event.key === \"Escape\" &&\n      dropdown.style.display !== \"none\"\n    ) {\n      event.preventDefault();\n      event.stopPropagation();\n      matches = [];\n      hideDropdown();\n    }\n  });\n\n  // ===== 儲存 =====\n\n  const footer = modal.contentEl.createDiv({\n    cls: \"modal-button-container\"\n  });\n\n  footer.createEl(\"button\", {\n    text: \"取消\"\n  }).onclick = () => modal.close();\n\n  const save = footer.createEl(\"button\", {\n    text: \"更新 references\",\n    cls: \"mod-cta\"\n  });\n\n  save.onclick = async () => {\n    save.disabled = true;\n\n    try {\n      const values = [\n        ...[...selected]\n          .map((key) => candidates.get(key)?.value)\n          .filter(Boolean),\n        ...manual.values()\n      ];\n\n      await app.fileManager.processFrontMatter(\n        file,\n        (frontmatter) => {\n          frontmatter[PROPERTY] = values;\n        }\n      );\n\n      modal.close();\n\n      new Notice(\n        `references 已更新（${values.length} 筆）`\n      );\n    } catch (error) {\n      console.error(\"Manage References\", error);\n      new Notice(\"更新失敗，請查看開發者主控台\");\n      save.disabled = false;\n    }\n  };\n\n  renderManual();\n  updateCount();\n  modal.open();\n})();\n"
+          }
+        },
+        {
+          "uuid": "c4fbb921-4935-4e34-8aa6-02d07bc81f30",
+          "icon": "lucide-book",
+          "label": "Related",
+          "tooltip": "",
+          "hasCommand": false,
+          "inGallery": false,
+          "link": "",
+          "linkAttr": {
+            "commandCheck": false,
+            "commandId": "",
+            "hasVars": false,
+            "type": "javascript",
+            "focus": "none"
+          },
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "viewMode": "all"
+          },
+          "scriptConfig": {
+            "pluginFunction": "evaluate",
+            "expression": "\n/*\n * Note Toolbar — Manage References v2.1\n * 保留 Markdown 連結名稱、避免重複網址、\n * Vault Autocomplete、Heading 分組\n */\n(async () => {\n  const app = ntb.app;\n  const { Modal, Setting, Notice } = ntb.o;\n  const file = app.workspace.getActiveFile();\n\n  const SCAN_MODE = \"auto\"; // \"auto\" | \"all\"\n  const PROPERTY = \"related\";\n  const MAX_SUGGESTIONS = 8;\n\n  if (!file || file.extension !== \"md\") {\n    new Notice(\"請先開啟 Markdown 筆記\");\n    return;\n  }\n\n  // ===== 連結識別 =====\n\n  const isMarkdownUrl = (value) =>\n    /^\\[[^\\]\\n]+\\]\\(https?:\\/\\/[^\\s)]+\\)$/.test(value);\n\n  // 裸網址與 Markdown 連結使用相同的識別 Key\n  const identity = (value) => {\n    const md = value.match(\n      /^\\[[^\\]\\n]+\\]\\((https?:\\/\\/[^\\s)]+)\\)$/\n    );\n    if (md) return `url:${md[1]}`;\n\n    if (/^https?:\\/\\/\\S+$/.test(value)) {\n      return `url:${value}`;\n    }\n\n    const wiki = value.match(/^\\[\\[([^\\]\\n]+)\\]\\]$/);\n    if (wiki) {\n      return `wiki:${wiki[1].split(\"|\")[0].trim()}`;\n    }\n\n    return `text:${value}`;\n  };\n\n  const isRefHeading = (title) => {\n    const name = title\n      .replace(/^\\s*\\d+\\s*[｜|.、:：-]\\s*/, \"\")\n      .replace(/\\s+#+\\s*$/, \"\")\n      .trim()\n      .toLowerCase();\n\n    return /^(參考資料|參考文獻|參考文件|參考連結|資料來源|來源與參考|引用資料|延伸閱讀|相關連結|references?|sources?|bibliography|further reading)$/.test(name);\n  };\n\n  // ===== 掃描筆記 =====\n\n  const markdown = await app.vault.cachedRead(file);\n  const body = markdown.replace(\n    /^---[ \\t]*\\r?\\n[\\s\\S]*?\\r?\\n---[ \\t]*(?:\\r?\\n|$)/,\n    \"\"\n  );\n  const lines = body.split(/\\r?\\n/);\n\n  const hasRefHeading = lines.some((line) => {\n    const h = line.match(/^\\s{0,3}(#{1,6})\\s+(.+)$/);\n    return h && isRefHeading(h[2]);\n  });\n\n  const referenceOnly =\n    SCAN_MODE === \"auto\" && hasRefHeading;\n\n  const groups = new Map();\n  const candidates = new Map();\n\n  const addCandidate = (\n    value, label, heading, type, inReferences\n  ) => {\n    value = value.trim();\n    if (!value) return;\n\n    const key = identity(value);\n    const old = candidates.get(key);\n\n    if (old) {\n      // 相同 URL 優先保留 [名稱](URL)\n      if (\n        isMarkdownUrl(value) &&\n        !isMarkdownUrl(old.value)\n      ) {\n        old.value = value;\n        old.label = label;\n      }\n\n      old.inReferences ||= inReferences;\n      return;\n    }\n\n    const item = {\n      key, value, label, heading, type, inReferences\n    };\n\n    candidates.set(key, item);\n\n    if (!groups.has(heading)) {\n      groups.set(heading, []);\n    }\n\n    groups.get(heading).push(item);\n  };\n\n  let heading = \"未分類\";\n  let refLevel = null;\n  let fenceChar = null;\n  let fenceLength = 0;\n\n  const markdownUrlRegex =\n    /(!?)\\[([^\\]\\n]+)\\]\\((https?:\\/\\/[^\\s)]+)\\)/g;\n\n  for (const raw of lines) {\n    const fence = raw.match(\n      /^\\s{0,3}(`{3,}|~{3,})/\n    );\n\n    if (fence) {\n      const token = fence[1];\n\n      if (!fenceChar) {\n        fenceChar = token[0];\n        fenceLength = token.length;\n      } else if (\n        token[0] === fenceChar &&\n        token.length >= fenceLength\n      ) {\n        fenceChar = null;\n        fenceLength = 0;\n      }\n\n      continue;\n    }\n\n    if (fenceChar) continue;\n\n    const h = raw.match(\n      /^\\s{0,3}(#{1,6})\\s+(.+?)\\s*#*\\s*$/\n    );\n\n    if (h) {\n      const level = h[1].length;\n      heading = h[2].trim();\n\n      if (isRefHeading(heading)) {\n        refLevel = level;\n      } else if (\n        refLevel !== null &&\n        level <= refLevel\n      ) {\n        refLevel = null;\n      }\n\n      continue;\n    }\n\n    if (referenceOnly && refLevel === null) {\n      continue;\n    }\n\n    const line = raw.replace(/`+[^`\\n]*`+/g, \"\");\n\n    const groupName =\n      /^\\s*\\[\\^[^\\]]+\\]:/.test(line)\n        ? \"註腳來源\"\n        : heading;\n\n    const inReferences = refLevel !== null;\n\n    // ===== Wikilink =====\n\n    for (const m of line.matchAll(\n      /(!?)\\[\\[([^\\]\\n]+)\\]\\]/g\n    )) {\n      if (m[1]) continue;\n\n      const [target, alias] = m[2].split(\n        /\\|(.+)/, 2\n      );\n\n      if (target.trim()) {\n        addCandidate(\n          `[[${target.trim()}]]`,\n          alias?.trim() || target.trim(),\n          groupName,\n          \"wiki\",\n          inReferences\n        );\n      }\n    }\n\n    // ===== Markdown URL =====\n    // 保留完整 [名稱](URL)\n\n    for (const m of line.matchAll(markdownUrlRegex)) {\n      if (m[1]) continue;\n\n      addCandidate(\n        m[0],\n        m[2],\n        groupName,\n        \"url\",\n        inReferences\n      );\n    }\n\n    // ===== 純文字 URL =====\n    // 排除已擷取的 Markdown 連結\n\n    const plainLine = line.replace(\n      markdownUrlRegex, \" \"\n    );\n\n    for (const m of plainLine.matchAll(\n      /https?:\\/\\/[^\\s<>\\])]+/g\n    )) {\n      const url = m[0].replace(\n        /[.,;!?，。；]+$/, \"\"\n      );\n\n      addCandidate(\n        url,\n        url,\n        groupName,\n        \"url\",\n        inReferences\n      );\n    }\n  }\n\n  // ===== 既有 references =====\n\n  const fm = app.metadataCache\n    .getFileCache(file)?.frontmatter;\n\n  const rawReferences = fm?.[PROPERTY];\n\n  const existing = (\n    Array.isArray(rawReferences)\n      ? rawReferences\n      : rawReferences\n        ? [rawReferences]\n        : []\n  )\n    .map(String)\n    .map((v) => v.trim())\n    .filter(Boolean);\n\n  for (const value of existing) {\n    const key = identity(value);\n\n    if (!candidates.has(key)) {\n      addCandidate(\n        value,\n        value,\n        \"原有 references（本文未找到）\",\n        \"existing\",\n        false\n      );\n    } else if (\n      isMarkdownUrl(value) &&\n      !isMarkdownUrl(candidates.get(key).value)\n    ) {\n      const item = candidates.get(key);\n      item.value = value;\n      item.label = value.match(\n        /^\\[([^\\]]+)\\]/\n      )[1];\n    }\n  }\n\n  const selected = new Set(existing.map(identity));\n  const manual = new Map();\n\n  const allFiles = app.vault\n    .getFiles()\n    .filter((f) => f.path !== file.path);\n\n  const toWiki = (target) =>\n    `[[${app.metadataCache.fileToLinktext(\n      target, file.path, true\n    )}]]`;\n\n  // ===== Modal =====\n\n  const modal = new Modal(app);\n  modal.setTitle(\"管理 references\");\n\n  modal.contentEl.createEl(\"p\", {\n    text: referenceOnly\n      ? \"已掃描參考資料章節；也可以手動加入網址或 Vault 檔案。\"\n      : \"已掃描全文；也可以手動加入網址或 Vault 檔案。\"\n  });\n\n  const tools = modal.contentEl.createDiv({\n    cls: \"modal-button-container\"\n  });\n\n  const recommend = tools.createEl(\"button\", {\n    text: \"勾選建議來源\"\n  });\n\n  const clear = tools.createEl(\"button\", {\n    text: \"取消全部勾選\"\n  });\n\n  const counter = modal.contentEl.createEl(\"p\");\n  counter.style.color = \"var(--text-muted)\";\n\n  const toggleMap = new Map();\n\n  const updateCount = () => {\n    counter.setText(\n      `已勾選 ${selected.size + manual.size} 項`\n    );\n  };\n\n  const refresh = () => {\n    for (const [key, toggle] of toggleMap) {\n      toggle.setValue(selected.has(key));\n    }\n    updateCount();\n  };\n\n  recommend.onclick = () => {\n    for (const item of candidates.values()) {\n      const attachment =\n        /\\.(pdf|png|jpe?g|gif|webp|svg|zip)(?:[#?\\]]|$)/i\n          .test(item.value);\n\n      const tool =\n        /(工具|檢測|下載|tools?)/i\n          .test(item.heading);\n\n      const sourceNote =\n        item.type === \"wiki\" &&\n        /^\\[\\[(CLIP｜|NOTE｜)/.test(item.value);\n\n      if (\n        item.inReferences &&\n        !attachment &&\n        !tool &&\n        (item.type === \"url\" || sourceNote)\n      ) {\n        selected.add(item.key);\n      }\n    }\n\n    refresh();\n  };\n\n  // ===== 掃描來源清單 =====\n\n  const foundList = modal.contentEl.createDiv();\n\n  Object.assign(foundList.style, {\n    maxHeight: \"36vh\",\n    overflowY: \"auto\",\n    paddingRight: \"6px\"\n  });\n\n  for (const [name, items] of groups) {\n    // Heading 獨立一行\n    foundList.createEl(\"h4\", { text: name });\n\n    for (const item of items) {\n      new Setting(foundList)\n        .setName(item.label)\n        .setDesc(item.value)\n        .addToggle((toggle) => {\n          toggleMap.set(item.key, toggle);\n          toggle.setValue(\n            selected.has(item.key)\n          );\n\n          toggle.onChange((on) => {\n            if (on) {\n              selected.add(item.key);\n            } else {\n              selected.delete(item.key);\n            }\n            updateCount();\n          });\n        });\n    }\n  }\n\n  if (!candidates.size) {\n    foundList.createEl(\"p\", {\n      text: \"沒有掃描到連結，可以手動新增。\"\n    });\n  }\n\n  // ===== 手動新增 =====\n\n  const section = modal.contentEl.createDiv();\n  section.style.marginTop = \"14px\";\n\n  const header = section.createDiv();\n\n  Object.assign(header.style, {\n    display: \"flex\",\n    alignItems: \"center\",\n    justifyContent: \"space-between\"\n  });\n\n  header.createEl(\"h4\", { text: \"手動新增\" });\n\n  const plus = header.createEl(\"button\", {\n    text: \"+\"\n  });\n\n  plus.title = \"搜尋 Vault 檔案或貼上網址\";\n\n  const manualList = section.createDiv();\n  const inputArea = section.createDiv();\n\n  Object.assign(inputArea.style, {\n    position: \"relative\",\n    marginTop: \"8px\"\n  });\n\n  const inputRow = inputArea.createDiv();\n\n  Object.assign(inputRow.style, {\n    display: \"flex\",\n    alignItems: \"center\",\n    gap: \"8px\"\n  });\n\n  const input = inputRow.createEl(\"input\");\n  input.type = \"text\";\n  input.placeholder =\n    \"搜尋 Vault 檔案或貼上 [名稱](網址)…\";\n\n  Object.assign(input.style, {\n    flex: \"1\",\n    minWidth: \"0\"\n  });\n\n  const addButton = inputRow.createEl(\"button\", {\n    text: \"加入\"\n  });\n\n  const dropdown = inputArea.createDiv();\n\n  Object.assign(dropdown.style, {\n    display: \"none\",\n    position: \"absolute\",\n    bottom: \"100%\",\n    left: \"0\",\n    right: \"0\",\n    zIndex: \"30\",\n    maxHeight: \"240px\",\n    overflowY: \"auto\",\n    border: \"1px solid var(--background-modifier-border)\",\n    background: \"var(--background-primary)\",\n    borderRadius: \"8px\",\n    boxShadow: \"var(--shadow-s)\"\n  });\n\n  function renderManual() {\n    manualList.empty();\n\n    for (const [key, value] of manual) {\n      const row = manualList.createDiv();\n\n      Object.assign(row.style, {\n        display: \"flex\",\n        alignItems: \"center\",\n        justifyContent: \"space-between\",\n        gap: \"12px\",\n        padding: \"10px 2px\",\n        borderBottom:\n          \"1px solid var(--background-modifier-border)\"\n      });\n\n      const label = row.createDiv();\n\n      Object.assign(label.style, {\n        minWidth: \"0\",\n        overflowWrap: \"anywhere\"\n      });\n\n      const display = isMarkdownUrl(value)\n        ? value.match(/^\\[([^\\]]+)\\]/)[1]\n        : value.startsWith(\"[[\")\n          ? value.slice(2, -2)\n              .split(\"|\")[0]\n              .split(\"/\").pop()\n          : value;\n\n      label.createEl(\"div\", { text: display });\n\n      if (display !== value) {\n        const detail = label.createEl(\"small\", {\n          text: value\n        });\n        detail.style.color = \"var(--text-muted)\";\n      }\n\n      const remove = row.createEl(\"button\", {\n        text: \"×\"\n      });\n\n      remove.title = \"移除此項\";\n\n      remove.onclick = () => {\n        manual.delete(key);\n        renderManual();\n        updateCount();\n      };\n    }\n  }\n\n  clear.onclick = () => {\n    selected.clear();\n    manual.clear();\n    renderManual();\n    refresh();\n  };\n\n  // ===== Vault Autocomplete =====\n\n  const getMatches = (text) => {\n    const q = text\n      .toLowerCase()\n      .replace(/^\\[\\[/, \"\")\n      .replace(/\\]\\]$/, \"\")\n      .trim();\n\n    if (\n      !q ||\n      /^https?:\\/\\//.test(q) ||\n      isMarkdownUrl(text)\n    ) {\n      return [];\n    }\n\n    return allFiles\n      .map((f) => {\n        const base = f.basename.toLowerCase();\n        const name = f.name.toLowerCase();\n        const path = f.path.toLowerCase();\n\n        const score =\n          base === q || name === q || path === q\n            ? 0\n            : base.startsWith(q) ? 1\n            : name.startsWith(q) ? 2\n            : base.includes(q) ? 3\n            : path.includes(q) ? 4\n            : 99;\n\n        return { f, score };\n      })\n      .filter((x) => x.score < 99)\n      .sort(\n        (a, b) =>\n          a.score - b.score ||\n          a.f.path.localeCompare(b.f.path)\n      )\n      .slice(0, MAX_SUGGESTIONS)\n      .map((x) => x.f);\n  };\n\n  let matches = [];\n  let active = 0;\n\n  const hideDropdown = () => {\n    dropdown.style.display = \"none\";\n  };\n\n  const addValue = (text) => {\n    const value = text.trim();\n    if (!value) return;\n\n    const key = identity(value);\n\n    if (candidates.has(key)) {\n      const item = candidates.get(key);\n\n      if (\n        isMarkdownUrl(value) &&\n        !isMarkdownUrl(item.value)\n      ) {\n        item.value = value;\n      }\n\n      selected.add(key);\n      refresh();\n\n      new Notice(\n        \"來源已在上方清單中，已勾選\"\n      );\n    } else if (!manual.has(key)) {\n      manual.set(key, value);\n      renderManual();\n      updateCount();\n    } else {\n      // 相同 URL 可改用新的 Markdown 名稱\n      if (isMarkdownUrl(value)) {\n        manual.set(key, value);\n      }\n\n      renderManual();\n    }\n\n    input.value = \"\";\n    matches = [];\n    hideDropdown();\n    input.focus();\n  };\n\n  const renderSuggestions = () => {\n    dropdown.empty();\n\n    if (!matches.length) {\n      hideDropdown();\n      return;\n    }\n\n    dropdown.style.display = \"block\";\n\n    matches.forEach((target, i) => {\n      const option = dropdown.createEl(\"button\");\n      option.type = \"button\";\n\n      Object.assign(option.style, {\n        display: \"block\",\n        width: \"100%\",\n        textAlign: \"left\",\n        height: \"auto\",\n        padding: \"8px 12px\",\n        whiteSpace: \"normal\",\n        border: \"none\",\n        borderRadius: \"0\",\n        boxShadow: \"none\",\n        background:\n          i === active\n            ? \"var(--background-modifier-hover)\"\n            : \"transparent\"\n      });\n\n      option.createEl(\"div\", {\n        text: target.name\n      });\n\n      const path = option.createEl(\"small\", {\n        text: target.path\n      });\n\n      path.style.color = \"var(--text-muted)\";\n\n      option.addEventListener(\"mouseenter\", () => {\n        active = i;\n\n        for (const [index, element] of\n          [...dropdown.children].entries()) {\n          element.style.background =\n            index === active\n              ? \"var(--background-modifier-hover)\"\n              : \"transparent\";\n        }\n      });\n\n      option.addEventListener(\"mousedown\", (event) => {\n        event.preventDefault();\n        addValue(toWiki(target));\n      });\n    });\n  };\n\n  const updateSuggestions = () => {\n    matches = getMatches(input.value);\n    active = 0;\n    renderSuggestions();\n  };\n\n  input.addEventListener(\"input\", updateSuggestions);\n  input.addEventListener(\"blur\", hideDropdown);\n\n  plus.onclick = () => {\n    input.focus();\n    updateSuggestions();\n  };\n\n  // ===== 輸入提交 =====\n\n  const submitInput = () => {\n    const text = input.value.trim();\n    if (!text) return;\n\n    // 保留完整 Markdown 連結\n    if (\n      isMarkdownUrl(text) ||\n      /^https?:\\/\\/\\S+$/.test(text) ||\n      /^\\[\\[[^\\]\\n]+\\]\\]$/.test(text)\n    ) {\n      addValue(text);\n    } else if (matches.length) {\n      addValue(toWiki(matches[active]));\n    } else {\n      new Notice(\n        \"請選擇 Vault 檔案，或輸入 URL / [名稱](URL) / [[連結]]\"\n      );\n    }\n  };\n\n  addButton.onclick = submitInput;\n\n  input.addEventListener(\"keydown\", (event) => {\n    if (\n      event.key === \"ArrowDown\" &&\n      matches.length\n    ) {\n      event.preventDefault();\n      active = (active + 1) % matches.length;\n      renderSuggestions();\n    } else if (\n      event.key === \"ArrowUp\" &&\n      matches.length\n    ) {\n      event.preventDefault();\n      active =\n        (active + matches.length - 1) %\n        matches.length;\n      renderSuggestions();\n    } else if (event.key === \"Enter\") {\n      event.preventDefault();\n      submitInput();\n    } else if (\n      event.key === \"Escape\" &&\n      dropdown.style.display !== \"none\"\n    ) {\n      event.preventDefault();\n      event.stopPropagation();\n      matches = [];\n      hideDropdown();\n    }\n  });\n\n  // ===== 儲存 =====\n\n  const footer = modal.contentEl.createDiv({\n    cls: \"modal-button-container\"\n  });\n\n  footer.createEl(\"button\", {\n    text: \"取消\"\n  }).onclick = () => modal.close();\n\n  const save = footer.createEl(\"button\", {\n    text: \"更新 references\",\n    cls: \"mod-cta\"\n  });\n\n  save.onclick = async () => {\n    save.disabled = true;\n\n    try {\n      const values = [\n        ...[...selected]\n          .map((key) => candidates.get(key)?.value)\n          .filter(Boolean),\n        ...manual.values()\n      ];\n\n      await app.fileManager.processFrontMatter(\n        file,\n        (frontmatter) => {\n          frontmatter[PROPERTY] = values;\n        }\n      );\n\n      modal.close();\n\n      new Notice(\n        `references 已更新（${values.length} 筆）`\n      );\n    } catch (error) {\n      console.error(\"Manage References\", error);\n      new Notice(\"更新失敗，請查看開發者主控台\");\n      save.disabled = false;\n    }\n  };\n\n  renderManual();\n  updateCount();\n  modal.open();\n})();\n"
+          }
+        },
+        {
+          "uuid": "e89d81a7-815b-434f-b210-6828cca7314d",
+          "icon": "lucide-book",
+          "label": "References",
+          "tooltip": "",
+          "hasCommand": false,
+          "inGallery": false,
+          "link": "",
+          "linkAttr": {
+            "commandCheck": false,
+            "commandId": "",
+            "hasVars": false,
+            "type": "javascript",
+            "focus": "none"
+          },
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "viewMode": "all"
+          },
+          "scriptConfig": {
+            "pluginFunction": "evaluate",
+            "expression": "\n/*\n * Note Toolbar — Manage References v2.1\n * 保留 Markdown 連結名稱、避免重複網址、\n * Vault Autocomplete、Heading 分組\n */\n(async () => {\n  const app = ntb.app;\n  const { Modal, Setting, Notice } = ntb.o;\n  const file = app.workspace.getActiveFile();\n\n  const SCAN_MODE = \"auto\"; // \"auto\" | \"all\"\n  const PROPERTY = \"references\";\n  const MAX_SUGGESTIONS = 8;\n\n  if (!file || file.extension !== \"md\") {\n    new Notice(\"請先開啟 Markdown 筆記\");\n    return;\n  }\n\n  // ===== 連結識別 =====\n\n  const isMarkdownUrl = (value) =>\n    /^\\[[^\\]\\n]+\\]\\(https?:\\/\\/[^\\s)]+\\)$/.test(value);\n\n  // 裸網址與 Markdown 連結使用相同的識別 Key\n  const identity = (value) => {\n    const md = value.match(\n      /^\\[[^\\]\\n]+\\]\\((https?:\\/\\/[^\\s)]+)\\)$/\n    );\n    if (md) return `url:${md[1]}`;\n\n    if (/^https?:\\/\\/\\S+$/.test(value)) {\n      return `url:${value}`;\n    }\n\n    const wiki = value.match(/^\\[\\[([^\\]\\n]+)\\]\\]$/);\n    if (wiki) {\n      return `wiki:${wiki[1].split(\"|\")[0].trim()}`;\n    }\n\n    return `text:${value}`;\n  };\n\n  const isRefHeading = (title) => {\n    const name = title\n      .replace(/^\\s*\\d+\\s*[｜|.、:：-]\\s*/, \"\")\n      .replace(/\\s+#+\\s*$/, \"\")\n      .trim()\n      .toLowerCase();\n\n    return /^(參考資料|參考文獻|參考文件|參考連結|資料來源|來源與參考|引用資料|延伸閱讀|相關連結|references?|sources?|bibliography|further reading)$/.test(name);\n  };\n\n  // ===== 掃描筆記 =====\n\n  const markdown = await app.vault.cachedRead(file);\n  const body = markdown.replace(\n    /^---[ \\t]*\\r?\\n[\\s\\S]*?\\r?\\n---[ \\t]*(?:\\r?\\n|$)/,\n    \"\"\n  );\n  const lines = body.split(/\\r?\\n/);\n\n  const hasRefHeading = lines.some((line) => {\n    const h = line.match(/^\\s{0,3}(#{1,6})\\s+(.+)$/);\n    return h && isRefHeading(h[2]);\n  });\n\n  const referenceOnly =\n    SCAN_MODE === \"auto\" && hasRefHeading;\n\n  const groups = new Map();\n  const candidates = new Map();\n\n  const addCandidate = (\n    value, label, heading, type, inReferences\n  ) => {\n    value = value.trim();\n    if (!value) return;\n\n    const key = identity(value);\n    const old = candidates.get(key);\n\n    if (old) {\n      // 相同 URL 優先保留 [名稱](URL)\n      if (\n        isMarkdownUrl(value) &&\n        !isMarkdownUrl(old.value)\n      ) {\n        old.value = value;\n        old.label = label;\n      }\n\n      old.inReferences ||= inReferences;\n      return;\n    }\n\n    const item = {\n      key, value, label, heading, type, inReferences\n    };\n\n    candidates.set(key, item);\n\n    if (!groups.has(heading)) {\n      groups.set(heading, []);\n    }\n\n    groups.get(heading).push(item);\n  };\n\n  let heading = \"未分類\";\n  let refLevel = null;\n  let fenceChar = null;\n  let fenceLength = 0;\n\n  const markdownUrlRegex =\n    /(!?)\\[([^\\]\\n]+)\\]\\((https?:\\/\\/[^\\s)]+)\\)/g;\n\n  for (const raw of lines) {\n    const fence = raw.match(\n      /^\\s{0,3}(`{3,}|~{3,})/\n    );\n\n    if (fence) {\n      const token = fence[1];\n\n      if (!fenceChar) {\n        fenceChar = token[0];\n        fenceLength = token.length;\n      } else if (\n        token[0] === fenceChar &&\n        token.length >= fenceLength\n      ) {\n        fenceChar = null;\n        fenceLength = 0;\n      }\n\n      continue;\n    }\n\n    if (fenceChar) continue;\n\n    const h = raw.match(\n      /^\\s{0,3}(#{1,6})\\s+(.+?)\\s*#*\\s*$/\n    );\n\n    if (h) {\n      const level = h[1].length;\n      heading = h[2].trim();\n\n      if (isRefHeading(heading)) {\n        refLevel = level;\n      } else if (\n        refLevel !== null &&\n        level <= refLevel\n      ) {\n        refLevel = null;\n      }\n\n      continue;\n    }\n\n    if (referenceOnly && refLevel === null) {\n      continue;\n    }\n\n    const line = raw.replace(/`+[^`\\n]*`+/g, \"\");\n\n    const groupName =\n      /^\\s*\\[\\^[^\\]]+\\]:/.test(line)\n        ? \"註腳來源\"\n        : heading;\n\n    const inReferences = refLevel !== null;\n\n    // ===== Wikilink =====\n\n    for (const m of line.matchAll(\n      /(!?)\\[\\[([^\\]\\n]+)\\]\\]/g\n    )) {\n      if (m[1]) continue;\n\n      const [target, alias] = m[2].split(\n        /\\|(.+)/, 2\n      );\n\n      if (target.trim()) {\n        addCandidate(\n          `[[${target.trim()}]]`,\n          alias?.trim() || target.trim(),\n          groupName,\n          \"wiki\",\n          inReferences\n        );\n      }\n    }\n\n    // ===== Markdown URL =====\n    // 保留完整 [名稱](URL)\n\n    for (const m of line.matchAll(markdownUrlRegex)) {\n      if (m[1]) continue;\n\n      addCandidate(\n        m[0],\n        m[2],\n        groupName,\n        \"url\",\n        inReferences\n      );\n    }\n\n    // ===== 純文字 URL =====\n    // 排除已擷取的 Markdown 連結\n\n    const plainLine = line.replace(\n      markdownUrlRegex, \" \"\n    );\n\n    for (const m of plainLine.matchAll(\n      /https?:\\/\\/[^\\s<>\\])]+/g\n    )) {\n      const url = m[0].replace(\n        /[.,;!?，。；]+$/, \"\"\n      );\n\n      addCandidate(\n        url,\n        url,\n        groupName,\n        \"url\",\n        inReferences\n      );\n    }\n  }\n\n  // ===== 既有 references =====\n\n  const fm = app.metadataCache\n    .getFileCache(file)?.frontmatter;\n\n  const rawReferences = fm?.[PROPERTY];\n\n  const existing = (\n    Array.isArray(rawReferences)\n      ? rawReferences\n      : rawReferences\n        ? [rawReferences]\n        : []\n  )\n    .map(String)\n    .map((v) => v.trim())\n    .filter(Boolean);\n\n  for (const value of existing) {\n    const key = identity(value);\n\n    if (!candidates.has(key)) {\n      addCandidate(\n        value,\n        value,\n        \"原有 references（本文未找到）\",\n        \"existing\",\n        false\n      );\n    } else if (\n      isMarkdownUrl(value) &&\n      !isMarkdownUrl(candidates.get(key).value)\n    ) {\n      const item = candidates.get(key);\n      item.value = value;\n      item.label = value.match(\n        /^\\[([^\\]]+)\\]/\n      )[1];\n    }\n  }\n\n  const selected = new Set(existing.map(identity));\n  const manual = new Map();\n\n  const allFiles = app.vault\n    .getFiles()\n    .filter((f) => f.path !== file.path);\n\n  const toWiki = (target) =>\n    `[[${app.metadataCache.fileToLinktext(\n      target, file.path, true\n    )}]]`;\n\n  // ===== Modal =====\n\n  const modal = new Modal(app);\n  modal.setTitle(\"管理 references\");\n\n  modal.contentEl.createEl(\"p\", {\n    text: referenceOnly\n      ? \"已掃描參考資料章節；也可以手動加入網址或 Vault 檔案。\"\n      : \"已掃描全文；也可以手動加入網址或 Vault 檔案。\"\n  });\n\n  const tools = modal.contentEl.createDiv({\n    cls: \"modal-button-container\"\n  });\n\n  const recommend = tools.createEl(\"button\", {\n    text: \"勾選建議來源\"\n  });\n\n  const clear = tools.createEl(\"button\", {\n    text: \"取消全部勾選\"\n  });\n\n  const counter = modal.contentEl.createEl(\"p\");\n  counter.style.color = \"var(--text-muted)\";\n\n  const toggleMap = new Map();\n\n  const updateCount = () => {\n    counter.setText(\n      `已勾選 ${selected.size + manual.size} 項`\n    );\n  };\n\n  const refresh = () => {\n    for (const [key, toggle] of toggleMap) {\n      toggle.setValue(selected.has(key));\n    }\n    updateCount();\n  };\n\n  recommend.onclick = () => {\n    for (const item of candidates.values()) {\n      const attachment =\n        /\\.(pdf|png|jpe?g|gif|webp|svg|zip)(?:[#?\\]]|$)/i\n          .test(item.value);\n\n      const tool =\n        /(工具|檢測|下載|tools?)/i\n          .test(item.heading);\n\n      const sourceNote =\n        item.type === \"wiki\" &&\n        /^\\[\\[(CLIP｜|NOTE｜)/.test(item.value);\n\n      if (\n        item.inReferences &&\n        !attachment &&\n        !tool &&\n        (item.type === \"url\" || sourceNote)\n      ) {\n        selected.add(item.key);\n      }\n    }\n\n    refresh();\n  };\n\n  // ===== 掃描來源清單 =====\n\n  const foundList = modal.contentEl.createDiv();\n\n  Object.assign(foundList.style, {\n    maxHeight: \"36vh\",\n    overflowY: \"auto\",\n    paddingRight: \"6px\"\n  });\n\n  for (const [name, items] of groups) {\n    // Heading 獨立一行\n    foundList.createEl(\"h4\", { text: name });\n\n    for (const item of items) {\n      new Setting(foundList)\n        .setName(item.label)\n        .setDesc(item.value)\n        .addToggle((toggle) => {\n          toggleMap.set(item.key, toggle);\n          toggle.setValue(\n            selected.has(item.key)\n          );\n\n          toggle.onChange((on) => {\n            if (on) {\n              selected.add(item.key);\n            } else {\n              selected.delete(item.key);\n            }\n            updateCount();\n          });\n        });\n    }\n  }\n\n  if (!candidates.size) {\n    foundList.createEl(\"p\", {\n      text: \"沒有掃描到連結，可以手動新增。\"\n    });\n  }\n\n  // ===== 手動新增 =====\n\n  const section = modal.contentEl.createDiv();\n  section.style.marginTop = \"14px\";\n\n  const header = section.createDiv();\n\n  Object.assign(header.style, {\n    display: \"flex\",\n    alignItems: \"center\",\n    justifyContent: \"space-between\"\n  });\n\n  header.createEl(\"h4\", { text: \"手動新增\" });\n\n  const plus = header.createEl(\"button\", {\n    text: \"+\"\n  });\n\n  plus.title = \"搜尋 Vault 檔案或貼上網址\";\n\n  const manualList = section.createDiv();\n  const inputArea = section.createDiv();\n\n  Object.assign(inputArea.style, {\n    position: \"relative\",\n    marginTop: \"8px\"\n  });\n\n  const inputRow = inputArea.createDiv();\n\n  Object.assign(inputRow.style, {\n    display: \"flex\",\n    alignItems: \"center\",\n    gap: \"8px\"\n  });\n\n  const input = inputRow.createEl(\"input\");\n  input.type = \"text\";\n  input.placeholder =\n    \"搜尋 Vault 檔案或貼上 [名稱](網址)…\";\n\n  Object.assign(input.style, {\n    flex: \"1\",\n    minWidth: \"0\"\n  });\n\n  const addButton = inputRow.createEl(\"button\", {\n    text: \"加入\"\n  });\n\n  const dropdown = inputArea.createDiv();\n\n  Object.assign(dropdown.style, {\n    display: \"none\",\n    position: \"absolute\",\n    bottom: \"100%\",\n    left: \"0\",\n    right: \"0\",\n    zIndex: \"30\",\n    maxHeight: \"240px\",\n    overflowY: \"auto\",\n    border: \"1px solid var(--background-modifier-border)\",\n    background: \"var(--background-primary)\",\n    borderRadius: \"8px\",\n    boxShadow: \"var(--shadow-s)\"\n  });\n\n  function renderManual() {\n    manualList.empty();\n\n    for (const [key, value] of manual) {\n      const row = manualList.createDiv();\n\n      Object.assign(row.style, {\n        display: \"flex\",\n        alignItems: \"center\",\n        justifyContent: \"space-between\",\n        gap: \"12px\",\n        padding: \"10px 2px\",\n        borderBottom:\n          \"1px solid var(--background-modifier-border)\"\n      });\n\n      const label = row.createDiv();\n\n      Object.assign(label.style, {\n        minWidth: \"0\",\n        overflowWrap: \"anywhere\"\n      });\n\n      const display = isMarkdownUrl(value)\n        ? value.match(/^\\[([^\\]]+)\\]/)[1]\n        : value.startsWith(\"[[\")\n          ? value.slice(2, -2)\n              .split(\"|\")[0]\n              .split(\"/\").pop()\n          : value;\n\n      label.createEl(\"div\", { text: display });\n\n      if (display !== value) {\n        const detail = label.createEl(\"small\", {\n          text: value\n        });\n        detail.style.color = \"var(--text-muted)\";\n      }\n\n      const remove = row.createEl(\"button\", {\n        text: \"×\"\n      });\n\n      remove.title = \"移除此項\";\n\n      remove.onclick = () => {\n        manual.delete(key);\n        renderManual();\n        updateCount();\n      };\n    }\n  }\n\n  clear.onclick = () => {\n    selected.clear();\n    manual.clear();\n    renderManual();\n    refresh();\n  };\n\n  // ===== Vault Autocomplete =====\n\n  const getMatches = (text) => {\n    const q = text\n      .toLowerCase()\n      .replace(/^\\[\\[/, \"\")\n      .replace(/\\]\\]$/, \"\")\n      .trim();\n\n    if (\n      !q ||\n      /^https?:\\/\\//.test(q) ||\n      isMarkdownUrl(text)\n    ) {\n      return [];\n    }\n\n    return allFiles\n      .map((f) => {\n        const base = f.basename.toLowerCase();\n        const name = f.name.toLowerCase();\n        const path = f.path.toLowerCase();\n\n        const score =\n          base === q || name === q || path === q\n            ? 0\n            : base.startsWith(q) ? 1\n            : name.startsWith(q) ? 2\n            : base.includes(q) ? 3\n            : path.includes(q) ? 4\n            : 99;\n\n        return { f, score };\n      })\n      .filter((x) => x.score < 99)\n      .sort(\n        (a, b) =>\n          a.score - b.score ||\n          a.f.path.localeCompare(b.f.path)\n      )\n      .slice(0, MAX_SUGGESTIONS)\n      .map((x) => x.f);\n  };\n\n  let matches = [];\n  let active = 0;\n\n  const hideDropdown = () => {\n    dropdown.style.display = \"none\";\n  };\n\n  const addValue = (text) => {\n    const value = text.trim();\n    if (!value) return;\n\n    const key = identity(value);\n\n    if (candidates.has(key)) {\n      const item = candidates.get(key);\n\n      if (\n        isMarkdownUrl(value) &&\n        !isMarkdownUrl(item.value)\n      ) {\n        item.value = value;\n      }\n\n      selected.add(key);\n      refresh();\n\n      new Notice(\n        \"來源已在上方清單中，已勾選\"\n      );\n    } else if (!manual.has(key)) {\n      manual.set(key, value);\n      renderManual();\n      updateCount();\n    } else {\n      // 相同 URL 可改用新的 Markdown 名稱\n      if (isMarkdownUrl(value)) {\n        manual.set(key, value);\n      }\n\n      renderManual();\n    }\n\n    input.value = \"\";\n    matches = [];\n    hideDropdown();\n    input.focus();\n  };\n\n  const renderSuggestions = () => {\n    dropdown.empty();\n\n    if (!matches.length) {\n      hideDropdown();\n      return;\n    }\n\n    dropdown.style.display = \"block\";\n\n    matches.forEach((target, i) => {\n      const option = dropdown.createEl(\"button\");\n      option.type = \"button\";\n\n      Object.assign(option.style, {\n        display: \"block\",\n        width: \"100%\",\n        textAlign: \"left\",\n        height: \"auto\",\n        padding: \"8px 12px\",\n        whiteSpace: \"normal\",\n        border: \"none\",\n        borderRadius: \"0\",\n        boxShadow: \"none\",\n        background:\n          i === active\n            ? \"var(--background-modifier-hover)\"\n            : \"transparent\"\n      });\n\n      option.createEl(\"div\", {\n        text: target.name\n      });\n\n      const path = option.createEl(\"small\", {\n        text: target.path\n      });\n\n      path.style.color = \"var(--text-muted)\";\n\n      option.addEventListener(\"mouseenter\", () => {\n        active = i;\n\n        for (const [index, element] of\n          [...dropdown.children].entries()) {\n          element.style.background =\n            index === active\n              ? \"var(--background-modifier-hover)\"\n              : \"transparent\";\n        }\n      });\n\n      option.addEventListener(\"mousedown\", (event) => {\n        event.preventDefault();\n        addValue(toWiki(target));\n      });\n    });\n  };\n\n  const updateSuggestions = () => {\n    matches = getMatches(input.value);\n    active = 0;\n    renderSuggestions();\n  };\n\n  input.addEventListener(\"input\", updateSuggestions);\n  input.addEventListener(\"blur\", hideDropdown);\n\n  plus.onclick = () => {\n    input.focus();\n    updateSuggestions();\n  };\n\n  // ===== 輸入提交 =====\n\n  const submitInput = () => {\n    const text = input.value.trim();\n    if (!text) return;\n\n    // 保留完整 Markdown 連結\n    if (\n      isMarkdownUrl(text) ||\n      /^https?:\\/\\/\\S+$/.test(text) ||\n      /^\\[\\[[^\\]\\n]+\\]\\]$/.test(text)\n    ) {\n      addValue(text);\n    } else if (matches.length) {\n      addValue(toWiki(matches[active]));\n    } else {\n      new Notice(\n        \"請選擇 Vault 檔案，或輸入 URL / [名稱](URL) / [[連結]]\"\n      );\n    }\n  };\n\n  addButton.onclick = submitInput;\n\n  input.addEventListener(\"keydown\", (event) => {\n    if (\n      event.key === \"ArrowDown\" &&\n      matches.length\n    ) {\n      event.preventDefault();\n      active = (active + 1) % matches.length;\n      renderSuggestions();\n    } else if (\n      event.key === \"ArrowUp\" &&\n      matches.length\n    ) {\n      event.preventDefault();\n      active =\n        (active + matches.length - 1) %\n        matches.length;\n      renderSuggestions();\n    } else if (event.key === \"Enter\") {\n      event.preventDefault();\n      submitInput();\n    } else if (\n      event.key === \"Escape\" &&\n      dropdown.style.display !== \"none\"\n    ) {\n      event.preventDefault();\n      event.stopPropagation();\n      matches = [];\n      hideDropdown();\n    }\n  });\n\n  // ===== 儲存 =====\n\n  const footer = modal.contentEl.createDiv({\n    cls: \"modal-button-container\"\n  });\n\n  footer.createEl(\"button\", {\n    text: \"取消\"\n  }).onclick = () => modal.close();\n\n  const save = footer.createEl(\"button\", {\n    text: \"更新 references\",\n    cls: \"mod-cta\"\n  });\n\n  save.onclick = async () => {\n    save.disabled = true;\n\n    try {\n      const values = [\n        ...[...selected]\n          .map((key) => candidates.get(key)?.value)\n          .filter(Boolean),\n        ...manual.values()\n      ];\n\n      await app.fileManager.processFrontMatter(\n        file,\n        (frontmatter) => {\n          frontmatter[PROPERTY] = values;\n        }\n      );\n\n      modal.close();\n\n      new Notice(\n        `references 已更新（${values.length} 筆）`\n      );\n    } catch (error) {\n      console.error(\"Manage References\", error);\n      new Notice(\"更新失敗，請查看開發者主控台\");\n      save.disabled = false;\n    }\n  };\n\n  renderManual();\n  updateCount();\n  modal.open();\n})();\n"
+          }
         }
       ],
       "mobileStyles": [],
@@ -2761,7 +2831,7 @@
           }
         }
       },
-      "updated": "2026-11-04T06:38:41.552Z"
+      "updated": "2026-11-06T06:55:57.389Z"
     },
     {
       "uuid": "d4085830-fd38-41bb-9c62-a90f5d090811",
